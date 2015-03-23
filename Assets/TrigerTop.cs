@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class TrigerTop : MonoBehaviour {
-
+	//boka 
 	// Use this for initialization
 	void Start () {
 	
