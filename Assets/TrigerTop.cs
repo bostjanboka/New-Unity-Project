@@ -4,6 +4,7 @@ using System.Collections;
 public class TrigerTop : MonoBehaviour {
 	//boka 
 	// Use this for initialization
+	//aljosa
 	void Start () {
 	
 	}
