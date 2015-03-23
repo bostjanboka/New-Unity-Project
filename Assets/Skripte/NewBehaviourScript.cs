@@ -5,6 +5,9 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	// Use this for initialization
 	GameObject junak;
+
+	public GameObject spirala;
+
 	public float speed;
 	float count;
 	Vector3 pozicija;
@@ -16,15 +19,19 @@ public class NewBehaviourScript : MonoBehaviour {
 	//GUIContent btn;
 	int presses = 0;
 
+	public int steviloSpiral;
+
+
 	void Start () {
 		//junak = GameObject.("junak1");
 		speed = 2;
 		count = 1;
 		pozicija = transform.position;
 		rigid = GetComponent<Rigidbody2D> ();
+		steviloSpiral = 0;
 		//btn = new GUIContent("Button");
-
 		//electorSprite = Instantiate (tileSelectionMarker, Vector3(0,0, 0), Quaternion.identity);
+		//Instantiate (spirala, new Vector3(3, -6, 0), Quaternion.identity);
 
 	}
 	
@@ -48,8 +55,12 @@ public class NewBehaviourScript : MonoBehaviour {
 				transform.Translate(move);
 			}
 			if(hitCollider.transform.name.Equals("gumb_strel")){
-				Debug.Log("zadetek");
-				pressedS = true;
+				Debug.Log("zadetek strel");
+				if(steviloSpiral == 0)
+				{
+					Instantiate (spirala, new Vector3(transform.position.x, -6, 0), Quaternion.identity);
+					steviloSpiral++;
+				}
 			}
 		}
 

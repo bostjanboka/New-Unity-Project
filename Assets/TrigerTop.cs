@@ -13,11 +13,11 @@ public class TrigerTop : MonoBehaviour {
 	
 	}
 
-	void onTriggerEnter2D(Collider2D other){
+	/*void onTriggerEnter2D(Collider2D other){
 		Debug.Log ("noter sem");
-		if (other.gameObject.name.Equals ("spirala")) {
+		if (other.gameObject.tag.Equals ("spirala")) {
 			Destroy(other.gameObject);
 			Debug.Log ("noter sem");
 		}
-	}
+	}*/
 }

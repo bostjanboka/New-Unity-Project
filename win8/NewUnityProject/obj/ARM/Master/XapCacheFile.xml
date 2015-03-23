@@ -1,32 +1,32 @@
-﻿<xapCache source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Bin\ARM\Master\NewUnityProject_Master_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="22.3.2015 14:48:46">
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\obj\ARM\Master\NewUnityProject.dll" archivePath="NewUnityProject.dll" lastWriteTime="22.3.2015 14:48:37" />
+﻿<xapCache source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Bin\ARM\Master\NewUnityProject_Master_ARM.xap" wasSigned="False" wasTritonized="False" certificateThumbprint="" TimeStampUrl="" signKeyFile="" signKeyPassword="" lastWriteTime="23.3.2015 21:14:11">
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\obj\ARM\Master\NewUnityProject.dll" archivePath="NewUnityProject.dll" lastWriteTime="23.3.2015 21:14:02" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\SplashScreenImage.jpg" archivePath="SplashScreenImage.jpg" lastWriteTime="24.2.2015 9:04:26" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assets\AlignmentGrid.png" archivePath="Assets\AlignmentGrid.png" lastWriteTime="5.2.2015 15:45:32" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assets\Tiles\FlipCycleTileLarge.png" archivePath="Assets\Tiles\FlipCycleTileLarge.png" lastWriteTime="5.2.2015 15:45:32" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assets\Tiles\FlipCycleTileSmall.png" archivePath="Assets\Tiles\FlipCycleTileSmall.png" lastWriteTime="5.2.2015 15:45:32" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assets\Tiles\IconicTileMediumLarge.png" archivePath="Assets\Tiles\IconicTileMediumLarge.png" lastWriteTime="5.2.2015 15:45:32" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assets\Tiles\IconicTileSmall.png" archivePath="Assets\Tiles\IconicTileSmall.png" lastWriteTime="5.2.2015 15:45:32" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\level0" archivePath="Data\level0" lastWriteTime="22.3.2015 14:48:10" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\level1" archivePath="Data\level1" lastWriteTime="22.3.2015 14:48:11" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\level2" archivePath="Data\level2" lastWriteTime="22.3.2015 14:48:11" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\mainData" archivePath="Data\mainData" lastWriteTime="22.3.2015 14:48:13" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\managedAssemblies.txt" archivePath="Data\managedAssemblies.txt" lastWriteTime="22.3.2015 14:48:34" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\level0" archivePath="Data\level0" lastWriteTime="23.3.2015 21:13:34" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\level1" archivePath="Data\level1" lastWriteTime="23.3.2015 21:13:34" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\level2" archivePath="Data\level2" lastWriteTime="23.3.2015 21:13:35" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\mainData" archivePath="Data\mainData" lastWriteTime="23.3.2015 21:13:40" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\managedAssemblies.txt" archivePath="Data\managedAssemblies.txt" lastWriteTime="23.3.2015 21:13:59" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\Resources\unity default resources" archivePath="Data\Resources\unity default resources" lastWriteTime="24.2.2015 11:39:48" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\Resources\unity_builtin_extra" archivePath="Data\Resources\unity_builtin_extra" lastWriteTime="22.3.2015 14:48:16" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets0.assets" archivePath="Data\sharedassets0.assets" lastWriteTime="22.3.2015 14:48:13" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets1.assets" archivePath="Data\sharedassets1.assets" lastWriteTime="22.3.2015 14:48:14" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets2.assets" archivePath="Data\sharedassets2.assets" lastWriteTime="22.3.2015 14:48:14" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets3.assets" archivePath="Data\sharedassets3.assets" lastWriteTime="22.3.2015 14:48:14" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\Resources\unity_builtin_extra" archivePath="Data\Resources\unity_builtin_extra" lastWriteTime="23.3.2015 21:13:40" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets0.assets" archivePath="Data\sharedassets0.assets" lastWriteTime="23.3.2015 21:13:40" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets1.assets" archivePath="Data\sharedassets1.assets" lastWriteTime="23.3.2015 21:13:40" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets2.assets" archivePath="Data\sharedassets2.assets" lastWriteTime="23.3.2015 21:13:40" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Data\sharedassets3.assets" archivePath="Data\sharedassets3.assets" lastWriteTime="23.3.2015 21:13:40" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Bin\ARM\Master\AppManifest.xaml" archivePath="AppManifest.xaml" lastWriteTime="19.3.2015 19:42:38" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Bin\ARM\Master\Assets\ApplicationIcon.png" archivePath="Assets\ApplicationIcon.png" lastWriteTime="5.2.2015 15:45:32" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Bin\ARM\Master\Assets\Tiles\FlipCycleTileMedium.png" archivePath="Assets\Tiles\FlipCycleTileMedium.png" lastWriteTime="5.2.2015 15:45:32" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assembly-CSharp.dll" archivePath="Assembly-CSharp.dll" lastWriteTime="22.3.2015 14:48:32" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Assembly-CSharp.dll" archivePath="Assembly-CSharp.dll" lastWriteTime="23.3.2015 21:13:58" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\Players\ARM\Master\BridgeInterface.winmd" archivePath="BridgeInterface.winmd" lastWriteTime="24.2.2015 17:32:22" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\UnityEngine.dll" archivePath="UnityEngine.dll" lastWriteTime="22.3.2015 14:48:33" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\UnityEngine.UI.dll" archivePath="UnityEngine.UI.dll" lastWriteTime="22.3.2015 14:48:33" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\UnityEngine.dll" archivePath="UnityEngine.dll" lastWriteTime="23.3.2015 21:13:59" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\UnityEngine.UI.dll" archivePath="UnityEngine.UI.dll" lastWriteTime="23.3.2015 21:13:59" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\Players\ARM\Master\UnityPlayer.winmd" archivePath="UnityPlayer.winmd" lastWriteTime="24.2.2015 17:40:26" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\Players\ARM\Master\WinRTBridge.dll" archivePath="WinRTBridge.dll" lastWriteTime="24.2.2015 17:32:22" />
-  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\WinRTLegacy.dll" archivePath="WinRTLegacy.dll" lastWriteTime="22.3.2015 14:48:34" />
+  <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\WinRTLegacy.dll" archivePath="WinRTLegacy.dll" lastWriteTime="23.3.2015 21:13:59" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\Players\ARM\Master\BridgeInterface.dll" archivePath="BridgeInterface.dll" lastWriteTime="24.2.2015 17:32:22" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\Players\ARM\Master\UnityPlayer.dll" archivePath="UnityPlayer.dll" lastWriteTime="24.2.2015 17:40:34" />
   <file source="C:\Users\Bostjan\Documents\New Unity Project\win8\NewUnityProject\Bin\ARM\Master\Properties\WMAppManifest.xml" archivePath="WMAppManifest.xml" lastWriteTime="19.3.2015 19:42:45" />
