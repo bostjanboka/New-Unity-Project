@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Zoga : MonoBehaviour {
 
-	// Use this for initialization komentar
+	// Use this for initialization komentar  hhh
 	public int visina;
 	public int speed;
 
