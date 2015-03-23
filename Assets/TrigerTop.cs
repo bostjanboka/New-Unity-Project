@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class TrigerTop : MonoBehaviour {
-	//boka 
+	//boka
+	//boka 2222
 	// Use this for initialization
-	//aljosa sss
 	void Start () {
 	
 	}
