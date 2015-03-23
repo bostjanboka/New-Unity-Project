@@ -23,4 +23,5 @@ public class TrigerTop : MonoBehaviour {
 	}*/
 
 	// tralalalalala
+	//drugi komentar
 }
