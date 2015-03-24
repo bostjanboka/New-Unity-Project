@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f486c884e22ff884680faec4039b52a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  novaZoga: {fileID: 110522}
+  novaZoga: {fileID: 0}
   visina: 20
   speed: 4
 --- !u!212 &21292156

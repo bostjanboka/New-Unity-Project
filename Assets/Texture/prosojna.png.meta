@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: f5df3a056b7159647adfc111d0adbcf8
-timeCreated: 1426725196
+guid: e03aafca15759fd4cafea32c2cd69a3a
+timeCreated: 1427237128
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName: {}
@@ -30,7 +30,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: 16
+    aniso: -1
     mipBias: -1
     wrapMode: 1
   nPOTScale: 0
@@ -46,11 +46,7 @@ TextureImporter:
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
   textureType: 8
-  buildTargetSettings:
-  - buildTarget: WP8
-    maxTextureSize: 2048
-    textureFormat: -1
-    compressionQuality: 50
+  buildTargetSettings: []
   spriteSheet:
     sprites: []
   spritePackingTag: 

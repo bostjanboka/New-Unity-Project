@@ -8,6 +8,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public GameObject spirala;
 	public GameObject srca;
+
+	GameObject canvas;
 	public int hp;
 
 	public float speed;
@@ -26,6 +28,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	void Start () {
 		//junak = GameObject.("junak1");
+		canvas = GameObject.Find ("Canvas");
+		canvas.SetActive (false);
 		speed = 2;
 		count = 1;
 		pozicija = transform.position;
@@ -73,7 +77,13 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	}
 	
+	void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag.Equals ("zogice")) {
+			Time.timeScale = 0;
+			canvas.SetActive(true);
 
+		}
+	}
 
 
 
