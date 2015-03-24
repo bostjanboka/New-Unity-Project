@@ -7,6 +7,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	GameObject junak;
 
 	public GameObject spirala;
+	public GameObject srca;
+	public int hp;
 
 	public float speed;
 	float count;
@@ -33,6 +35,11 @@ public class NewBehaviourScript : MonoBehaviour {
 		//electorSprite = Instantiate (tileSelectionMarker, Vector3(0,0, 0), Quaternion.identity);
 		//Instantiate (spirala, new Vector3(3, -6, 0), Quaternion.identity);
 
+		//Instantiate (srca, new Vector3(0.3f, (Screen.height)/50, 0), Quaternion.identity);
+		Debug.Log ("res "+Screen.currentResolution.height);
+		Debug.Log ("hei "+Screen.height);
+		Debug.Log ("dpi "+Screen.dpi);
+
 	}
 	
 	// Update is called once per frame
@@ -58,7 +65,7 @@ public class NewBehaviourScript : MonoBehaviour {
 				Debug.Log("zadetek strel");
 				if(steviloSpiral == 0)
 				{
-					Instantiate (spirala, new Vector3(transform.position.x, -6, 0), Quaternion.identity);
+					Instantiate (spirala, new Vector3(transform.position.x, -6, 2), Quaternion.identity);
 					steviloSpiral++;
 				}
 			}
