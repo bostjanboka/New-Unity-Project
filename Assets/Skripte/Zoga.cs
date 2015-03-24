@@ -33,7 +33,7 @@ public class Zoga : MonoBehaviour {
 			rb.velocity = new Vector3(0,visina);
 
 		}
-		if (other.gameObject.name.Equals ("Cube") || other.gameObject.name.Equals ("Cube 1")) {
+		if (other.gameObject.name.Equals ("Cube") || other.gameObject.name.Equals ("Cube 1") || other.gameObject.name.Equals("steber")) {
 			speed *= -1;
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
