@@ -39,16 +39,18 @@ public class Zoga : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("spirala")) {
 
 
-			inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-			rb = inst.GetComponent<Rigidbody2D>();
-			rb.velocity = new Vector3(0,10);
+			if(novaZoga){
+				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
+				rb = inst.GetComponent<Rigidbody2D>();
+				rb.velocity = new Vector3(0,10);
 
 
-			inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-			rb = inst.GetComponent<Rigidbody2D>();
-			rb.velocity = new Vector3(0,10);
-			zogaSkripta = inst.GetComponent<Zoga>();
-			zogaSkripta.speed *= -1;
+				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
+				rb = inst.GetComponent<Rigidbody2D>();
+				rb.velocity = new Vector3(0,10);
+				zogaSkripta = inst.GetComponent<Zoga>();
+				zogaSkripta.speed *= -1;
+			}
 
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();
 			junakSkripta.steviloSpiral--;
