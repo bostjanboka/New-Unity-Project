@@ -5,7 +5,8 @@ public class ZmagaLevelaSkripta : MonoBehaviour {
 
 	// Use this for initialization
 	public string naloziLevel;
-	
+	public GameObject zmagal;
+	InputNavigacija navSkripta;
 
 	bool triggered = false;
 	int stevilo = 0;
@@ -13,7 +14,7 @@ public class ZmagaLevelaSkripta : MonoBehaviour {
 	void Start () {
 		
 		time = Time.time;
-
+		navSkripta = zmagal.GetComponent<InputNavigacija> ();
 	}
 	
 	// Update is called once per frame
@@ -23,11 +24,8 @@ public class ZmagaLevelaSkripta : MonoBehaviour {
 			Debug.Log (stevilo);
 			time = Time.time;
 		} else if(Time.time - time > 0.2f){
-			if(naloziLevel != null){
-				Debug.Log("else zmaga levela"+stevilo);
-				Application.LoadLevel(naloziLevel);
-			}
-			//Destroy(gameObject);
+			Time.timeScale=0;
+			zmagal.SetActive(true);
 		}
 		stevilo = 0;
 		triggered = false;
