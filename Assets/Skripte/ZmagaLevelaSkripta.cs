@@ -43,7 +43,7 @@ public class ZmagaLevelaSkripta : MonoBehaviour {
 			triggered = true;
 			stevilo++;
 		}
-		
+
 		// put other enter trigger logic here
 	}
 }

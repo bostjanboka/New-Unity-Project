@@ -21,4 +21,8 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		Application.LoadLevel ("level10");
 	}
+
+	public void highScoreButton(){
+		Application.LoadLevel ("HighScoreScena");
+	}
 }

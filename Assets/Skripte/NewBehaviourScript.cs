@@ -79,6 +79,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag.Equals ("zogice")) {
+			HighScoreManager._instance.SaveHighScore("boka",35);
 			Time.timeScale = 0;
 			zgubil.SetActive (true);
 		}
