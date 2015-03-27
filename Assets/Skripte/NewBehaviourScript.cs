@@ -83,6 +83,11 @@ public class NewBehaviourScript : MonoBehaviour {
 			Time.timeScale = 0;
 			zgubil.SetActive (true);
 		}
+		if (other.gameObject.tag.Equals ("zeleji")) {
+			HighScoreManager._instance.SaveHighScore("boka",35);
+			Time.timeScale = 0;
+			zgubil.SetActive (true);
+		}
 	}
 
 

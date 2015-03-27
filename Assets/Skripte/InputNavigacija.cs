@@ -46,7 +46,8 @@ public class InputNavigacija : MonoBehaviour {
 
 	public void resetLevel(){
 		Time.timeScale = 1;
-		Application.LoadLevel ("level10"); 
+		Application.LoadLevel (Application.loadedLevel); 
+
 
 	}
 
