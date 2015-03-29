@@ -11,6 +11,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	public GameObject srca;
 	public GameObject zgubil;
 
+	public bool omogociPremikanje = true;
+
 	public int hp;
 
 	public float speed;
@@ -49,35 +51,33 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (omogociPremikanje) {
+			foreach (Touch touch in Input.touches) {
 
-		foreach (Touch touch in Input.touches) {
-
-			Vector2 mousePosition = Camera.main.ScreenToWorldPoint(touch.position);
-			Collider2D hitCollider = Physics2D.OverlapPoint(mousePosition);
-			Debug.Log("mouse pos "+mousePosition.x+" y "+mousePosition.y+" ");
-			if(hitCollider.transform.name.Equals("gumb_levo")){
-				Debug.Log("zadetek");
-				Vector2 move = new Vector2(-1*speed,0);
-				move *= Time.deltaTime;
-				transform.Translate(move);
-			}
-			if(hitCollider.transform.name.Equals("gumb_desno")){
-				Vector2 move = new Vector2(speed,0);
-				move *= Time.deltaTime;
-				transform.Translate(move);
-			}
-			if(hitCollider.transform.name.Equals("gumb_strel")){
-				Debug.Log("zadetek strel");
-				if(steviloSpiral == 0)
-				{
-					if(powerUpSpirala)
-					{
-						Instantiate (powerUpSpirala, new Vector3(transform.position.x, -6, 2), Quaternion.identity);
+				Vector2 mousePosition = Camera.main.ScreenToWorldPoint (touch.position);
+				Collider2D hitCollider = Physics2D.OverlapPoint (mousePosition);
+				Debug.Log ("mouse pos " + mousePosition.x + " y " + mousePosition.y + " ");
+				if (hitCollider.transform.name.Equals ("gumb_levo")) {
+					Debug.Log ("zadetek");
+					Vector2 move = new Vector2 (-1 * speed, 0);
+					move *= Time.deltaTime;
+					transform.Translate (move);
+				}
+				if (hitCollider.transform.name.Equals ("gumb_desno")) {
+					Vector2 move = new Vector2 (speed, 0);
+					move *= Time.deltaTime;
+					transform.Translate (move);
+				}
+				if (hitCollider.transform.name.Equals ("gumb_strel")) {
+					Debug.Log ("zadetek strel");
+					if (steviloSpiral == 0) {
+						if (powerUpSpirala) {
+							Instantiate (powerUpSpirala, new Vector3 (transform.position.x, -6, 2), Quaternion.identity);
+						} else {
+							Instantiate (spirala, new Vector3 (transform.position.x, -6, 2), Quaternion.identity);
+						}
+						steviloSpiral++;
 					}
-					else{
-						Instantiate (spirala, new Vector3(transform.position.x, -6, 2), Quaternion.identity);
-					}
-					steviloSpiral++;
 				}
 			}
 		}

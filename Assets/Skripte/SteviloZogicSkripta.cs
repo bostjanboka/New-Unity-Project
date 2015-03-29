@@ -5,14 +5,18 @@ public class SteviloZogicSkripta : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject vrata;
+	public bool prazenProstor;
 
 	VrataSkripta vrataSkripta;
 	bool triggered = false;
 	int stevilo = 0;
 	float time;
+	bool trignil;
 	void Start () {
 
 		time = Time.time;
+		prazenProstor = false;
+		trignil = false;
 		if (vrata) {
 			vrataSkripta = vrata.GetComponent<VrataSkripta> ();
 		}
@@ -24,11 +28,14 @@ public class SteviloZogicSkripta : MonoBehaviour {
 			// put exit trigger logic here
 			Debug.Log (stevilo);
 			time = Time.time;
-		} else if(Time.time - time > 0.5f){
+			prazenProstor=false;
+			trignil=true;
+		} else if(Time.time - time > 0.5f && trignil == true){
 			if(vrata){
 				Debug.Log("else"+stevilo);
 				vrataSkripta.premakni=true;
 			}
+			prazenProstor=true;
 			Destroy(gameObject);
 		}
 		stevilo = 0;

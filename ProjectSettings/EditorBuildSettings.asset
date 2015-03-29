@@ -17,3 +17,5 @@ EditorBuildSettings:
     path: Assets/Leveli/level9.unity
   - enabled: 1
     path: Assets/Leveli/level8.unity
+  - enabled: 1
+    path: Assets/Leveli/level7.unity
