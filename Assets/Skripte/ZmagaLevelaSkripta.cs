@@ -47,6 +47,10 @@ public class ZmagaLevelaSkripta : MonoBehaviour {
 			triggered = true;
 			stevilo++;
 		}
+		if (other.gameObject.tag.Equals ("jaw")) {
+			triggered = true;
+			stevilo++;
+		}
 
 		// put other enter trigger logic here
 	}

@@ -6,6 +6,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	// Use this for initialization
 	GameObject junak;
 
+	public GameObject powerUpSpirala;
 	public GameObject spirala;
 	public GameObject srca;
 	public GameObject zgubil;
@@ -69,7 +70,13 @@ public class NewBehaviourScript : MonoBehaviour {
 				Debug.Log("zadetek strel");
 				if(steviloSpiral == 0)
 				{
-					Instantiate (spirala, new Vector3(transform.position.x, -6, 2), Quaternion.identity);
+					if(powerUpSpirala)
+					{
+						Instantiate (powerUpSpirala, new Vector3(transform.position.x, -6, 2), Quaternion.identity);
+					}
+					else{
+						Instantiate (spirala, new Vector3(transform.position.x, -6, 2), Quaternion.identity);
+					}
 					steviloSpiral++;
 				}
 			}
@@ -84,6 +91,11 @@ public class NewBehaviourScript : MonoBehaviour {
 			zgubil.SetActive (true);
 		}
 		if (other.gameObject.tag.Equals ("zeleji")) {
+			HighScoreManager._instance.SaveHighScore("boka",35);
+			Time.timeScale = 0;
+			zgubil.SetActive (true);
+		}
+		if (other.gameObject.tag.Equals ("jaw")) {
 			HighScoreManager._instance.SaveHighScore("boka",35);
 			Time.timeScale = 0;
 			zgubil.SetActive (true);

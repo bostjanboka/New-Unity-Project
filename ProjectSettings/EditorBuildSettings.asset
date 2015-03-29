@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/HighScoreScena.unity
   - enabled: 1
     path: Assets/Leveli/level9.unity
+  - enabled: 1
+    path: Assets/Leveli/level8.unity

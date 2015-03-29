@@ -5,17 +5,19 @@ public class SpiralaScript : MonoBehaviour {
 
 	// Use this for initialization
 	public float speed = 5;
+	public string vrsta;
 	GameObject junak;
 	NewBehaviourScript skripta;
+
+
 	void Start () {
-	
+		junak = GameObject.Find ("junak1");
 	}
 
 	// Update is called once per frame
 	void Update () {
 		Vector2 move = new Vector2(0,speed)*Time.deltaTime;
 		transform.Translate(move);
-		junak = GameObject.Find ("junak1");
 	}
 
 	/*void OnCollisionEnter2D (Collision2D col)

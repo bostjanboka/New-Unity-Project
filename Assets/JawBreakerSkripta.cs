@@ -1,29 +1,28 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZeleSkripta : MonoBehaviour {
+public class JawBreakerSkripta : MonoBehaviour {
 
 	// Use this for initialization komentar  hhh
-	public GameObject noviZele;
+	public GameObject noviJaw;
 	public int visina;
 	public int speed;
-	public int korak;
+
 	
-	float stopinje;
-	public float skala;
+
 	Rigidbody2D rb;
-	ZeleSkripta zeleSkripta;
+	JawBreakerSkripta jawBreakerSkripta;
 	NewBehaviourScript junakSkripta;
+	SpiralaScript spirala;
 	GameObject inst;
 	GameObject junak;
-
+	
 	public float timeNastanka;
 	void Start () {
 		
 		rb = GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
-		stopinje = 0;
-		skala = transform.localScale.x;
+
 		timeNastanka = Time.time;
 	}
 	
@@ -32,8 +31,7 @@ public class ZeleSkripta : MonoBehaviour {
 		Vector2 move = new Vector2(speed,0);
 		move *= Time.deltaTime;
 		transform.Translate(move);
-		transform.localScale = new Vector3 (skala, skala*(1 - Mathf.Sin (stopinje * 0.0174532925f) * 0.1f), 1);
-		stopinje = (stopinje + korak)%360;
+
 		//stopinje *= Time.deltaTime;
 	}
 	
@@ -47,27 +45,10 @@ public class ZeleSkripta : MonoBehaviour {
 			speed *= -1;
 		}
 
-		if (other.gameObject.tag.Equals ("zeleji")) {
-			Debug.Log("zeleji");
-			zeleSkripta = other.gameObject.GetComponent<ZeleSkripta>();
-			if(Time.time-timeNastanka > 0.5f && Time.time-zeleSkripta.timeNastanka > 0.5f)
-			{
-				Debug.Log("zeleji izbris");
-				if(skala > zeleSkripta.skala){
-					skala += zeleSkripta.skala;
-					skala = other.gameObject.transform.localScale.x + transform.localScale.x;
-					Destroy(other.gameObject);
-				}else{
-					zeleSkripta.skala = other.gameObject.transform.localScale.x + transform.localScale.x;
-					Destroy(gameObject);
-				}
-			}
-		}
-
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
-			
-			if(noviZele && skala > 0.070f){
+			rb.velocity = new Vector3(0,5);
+			/*if(noviZele && skala > 0.070f){
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
@@ -83,13 +64,18 @@ public class ZeleSkripta : MonoBehaviour {
 				zeleSkripta = inst.GetComponent<ZeleSkripta>();
 				zeleSkripta.skala *= 0.5f;
 				zeleSkripta.speed *= -1;
-			}
-			
+			}*/
+			spirala = other.gameObject.GetComponent<SpiralaScript>();
+
+
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();
 			junakSkripta.steviloSpiral--;
 			
 			Destroy(other.gameObject);
-			Destroy(gameObject);
+			if(spirala.vrsta.Equals("jaw")){
+				Destroy(gameObject);
+			}
+			//
 		}
 		
 	}
