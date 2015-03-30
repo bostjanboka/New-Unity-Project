@@ -29,6 +29,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	bool pressedD = false;
 	bool pressedL = false;
 	bool pressedS = false;
+	public bool ustreli = false;
 	InputNavigacija navSkripta;
 	//GUIContent btn;
 	int presses = 0;
@@ -44,7 +45,8 @@ public class NewBehaviourScript : MonoBehaviour {
 		pozicija = transform.position;
 		rigid = GetComponent<Rigidbody2D> ();
 		steviloSpiral = 0;
-		anim = GetComponent<Animator> ();
+		Transform animacija = transform.Find ("animacija");
+		anim = animacija.gameObject.GetComponent<Animator> ();
 		//btn = new GUIContent("Button");
 		//electorSprite = Instantiate (tileSelectionMarker, Vector3(0,0, 0), Quaternion.identity);
 		//Instantiate (spirala, new Vector3(3, -6, 0), Quaternion.identity);
@@ -79,7 +81,7 @@ public class NewBehaviourScript : MonoBehaviour {
 					move *= Time.deltaTime;
 					transform.Translate (move);
 				}
-				if (hitCollider.transform.name.Equals ("gumb_strel")) {
+				if (hitCollider.transform.name.Equals ("gumb_strel") || ustreli) {
 					Debug.Log ("zadetek strel");
 					if (steviloSpiral == 0) {
 						if (powerUpSpirala) {
@@ -88,15 +90,32 @@ public class NewBehaviourScript : MonoBehaviour {
 							Instantiate (spirala, new Vector3 (transform.position.x, -6, 2), Quaternion.identity);
 						}
 						steviloSpiral++;
+
 					}
+					ustreli=false;
 				}
+			}
+			if ( ustreli) {
+				Debug.Log ("zadetek strel");
+				if (steviloSpiral == 0) {
+					if (powerUpSpirala) {
+						Instantiate (powerUpSpirala, new Vector3 (transform.parent.transform.position.x, -6, 2), Quaternion.identity);
+					} else {
+						Instantiate (spirala, new Vector3 (transform.position.x, -6, 2), Quaternion.identity);
+					}
+					steviloSpiral++;
+					
+				}
+				ustreli=false;
 			}
 		} else {
 			if (transform.position.x < xTocka) {
 				stojimNaMestuX=false;
 				transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
+				anim.SetFloat ("hitrost", 1);
 			} else {
 				stojimNaMestuX = true;
+				anim.SetFloat ("hitrost", 0);
 			}
 		}
 
