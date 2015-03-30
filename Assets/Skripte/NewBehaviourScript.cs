@@ -3,6 +3,10 @@ using System.Collections;
 
 public class NewBehaviourScript : MonoBehaviour {
 
+	//animacija
+
+	Animator anim;
+
 	// Use this for initialization
 	GameObject junak;
 
@@ -38,6 +42,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		pozicija = transform.position;
 		rigid = GetComponent<Rigidbody2D> ();
 		steviloSpiral = 0;
+		anim = GetComponent<Animator> ();
 		//btn = new GUIContent("Button");
 		//electorSprite = Instantiate (tileSelectionMarker, Vector3(0,0, 0), Quaternion.identity);
 		//Instantiate (spirala, new Vector3(3, -6, 0), Quaternion.identity);
@@ -51,20 +56,24 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
 		if (omogociPremikanje) {
+
+			anim.SetFloat ("hitrost", 0);
 			foreach (Touch touch in Input.touches) {
 
 				Vector2 mousePosition = Camera.main.ScreenToWorldPoint (touch.position);
 				Collider2D hitCollider = Physics2D.OverlapPoint (mousePosition);
 				Debug.Log ("mouse pos " + mousePosition.x + " y " + mousePosition.y + " ");
 				if (hitCollider.transform.name.Equals ("gumb_levo")) {
-					Debug.Log ("zadetek");
 					Vector2 move = new Vector2 (-1 * speed, 0);
+					anim.SetFloat ("hitrost", -1);
 					move *= Time.deltaTime;
 					transform.Translate (move);
 				}
-				if (hitCollider.transform.name.Equals ("gumb_desno")) {
+				if  (hitCollider.transform.name.Equals ("gumb_desno")) {
 					Vector2 move = new Vector2 (speed, 0);
+					anim.SetFloat ("hitrost", 1);
 					move *= Time.deltaTime;
 					transform.Translate (move);
 				}
