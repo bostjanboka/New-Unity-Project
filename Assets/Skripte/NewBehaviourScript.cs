@@ -16,10 +16,12 @@ public class NewBehaviourScript : MonoBehaviour {
 	public GameObject zgubil;
 
 	public bool omogociPremikanje = true;
+	public bool stojimNaMestuX;
 
 	public int hp;
 
 	public float speed;
+	public float xTocka;
 	float count;
 	Vector3 pozicija;
 	Rigidbody2D rigid;
@@ -88,6 +90,13 @@ public class NewBehaviourScript : MonoBehaviour {
 						steviloSpiral++;
 					}
 				}
+			}
+		} else {
+			if (transform.position.x < xTocka) {
+				stojimNaMestuX=false;
+				transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
+			} else {
+				stojimNaMestuX = true;
 			}
 		}
 
