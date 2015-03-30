@@ -7,6 +7,7 @@ public class Zoga : MonoBehaviour {
 	public GameObject novaZoga;
 	public int visina;
 	public int speed;
+	public int smer=1;
 
 
 	Rigidbody2D rb;
@@ -22,7 +23,7 @@ public class Zoga : MonoBehaviour {
 	
 	// Update is called once per frame hhhhh
 	void Update () {
-		Vector2 move = new Vector2(speed,0);
+		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
 		transform.Translate(move);
 	}
@@ -33,8 +34,12 @@ public class Zoga : MonoBehaviour {
 			rb.velocity = new Vector3(0,visina);
 
 		}
-		if (other.gameObject.name.Equals ("Cube") || other.gameObject.name.Equals ("Cube 1") || other.gameObject.name.Equals("steber")) {
-			speed *= -1;
+		if (other.gameObject.name.Equals ("Cube")) {
+			smer = 1;
+		} else if (other.gameObject.name.Equals ("Cube 1")) {
+			smer = -1;
+		} else if (other.gameObject.name.Equals ("steber")) {
+			smer *= -1;
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
 
@@ -43,13 +48,15 @@ public class Zoga : MonoBehaviour {
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				rb = inst.GetComponent<Rigidbody2D>();
 				rb.velocity = new Vector3(0,10);
+				zogaSkripta = inst.GetComponent<Zoga>();
+				zogaSkripta.smer = 1;
 
 
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				rb = inst.GetComponent<Rigidbody2D>();
 				rb.velocity = new Vector3(0,10);
 				zogaSkripta = inst.GetComponent<Zoga>();
-				zogaSkripta.speed *= -1;
+				zogaSkripta.smer = -1;
 			}
 
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();
