@@ -470,8 +470,10 @@ MonoBehaviour:
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
   zgubil: {fileID: 119800}
   omogociPremikanje: 1
+  stojimNaMestuX: 0
   hp: 3
   speed: 6
+  xTocka: 0
   steviloSpiral: 0
 --- !u!114 &11401336
 MonoBehaviour:
@@ -1123,7 +1125,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300010, guid: a0ec1c91360f3cc4693fed4f2a2fdac0, type: 3}
+  m_Sprite: {fileID: 21300010, guid: 57e201a5c117f9b4c8a7f77bdbd6d101, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!222 &22203598
 CanvasRenderer:
