@@ -5,7 +5,7 @@ using System.Collections;
 public class Meni_Gumbi : MonoBehaviour {
 
 	// Use this for initialization
-
+	public GameObject loadingScreen;
 	void Start () {
 
 	}
@@ -18,11 +18,22 @@ public class Meni_Gumbi : MonoBehaviour {
 	}
 
 	public void newGameButton(){
-
-		Application.LoadLevel ("level6");
+		loadingScreen.GetComponent<LoadingScreen> ().show ();
+		Application.LoadLevel ("level1");
 	}
 
 	public void highScoreButton(){
 		Application.LoadLevel ("HighScoreScena");
 	}
+
+	IEnumerator Wait(float duration)
+	{
+		//This is a coroutine
+		Debug.Log("Start Wait() function. The time is: "+Time.time);
+		Debug.Log( "Float duration = "+duration);
+		yield return new WaitForSeconds(duration);   //Wait
+		Debug.Log("End Wait() function and the time is: "+Time.time);
+		Time.timeScale = 1;
+
+	} 
 }
