@@ -19,7 +19,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public void newGameButton(){
 		loadingScreen.GetComponent<LoadingScreen> ().show ();
-		Application.LoadLevel ("level1");
+		Application.LoadLevel ("level2");
 	}
 
 	public void highScoreButton(){

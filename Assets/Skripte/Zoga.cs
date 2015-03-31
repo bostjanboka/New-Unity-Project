@@ -31,14 +31,17 @@ public class Zoga : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("noter sem zoga");
 		if (other.gameObject.name.Equals ("tla")) {
-			rb.velocity = new Vector3(0,visina);
+			rb.velocity = new Vector3 (0, visina);
 
+		} else if (other.gameObject.tag.Equals ("strop")) {
+			rb.velocity = new Vector3(0,-Mathf.Abs(rb.velocity.y));
 		}
 		if (other.gameObject.name.Equals ("Cube")) {
 			smer = 1;
 		} else if (other.gameObject.name.Equals ("Cube 1")) {
 			smer = -1;
-		} else if (other.gameObject.name.Equals ("steber")) {
+		} else if (other.gameObject.tag.Equals ("ovira")) {
+			//rb.velocity = new Vector3(0,-rb.velocity.y*0.5f);
 			smer *= -1;
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {

@@ -30,7 +30,7 @@ public class SpiralaScript : MonoBehaviour {
 	}*/
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("noter sem spirala");
-		if (other.gameObject.name.Equals ("Cube 2")) {
+		if (other.gameObject.tag.Equals ("strop")) {
 			skripta = junak.GetComponent<NewBehaviourScript>();
 			skripta.steviloSpiral--;
 			Destroy(gameObject);
