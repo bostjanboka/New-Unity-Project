@@ -1182,7 +1182,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 416500, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.52999973
+      value: -9.02999973
       objectReference: {fileID: 0}
     - target: {fileID: 11424844, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
       propertyPath: ustreli
