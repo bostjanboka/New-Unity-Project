@@ -1,15 +1,15 @@
 ﻿using UnityEngine;
 using System.Collections;
-public class LoadingScreen : MonoBehaviour
-{
+
+public class SplashLoader : MonoBehaviour {
 	public float delayTime=5;
-	
+
 	private float timer;
 
-
-	void Start ()
-	{
+	// Use this for initialization
+	void Start () {
 		timer = delayTime;
+	
 	}
 
 	void Awake()
@@ -38,17 +38,15 @@ public class LoadingScreen : MonoBehaviour
 	{
 		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 	}
-	
-	void Update()
-	{
+
+	void Update () {
 		timer -= Time.deltaTime;
 
 		if (timer > 0)
 			return;
-
 		if(!Application.isLoadingLevel)
 			hide();
 
+	
 	}
-
 }
