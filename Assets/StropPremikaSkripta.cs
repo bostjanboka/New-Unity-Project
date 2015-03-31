@@ -13,10 +13,10 @@ public class StropPremikaSkripta : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (transform.localPosition.y > 0) {
+		if (transform.localPosition.y > -2.2) {
 			smer = -1;
 			Vector3 pos = transform.localPosition;
-			pos.y = 0;
+			pos.y = -2.2f;
 			transform.localPosition = pos;
 		} 
 		if (transform.localPosition.y < visinaY) {
