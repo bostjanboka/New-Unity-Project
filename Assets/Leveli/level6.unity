@@ -453,7 +453,7 @@ Transform:
   - {fileID: 813471409}
   - {fileID: 1842549833}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!1 &557295293
 GameObject:
   m_ObjectHideFlags: 0
@@ -757,7 +757,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 493080, guid: a4651ae97729de14d8366b2092ba2512, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.01999998
+      value: 1.06400001
       objectReference: {fileID: 0}
     - target: {fileID: 493080, guid: a4651ae97729de14d8366b2092ba2512, type: 2}
       propertyPath: m_LocalPosition.z
@@ -781,7 +781,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 493080, guid: a4651ae97729de14d8366b2092ba2512, type: 2}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 21212558, guid: a4651ae97729de14d8366b2092ba2512, type: 2}
       propertyPath: m_Color.r
@@ -1037,7 +1037,7 @@ Transform:
   - {fileID: 557295295}
   - {fileID: 1913150784}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!114 &1049772639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1187,6 +1187,10 @@ Prefab:
     - target: {fileID: 11424844, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
       propertyPath: ustreli
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 416500, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.6500001
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
