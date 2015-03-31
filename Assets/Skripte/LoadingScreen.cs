@@ -2,26 +2,31 @@
 using System.Collections;
 public class LoadingScreen : MonoBehaviour
 {
-	public float delayTime=5;
+	public float delayTime=1;
 	
 	private float timer;
+
+	bool showed = false;
 
 
 	void Start ()
 	{
-		timer = delayTime;
+		timer = -3;
 	}
 
 	void Awake()
 	{
-		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+		gameObject.GetComponent<Animator> ().enabled = false;
 		DontDestroyOnLoad(gameObject);
 	}
 	public void show()
 	{
-		gameObject.GetComponent<SpriteRenderer> ().enabled = true;
-		//Time.timeScale = .0000001f;
-		//StartCoroutine(Wait(Time.timeScale * 5));
+		showed = true;
+		Debug.Log("show show");
+		timer = 0;
+		gameObject.GetComponent<Animator> ().enabled = true;
+		Time.timeScale = .0000001f;
+		StartCoroutine(Wait(Time.timeScale * delayTime));
 	}
 
 	IEnumerator Wait(float duration)
@@ -32,23 +37,31 @@ public class LoadingScreen : MonoBehaviour
 		yield return new WaitForSeconds(duration);   //Wait
 		Debug.Log("End Wait() function and the time is: "+Time.time);
 		Time.timeScale = 1;
+
 	}
 
 	public void hide()
 	{
+		Debug.Log("IZGINI");
+		gameObject.GetComponent<Animator> ().enabled = false;
 		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 	}
 	
 	void Update()
 	{
-		timer -= Time.deltaTime;
+		/*if (timer >= 0) {
+			timer += Time.deltaTime;
+			Debug.Log("IZGINI pdate" + timer);
+		}
 
-		if (timer > 0)
-			return;
+		if (delayTime < timer) {
+			Debug.Log("konec stetja" + timer);
+		}*/
 
-		if(!Application.isLoadingLevel)
+		if (showed&&Time.timeScale == 1 && !Application.isLoadingLevel) {
+			Debug.Log("IZGINI pdate");
 			hide();
-
+		}
 	}
 
 }
