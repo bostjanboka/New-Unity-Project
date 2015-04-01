@@ -9,7 +9,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	public float speed;
 	public int smer;
 
-	
+	public float rotacija=360;
 
 	public float skala;
 	Rigidbody2D rb;
@@ -32,6 +32,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
 		transform.Translate(move);
+		transform.Rotate (new Vector3(0,0,rotacija*Time.deltaTime));
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
