@@ -123,20 +123,20 @@ public class NewBehaviourScript : MonoBehaviour {
 	
 	void OnTriggerEnter2D(Collider2D other){
 		if (other.gameObject.tag.Equals ("zogice")) {
-			HighScoreManager._instance.SaveHighScore("boka",35);
-			Time.timeScale = 0;
-			zgubil.SetActive (true);
+			zgubilLevel();
 		}
-		if (other.gameObject.tag.Equals ("zeleji")) {
-			HighScoreManager._instance.SaveHighScore("boka",35);
-			Time.timeScale = 0;
-			zgubil.SetActive (true);
+		else if (other.gameObject.tag.Equals ("zeleji")) {
+			zgubilLevel();
 		}
-		if (other.gameObject.tag.Equals ("jaw")) {
-			HighScoreManager._instance.SaveHighScore("boka",35);
-			Time.timeScale = 0;
-			zgubil.SetActive (true);
+		else if (other.gameObject.tag.Equals ("jaw")) {
+			zgubilLevel();
 		}
+	}
+
+	public void zgubilLevel(){
+		HighScoreManager._instance.SaveHighScore("boka",35);
+		Time.timeScale = 0;
+		zgubil.SetActive (true);
 	}
 
 

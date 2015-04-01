@@ -7,8 +7,10 @@ public class StropPremikaSkripta : MonoBehaviour {
 	public float speed;
 	public int smer;
 	public float visinaY;
+
+
 	void Start () {
-	
+
 	}
 	
 	// Update is called once per frame
