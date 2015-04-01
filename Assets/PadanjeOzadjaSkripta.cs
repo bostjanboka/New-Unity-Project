@@ -5,6 +5,8 @@ public class PadanjeOzadjaSkripta : MonoBehaviour {
 
 	// Use this for initialization
 	public float padanje;
+	public float speed;
+
 	GameObject junak;
 	void Start () {
 		junak = GameObject.Find("junak1");

@@ -9,7 +9,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	public float speed;
 	public int smer;
 
-	public float rotacija=360;
+	public float rotacija=90;
 
 	public float skala;
 	Rigidbody2D rb;
@@ -17,14 +17,15 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	NewBehaviourScript junakSkripta;
 	GameObject inst;
 	GameObject junak;
-	
+
+
 
 	void Start () {
 		
 		rb = GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
 		skala = transform.localScale.x;
-		//smer = 1;
+		smer = 1;
 	}
 	
 	// Update is called once per frame hhhhh
@@ -32,7 +33,10 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
 		transform.parent.gameObject.transform.Translate(move);
-		transform.Rotate (new Vector3(0,0,rotacija*Time.deltaTime));
+
+		transform.Rotate (new Vector3(0,0,Time.deltaTime * -rotacija * smer));
+
+
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
