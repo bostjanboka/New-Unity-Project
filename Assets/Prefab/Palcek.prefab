@@ -12,6 +12,7 @@ GameObject:
   - 61: {fileID: 6137930}
   - 114: {fileID: 11413076}
   - 212: {fileID: 21212558}
+  - 95: {fileID: 9553332}
   m_Layer: 0
   m_Name: Palcek
   m_TagString: Untagged
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 167682}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.3199997, y: .970000029, z: 1}
+  m_LocalPosition: {x: 3.83999991, y: .374000013, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,9 +57,26 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: .289999992, y: .569999993}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: .460000008, y: 1}
+--- !u!95 &9553332
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 167682}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fa9b16116e09182499beb29a687cf28d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &11413076
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,7 +116,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 7
-  m_Sprite: {fileID: 21300000, guid: 48b26c42317fe0c4fbb1296bb1ecd188, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0c7b7c0babf11124680209ec7b5c3546, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
