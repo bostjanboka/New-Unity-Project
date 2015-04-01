@@ -31,7 +31,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	void Update () {
 		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
-		transform.Translate(move);
+		transform.parent.gameObject.transform.Translate(move);
 		transform.Rotate (new Vector3(0,0,rotacija*Time.deltaTime));
 	}
 	
