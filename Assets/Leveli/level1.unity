@@ -154,7 +154,7 @@ Prefab:
         type: 3}
     - target: {fileID: 5825132, guid: 21273cab3c0e2e740a0657253898f164, type: 2}
       propertyPath: m_Radius
-      value: 1.45975494
+      value: 1.70389748
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 21245410, guid: 21273cab3c0e2e740a0657253898f164, type: 2}
@@ -1453,7 +1453,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 57d5d8a493b885a40a6bd115f505b86d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d15f54e3d8392fb45b9a085abc320bac, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1777743050
 Transform:
