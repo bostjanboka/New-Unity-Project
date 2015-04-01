@@ -39,6 +39,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	void Start () {
 		//junak = GameObject.("junak1");
+		stojimNaMestuX = false;
 		navSkripta = zgubil.GetComponent<InputNavigacija> ();
 		speed = 2;
 		count = 1;
@@ -109,7 +110,7 @@ public class NewBehaviourScript : MonoBehaviour {
 				ustreli=false;
 			}
 		} else {
-			if (transform.position.x < xTocka) {
+			if (transform.localPosition.x < xTocka) {
 				stojimNaMestuX=false;
 				transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 				anim.SetFloat ("hitrost", 1);

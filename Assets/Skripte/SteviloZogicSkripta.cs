@@ -53,6 +53,12 @@ public class SteviloZogicSkripta : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("zogice")) {
 			triggered = true;
 			stevilo++;
+		} else if (other.gameObject.tag.Equals ("zelejie")) {
+			triggered = true;
+			stevilo++;
+		} else if (other.gameObject.tag.Equals ("jaw")) {
+			triggered = true;
+			stevilo++;
 		}
 
 		// put other enter trigger logic here
