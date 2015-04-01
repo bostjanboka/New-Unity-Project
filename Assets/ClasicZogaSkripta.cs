@@ -1,31 +1,29 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ZeleSkripta : MonoBehaviour {
+public class ClasicZogaSkripta : MonoBehaviour {
 
 	// Use this for initialization komentar  hhh
-	public GameObject noviZele;
-	public int visina;
+	public GameObject novaZoga;
+	public float visina;
 	public float speed;
 	public int smer;
-	public int korak;
+
 	
-	float stopinje;
+
 	public float skala;
 	Rigidbody2D rb;
-	ZeleSkripta zeleSkripta;
+	ClasicZogaSkripta clasicSkripta;
 	NewBehaviourScript junakSkripta;
 	GameObject inst;
 	GameObject junak;
+	
 
-	public float timeNastanka;
 	void Start () {
 		
 		rb = GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
-		stopinje = 0;
 		skala = transform.localScale.x;
-		timeNastanka = Time.time;
 		//smer = 1;
 	}
 	
@@ -34,9 +32,6 @@ public class ZeleSkripta : MonoBehaviour {
 		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
 		transform.Translate(move);
-		transform.localScale = new Vector3 (skala, skala*(1 - Mathf.Sin (stopinje * 0.0174532925f) * 0.1f), 1);
-		stopinje = (stopinje + korak)%360;
-		//stopinje *= Time.deltaTime;
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
@@ -55,43 +50,28 @@ public class ZeleSkripta : MonoBehaviour {
 			//rb.velocity = new Vector3(0,-rb.velocity.y*0.5f);
 			smer *= -1;
 		}
-
-		if (other.gameObject.tag.Equals ("zeleji")) {
-			Debug.Log("zeleji");
-			zeleSkripta = other.gameObject.GetComponent<ZeleSkripta>();
-			if(Time.time-timeNastanka > 0.5f && Time.time-zeleSkripta.timeNastanka > 0.5f)
-			{
-				Debug.Log("zeleji izbris");
-				if(skala > zeleSkripta.skala){
-					skala += zeleSkripta.skala;
-					skala = other.gameObject.transform.localScale.x + transform.localScale.x;
-					Destroy(other.gameObject);
-				}else{
-					zeleSkripta.skala = other.gameObject.transform.localScale.x + transform.localScale.x;
-					Destroy(gameObject);
-				}
-			}
-		}
-
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
 			
-			if(noviZele && skala > 0.070f){
-				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
+			if(novaZoga && skala > 0.50f){
+				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
-				zeleSkripta = inst.GetComponent<ZeleSkripta>();
-				zeleSkripta.skala *= 0.5f;
+				clasicSkripta = inst.GetComponent<ClasicZogaSkripta>();
+				clasicSkripta.skala *= 0.5f;
+				clasicSkripta.visina*=0.9f;
 				rb.velocity = new Vector3(0,5);
-				zeleSkripta.smer = 1;
+				clasicSkripta.smer = 1;
 				
-				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
+				
+				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
 				rb.velocity = new Vector3(0,5);
-				zeleSkripta = inst.GetComponent<ZeleSkripta>();
-				zeleSkripta.skala *= 0.5f;
-				zeleSkripta.smer = -1;
+				clasicSkripta = inst.GetComponent<ClasicZogaSkripta>();
+				clasicSkripta.skala *= 0.5f;
+				clasicSkripta.smer = -1;
+				clasicSkripta.visina*=0.9f;
 			}
 			
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();
