@@ -53,7 +53,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
 			
-			if(novaZoga && skala > 0.50f){
+			if(novaZoga && skala > 1.00f){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
