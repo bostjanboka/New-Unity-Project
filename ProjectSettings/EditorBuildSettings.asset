@@ -11,19 +11,19 @@ EditorBuildSettings:
     path: Assets/HighScoreScena.unity
   - enabled: 1
     path: Assets/Leveli/level1.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Leveli/level2.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Leveli/level3.unity
-  - enabled: 1
-    path: Assets/Leveli/level6.unity
-  - enabled: 1
-    path: Assets/Leveli/level7.unity
-  - enabled: 1
-    path: Assets/Leveli/level8.unity
-  - enabled: 1
-    path: Assets/Leveli/level9.unity
-  - enabled: 1
-    path: Assets/Leveli/level10.unity
-  - enabled: 1
+  - enabled: 0
     path: Assets/Leveli/level4.unity
+  - enabled: 0
+    path: Assets/Leveli/level6.unity
+  - enabled: 0
+    path: Assets/Leveli/level7.unity
+  - enabled: 0
+    path: Assets/Leveli/level8.unity
+  - enabled: 0
+    path: Assets/Leveli/level9.unity
+  - enabled: 0
+    path: Assets/Leveli/level10.unity
