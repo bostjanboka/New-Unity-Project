@@ -85,55 +85,41 @@ public class BossKrogla : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
 			if(indexBarve <= 6){
-				if(novaZoga && skala > 0.15f){
-					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-					inst.transform.localScale = inst.transform.localScale * 1.4f;
-					rb = inst.GetComponent<Rigidbody2D>();
-					clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
-					clasicSkripta.skala *= 1.5f;
-					clasicSkripta.visina*=1.1f;
-					clasicSkripta.speed*=1.5f;
-					rb.velocity = new Vector3(0,8);
-					clasicSkripta.smer = 1;
+				if(novaZoga && skala < 0.4f){
+					gameObject.transform.localScale *= 2;
+					skala *= 2;
 
-					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-					inst.transform.localScale = inst.transform.localScale * 1.4f;
-					rb = inst.GetComponent<Rigidbody2D>();
-					rb.velocity = new Vector3(0,8);
-					clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
-					clasicSkripta.skala *= 1.5f;
-					clasicSkripta.smer = -1;
-					clasicSkripta.visina*=1.1f;
-					clasicSkripta.speed*=1.5f;
 				}
+				rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);
 			}else{
-				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
-				rb = inst.GetComponent<Rigidbody2D>();
-				clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
-				clasicSkripta.skala *= 0.5f;
-				clasicSkripta.visina*=0.9f;
-				rb.velocity = new Vector3(0,5);
-				clasicSkripta.smer = 1;
-				clasicSkripta.speed*=0.75f;
-				
-				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
-				rb = inst.GetComponent<Rigidbody2D>();
-				rb.velocity = new Vector3(0,5);
-				clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
-				clasicSkripta.skala *= 0.5f;
-				clasicSkripta.smer = -1;
-				clasicSkripta.visina*=0.9f;
-				clasicSkripta.speed*=0.75f;
+				if(novaZoga && skala > 0.06f){
+					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
+					inst.transform.localScale = inst.transform.localScale * 0.5f;
+					rb = inst.GetComponent<Rigidbody2D>();
+					clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
+					clasicSkripta.skala *= 0.5f;
+					clasicSkripta.visina*=0.9f;
+					rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);
+					clasicSkripta.smer = 1;
+					
+					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
+					inst.transform.localScale = inst.transform.localScale * 0.5f;
+					rb = inst.GetComponent<Rigidbody2D>();
+					rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);
+					clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
+					clasicSkripta.skala *= 0.5f;
+					clasicSkripta.smer = -1;
+					clasicSkripta.visina*=0.9f;
+				}
+				GameObject parent = gameObject.transform.parent.gameObject;
+				Destroy(parent);
 			}
 			
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();
 			junakSkripta.steviloSpiral--;
 			
 			Destroy(other.gameObject);
-			GameObject parent = gameObject.transform.parent.gameObject;
-			Destroy(parent);
+
 		}
 		
 	}
