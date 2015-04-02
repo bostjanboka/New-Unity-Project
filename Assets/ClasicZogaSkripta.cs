@@ -7,7 +7,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	public GameObject novaZoga;
 	public float visina;
 	public float speed;
-	public int smer;
+	public int smer=1;
 
 	public float rotacija=90;
 
@@ -22,10 +22,10 @@ public class ClasicZogaSkripta : MonoBehaviour {
 
 	void Start () {
 		
-		rb = GetComponent<Rigidbody2D>();
+		rb = transform.parent.GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
 		skala = transform.localScale.x;
-		smer = 1;
+		//smer = 1;
 	}
 	
 	// Update is called once per frame hhhhh
@@ -43,6 +43,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		Debug.Log ("noter sem zoga");
 		if (other.gameObject.name.Equals ("tla")) {
 			rb.velocity = new Vector3 (0, visina);
+			Debug.Log("dotik tal!!!");
 			
 		} else if (other.gameObject.tag.Equals ("strop")) {
 			rb.velocity = new Vector3(0,-Mathf.Abs(rb.velocity.y));
@@ -58,11 +59,11 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
 			
-			if(novaZoga && skala > 1.00f){
+			if(novaZoga && skala > 0.14f){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
-				clasicSkripta = inst.GetComponent<ClasicZogaSkripta>();
+				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
 				clasicSkripta.skala *= 0.5f;
 				clasicSkripta.visina*=0.9f;
 				rb.velocity = new Vector3(0,5);
@@ -73,7 +74,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
 				rb.velocity = new Vector3(0,5);
-				clasicSkripta = inst.GetComponent<ClasicZogaSkripta>();
+				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
 				clasicSkripta.skala *= 0.5f;
 				clasicSkripta.smer = -1;
 				clasicSkripta.visina*=0.9f;
@@ -83,7 +84,8 @@ public class ClasicZogaSkripta : MonoBehaviour {
 			junakSkripta.steviloSpiral--;
 			
 			Destroy(other.gameObject);
-			Destroy(gameObject);
+			GameObject parent = gameObject.transform.parent.gameObject;
+			Destroy(parent);
 		}
 		
 	}
