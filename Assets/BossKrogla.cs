@@ -1,16 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ClasicZogaSkripta : MonoBehaviour {
+public class BossKrogla : MonoBehaviour {
 
 	// Use this for initialization komentar  hhh
 	public GameObject novaZoga;
 	public float visina;
 	public float speed;
 	public int smer=1;
-
+	
 	public float rotacija=90;
-
+	
 	public float skala;
 	Rigidbody2D rb;
 	ClasicZogaSkripta clasicSkripta;
@@ -19,24 +19,48 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	GameObject junak;
 
 
-
+	Color[] barve;
+	int indexBarve;
+	public float casZaZamenjatBarvo=1;
+	float casTrajanja;
+	SpriteRenderer render;
+	
 	void Start () {
-		
+		barve = new Color[8];
+		barve [0] = new Color (1,0,0);
+		barve [1] = new Color (1,127f/255,0);
+		barve [2] = new Color (1,1,0);
+		barve [3] = new Color (0,1,0);
+		barve [4] = new Color (0,0,1);
+		barve [5] = new Color (75f/255,0,130f/255);
+		barve [6] = new Color (143f/255,0,1);
+		barve [7] = new Color (212f/255,175f/255,52f/255);
+		indexBarve = 0;
+		casTrajanja = 0;
 		rb = transform.parent.GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
 		skala = transform.parent.gameObject.transform.localScale.x;
+		render = gameObject.GetComponent<SpriteRenderer> ();
+		render.color = barve [0];
 		//smer = 1;
 	}
 	
 	// Update is called once per frame hhhhh
 	void Update () {
+		casTrajanja += Time.deltaTime;
+		if (casTrajanja >= casZaZamenjatBarvo) {
+			indexBarve = (++indexBarve)%barve.Length;
+			casTrajanja=0;
+			render.color = barve[indexBarve];
+		}
+
 		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
 		transform.parent.gameObject.transform.Translate(move);
-
+		
 		transform.Rotate (new Vector3(0,0,Time.deltaTime * -rotacija * smer));
-
-
+		
+		
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){

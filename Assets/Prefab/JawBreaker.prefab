@@ -13,7 +13,7 @@ GameObject:
   - 58: {fileID: 5827326}
   - 114: {fileID: 11422666}
   m_Layer: 0
-  m_Name: krogla_crna_4
+  m_Name: JawBreaker
   m_TagString: jaw
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26,8 +26,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 164808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.44999981, y: 5.80999994, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalPosition: {x: -4.30999994, y: 12.29, z: 0}
+  m_LocalScale: {x: .449999988, y: .449999988, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -58,7 +58,7 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: .564999998
+  m_Radius: 4.19999981
 --- !u!114 &11422666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -98,7 +98,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 67281ad6b01512243ad6b43364f146b7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dd2773160c6dfce488dd0d695208ffe6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
