@@ -137,11 +137,11 @@ Prefab:
         type: 3}
     - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.x
-      value: .349999994
+      value: .460000008
       objectReference: {fileID: 0}
     - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.y
-      value: .349999994
+      value: .460000008
       objectReference: {fileID: 0}
     - target: {fileID: 5881572, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Radius
@@ -150,6 +150,10 @@ Prefab:
     - target: {fileID: 5886452, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Radius
       value: 4.12158585
+      objectReference: {fileID: 0}
+    - target: {fileID: 5080784, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_GravityScale
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
@@ -806,8 +810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   novaZoga: {fileID: 445850661}
-  visina: 15
-  speed: 2
+  visina: 10
+  speed: 2.5
   smer: 1
   rotacija: 90
   skala: 0

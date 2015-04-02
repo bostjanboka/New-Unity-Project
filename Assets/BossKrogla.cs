@@ -24,6 +24,7 @@ public class BossKrogla : MonoBehaviour {
 	public float casZaZamenjatBarvo=1;
 	float casTrajanja;
 	SpriteRenderer render;
+	public AudioSource zvok;
 	
 	void Start () {
 		barve = new Color[10];
@@ -44,6 +45,8 @@ public class BossKrogla : MonoBehaviour {
 		skala = transform.parent.gameObject.transform.localScale.x;
 		render = gameObject.GetComponent<SpriteRenderer> ();
 		render.color = barve [0];
+		zvok = gameObject.GetComponent<AudioSource> ();
+
 		//smer = 1;
 	}
 	
@@ -83,7 +86,7 @@ public class BossKrogla : MonoBehaviour {
 			smer *= -1;
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
-			
+
 			if(indexBarve <= 6){
 				if(novaZoga && skala < 0.4f){
 					gameObject.transform.localScale *= 2;
@@ -91,6 +94,7 @@ public class BossKrogla : MonoBehaviour {
 
 				}
 				rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);
+				zvok.Play();
 			}else{
 				if(novaZoga && skala > 0.06f){
 					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
@@ -99,6 +103,7 @@ public class BossKrogla : MonoBehaviour {
 					clasicSkripta = inst.transform.GetChild(0).GetComponent<BossKrogla>();
 					clasicSkripta.skala *= 0.5f;
 					clasicSkripta.visina*=0.9f;
+					clasicSkripta.zvok.Play();
 					rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);
 					clasicSkripta.smer = 1;
 					
