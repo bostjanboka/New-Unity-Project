@@ -94,70 +94,40 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalPosition.x
       value: 9.74138165
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalPosition.y
       value: 5.38544846
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    - target: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 192432, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_Name
-      value: BossKrogla
-      objectReference: {fileID: 0}
-    - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: b1868ce3ae5b8f642958e2b01f7edec5,
-        type: 3}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_LocalScale.x
-      value: .460000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_LocalScale.y
-      value: .460000008
-      objectReference: {fileID: 0}
-    - target: {fileID: 5881572, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_Radius
-      value: 4.08962536
-      objectReference: {fileID: 0}
-    - target: {fileID: 5886452, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_Radius
-      value: 4.12158585
-      objectReference: {fileID: 0}
-    - target: {fileID: 5080784, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-      propertyPath: m_GravityScale
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &219725727
 GameObject:
@@ -401,10 +371,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9b3f3a5a4e83f419e0ccf84c600a5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &445850661
-GameObject:
-  m_PrefabParentObject: {fileID: 123578, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
-  m_PrefabInternal: {fileID: 50450745}
 --- !u!1 &510530412
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,26 +762,77 @@ Transform:
   m_RootOrder: 1
 --- !u!1 &849160599
 GameObject:
-  m_PrefabParentObject: {fileID: 192432, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+  m_PrefabParentObject: {fileID: 185034, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
   m_PrefabInternal: {fileID: 50450745}
---- !u!114 &849160600
-MonoBehaviour:
+--- !u!82 &849160604
+AudioSource:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 849160599}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff21fee16f06d1345ae2669b74cc52de, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  novaZoga: {fileID: 445850661}
-  visina: 10
-  speed: 2.5
-  smer: 1
-  rotacija: 90
-  skala: 0
-  casZaZamenjatBarvo: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: ed2627affb84d344aa6af2f410dd4fd7, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!1 &931491505
 GameObject:
   m_ObjectHideFlags: 0
