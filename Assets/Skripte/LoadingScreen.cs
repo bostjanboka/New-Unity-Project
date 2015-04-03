@@ -16,7 +16,8 @@ public class LoadingScreen : MonoBehaviour
 
 	void Awake()
 	{
-		gameObject.GetComponent<Animator> ().enabled = false;
+
+		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 		DontDestroyOnLoad(gameObject);
 	}
 	public void show()
@@ -24,7 +25,7 @@ public class LoadingScreen : MonoBehaviour
 		showed = true;
 		Debug.Log("show show");
 		timer = 0;
-		gameObject.GetComponent<Animator> ().enabled = true;
+		gameObject.GetComponent<SpriteRenderer> ().enabled = true;
 		Time.timeScale = .0000001f;
 		StartCoroutine(Wait(Time.timeScale * delayTime));
 	}
@@ -43,7 +44,7 @@ public class LoadingScreen : MonoBehaviour
 	public void hide()
 	{
 		Debug.Log("IZGINI");
-		gameObject.GetComponent<Animator> ().enabled = false;
+		//gameObject.GetComponent<Animator> ().enabled = false;
 		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
 	}
 	

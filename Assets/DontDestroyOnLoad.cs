@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class DontDestroyOnLoad : MonoBehaviour {
 
@@ -7,15 +8,30 @@ public class DontDestroyOnLoad : MonoBehaviour {
 	AudioSource audio;
 	GameObject gumbMute;
 	GameObject MuzikaMute;
-	bool zvok = false;
-	bool muzika = false;
+	public bool zvok = false;
+	public bool muzika = false;
+
+
+
+
 	void Awake() {
+
 		DontDestroyOnLoad(transform.gameObject);
 		audio = gameObject.GetComponent<AudioSource> ();
+		audio.mute = true;
 	}
 
-	public void muteZvok(){
-		zvok = !zvok;
+	void Start(){
+		audio.mute = false;
+
+	}
+
+	void Update(){
+
+	}
+
+	public void muteZvok(bool x){
+		zvok = x;
 		if (zvok) {
 			AudioListener.volume = 0;
 		} else {
@@ -23,8 +39,8 @@ public class DontDestroyOnLoad : MonoBehaviour {
 		}
 	}
 
-	public void muteMuzika(){
-		muzika = !muzika;
+	public void muteMuzika(bool x){
+		muzika = x;
 		audio.mute = muzika;
 	}
 }

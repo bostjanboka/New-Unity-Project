@@ -1,12 +1,36 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 
 public class Meni_Gumbi : MonoBehaviour {
 
 	// Use this for initialization
-	public GameObject loadingScreen;
+	GameObject loadingScreen;
+	public GameObject gameMusic;
+	public GameObject loading;
+
+	public Toggle musicToggle; 
+	public Toggle soundToggle; 
+
+	GameObject zvok;
+	void Awake(){
+		zvok = GameObject.Find("game music(Clone)");
+		if(zvok == null)
+			zvok = Instantiate (gameMusic) as GameObject;
+		if (GameObject.Find ("Loading(Clone)") == null) {
+			loadingScreen = Instantiate (loading) as GameObject;
+		} else {
+			loadingScreen = GameObject.Find ("Loading(Clone)");
+		}
+		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
+
+		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
+		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
+		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
+	}
 	void Start () {
+
 
 	}
 	
@@ -36,4 +60,12 @@ public class Meni_Gumbi : MonoBehaviour {
 		Time.timeScale = 1;
 
 	} 
+
+	public void muteZvok(){
+		zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
+	}
+	
+	public void muteMuzika(){
+		zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
+	}
 }
