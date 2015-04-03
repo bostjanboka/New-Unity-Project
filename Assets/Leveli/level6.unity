@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPressed: {fileID: 21300000, guid: fdbaeddceacab9e4e9673ffd50a37263, type: 3}
-  normal: {fileID: 21300000, guid: ee9cd619c72f01a4b879abbd3c68cf07, type: 3}
+  normal: {fileID: 21300000, guid: e6612e847b0584b49962638c411fa23c, type: 3}
 --- !u!1 &386227152
 GameObject:
   m_PrefabParentObject: {fileID: 191784, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
@@ -1000,30 +1000,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6103048, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
-      propertyPath: m_Offset.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 416500, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -8.28999996
-      objectReference: {fileID: 0}
-    - target: {fileID: 11424844, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
-      propertyPath: ustreli
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 416500, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -3.6400001
-      objectReference: {fileID: 0}
-    - target: {fileID: 124740, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 121342, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 42b9ef34e2928484293c9adcb2b5ff0b, type: 2}
   m_IsPrefabParent: 0
@@ -1162,7 +1138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onPressed: {fileID: 21300000, guid: 492d545f62dfe6941ae7588bc375c6ca, type: 3}
-  normal: {fileID: 21300000, guid: b511cc01e8eae1b4f99d85c20bf618b3, type: 3}
+  normal: {fileID: 21300000, guid: 7a7dabdfd58a15c46876061deaaa1632, type: 3}
 --- !u!1001 &1847222095
 Prefab:
   m_ObjectHideFlags: 0
