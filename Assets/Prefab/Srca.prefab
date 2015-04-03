@@ -54,8 +54,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bdf06d6ddb9194cac63350154a7bad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rdeca: {fileID: 21300000, guid: b99c273a15285e34e9228fa5f7cd3213, type: 3}
-  bela: {fileID: 21300000, guid: cf321e61dc7131942a64c9534f0b8663, type: 3}
+  rdeca: {fileID: 21300000, guid: cf321e61dc7131942a64c9534f0b8663, type: 3}
+  bela: {fileID: 21300000, guid: cae0aa299c6a3f448a948904f532631d, type: 3}
+  rang: 0
 --- !u!212 &21207242
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -80,7 +81,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: cf321e61dc7131942a64c9534f0b8663, type: 3}
+  m_Sprite: {fileID: 21300000, guid: cae0aa299c6a3f448a948904f532631d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
