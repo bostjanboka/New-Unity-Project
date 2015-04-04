@@ -29,7 +29,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 		junakSkripta.omogociPremikanje = false;
 
 		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 5.5f;
+		palcekSkripta.xTocka = -3.3f;
 		stanje = 0;
 		akcija.SetActive (false);
 	}

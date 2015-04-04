@@ -48,9 +48,9 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		} else if (other.gameObject.tag.Equals ("strop")) {
 			rb.velocity = new Vector3(0,-Mathf.Abs(rb.velocity.y));
 		}
-		if (other.gameObject.name.Equals ("Cube")) {
+		if (other.gameObject.name.Equals ("Levo")) {
 			smer = 1;
-		} else if (other.gameObject.name.Equals ("Cube 1")) {
+		} else if (other.gameObject.name.Equals ("Desno")) {
 			smer = -1;
 		} else if (other.gameObject.tag.Equals ("ovira")) {
 			//rb.velocity = new Vector3(0,-rb.velocity.y*0.5f);

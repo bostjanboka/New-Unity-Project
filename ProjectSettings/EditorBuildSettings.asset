@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/MeniScena.unity
   - enabled: 1
     path: Assets/HighScoreScena.unity
-  - enabled: 0
+  - enabled: 1
     path: Assets/Leveli/level1.unity
   - enabled: 0
     path: Assets/Leveli/level2.unity
