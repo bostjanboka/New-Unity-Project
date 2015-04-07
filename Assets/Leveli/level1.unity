@@ -126,6 +126,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 110864, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0
@@ -862,6 +866,15 @@ Prefab:
       propertyPath: zgubil
       value: 
       objectReference: {fileID: 1608085761}
+    - target: {fileID: 21210366, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d9909e55882a06a4cbb9278a968d3737,
+        type: 3}
+    - target: {fileID: 443646, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -.0590000004
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
   m_IsPrefabParent: 0

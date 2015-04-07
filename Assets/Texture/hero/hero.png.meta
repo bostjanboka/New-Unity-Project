@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 6ee99093ff2f9c240a2d596801e40b51
-timeCreated: 1428417245
+timeCreated: 1428420191
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -115,16 +115,6 @@ TextureImporter:
       alignment: 6
       pivot: {x: 0, y: 0}
       border: {x: 60, y: 0, z: 52, w: 0}
-    - name: hero_7
-      rect:
-        serializedVersion: 2
-        x: 2790
-        y: 681
-        width: 260
-        height: 413
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 60, y: 0, z: 0, w: 0}
     - name: hero_8
       rect:
         serializedVersion: 2
