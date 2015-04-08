@@ -114,6 +114,7 @@ public class NewBehaviourScript : MonoBehaviour {
 				stojimNaMestuX=false;
 				transform.Translate (new Vector3 (speed * Time.deltaTime, 0, 0));
 				anim.SetFloat ("hitrost", 1);
+				Debug.Log("animacija hitrost 1");
 			} else {
 				stojimNaMestuX = true;
 				anim.SetFloat ("hitrost", 0);

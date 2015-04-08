@@ -10,24 +10,28 @@ public class PalcekAI : MonoBehaviour {
 	public float speed;
 	public float xTocka=1000f;
 
+	public float palica=1;
+
 	public bool stojimNaMestuX=false;
 
 	void Start () {
 
-		anim = gameObject.GetComponent<Animator> ();
+		Transform animacija = transform.Find ("palcekAnimacija");
+		anim = animacija.gameObject.GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 
-		if (transform.position.x < xTocka) {
+		if (gameObject.transform.position.x < xTocka) {
 			stojimNaMestuX=false;
-			transform.Translate (new Vector3 (smer * speed * Time.deltaTime, 0, 0));
-			anim.SetFloat ("odpiranje", 0);
+			gameObject.transform.Translate (new Vector3 (smer * speed * Time.deltaTime, 0, 0));
+
+			anim.SetFloat ("odpiranje", 1*palica);
 
 		} else {
 			stojimNaMestuX = true;
-			anim.SetFloat ("odpiranje", 1);
+			anim.SetFloat ("odpiranje", 0*palica);
 		}
 
 	}

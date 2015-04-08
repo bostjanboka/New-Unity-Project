@@ -41,7 +41,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 			stanje = 1;
 		} else if (stanje == 1 && trezorSkripta.odprt) {
 			palcekSkripta.xTocka = 15.5f;
-			junakSkripta.xTocka = 4.5f;
+			junakSkripta.xTocka = -8f;
 			stanje = 2;
 		} else if (stanje == 2) {
 			if (junakSkripta.stojimNaMestuX) {
