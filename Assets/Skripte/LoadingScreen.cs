@@ -2,30 +2,36 @@
 using System.Collections;
 public class LoadingScreen : MonoBehaviour
 {
-	public float delayTime=1;
-	
-	private float timer;
+	public float delayTime;
+
+
+	public GameObject slikaOzadja;
+	public GameObject animacija;
 
 	bool showed = false;
 
 
 	void Start ()
 	{
-		timer = -3;
+
 	}
 
 	void Awake()
 	{
 
-		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = false;
+		animacija.GetComponent<Animator> ().enabled = false;
+		animacija.GetComponent<SpriteRenderer> ().enabled = false;
+
 		DontDestroyOnLoad(gameObject);
 	}
 	public void show()
 	{
 		showed = true;
 		Debug.Log("show show");
-		timer = 0;
-		gameObject.GetComponent<SpriteRenderer> ().enabled = true;
+		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = true;
+		animacija.GetComponent<Animator> ().enabled = true;
+		animacija.GetComponent<SpriteRenderer> ().enabled = true;
 		Time.timeScale = .0000001f;
 		StartCoroutine(Wait(Time.timeScale * delayTime));
 	}
@@ -45,7 +51,9 @@ public class LoadingScreen : MonoBehaviour
 	{
 		Debug.Log("IZGINI");
 		//gameObject.GetComponent<Animator> ().enabled = false;
-		gameObject.GetComponent<SpriteRenderer> ().enabled = false;
+		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = false;
+		animacija.GetComponent<Animator> ().enabled = false;
+		animacija.GetComponent<SpriteRenderer> ().enabled = false;
 	}
 	
 	void Update()
