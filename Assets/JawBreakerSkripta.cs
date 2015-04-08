@@ -41,7 +41,7 @@ public class JawBreakerSkripta : MonoBehaviour {
 			rb.velocity = new Vector3(0,visina);
 			
 		}
-		if (other.gameObject.name.Equals ("Cube") || other.gameObject.name.Equals ("Cube 1") || other.gameObject.name.Equals("steber")) {
+		if (other.gameObject.name.Equals ("Cube") || other.gameObject.name.Equals ("Cube 1") || other.gameObject.tag.Equals("ovira")) {
 			speed *= -1;
 		}
 
