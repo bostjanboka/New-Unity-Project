@@ -53,7 +53,7 @@ public class SteviloZogicSkripta : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("zogice")) {
 			triggered = true;
 			stevilo++;
-		} else if (other.gameObject.tag.Equals ("zelejie")) {
+		} else if (other.gameObject.tag.Equals ("zeleji")) {
 			triggered = true;
 			stevilo++;
 		} else if (other.gameObject.tag.Equals ("jaw")) {
