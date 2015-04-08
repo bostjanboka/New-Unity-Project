@@ -1885,7 +1885,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466846, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
       propertyPath: m_RootOrder
+<<<<<<< HEAD
       value: 5
+=======
+      value: 1
+>>>>>>> origin/master
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
@@ -2032,6 +2036,10 @@ Prefab:
     - target: {fileID: 189638, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
       propertyPath: m_TagString
       value: ovira
+      objectReference: {fileID: 0}
+    - target: {fileID: 196230, guid: 951229c4f0de32844ab3369bc334d30a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
