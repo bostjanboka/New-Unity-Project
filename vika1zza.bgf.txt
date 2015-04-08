@@ -1,0 +1,17 @@
+﻿Revert "Merge remote-tracking branch 'origin/master'"
+
+This reverts commit 8209e13efeaf0b9fc8926ce4966cf4c31f0afbac, reversing
+changes made to 5a030b3dbe24ede97647bc870ca2054d937bf449.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch is up-to-date with 'origin/master'.
+#
+# Changes to be committed:
+#	modified:   Assets/Leveli/level3.unity
+#	modified:   Assets/Prefab/steber.prefab
+#	modified:   Assets/Texture/vrata.png
+#	modified:   Assets/Texture/vrata.png.meta
+#
+
