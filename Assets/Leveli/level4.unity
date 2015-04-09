@@ -963,7 +963,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 420520, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 420520, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
       propertyPath: m_LocalRotation.x
@@ -987,6 +987,10 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 141708, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21225530, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1695,7 +1699,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 1, g: 0, b: 0, a: .0196078438}
+  m_BackGroundColor: {r: .278431386, g: .278431386, b: .278431386, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1990,7 +1994,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1561043104
 Transform:
   m_ObjectHideFlags: 0

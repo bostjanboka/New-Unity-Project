@@ -632,6 +632,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 11445378, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
+      propertyPath: palica
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
   m_IsPrefabParent: 0
