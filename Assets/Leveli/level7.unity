@@ -1351,7 +1351,7 @@ Prefab:
     - target: {fileID: 21280520, guid: fc7fe1e648a96064dacb441f70759ef1, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 53a07807a3bdabb4abc678d04cb7ca4a,
+      objectReference: {fileID: 21300000, guid: cfc26431e236a414f9ab71aac82da576,
         type: 3}
     - target: {fileID: 21280520, guid: fc7fe1e648a96064dacb441f70759ef1, type: 2}
       propertyPath: m_Color.r
