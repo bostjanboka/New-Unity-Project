@@ -1296,7 +1296,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5055460, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_GravityScale
-      value: 1.89999998
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402174, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
+      propertyPath: visina
+      value: 16
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
