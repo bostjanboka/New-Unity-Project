@@ -88,7 +88,7 @@ public class NewBehaviourScript : MonoBehaviour {
 						if (powerUpSpirala) {
 							Instantiate (powerUpSpirala, new Vector3 (transform.position.x, -9.62f, 2), Quaternion.identity);
 						} else {
-							Instantiate (spirala, new Vector3 (transform.position.x, -9.62f, 2), Quaternion.identity);
+							Instantiate (spirala, new Vector3 (transform.position.x, -9.7f, 2), Quaternion.identity);
 						}
 						steviloSpiral++;
 
@@ -100,9 +100,9 @@ public class NewBehaviourScript : MonoBehaviour {
 				Debug.Log ("zadetek strel");
 				if (steviloSpiral == 0) {
 					if (powerUpSpirala) {
-						Instantiate (powerUpSpirala, new Vector3 (transform.parent.transform.position.x, -6, 2), Quaternion.identity);
+						Instantiate (powerUpSpirala, new Vector3 (transform.position.x, -9.62f, 2), Quaternion.identity);
 					} else {
-						Instantiate (spirala, new Vector3 (transform.position.x, -6, 2), Quaternion.identity);
+						Instantiate (spirala, new Vector3 (transform.position.x, -9.7f, 2), Quaternion.identity);
 					}
 					steviloSpiral++;
 					
@@ -120,7 +120,7 @@ public class NewBehaviourScript : MonoBehaviour {
 				anim.SetFloat ("hitrost", 0);
 			}
 		}
-
+		
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){

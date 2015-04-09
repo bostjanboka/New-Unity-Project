@@ -7,8 +7,9 @@ public class JawBreakerSkripta : MonoBehaviour {
 	public GameObject noviJaw;
 	public int visina;
 	public int speed;
+	public float smer;
 
-	
+	public float rotacija=90;
 
 	Rigidbody2D rb;
 	JawBreakerSkripta jawBreakerSkripta;
@@ -20,7 +21,7 @@ public class JawBreakerSkripta : MonoBehaviour {
 	public float timeNastanka;
 	void Start () {
 		
-		rb = GetComponent<Rigidbody2D>();
+		rb = transform.parent.gameObject.GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
 
 		timeNastanka = Time.time;
@@ -28,10 +29,10 @@ public class JawBreakerSkripta : MonoBehaviour {
 	
 	// Update is called once per frame hhhhh
 	void Update () {
-		Vector2 move = new Vector2(speed,0);
+		Vector2 move = new Vector2(speed*smer,0);
 		move *= Time.deltaTime;
-		transform.Translate(move);
-
+		transform.parent.Translate(move);
+		transform.Rotate (new Vector3(0,0,Time.deltaTime * -rotacija * smer));
 		//stopinje *= Time.deltaTime;
 	}
 	
@@ -41,30 +42,18 @@ public class JawBreakerSkripta : MonoBehaviour {
 			rb.velocity = new Vector3(0,visina);
 			
 		}
-		if (other.gameObject.name.Equals ("Cube") || other.gameObject.name.Equals ("Cube 1") || other.gameObject.tag.Equals("ovira")) {
-			speed *= -1;
+		if (other.gameObject.name.Equals ("Levo")) {
+			smer = 1;
+		} else if (other.gameObject.name.Equals ("Desno")) {
+			smer = -1;
+		} else if (other.gameObject.tag.Equals ("ovira")) {
+			smer *= -1;
 		}
 
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
 			rb.velocity = new Vector3(0,5);
-			/*if(noviZele && skala > 0.070f){
-				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
-				rb = inst.GetComponent<Rigidbody2D>();
-				zeleSkripta = inst.GetComponent<ZeleSkripta>();
-				zeleSkripta.skala *= 0.5f;
-				rb.velocity = new Vector3(0,5);
-				
-				
-				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
-				rb = inst.GetComponent<Rigidbody2D>();
-				rb.velocity = new Vector3(0,5);
-				zeleSkripta = inst.GetComponent<ZeleSkripta>();
-				zeleSkripta.skala *= 0.5f;
-				zeleSkripta.speed *= -1;
-			}*/
+
 			spirala = other.gameObject.GetComponent<SpiralaScript>();
 
 

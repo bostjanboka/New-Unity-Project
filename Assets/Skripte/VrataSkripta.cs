@@ -14,7 +14,7 @@ public class VrataSkripta : MonoBehaviour {
 	float zacetnaY;
 
 	void Start () {
-		zacetnaY = transform.position.y;
+		zacetnaY = transform.localPosition.y;
 	}
 	
 	// Update is called once per frame
@@ -23,22 +23,23 @@ public class VrataSkripta : MonoBehaviour {
 			zaprta = false;
 			Vector3 move = new Vector3 (0, speed, 0) * Time.deltaTime;
 			transform.Translate (move);
-			if (transform.position.y >= 2.6f) {
+			Debug.Log(transform.localPosition.y);
+			if (transform.localPosition.y >= -5) {
 				premakni = false;
-				Vector3 pos = transform.position;
-				pos.y = 2.6f;
-				transform.position = pos;
+				Vector3 pos = transform.localPosition;
+				pos.y = -5;
+				transform.localPosition = pos;
 				odprta = true;
 			}
 		} else if (zapri) {
 			odprta = false;
 			Vector3 move = new Vector3 (0, speed*-1, 0) * Time.deltaTime;
 			transform.Translate (move);
-			if (transform.position.y <= zacetnaY) {
+			if (transform.localPosition.y <= zacetnaY) {
 				zapri = false;
-				Vector3 pos = transform.position;
+				Vector3 pos = transform.localPosition;
 				pos.y = zacetnaY;
-				transform.position = pos;
+				transform.localPosition = pos;
 				zaprta = true;
 			}
 		}

@@ -6,6 +6,7 @@ public class SteviloZogicSkripta : MonoBehaviour {
 	// Use this for initialization
 	public GameObject vrata;
 	public bool prazenProstor;
+	public bool upostevajJaw;
 
 	VrataSkripta vrataSkripta;
 	bool triggered = false;
@@ -26,17 +27,17 @@ public class SteviloZogicSkripta : MonoBehaviour {
 	void Update () {
 		if (triggered) {
 			// put exit trigger logic here
-			Debug.Log (stevilo);
+			//Debug.Log (stevilo);
 			time = Time.time;
 			prazenProstor=false;
 			trignil=true;
 		} else if(Time.time - time > 0.5f && trignil == true){
 			if(vrata){
-				Debug.Log("else"+stevilo);
+				//Debug.Log("else"+stevilo);
 				vrataSkripta.premakni=true;
 			}
 			prazenProstor=true;
-			Destroy(gameObject);
+
 		}
 		stevilo = 0;
 		triggered = false;
@@ -56,7 +57,7 @@ public class SteviloZogicSkripta : MonoBehaviour {
 		} else if (other.gameObject.tag.Equals ("zeleji")) {
 			triggered = true;
 			stevilo++;
-		} else if (other.gameObject.tag.Equals ("jaw")) {
+		} else if (upostevajJaw && other.gameObject.tag.Equals ("jaw")) {
 			triggered = true;
 			stevilo++;
 		}
