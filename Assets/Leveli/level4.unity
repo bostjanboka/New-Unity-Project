@@ -1847,7 +1847,7 @@ Prefab:
     - target: {fileID: 11407098, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: zoga
       value: 
-      objectReference: {fileID: 164808, guid: f8e622fae7462ab4cb6a6839cbc018c8, type: 2}
+      objectReference: {fileID: 187510, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
   m_IsPrefabParent: 0
@@ -2405,6 +2405,10 @@ Prefab:
     - target: {fileID: 457332, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
       propertyPath: m_LocalScale.x
       value: 2.13000011
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462642, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
+      propertyPath: upostevajJaw
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
