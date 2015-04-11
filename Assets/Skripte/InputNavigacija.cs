@@ -4,6 +4,10 @@ using System.Collections;
 public class InputNavigacija : MonoBehaviour {
 
 	// Use this for initialization
+
+	public int level;
+	public int trenutniLevel;
+
 	public GameObject zgubil;
 	public GameObject zmagal;
 	public GameObject back;
@@ -46,7 +50,12 @@ public class InputNavigacija : MonoBehaviour {
 
 	public void resetLevel(){
 		Time.timeScale = 1;
-		Application.LoadLevel (Application.loadedLevel); 
+		if (level % 2 == 0) {
+			Application.LoadLevel ("level" + level * 2); 
+		} else {
+			Application.LoadLevel ("level"+(level*2-1+trenutniLevel)); 
+		}
+		//Application.LoadLevel (Application.loadedLevel); 
 
 
 	}

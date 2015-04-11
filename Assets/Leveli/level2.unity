@@ -162,13 +162,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0004271dae271724182ac10e655ac63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  score: 0
+  hp: 3
+  trenutniLevel: 0
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
   zgubil: {fileID: 2143401780}
+  inputNavigacija: {fileID: 1895986892}
   omogociPremikanje: 1
   stojimNaMestuX: 0
-  hp: 3
   speed: 6
   xTocka: 0
   ustreli: 0
@@ -2029,6 +2033,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1903df4a5017f499958449b082bf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  trenutniLevel: 0
   zgubil: {fileID: 2143401780}
   zmagal: {fileID: 2028832766}
   back: {fileID: 1192008798}

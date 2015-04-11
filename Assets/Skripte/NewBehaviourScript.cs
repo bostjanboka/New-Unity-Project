@@ -4,6 +4,11 @@ using System.Collections;
 public class NewBehaviourScript : MonoBehaviour {
 
 	//animacija
+	public int level;
+	public int score;
+	public int hp;
+	public int trenutniLevel;
+
 
 	Animator anim;
 
@@ -15,10 +20,12 @@ public class NewBehaviourScript : MonoBehaviour {
 	public GameObject srca;
 	public GameObject zgubil;
 
+	public GameObject inputNavigacija;
+
 	public bool omogociPremikanje = true;
 	public bool stojimNaMestuX;
 
-	public int hp;
+
 
 	public float speed;
 	public float xTocka;
@@ -39,6 +46,11 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	void Start () {
 		//junak = GameObject.("junak1");
+
+		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
+		hp = temp.hp;
+		trenutniLevel = temp.trenutniLevel;
+		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = trenutniLevel;
 		stojimNaMestuX = false;
 		navSkripta = zgubil.GetComponent<InputNavigacija> ();
 		speed = 2;
@@ -136,9 +148,20 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public void zgubilLevel(){
+		LeveliManeger._instance.saveProgres (level, --hp, trenutniLevel, 0);
+		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
+
 		HighScoreManager._instance.SaveHighScore("boka",35);
 		Time.timeScale = 0;
+		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = temp.trenutniLevel;
 		zgubil.SetActive (true);
+	}
+
+	public void zmagalLevel(){
+		LeveliManeger._instance.saveProgres (level, hp, ++trenutniLevel, score);
+		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
+
+		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
 	}
 
 

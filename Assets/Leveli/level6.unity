@@ -425,6 +425,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &792115168
+GameObject:
+  m_PrefabParentObject: {fileID: 191998, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
+  m_PrefabInternal: {fileID: 2046391427}
 --- !u!1 &966045072
 GameObject:
   m_PrefabParentObject: {fileID: 181300, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
@@ -594,7 +598,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 152098, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 404032, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
       propertyPath: m_LocalPosition.y
@@ -603,6 +607,26 @@ Prefab:
     - target: {fileID: 463168, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
       propertyPath: m_LocalPosition.y
       value: -3.63199997
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460948, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
+      propertyPath: hp
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460948, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459132, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
+      propertyPath: level
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460948, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
+      propertyPath: inputNavigacija
+      value: 
+      objectReference: {fileID: 792115168}
+    - target: {fileID: 11460948, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
+      propertyPath: trenutniLevel
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b06dede819c10fb45a31ae9a93942794, type: 2}
