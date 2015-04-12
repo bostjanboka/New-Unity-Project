@@ -299,7 +299,7 @@ GameObject:
   - 114: {fileID: 142971389}
   - 114: {fileID: 142971388}
   m_Layer: 0
-  m_Name: start
+  m_Name: continue
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -348,10 +348,10 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: .100000001
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 943b2241b21e5264383adcd092e9caa1,
+    m_HighlightedSprite: {fileID: 21300000, guid: dfdacdd76eabc114984743bfaecfc30e,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 029ecc779d4bdb049a692f7b377420aa, type: 3}
-    m_DisabledSprite: {fileID: 21300000, guid: 89a1218b64d901241be107603c9f4f66, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: a65dba7041375814eb1c4aa3ef569658, type: 3}
+    m_DisabledSprite: {fileID: 21300000, guid: e7874677d3da6fc44bdf94ee55afef61, type: 3}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
     m_HighlightedTrigger: Highlighted
@@ -377,7 +377,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 943b2241b21e5264383adcd092e9caa1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dfdacdd76eabc114984743bfaecfc30e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
