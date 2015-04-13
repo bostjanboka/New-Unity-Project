@@ -4,7 +4,7 @@ using System.Collections;
 public class NewBehaviourScript : MonoBehaviour {
 
 	//animacija
-	public int level;
+	int level;
 	public int score;
 	public int hp;
 	public int trenutniLevel;
@@ -45,30 +45,22 @@ public class NewBehaviourScript : MonoBehaviour {
 
 
 	void Start () {
-		//junak = GameObject.("junak1");
 
+		level = inputNavigacija.GetComponent<InputNavigacija> ().level;
 		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
 		hp = temp.hp;
 		trenutniLevel = temp.trenutniLevel;
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = trenutniLevel;
 		stojimNaMestuX = false;
 		navSkripta = zgubil.GetComponent<InputNavigacija> ();
-		speed = 2;
-		count = 1;
 		pozicija = transform.position;
 		rigid = GetComponent<Rigidbody2D> ();
-		steviloSpiral = 0;
 		Transform animacija = transform.Find ("animacija");
 		anim = animacija.gameObject.GetComponent<Animator> ();
-		//btn = new GUIContent("Button");
-		//electorSprite = Instantiate (tileSelectionMarker, Vector3(0,0, 0), Quaternion.identity);
-		//Instantiate (spirala, new Vector3(3, -6, 0), Quaternion.identity);
 
-		//Instantiate (srca, new Vector3(0.3f, (Screen.height)/50, 0), Quaternion.identity);
-		Debug.Log ("res "+Screen.currentResolution.height);
-		Debug.Log ("hei "+Screen.height);
-		Debug.Log ("dpi "+Screen.dpi);
-
+		speed = 2;
+		count = 1;
+		steviloSpiral = 0;
 	}
 	
 	// Update is called once per frame
@@ -148,6 +140,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public void zgubilLevel(){
+
 		LeveliManeger._instance.saveProgres (level, --hp, trenutniLevel, 0);
 		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
 
@@ -166,21 +159,4 @@ public class NewBehaviourScript : MonoBehaviour {
 
 
 
-	void OnCollisionEnter2D (Collision2D col)
-	{
-
-		Debug.Log("blaaaaaa");
-	}
-
-	void OnCollisionStay (Collision col)
-	{
-
-		Debug.Log("blaaaaaa2");
-	}
-
-	void OnCollisionExit (Collision col)
-	{
-
-		Debug.Log("blaaaaaa3");
-	}
 }

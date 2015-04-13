@@ -239,10 +239,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: .0219999999
---- !u!1 &334496101
-GameObject:
-  m_PrefabParentObject: {fileID: 103030, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
-  m_PrefabInternal: {fileID: 106393169}
 --- !u!1 &738338312
 GameObject:
   m_ObjectHideFlags: 0
@@ -947,7 +943,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1455546611}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.76999998, y: 3.80999994, z: 1.83000004}
+  m_LocalPosition: {x: 10.7399998, y: 5.55999994, z: 1.83000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1861241461}
@@ -988,7 +984,6 @@ MonoBehaviour:
   palcek: {fileID: 1291751862}
   trezor: {fileID: 950643464}
   prostorZogic: {fileID: 1126238527}
-  zmagal: {fileID: 334496101}
   akcija: {fileID: 1455546611}
 --- !u!4 &1695908251
 Transform:

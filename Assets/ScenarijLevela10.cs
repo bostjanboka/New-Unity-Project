@@ -1,34 +1,31 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class ScenarijLevel2 : MonoBehaviour {
+public class ScenarijLevela10 : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
-	BoxCollider2D coliderJunak;
+
 	public GameObject palcek;
 	PalcekAI palcekSkripta;
-
-
+	
+	
 	
 	public GameObject prostorZogic;
-	public GameObject zmagal;
+
 	public GameObject akcija;
 	SteviloZogicSkripta steviloZogic;
-
+	
 	int stanje;
 	void Start () {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
-
-		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
-		coliderJunak = junak.GetComponent<BoxCollider2D> ();
-		coliderJunak.isTrigger = true;
 		
-		junakSkripta.omogociPremikanje = false;
+		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
+
 		
 		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = -6.16f;
+		palcekSkripta.xTocka = 4f;
 		junakSkripta.xTocka = -8f;
 		stanje = 0;
 		akcija.SetActive (false);
@@ -39,14 +36,13 @@ public class ScenarijLevel2 : MonoBehaviour {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
 			akcija.SetActive (true);
-			junakSkripta.omogociPremikanje = true;
-			coliderJunak.isTrigger = false;
-			palcekSkripta.xTocka=21f;
 
+			palcekSkripta.xTocka=21f;
+			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
 			junakSkripta.zmagalLevel();
 			stanje++;
 		}
-	
+		
 	}
 }

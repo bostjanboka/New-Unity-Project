@@ -58,6 +58,9 @@ public class LoadingScreen : MonoBehaviour
 	
 	void Update()
 	{
+		if (showed && Input.GetKeyDown (KeyCode.Escape)) {
+			Application.LoadLevel("MeniScena");
+		}
 		/*if (timer >= 0) {
 			timer += Time.deltaTime;
 			Debug.Log("IZGINI pdate" + timer);

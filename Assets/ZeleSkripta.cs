@@ -35,7 +35,7 @@ public class ZeleSkripta : MonoBehaviour {
 		move *= Time.deltaTime;
 		transform.Translate(move);
 		transform.localScale = new Vector3 (skala, skala*(1 - Mathf.Sin (stopinje * 0.0174532925f) * 0.1f), 1);
-		stopinje = (stopinje + korak)%360;
+		stopinje = (stopinje + korak*Time.deltaTime)%360;
 		//stopinje *= Time.deltaTime;
 	}
 	

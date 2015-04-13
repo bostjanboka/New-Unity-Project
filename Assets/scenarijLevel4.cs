@@ -52,8 +52,8 @@ public class scenarijLevel4 : MonoBehaviour {
 			stanje=3;
 		}
 		else if(stanje == 3 && steviloZogic.prazenProstor){
-			zmagal.SetActive(true);
-			Time.timeScale=0;
+			junakSkripta.zmagalLevel();
+			stanje++;
 		}
 	}
 }
