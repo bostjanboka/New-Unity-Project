@@ -34,6 +34,7 @@ public class ScenarijLevela11 : MonoBehaviour {
 		if(steviloZogic.prazenProstor){
 			junakSkripta.zmagalLevel();
 			stanje++;
+			LeveliManeger._instance.odkleniStopnjo(6);
 		}
 		
 	}

@@ -62,6 +62,7 @@ public class scenarijLevel3 : MonoBehaviour {
 		}else if(stanje==5 && vrataSkripta.odprta){
 			stanje = 6;
 		} else if (stanje == 6 && steviloZogic.prazenProstor) {
+			LeveliManeger._instance.odkleniStopnjo(2);
 			junakSkripta.zmagalLevel();
 			stanje++;
 			

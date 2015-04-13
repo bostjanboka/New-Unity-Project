@@ -39,6 +39,7 @@ public class ScenarijLevela8 : MonoBehaviour {
 			palcekSkripta.xTocka=21f;
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
+			LeveliManeger._instance.odkleniStopnjo(5);
 			junakSkripta.zmagalLevel();
 			stanje++;
 		}

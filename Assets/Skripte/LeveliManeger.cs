@@ -24,6 +24,22 @@ public class LeveliManeger : MonoBehaviour {
 		DontDestroyOnLoad (gameObject);
 	}
 
+	public void odkleniStopnjo(int stopnja){
+		PlayerPrefs.SetInt ("Stopnja" + stopnja, 1);
+	}
+
+	public bool odklenjenaStopnja(int stopnja){
+		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja)) {
+			PlayerPrefs.SetInt ("Stopnja" + stopnja, 0);
+		}
+		int x = PlayerPrefs.GetInt ("Stopnja"+stopnja);
+		if (x == 0) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+
 	public void saveProgres(int level, int hp, int trenutniLevel, int score){
 		if (!PlayerPrefs.HasKey ("Level" + level + "hp") || hp < 1) {
 			PlayerPrefs.SetInt ("Level" + level + "score", 0);

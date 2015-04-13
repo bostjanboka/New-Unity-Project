@@ -63,6 +63,7 @@ public class ScenarijLevela7 : MonoBehaviour {
 			vrataSkripta.premakni = true;
 			stanje = 5;
 		} else if (palcekSkripta.stojimNaMestuX && stanje == 5) {
+			LeveliManeger._instance.odkleniStopnjo(4);
 			zmagal.SetActive(true);
 			Time.timeScale=0;
 
