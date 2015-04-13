@@ -323,6 +323,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1903df4a5017f499958449b082bf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 1
+  trenutniLevel: 0
   zgubil: {fileID: 691160188}
   zmagal: {fileID: 99775612}
   back: {fileID: 59997420}
@@ -1624,13 +1626,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0004271dae271724182ac10e655ac63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  hp: 3
+  trenutniLevel: 0
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
   zgubil: {fileID: 691160188}
+  inputNavigacija: {fileID: 133590563}
   omogociPremikanje: 1
   stojimNaMestuX: 0
-  hp: 3
   speed: 6
   xTocka: 0
   ustreli: 0
@@ -2297,6 +2302,10 @@ Prefab:
     - target: {fileID: 469440, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.y
       value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11402174, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}

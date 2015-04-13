@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class scenarijLevel3 : MonoBehaviour {
+public class ScenarijLevela9 : MonoBehaviour {
 
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
@@ -11,21 +11,22 @@ public class scenarijLevel3 : MonoBehaviour {
 	VrataSkripta vrataSkripta;
 	public GameObject akcija;
 	public GameObject prostorZogic;
-	public GameObject zmagal;
+	public GameObject akcija2;
 	SteviloZogicSkripta steviloZogic;
 	
-	int stanje;
+	float stanje;
 	void Start () {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
 		vrataSkripta = vrata.GetComponent<VrataSkripta> ();
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
 		vrataSkripta.zapri = true;
-
+		
 		akcija.SetActive (false);
-
+		akcija2.SetActive (false);
+		
 		
 		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 3.5f;
+		palcekSkripta.xTocka = -1.6f;
 		stanje = 0;
 	}
 	
@@ -39,7 +40,7 @@ public class scenarijLevel3 : MonoBehaviour {
 				stanje = 1;
 			}
 		} else if (stanje == 1 && vrataSkripta.odprta) {
-			palcekSkripta.xTocka = 7;
+			palcekSkripta.xTocka = 1f;
 			stanje = 2;
 			Debug.Log ("stanje 1");
 		} else if (palcekSkripta.stojimNaMestuX && stanje == 2) {
@@ -47,25 +48,26 @@ public class scenarijLevel3 : MonoBehaviour {
 				vrataSkripta.zapri = true;
 				stanje = 3;
 				Debug.Log ("zapiram vrata");
+				palcekSkripta.xTocka = 4.5f;
 				
 			}
-		} else if (stanje == 3 && vrataSkripta.zaprta) {
+		} 
+		else if (stanje == 3 && vrataSkripta.zaprta) {
 			akcija.SetActive (true);
-
+			
 			stanje = 4;
 		} else if (stanje == 4 && steviloZogic.prazenProstor) {
 			
 			palcekSkripta.xTocka = 12;
 			vrataSkripta.premakni = true;
-			steviloZogic.upostevajJaw=true;
+			akcija2.SetActive(true);
 			stanje = 5;
-		}else if(stanje==5 && vrataSkripta.odprta){
+		} else if (stanje == 5 && vrataSkripta.odprta) {
 			stanje = 6;
 		} else if (stanje == 6 && steviloZogic.prazenProstor) {
-			junakSkripta.zmagalLevel();
+			junakSkripta.zmagalLevel ();
 			stanje++;
 			
 		}
-		
 	}
 }

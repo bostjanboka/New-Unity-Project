@@ -220,7 +220,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 496004, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -6.15999985
+      value: .779999971
       objectReference: {fileID: 0}
     - target: {fileID: 496004, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1257,7 +1257,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &629052637
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1266,15 +1266,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 629052636}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8605fe19672c44649893fb9457c66325, type: 3}
+  m_Script: {fileID: 11500000, guid: e95e4054d571b6041918631f1fcd7431, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junak: {fileID: 0}
-  palcek: {fileID: 0}
-  trezor: {fileID: 0}
-  prostorZogic: {fileID: 1766434837}
-  zmagal: {fileID: 0}
-  akcija: {fileID: 0}
+  junak: {fileID: 1632155949}
+  palcek: {fileID: 1769984393}
+  prostorZogic: {fileID: 1526557553}
+  zmagal: {fileID: 2024938059}
+  akcija: {fileID: 753896275}
 --- !u!4 &629052638
 Transform:
   m_ObjectHideFlags: 0
@@ -2422,6 +2421,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1903df4a5017f499958449b082bf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  level: 0
+  trenutniLevel: 0
   zgubil: {fileID: 1947516484}
   zmagal: {fileID: 2024938059}
   back: {fileID: 1447761025}
@@ -2767,6 +2768,10 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
   m_SortingOrder: 6
+--- !u!1 &1526557553
+GameObject:
+  m_PrefabParentObject: {fileID: 168644, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
+  m_PrefabInternal: {fileID: 1766434836}
 --- !u!1001 &1531765392
 Prefab:
   m_ObjectHideFlags: 0
@@ -3226,13 +3231,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0004271dae271724182ac10e655ac63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 0
+  hp: 3
+  trenutniLevel: 0
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
   zgubil: {fileID: 1947516484}
+  inputNavigacija: {fileID: 1109816193}
   omogociPremikanje: 1
   stojimNaMestuX: 0
-  hp: 3
   speed: 6
   xTocka: 0
   ustreli: 0
@@ -3643,10 +3651,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1766434837
+--- !u!1 &1769984393
 GameObject:
-  m_PrefabParentObject: {fileID: 168644, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
-  m_PrefabInternal: {fileID: 1766434836}
+  m_PrefabParentObject: {fileID: 150790, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
+  m_PrefabInternal: {fileID: 136275677}
 --- !u!4 &1780681326
 Transform:
   m_PrefabParentObject: {fileID: 457530, guid: 2d6f3808b9c7f6a408202d9c286a08ab, type: 2}

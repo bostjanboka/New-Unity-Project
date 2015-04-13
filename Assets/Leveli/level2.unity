@@ -162,7 +162,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0004271dae271724182ac10e655ac63d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 1
   score: 0
   hp: 3
   trenutniLevel: 0
@@ -1209,6 +1208,10 @@ Prefab:
     - target: {fileID: 11487662, guid: 1ffe92446876c5749b87a271849c3e42, type: 2}
       propertyPath: smer
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11487662, guid: 1ffe92446876c5749b87a271849c3e42, type: 2}
+      propertyPath: korak
+      value: 220
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffe92446876c5749b87a271849c3e42, type: 2}

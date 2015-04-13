@@ -37,8 +37,21 @@ public class Meni_Gumbi : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			Application.Quit();
+			if(Application.loadedLevelName.Equals("ZemljevidScena")){
+				Application.LoadLevel("MeniScena");
+			}else{
+				Application.Quit();
+			}
+
 		}
+	}
+
+	public void naloziZemljevid(){
+		Application.LoadLevel ("ZemljevidScena");
+	}
+
+	public void naloziMeni(){
+		Application.LoadLevel ("MeniScena");
 	}
 
 	public void newGameButton(){

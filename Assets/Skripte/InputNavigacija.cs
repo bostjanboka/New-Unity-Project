@@ -15,14 +15,14 @@ public class InputNavigacija : MonoBehaviour {
 		back.SetActive (false);
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
+		Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape)) {
+		if (Input.GetKeyDown (KeyCode.Escape) && !zgubil.activeSelf && !zmagal.activeSelf) {
 			Time.timeScale = 0;
 			back.SetActive (true);
-
 		}
 	
 	}

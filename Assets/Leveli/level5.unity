@@ -847,6 +847,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &756996403
+GameObject:
+  m_PrefabParentObject: {fileID: 146610, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 756996402}
 --- !u!1001 &941844857
 Prefab:
   m_ObjectHideFlags: 0
@@ -1175,6 +1179,10 @@ Prefab:
       propertyPath: m_ApplyRootMotion
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11448502, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
+      propertyPath: inputNavigacija
+      value: 
+      objectReference: {fileID: 756996403}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
   m_IsPrefabParent: 0
