@@ -1,6 +1,7 @@
 ﻿public class InfoLeveli {
+	public int level;
 	public int hp;
 	public int trenutniLevel;
-	public int score;
+	public float score;
 
 }

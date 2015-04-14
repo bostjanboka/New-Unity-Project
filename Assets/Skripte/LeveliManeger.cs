@@ -40,52 +40,99 @@ public class LeveliManeger : MonoBehaviour {
 		}
 	}
 
-	public void saveProgres(int level, int hp, int trenutniLevel, int score){
-		if (!PlayerPrefs.HasKey ("Level" + level + "hp") || hp < 1) {
-			PlayerPrefs.SetInt ("Level" + level + "score", 0);
-			PlayerPrefs.SetInt ("Level" + level + "hp", 4);
-			PlayerPrefs.SetInt ("Level" + level + "trenutniLevel", 0);
+	public void saveProgres(int hp, int trenutniLevel, float score){
+		if (hp < 1) {
+			PlayerPrefs.SetFloat ("Leveli"  + "score", 0);
+			PlayerPrefs.SetInt ("Leveli"  + "hp", 4);
+			PlayerPrefs.SetInt ("Leveli" + "trenutniLevel", 0);
+		} 
+
+		if(hp > 0){
+			float tempScore = PlayerPrefs.GetFloat("Leveli"  + "score");
+			PlayerPrefs.SetFloat ("Leveli" + "score", tempScore+score);
+			PlayerPrefs.SetInt ("Leveli"  + "hp", hp);
+			PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", trenutniLevel);
 		}
-		if (PlayerPrefs.HasKey ("Level" + level + "hp")) {
-			if(hp > 0){
-				int tempScore = PlayerPrefs.GetInt("Level" + level + "score");
-				PlayerPrefs.SetInt ("Level" + level + "score", tempScore+score);
-				PlayerPrefs.SetInt ("Level" + level + "hp", hp);
-				PlayerPrefs.SetInt ("Level" + level + "trenutniLevel", trenutniLevel);
-			}
-		}
+
 	}
 
-	public InfoLeveli getLevel(int level){
-		int i = level;
-		if (!PlayerPrefs.HasKey ("Level" + level + "hp")) {
-			PlayerPrefs.SetInt ("Level" + level + "score", 0);
-			PlayerPrefs.SetInt ("Level" + level + "hp", 4);
-			PlayerPrefs.SetInt ("Level" + level + "trenutniLevel", 0);
+	public float naredilStopnjo(){
+		LeveliManeger._instance.nastaviCas(PlayerPrefs.GetInt ("Levelilevel"),PlayerPrefs.GetFloat ("Leveli"  + "score"));
+		PlayerPrefs.SetInt("Levelilevel",-1);
+		return PlayerPrefs.GetFloat ("Leveli"  + "score");
+	}
+
+	public void ponastaviLevel(int stopnja){
+
+		PlayerPrefs.SetInt("Levelilevel",stopnja);
+		PlayerPrefs.SetFloat ("Leveli"  + "score", 0);
+		PlayerPrefs.SetInt ("Leveli" + "hp", 4);
+		PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", 0);
+		
+	}
+
+	public InfoLeveli getLevel(){
+
+		if (!PlayerPrefs.HasKey ("Leveli" + "hp")) {
+			PlayerPrefs.SetInt("Leveli"+"level",-1);
+			PlayerPrefs.SetFloat ("Leveli"  + "score", 0);
+			PlayerPrefs.SetInt ("Leveli"  + "hp", 4);
+			PlayerPrefs.SetInt ("Leveli" + "trenutniLevel", 0);
 		}
 		InfoLeveli temp = new InfoLeveli ();
-		
-		temp.hp = PlayerPrefs.GetInt("Level" + i + "hp");
-		temp.trenutniLevel = PlayerPrefs.GetInt("Level" + i + "trenutniLevel");
-		temp.score = PlayerPrefs.GetInt ("Level" + i + "score");
+		temp.level = PlayerPrefs.GetInt ("Leveli"+"level");
+		temp.hp = PlayerPrefs.GetInt("Leveli"  + "hp");
+		temp.trenutniLevel = PlayerPrefs.GetInt("Leveli" + "trenutniLevel");
+		temp.score = PlayerPrefs.GetFloat ("Leveli" + "score");
 
 		return temp;
 	}
 
-	public List<InfoLeveli> GetLeveleInfo ()
-	{
-		List<InfoLeveli> infoLeveli = new List<InfoLeveli> ();
-		int i = 1;
-		while (i<=leveliLength && PlayerPrefs.HasKey("Level"+i+"hp")) {
-			InfoLeveli temp = new InfoLeveli ();
+	public void nastaviCas(int stopnja,float cas){
+		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja)) {
+			PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
+		} else {
+			if(PlayerPrefs.GetFloat ("Stopnja" + stopnja) > cas ){
+				PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
+			}
 
-			temp.hp = PlayerPrefs.GetInt("Level" + i + "hp");
-			temp.trenutniLevel = PlayerPrefs.GetInt("Level" + i + "trenutniLevel");
-			temp.score = PlayerPrefs.GetInt ("Level" + i + "score");
-
-			infoLeveli.Add (temp);
-			i++;
 		}
-		return infoLeveli;
 	}
+
+	public float[] getCase(){
+		float[] casi = new float[leveliLength];
+		if (!PlayerPrefs.HasKey ("Stopnja" + 1)) {
+			casi [0] = -1;
+		} else {
+			casi[0] = PlayerPrefs.GetFloat ("Stopnja" + 1);
+		}
+		if (!PlayerPrefs.HasKey ("Stopnja" + 2)) {
+			casi [1] = -1;
+		} else {
+			casi[1] = PlayerPrefs.GetFloat ("Stopnja" + 2);
+		}
+		if (!PlayerPrefs.HasKey ("Stopnja" + 3)) {
+			casi [2] = -1;
+		} else {
+			casi[2] = PlayerPrefs.GetFloat ("Stopnja" + 3);
+		}
+		if (!PlayerPrefs.HasKey ("Stopnja" + 4)) {
+			casi [3] = -1;
+		} else {
+			casi[3] = PlayerPrefs.GetFloat ("Stopnja" + 4);
+		}
+		if (!PlayerPrefs.HasKey ("Stopnja" + 5)) {
+			casi [4] = -1;
+		} else {
+			casi[4] = PlayerPrefs.GetFloat ("Stopnja" + 5);
+		}
+		if (!PlayerPrefs.HasKey ("Stopnja" + 6)) {
+			casi [5] = -1;
+		} else {
+			casi[5] = PlayerPrefs.GetFloat ("Stopnja" + 6);
+		}
+		return casi;
+	}
+
+
 }

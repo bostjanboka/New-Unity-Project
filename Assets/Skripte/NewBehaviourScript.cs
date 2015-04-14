@@ -5,7 +5,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	//animacija
 	int level;
-	public int score;
+	public float score;
 	public int hp;
 	public int trenutniLevel;
 
@@ -24,7 +24,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public bool omogociPremikanje = true;
 	public bool stojimNaMestuX;
-
+	public bool meritev;
 
 
 	public float speed;
@@ -47,9 +47,10 @@ public class NewBehaviourScript : MonoBehaviour {
 	void Start () {
 
 		level = inputNavigacija.GetComponent<InputNavigacija> ().level;
-		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
+		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		hp = temp.hp;
 		trenutniLevel = temp.trenutniLevel;
+		score = temp.score;
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = trenutniLevel;
 		stojimNaMestuX = false;
 		navSkripta = zgubil.GetComponent<InputNavigacija> ();
@@ -124,7 +125,13 @@ public class NewBehaviourScript : MonoBehaviour {
 				anim.SetFloat ("hitrost", 0);
 			}
 		}
-		
+		if (meritev) {
+			score+=Time.deltaTime;
+		}
+	}
+
+	public void zacniCas(){
+		meritev = true;
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
@@ -141,8 +148,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public void zgubilLevel(){
 
-		LeveliManeger._instance.saveProgres (level, --hp, trenutniLevel, 0);
-		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
+		LeveliManeger._instance.saveProgres ( --hp, trenutniLevel, score);
+		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
 		HighScoreManager._instance.SaveHighScore("boka",35);
 		Time.timeScale = 0;
@@ -151,8 +158,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public void zmagalLevel(){
-		LeveliManeger._instance.saveProgres (level, hp, ++trenutniLevel, score);
-		InfoLeveli temp = LeveliManeger._instance.getLevel (level);
+		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
 
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
 	}
