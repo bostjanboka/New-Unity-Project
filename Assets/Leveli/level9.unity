@@ -718,6 +718,7 @@ MonoBehaviour:
   inputNavigacija: {fileID: 587424569}
   omogociPremikanje: 1
   stojimNaMestuX: 0
+  meritev: 0
   speed: 6
   xTocka: 0
   ustreli: 0
@@ -865,7 +866,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1903df4a5017f499958449b082bf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 5
   trenutniLevel: 0
   zgubil: {fileID: 401811803}
   zmagal: {fileID: 1099888931}

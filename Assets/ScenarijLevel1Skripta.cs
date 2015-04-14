@@ -49,6 +49,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 			}
 		} else if (stanje == 3) {
 			akcija.SetActive (true);
+			junakSkripta.meritev=true;
 			palcekSkripta.xTocka=21f;
 			stanje = 4;
 		}else if(stanje == 4 && steviloZogic.prazenProstor){

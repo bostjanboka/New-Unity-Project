@@ -34,6 +34,7 @@ public class ScenarijLevel6 : MonoBehaviour {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
 			akcija.SetActive (true);
+			junakSkripta.meritev=true;
 
 			palcekSkripta.xTocka=12f;
 			

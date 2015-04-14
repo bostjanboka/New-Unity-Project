@@ -26,15 +26,18 @@ public class ScenarijLevela11 : MonoBehaviour {
 		palcekSkripta.xTocka = 12.16f;
 
 		stanje = 0;
+		junakSkripta.meritev=true;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if(steviloZogic.prazenProstor){
-			junakSkripta.zmagalLevel();
 			stanje++;
 			LeveliManeger._instance.odkleniStopnjo(6);
+			LeveliManeger._instance.naredilStopnjo();
+			junakSkripta.zmagalLevel();
+
 		}
 		
 	}

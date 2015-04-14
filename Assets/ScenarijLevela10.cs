@@ -36,7 +36,7 @@ public class ScenarijLevela10 : MonoBehaviour {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
 			akcija.SetActive (true);
-
+			junakSkripta.meritev=true;
 			palcekSkripta.xTocka=21f;
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){

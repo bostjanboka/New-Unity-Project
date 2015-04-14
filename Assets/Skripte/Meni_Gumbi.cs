@@ -60,8 +60,18 @@ public class Meni_Gumbi : MonoBehaviour {
 	}
 
 	public void continueGame(){
-		Application.LoadLevel ("level6");
-		loadingScreen.GetComponent<LoadingScreen> ().show ();
+		InfoLeveli temp = LeveliManeger._instance.getLevel ();
+
+		if (temp.level == -1) {
+			Application.LoadLevel ("ZemljevidScena");
+		} else {
+			if (temp.level % 2 == 0) {
+				Application.LoadLevel ("level" + temp.level * 2); 
+			} else {
+				Application.LoadLevel ("level"+(temp.level*2-1+temp.trenutniLevel)); 
+			}
+			loadingScreen.GetComponent<LoadingScreen> ().show ();
+		}
 	}
 
 	public void highScoreButton(){

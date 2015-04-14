@@ -42,10 +42,12 @@ public class scenarijLevel4 : MonoBehaviour {
 		if (stanje == 0 && junakSkripta.stojimNaMestuX) {
 			junakSkripta.omogociPremikanje = true;
 			coliderJunak.isTrigger=false;
+
 			stanje = 1;
 		} else if (stanje == 1 && palcekSkripta.stojimNaMestuX) {
 			palcekSkripta.xTocka = 12.5f;
 			visenje.GetComponent<DropDownSkriptaZaVisenje> ().sprozi = true;
+			junakSkripta.meritev=true;
 			stanje = 2;
 		} else if (stanje == 2 && GameObject.FindGameObjectsWithTag ("zogice").Length == 0 && GameObject.FindGameObjectsWithTag ("zeleji").Length == 0) {
 			caneZaJaw.SetActive (true);
@@ -53,6 +55,7 @@ public class scenarijLevel4 : MonoBehaviour {
 		}
 		else if(stanje == 3 && steviloZogic.prazenProstor){
 			LeveliManeger._instance.odkleniStopnjo(3);
+			LeveliManeger._instance.naredilStopnjo();
 			junakSkripta.zmagalLevel();
 			stanje++;
 		}

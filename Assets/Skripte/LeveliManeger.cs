@@ -57,7 +57,7 @@ public class LeveliManeger : MonoBehaviour {
 	}
 
 	public float naredilStopnjo(){
-		LeveliManeger._instance.nastaviCas(PlayerPrefs.GetInt ("Levelilevel"),PlayerPrefs.GetFloat ("Leveli"  + "score"));
+		nastaviCas(PlayerPrefs.GetInt ("Levelilevel"),PlayerPrefs.GetFloat ("Leveli"  + "score"));
 		PlayerPrefs.SetInt("Levelilevel",-1);
 		return PlayerPrefs.GetFloat ("Leveli"  + "score");
 	}
@@ -89,11 +89,14 @@ public class LeveliManeger : MonoBehaviour {
 	}
 
 	public void nastaviCas(int stopnja,float cas){
-		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja)) {
+		Debug.Log("Prvic1"+cas);
+		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja) || PlayerPrefs.GetFloat ("Stopnja" + stopnja) < 1) {
 			PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
+			Debug.Log("Prvic"+cas);
 		} else {
 			if(PlayerPrefs.GetFloat ("Stopnja" + stopnja) > cas ){
 				PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
+				Debug.Log("Drugic"+cas);
 			}
 
 		}

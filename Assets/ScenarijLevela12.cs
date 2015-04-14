@@ -39,6 +39,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 			}else{
 				palcek.SetActive(false);
 				akcija.SetActive (true);
+				junakSkripta.meritev=true;
 				stanje = 1;
 			}
 
@@ -46,6 +47,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 			//palcekSkripta.xTocka=21f;
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
+			LeveliManeger._instance.naredilStopnjo();
 			junakSkripta.zmagalLevel();
 			stanje++;
 		}

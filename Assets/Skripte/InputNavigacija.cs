@@ -50,10 +50,11 @@ public class InputNavigacija : MonoBehaviour {
 
 	public void resetLevel(){
 		Time.timeScale = 1;
+		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		if (level % 2 == 0) {
 			Application.LoadLevel ("level" + level * 2); 
 		} else {
-			Application.LoadLevel ("level"+(level*2-1+trenutniLevel)); 
+			Application.LoadLevel ("level"+(level*2-1+temp.trenutniLevel)); 
 		}
 		//Application.LoadLevel (Application.loadedLevel); 
 

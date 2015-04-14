@@ -54,7 +54,7 @@ public class ScenarijLevela9 : MonoBehaviour {
 		} 
 		else if (stanje == 3 && vrataSkripta.zaprta) {
 			akcija.SetActive (true);
-			
+			junakSkripta.meritev=true;
 			stanje = 4;
 		} else if (stanje == 4 && steviloZogic.prazenProstor) {
 			

@@ -39,6 +39,7 @@ public class ScenarijLevel2 : MonoBehaviour {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
 			akcija.SetActive (true);
+			junakSkripta.meritev=true;
 			junakSkripta.omogociPremikanje = true;
 			coliderJunak.isTrigger = false;
 			palcekSkripta.xTocka=21f;

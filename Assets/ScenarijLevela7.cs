@@ -56,6 +56,7 @@ public class ScenarijLevela7 : MonoBehaviour {
 			modra.SetActive (true);
 			jawBreaker.SetActive (true);
 			junakSkripta.omogociPremikanje = true;
+			junakSkripta.meritev=true;
 			stanje = 4;
 		} else if (stanje == 4 && steviloZogic.prazenProstor) {
 
@@ -64,6 +65,7 @@ public class ScenarijLevela7 : MonoBehaviour {
 			stanje = 5;
 		} else if (palcekSkripta.stojimNaMestuX && stanje == 5) {
 			LeveliManeger._instance.odkleniStopnjo(4);
+			LeveliManeger._instance.naredilStopnjo();
 			zmagal.SetActive(true);
 			Time.timeScale=0;
 
