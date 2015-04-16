@@ -1006,7 +1006,7 @@ GameObject:
   - 114: {fileID: 1696336355}
   - 114: {fileID: 1696336354}
   m_Layer: 0
-  m_Name: high score
+  m_Name: more games
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,9 +1055,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: .100000001
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: b915e57fb6556304c89bc2049de04128,
+    m_HighlightedSprite: {fileID: 21300000, guid: 0f8b71e4d5a225749a7fd74f057121e8,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: 9863db4384e6c1c4fb085e57b0bda71d, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: aec215753d51a364b81e4334851036d2, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -1096,7 +1096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: b915e57fb6556304c89bc2049de04128, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0f8b71e4d5a225749a7fd74f057121e8, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
