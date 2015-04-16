@@ -63,7 +63,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .186040208, g: .555430472, b: .816176474, a: .431372553}
+  m_Color: {r: .200000003, g: .752941191, b: .800000012, a: .588235319}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 1067ecb0e2897b34e87a769c13dc2789, type: 3}
     m_FontSize: 100
@@ -76,7 +76,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0000000
+  m_Text: 0:0
 --- !u!114 &11484956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -120,7 +120,7 @@ Canvas:
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
 --- !u!224 &22400858
 RectTransform:
   m_ObjectHideFlags: 1
@@ -153,7 +153,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -380.190002, y: -214.690002}
+  m_AnchoredPosition: {x: -373.579987, y: -215.899994}
   m_SizeDelta: {x: 588, y: 229}
   m_Pivot: {x: .5, y: .5}
 --- !u!1001 &100100000
