@@ -53,7 +53,7 @@ public class LeveliManeger : MonoBehaviour {
 
 		if(hp > 0){
 			float tempScore = PlayerPrefs.GetFloat("Leveli"  + "score");
-			PlayerPrefs.SetFloat ("Leveli" + "score", tempScore+score);
+			PlayerPrefs.SetFloat ("Leveli" + "score", score);
 			PlayerPrefs.SetInt ("Leveli"  + "hp", hp);
 			PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", trenutniLevel);
 		}
