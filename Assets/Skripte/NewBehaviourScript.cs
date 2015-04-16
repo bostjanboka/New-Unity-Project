@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class NewBehaviourScript : MonoBehaviour {
 
@@ -8,6 +9,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	public float score;
 	public int hp;
 	public int trenutniLevel;
+	public Text casi;
 
 
 	Animator anim;
@@ -128,6 +130,8 @@ public class NewBehaviourScript : MonoBehaviour {
 		}
 		if (meritev) {
 			score+=Time.deltaTime;
+			string format=((int)score/60)+":"+((int)score%60);
+			casi.text=format;
 		}
 	}
 
