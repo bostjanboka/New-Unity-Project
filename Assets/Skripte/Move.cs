@@ -19,6 +19,8 @@ public class Move : MonoBehaviour {
 		Debug.Log(""+UnityPluginForWindowsPhone.Class1.GetDeviceName);
 
 
+		//PlayerPrefs.DeleteAll ();
+		//PlayerPrefs.Save ();
 
 
 	}

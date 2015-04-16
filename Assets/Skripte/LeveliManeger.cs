@@ -25,14 +25,18 @@ public class LeveliManeger : MonoBehaviour {
 	}
 
 	public void odkleniStopnjo(int stopnja){
-		PlayerPrefs.SetInt ("Stopnja" + stopnja, 1);
+		PlayerPrefs.SetInt ("StopnjaOdkleni" + stopnja, 1);
+		PlayerPrefs.Save ();
 	}
 
 	public bool odklenjenaStopnja(int stopnja){
-		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja)) {
-			PlayerPrefs.SetInt ("Stopnja" + stopnja, 0);
+		if (!PlayerPrefs.HasKey ("StopnjaOdkleni" + stopnja)) {
+			PlayerPrefs.SetInt ("StopnjaOdkleni" + stopnja, 0);
+			Debug.Log("odklenjena stopnja nima kljuca "+stopnja);
 		}
-		int x = PlayerPrefs.GetInt ("Stopnja"+stopnja);
+		int x = PlayerPrefs.GetInt ("StopnjaOdkleni"+stopnja);
+		Debug.Log("odklenjena stopnjakljuca "+stopnja +" vrednost x"+x);
+		PlayerPrefs.Save ();
 		if (x == 0) {
 			return false;
 		} else {
@@ -53,12 +57,14 @@ public class LeveliManeger : MonoBehaviour {
 			PlayerPrefs.SetInt ("Leveli"  + "hp", hp);
 			PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", trenutniLevel);
 		}
+		PlayerPrefs.Save ();
 
 	}
 
 	public float naredilStopnjo(){
 		nastaviCas(PlayerPrefs.GetInt ("Levelilevel"),PlayerPrefs.GetFloat ("Leveli"  + "score"));
 		PlayerPrefs.SetInt("Levelilevel",-1);
+		PlayerPrefs.Save ();
 		return PlayerPrefs.GetFloat ("Leveli"  + "score");
 	}
 
@@ -68,7 +74,7 @@ public class LeveliManeger : MonoBehaviour {
 		PlayerPrefs.SetFloat ("Leveli"  + "score", 0);
 		PlayerPrefs.SetInt ("Leveli" + "hp", 4);
 		PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", 0);
-		
+		PlayerPrefs.Save ();
 	}
 
 	public InfoLeveli getLevel(){
@@ -100,6 +106,7 @@ public class LeveliManeger : MonoBehaviour {
 			}
 
 		}
+		PlayerPrefs.Save ();
 	}
 
 	public float[] getCase(){
