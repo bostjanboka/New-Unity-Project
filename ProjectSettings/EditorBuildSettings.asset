@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/ZemljevidScena.unity
-  - enabled: 1
     path: Assets/MeniScena.unity
+  - enabled: 1
+    path: Assets/ZemljevidScena.unity
   - enabled: 1
     path: Assets/Leveli/level1.unity
   - enabled: 1

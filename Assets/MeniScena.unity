@@ -1364,3 +1364,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56ad90271c445f4eb68500cf4fee8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  prikaziReklamoBool: 0
+  ugasniReklamoBool: 1

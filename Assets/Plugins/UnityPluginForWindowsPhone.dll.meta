@@ -1,6 +1,6 @@
 fileFormatVersion: 2
-guid: 59d1ca71a6247e74393d6c315fd4b282
-timeCreated: 1428860626
+guid: f2b846ba1fe8fed4caa1ffe4fdf461f3
+timeCreated: 1429123677
 licenseType: Free
 PluginImporter:
   serializedVersion: 1
@@ -20,7 +20,7 @@ PluginImporter:
       settings:
         CPU: AnyCPU
         DefaultValueInitialized: true
-        OS: Windows
+        OS: AnyOS
     Linux:
       enabled: 0
       settings:
@@ -29,9 +29,6 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: x86_64
-    LinuxUniversal:
-      enabled: 0
-      settings: {}
     OSXIntel:
       enabled: 0
       settings:
@@ -40,18 +37,12 @@ PluginImporter:
       enabled: 0
       settings:
         CPU: AnyCPU
-    OSXUniversal:
-      enabled: 0
-      settings: {}
     WP8:
       enabled: 0
       settings:
         CPU: AnyCPU
         DontProcess: False
-        PlaceholderPath: Assets/Plugins/WP8/UnityPluginForWindowsPhone.dll
-    WebStreamed:
-      enabled: 0
-      settings: {}
+        PlaceholderPath: 
     Win:
       enabled: 0
       settings:
