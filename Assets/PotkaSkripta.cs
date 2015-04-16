@@ -18,7 +18,8 @@ public class PotkaSkripta : MonoBehaviour {
 	public Text cas4;
 	public Text cas5;
 	public Text cas6;
-
+	public Text totalCas;
+	float skupaj;
 	void Start () {
 
 
@@ -30,17 +31,34 @@ public class PotkaSkripta : MonoBehaviour {
 		sest.interactable = LeveliManeger._instance.odklenjenaStopnja(6);
 
 		float[] casi = LeveliManeger._instance.getCase ();
-		cas1.text = (casi[0] > 0) ? casi[0]+"s":"N/A";
-		cas2.text = (casi[1] > 0) ? casi[1]+"s":"N/A";
-		cas3.text = (casi[2] > 0) ? casi[2]+"s":"N/A";
-		cas4.text = (casi[3] > 0) ? casi[3]+"s":"N/A";
-		cas5.text = (casi[4] > 0) ? casi[4]+"s":"N/A";
-		cas6.text = (casi[5] > 0) ? casi[5]+"s":"N/A";
+		cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
+	    cas2.text = (casi[1] > 0) ? "BEST: "+casovniFormat(casi[1])+"s":"BEST: N/A";
+	    cas3.text = (casi[2] > 0) ? "BEST: "+casovniFormat(casi[2])+"s":"BEST: N/A";
+	    cas4.text = (casi[3] > 0) ? "BEST: "+casovniFormat(casi[3])+"s":"BEST: N/A";
+	    cas5.text = (casi[4] > 0) ? "BEST: "+casovniFormat(casi[4])+"s":"BEST: N/A";
+	    cas6.text = (casi[5] > 0) ? "BEST: "+casovniFormat(casi[5])+"s":"BEST: N/A";
+
+		for (int i=0; i < casi.Length; i++) {
+			if(casi[i]> 0){
+				skupaj+=casi[i];
+			}
+
+		}
+		totalCas.text = casovniFormat (skupaj);
 	}
 	
 	// Update is called once per frame
 	void Update () {
 	
+	}
+
+	string casovniFormat(float cas){
+
+		string minutes = Mathf.Floor(cas / 60).ToString("00");
+		string seconds = Mathf.Floor(cas % 60).ToString("00");
+		string mil = Mathf.Floor((cas*10) % 10).ToString("0");
+
+		return minutes + ":" + seconds + "." + mil;
 	}
 
 	public void pritisnilEna(){
