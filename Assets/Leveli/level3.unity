@@ -559,11 +559,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   junak: {fileID: 914824930}
-  palcek: {fileID: 0}
+  palcek: {fileID: 2068464042}
   vrata: {fileID: 1076407784}
   akcija: {fileID: 2056040014}
   prostorZogic: {fileID: 23470105}
-  zmagal: {fileID: 0}
+  zmagal: {fileID: 944925160}
 --- !u!4 &741426693
 Transform:
   m_ObjectHideFlags: 0
@@ -665,6 +665,10 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
+--- !u!1 &944925160
+GameObject:
+  m_PrefabParentObject: {fileID: 103030, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 1793983612}
 --- !u!1 &1076407784
 GameObject:
   m_PrefabParentObject: {fileID: 137790, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}

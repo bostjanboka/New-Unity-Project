@@ -17,7 +17,10 @@ public class PalcekAI : MonoBehaviour {
 	void Start () {
 
 		Transform animacija = transform.Find ("palcekAnimacija");
+
 		anim = animacija.gameObject.GetComponent<Animator> ();
+		
+
 	}
 	
 	// Update is called once per frame
