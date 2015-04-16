@@ -116,7 +116,7 @@ Transform:
   - {fileID: 62981975}
   - {fileID: 391070764}
   m_Father: {fileID: 2046391428}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &62981974
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,11 +640,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 425288, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 110864, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_Name
       value: Canvas Gumbi
+      objectReference: {fileID: 0}
+    - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: level7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
@@ -1374,7 +1378,7 @@ Transform:
   m_Children:
   - {fileID: 996701080}
   m_Father: {fileID: 2046391428}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!114 &966045074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1756,7 +1760,7 @@ Transform:
   - {fileID: 70880202}
   - {fileID: 303174460}
   m_Father: {fileID: 2046391428}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!61 &1288653185
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1828,7 +1832,7 @@ Transform:
   m_Children:
   - {fileID: 657946869}
   m_Father: {fileID: 2046391428}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1434032053
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2037,12 +2041,12 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 812476064}
+  - {fileID: 339439439}
   - {fileID: 1434032052}
   - {fileID: 35365738}
   - {fileID: 1288653184}
   - {fileID: 966045073}
   - {fileID: 1227401920}
-  - {fileID: 339439439}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &2059364017
