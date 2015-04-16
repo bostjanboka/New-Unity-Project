@@ -358,7 +358,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22481928, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: -374.690002
+      value: -377.690002
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460068, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 22481928, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -214.059998
+      objectReference: {fileID: 0}
+    - target: {fileID: 11460068, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}
+      propertyPath: m_Text
+      value: 00:00.0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}

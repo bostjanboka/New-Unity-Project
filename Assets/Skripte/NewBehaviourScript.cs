@@ -65,6 +65,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		speed = 2;
 		count = 1;
 		steviloSpiral = 0;
+		casi.text= PotkaSkripta.casovniFormat(score);
 	}
 	
 	// Update is called once per frame
@@ -130,8 +131,8 @@ public class NewBehaviourScript : MonoBehaviour {
 		}
 		if (meritev) {
 			score+=Time.deltaTime;
-			string format=((int)score/60)+":"+((int)score%60);
-			casi.text=format;
+
+			casi.text= PotkaSkripta.casovniFormat(score);
 		}
 	}
 

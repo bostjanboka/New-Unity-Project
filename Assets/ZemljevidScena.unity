@@ -404,6 +404,7 @@ MonoBehaviour:
   cas4: {fileID: 1895612129}
   cas5: {fileID: 399859911}
   cas6: {fileID: 1276328783}
+  totalCas: {fileID: 1040027152}
 --- !u!4 &144157590
 Transform:
   m_ObjectHideFlags: 0

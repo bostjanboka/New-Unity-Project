@@ -52,7 +52,7 @@ public class PotkaSkripta : MonoBehaviour {
 	
 	}
 
-	string casovniFormat(float cas){
+	public static string casovniFormat(float cas){
 
 		string minutes = Mathf.Floor(cas / 60).ToString("00");
 		string seconds = Mathf.Floor(cas % 60).ToString("00");
