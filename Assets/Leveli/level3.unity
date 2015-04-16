@@ -1077,6 +1077,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: level4
       objectReference: {fileID: 0}
+    - target: {fileID: 110864, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0
@@ -1319,6 +1323,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 2068464043}
   - 212: {fileID: 2068464044}
+  - 114: {fileID: 2068464045}
   m_Layer: 0
   m_Name: Palcek
   m_TagString: Untagged
@@ -1333,7 +1338,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2068464042}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.82999992, z: 2}
+  m_LocalPosition: {x: 0, y: -4.84899998, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1324352826}
@@ -1365,3 +1370,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &2068464045
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068464042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6281076bca7ec1c49bdc57fb053cdecb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  smer: 1
+  speed: 2
+  xTocka: 12
+  palica: 1
+  stojimNaMestuX: 0
