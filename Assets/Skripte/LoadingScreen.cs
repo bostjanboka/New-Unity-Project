@@ -61,6 +61,7 @@ public class LoadingScreen : MonoBehaviour
 	{
 		if (showed && Input.GetKeyDown (KeyCode.Escape)) {
 			Application.LoadLevel("ZemljevidScena");
+			Destroy (gameObject);
 		}
 		/*if (timer >= 0) {
 			timer += Time.deltaTime;
