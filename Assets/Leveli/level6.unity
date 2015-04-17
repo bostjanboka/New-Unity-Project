@@ -669,6 +669,10 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 146610, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_PrefabInternal: {fileID: 339439438}
+--- !u!1 &339439442
+GameObject:
+  m_PrefabParentObject: {fileID: 103030, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 339439438}
 --- !u!1 &391070763
 GameObject:
   m_ObjectHideFlags: 0
@@ -985,7 +989,7 @@ MonoBehaviour:
   junak: {fileID: 1434032051}
   palcek: {fileID: 966045072}
   prostorZogic: {fileID: 1766434837}
-  zmagal: {fileID: 0}
+  zmagal: {fileID: 339439442}
   akcija: {fileID: 1201828486}
 --- !u!4 &629052638
 Transform:

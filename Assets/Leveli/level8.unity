@@ -925,7 +925,7 @@ MonoBehaviour:
   junak: {fileID: 1632155949}
   palcek: {fileID: 1769984393}
   prostorZogic: {fileID: 1526557553}
-  zmagal: {fileID: 0}
+  zmagal: {fileID: 2051124495}
   akcija: {fileID: 753896275}
 --- !u!4 &629052638
 Transform:
@@ -2981,6 +2981,10 @@ GameObject:
 --- !u!1 &2051124494
 GameObject:
   m_PrefabParentObject: {fileID: 154590, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 2051124491}
+--- !u!1 &2051124495
+GameObject:
+  m_PrefabParentObject: {fileID: 103030, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_PrefabInternal: {fileID: 2051124491}
 --- !u!4 &2073044516
 Transform:

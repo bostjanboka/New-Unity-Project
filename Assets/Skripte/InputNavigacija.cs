@@ -15,7 +15,7 @@ public class InputNavigacija : MonoBehaviour {
 		back.SetActive (false);
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
-		Time.timeScale = 1;
+		//Time.timeScale = 1;
 	}
 	
 	// Update is called once per frame

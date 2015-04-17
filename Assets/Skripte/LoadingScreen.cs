@@ -2,7 +2,7 @@
 using System.Collections;
 public class LoadingScreen : MonoBehaviour
 {
-	public float delayTime;
+	public float delayTime=3;
 
 
 	public GameObject slikaOzadja;
@@ -49,17 +49,18 @@ public class LoadingScreen : MonoBehaviour
 
 	public void hide()
 	{
-		Debug.Log("IZGINI");
+		//Debug.Log("IZGINI");
 		//gameObject.GetComponent<Animator> ().enabled = false;
 		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = false;
 		animacija.GetComponent<Animator> ().enabled = false;
 		animacija.GetComponent<SpriteRenderer> ().enabled = false;
+		Destroy (gameObject);
 	}
 	
 	void Update()
 	{
 		if (showed && Input.GetKeyDown (KeyCode.Escape)) {
-			Application.LoadLevel("MeniScena");
+			Application.LoadLevel("ZemljevidScena");
 		}
 		/*if (timer >= 0) {
 			timer += Time.deltaTime;
@@ -71,7 +72,7 @@ public class LoadingScreen : MonoBehaviour
 		}*/
 
 		if (showed&&Time.timeScale == 1 && !Application.isLoadingLevel) {
-			Debug.Log("IZGINI pdate");
+			//Debug.Log("IZGINI pdate");
 			hide();
 		}
 	}
