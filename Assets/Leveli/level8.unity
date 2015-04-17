@@ -2265,8 +2265,8 @@ MonoBehaviour:
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
-  zgubil: {fileID: 0}
-  inputNavigacija: {fileID: 0}
+  zgubil: {fileID: 2051124494}
+  inputNavigacija: {fileID: 2051124493}
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
@@ -2961,7 +2961,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: level9
+      value: ZemljevidScena
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
@@ -2969,6 +2969,14 @@ Prefab:
 --- !u!4 &2051124492
 Transform:
   m_PrefabParentObject: {fileID: 425288, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 2051124491}
+--- !u!1 &2051124493
+GameObject:
+  m_PrefabParentObject: {fileID: 146610, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 2051124491}
+--- !u!1 &2051124494
+GameObject:
+  m_PrefabParentObject: {fileID: 154590, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_PrefabInternal: {fileID: 2051124491}
 --- !u!4 &2073044516
 Transform:

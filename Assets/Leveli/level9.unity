@@ -191,8 +191,8 @@ MonoBehaviour:
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
-  zgubil: {fileID: 0}
-  inputNavigacija: {fileID: 0}
+  zgubil: {fileID: 615838586}
+  inputNavigacija: {fileID: 615838585}
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
@@ -364,6 +364,14 @@ Prefab:
 --- !u!4 &615838584
 Transform:
   m_PrefabParentObject: {fileID: 425288, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 615838583}
+--- !u!1 &615838585
+GameObject:
+  m_PrefabParentObject: {fileID: 146610, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 615838583}
+--- !u!1 &615838586
+GameObject:
+  m_PrefabParentObject: {fileID: 154590, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_PrefabInternal: {fileID: 615838583}
 --- !u!1001 &619306143
 Prefab:
@@ -1251,6 +1259,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 9549606, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: d75eb0444fd81434d8808f1716b0f411, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
   m_IsPrefabParent: 0

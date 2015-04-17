@@ -325,6 +325,10 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 330943780}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &387857684
+GameObject:
+  m_PrefabParentObject: {fileID: 154590, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 1793983612}
 --- !u!1 &398124578
 GameObject:
   m_ObjectHideFlags: 0
@@ -394,7 +398,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: b7bec71aecede814c920afa6ffa266dc, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -626,8 +630,8 @@ MonoBehaviour:
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
-  zgubil: {fileID: 0}
-  inputNavigacija: {fileID: 0}
+  zgubil: {fileID: 387857684}
+  inputNavigacija: {fileID: 1796896463}
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
@@ -855,7 +859,7 @@ GameObject:
   - 212: {fileID: 1324352828}
   - 95: {fileID: 1324352827}
   m_Layer: 0
-  m_Name: palcekAnimacijaL3
+  m_Name: palcekAnimacija
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -885,7 +889,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: d75eb0444fd81434d8808f1716b0f411, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
@@ -1075,7 +1079,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: level4
+      value: ZemljevidScena
       objectReference: {fileID: 0}
     - target: {fileID: 110864, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_IsActive
@@ -1185,6 +1189,10 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1795158410}
   m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+--- !u!1 &1796896463
+GameObject:
+  m_PrefabParentObject: {fileID: 146610, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+  m_PrefabInternal: {fileID: 1793983612}
 --- !u!1001 &1864823590
 Prefab:
   m_ObjectHideFlags: 0

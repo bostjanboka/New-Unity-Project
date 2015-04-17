@@ -222,10 +222,10 @@ Prefab:
     - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1895986892}
+      objectReference: {fileID: 176566234}
     - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: 
+      value: noviLevel
       objectReference: {fileID: 0}
     - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
@@ -234,6 +234,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &176566234
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11419918, guid: 92d73ad9521a2bc42827d91114c54466,
+    type: 2}
+  m_PrefabInternal: {fileID: 176566233}
+  m_Script: {fileID: 11500000, guid: 2e1903df4a5017f499958449b082bf8a, type: 3}
 --- !u!1 &202423454
 GameObject:
   m_PrefabParentObject: {fileID: 150790, guid: e2c332152e18eda43bdcf92bd8785d71, type: 2}
