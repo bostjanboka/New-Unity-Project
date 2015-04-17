@@ -985,7 +985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21239386, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
       propertyPath: m_SortingOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 189638, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
       propertyPath: m_IsActive
@@ -1034,6 +1034,10 @@ Prefab:
     - target: {fileID: 11497902, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
       propertyPath: speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 484394, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
