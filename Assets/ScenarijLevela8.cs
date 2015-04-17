@@ -40,8 +40,9 @@ public class ScenarijLevela8 : MonoBehaviour {
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
 			LeveliManeger._instance.odkleniStopnjo(5);
-			LeveliManeger._instance.naredilStopnjo();
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
+
 			stanje++;
 		}
 		

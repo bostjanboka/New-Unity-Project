@@ -1867,7 +1867,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   hp: 0
-  trenutniLevel: 1
+  trenutniLevel: 0
   casi: {fileID: 1227401919}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}

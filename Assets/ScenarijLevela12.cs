@@ -24,7 +24,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 
 		
 		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 10f;
+		palcekSkripta.xTocka = 0f;
 		junakSkripta.xTocka = -8f;
 		stanje = 0;
 		akcija.SetActive (false);
@@ -33,7 +33,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
-			if(palcek.transform.position.y < 5){
+			if(palcek.transform.position.y < 1.4f){
 				palcek.transform.Translate(new Vector2(0,2*Time.deltaTime));
 
 			}else{
@@ -48,8 +48,8 @@ public class ScenarijLevela12 : MonoBehaviour {
 			//palcekSkripta.xTocka=21f;
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
-			LeveliManeger._instance.naredilStopnjo();
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
 			stanje++;
 		}
 		

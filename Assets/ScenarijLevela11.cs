@@ -33,11 +33,12 @@ public class ScenarijLevela11 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(steviloZogic.prazenProstor){
+		if(stanje == 0 && steviloZogic.prazenProstor){
 			stanje++;
 			LeveliManeger._instance.odkleniStopnjo(6);
-			LeveliManeger._instance.naredilStopnjo();
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
+
 
 		}
 		

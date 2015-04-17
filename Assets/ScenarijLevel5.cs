@@ -46,8 +46,9 @@ public class ScenarijLevel5 : MonoBehaviour {
 			palcekSkripta.xTocka=12f;
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
-			zmagal.SetActive(true);
-			Time.timeScale=0;
+			junakSkripta.zmagalLevel();
+			stanje++;
+			//Time.timeScale=0;
 		}
 		
 	}
