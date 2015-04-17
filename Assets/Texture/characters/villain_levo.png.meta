@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: cb85b7597b1f8a349b08127debfe54ef
-timeCreated: 1428503110
+timeCreated: 1429285286
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -57,53 +57,53 @@ TextureImporter:
     - name: villain_levo_0
       rect:
         serializedVersion: 2
-        x: 69
+        x: 111
         y: 297
-        width: 506
+        width: 464
         height: 437
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 192, y: 0, z: 0, w: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 150, y: 0, z: 0, w: 0}
     - name: villain_levo_1
       rect:
         serializedVersion: 2
-        x: 613
+        x: 655
         y: 297
-        width: 507
+        width: 465
         height: 495
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 192, y: 0, z: 0, w: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 150, y: 0, z: 0, w: 0}
     - name: villain_levo_2
       rect:
         serializedVersion: 2
-        x: 1191
+        x: 1232
         y: 297
-        width: 506
+        width: 465
         height: 482
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 125, y: 0, z: 0, w: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 150, y: 0, z: 0, w: 0}
     - name: villain_levo_3
       rect:
         serializedVersion: 2
-        x: 1703
+        x: 1744
         y: 297
-        width: 504
+        width: 464
         height: 495
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 192, y: 0, z: 0, w: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 150, y: 0, z: 0, w: 0}
     - name: villain_levo_4
       rect:
         serializedVersion: 2
-        x: 2214
+        x: 2253
         y: 297
-        width: 513
+        width: 474
         height: 476
-      alignment: 6
-      pivot: {x: 0, y: 0}
-      border: {x: 247, y: 0, z: 0, w: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 210, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
   assetBundleName: 
