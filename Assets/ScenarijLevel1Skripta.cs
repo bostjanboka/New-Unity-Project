@@ -30,6 +30,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 		palcekSkripta.xTocka = -3.3f;
 		stanje = 0;
 		akcija.SetActive (false);
+
 	}
 	
 	// Update is called once per frame

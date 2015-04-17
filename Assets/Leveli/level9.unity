@@ -362,6 +362,10 @@ Prefab:
       propertyPath: level
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11419918, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: loading
+      value: 
+      objectReference: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0

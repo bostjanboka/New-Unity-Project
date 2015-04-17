@@ -7,7 +7,8 @@ public class InputNavigacija : MonoBehaviour {
 
 	public int level;
 	public int trenutniLevel;
-
+	public GameObject loading;
+	GameObject loadingScreen;
 	public GameObject zgubil;
 	public GameObject zmagal;
 	public GameObject back;
@@ -15,6 +16,7 @@ public class InputNavigacija : MonoBehaviour {
 		back.SetActive (false);
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
+		loadingScreen = Instantiate (loading) as GameObject;
 		//Time.timeScale = 1;
 	}
 	
@@ -50,6 +52,7 @@ public class InputNavigacija : MonoBehaviour {
 
 	public void noviLevel(string level){
 		Time.timeScale = 1;
+		loadingScreen.GetComponent<LoadingScreen> ().show ();
 		Application.LoadLevel (level); 
 	}
 

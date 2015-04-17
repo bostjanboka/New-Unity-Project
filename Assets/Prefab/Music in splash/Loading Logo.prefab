@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3cfda97aef1bdf44817c631bece9810, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayTime: 3
+  delayTime: 1
   slikaOzadja: {fileID: 118536}
   animacija: {fileID: 166716}
 --- !u!212 &21250186
