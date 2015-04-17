@@ -35,6 +35,7 @@ public class ScenarijLevela10 : MonoBehaviour {
 	void Update () {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
+			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
 			palcekSkripta.xTocka=21f;

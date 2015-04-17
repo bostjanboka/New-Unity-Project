@@ -33,6 +33,7 @@ public class ScenarijLevel6 : MonoBehaviour {
 	void Update () {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
+			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
 

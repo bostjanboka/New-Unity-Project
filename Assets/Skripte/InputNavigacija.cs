@@ -23,18 +23,23 @@ public class InputNavigacija : MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Escape) && !zgubil.activeSelf && !zmagal.activeSelf) {
 			Time.timeScale = 0;
 			back.SetActive (true);
+			Move.prizgiReklamo();
 		}
+
+
 	
 	}
 
 	public void Zgubil(){
 		Time.timeScale = 0;
 		zgubil.SetActive (true);
+		Move.prizgiReklamo();
 	}
 
 	public void Zmagal(){
 		Time.timeScale = 0;
 		zmagal.SetActive (true);
+		Move.prizgiReklamo();
 	}
 
 	public void nastaviNaFalse(){
@@ -56,13 +61,14 @@ public class InputNavigacija : MonoBehaviour {
 		} else {
 			Application.LoadLevel ("level"+(level*2-1+temp.trenutniLevel)); 
 		}
+		Move.prizgiReklamo ();
 		//Application.LoadLevel (Application.loadedLevel); 
 
 
 	}
 
 	public void quitToMainMenu(){
-		Application.LoadLevel ("MeniScena");
+		Application.LoadLevel ("ZemljevidScena");
 		Time.timeScale = 1;
 	}
 
@@ -82,6 +88,7 @@ public class InputNavigacija : MonoBehaviour {
 		Debug.Log( "Float duration = "+duration);
 		yield return new WaitForSeconds(duration);   //Wait
 		Debug.Log("End Wait() function and the time is: "+Time.time);
+		Move.ugasniReklamo ();
 		Time.timeScale = 1;
 	} 
 }

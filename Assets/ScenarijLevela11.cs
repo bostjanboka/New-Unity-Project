@@ -27,6 +27,7 @@ public class ScenarijLevela11 : MonoBehaviour {
 
 		stanje = 0;
 		junakSkripta.meritev=true;
+		Move.ugasniReklamo ();
 
 	}
 	

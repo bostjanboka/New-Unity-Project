@@ -38,6 +38,7 @@ public class ScenarijLevel5 : MonoBehaviour {
 	void Update () {
 		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
 			stanje = 1;
+			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
 			junakSkripta.omogociPremikanje = true;

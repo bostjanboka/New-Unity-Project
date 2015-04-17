@@ -46,6 +46,7 @@ public class scenarijLevel4 : MonoBehaviour {
 			stanje = 1;
 		} else if (stanje == 1 && palcekSkripta.stojimNaMestuX) {
 			palcekSkripta.xTocka = 12.5f;
+			Move.ugasniReklamo ();
 			visenje.GetComponent<DropDownSkriptaZaVisenje> ().sprozi = true;
 			junakSkripta.meritev=true;
 			stanje = 2;

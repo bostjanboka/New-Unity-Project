@@ -53,6 +53,7 @@ public class ScenarijLevela9 : MonoBehaviour {
 			}
 		} 
 		else if (stanje == 3 && vrataSkripta.zaprta) {
+			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
 			stanje = 4;

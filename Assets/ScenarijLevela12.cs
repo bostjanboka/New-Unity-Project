@@ -38,6 +38,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 
 			}else{
 				palcek.SetActive(false);
+				Move.ugasniReklamo ();
 				akcija.SetActive (true);
 				junakSkripta.meritev=true;
 				stanje = 1;

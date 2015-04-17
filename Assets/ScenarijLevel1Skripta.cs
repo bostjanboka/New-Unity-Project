@@ -48,6 +48,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 				stanje = 3;
 			}
 		} else if (stanje == 3) {
+			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
 			palcekSkripta.xTocka=21f;
