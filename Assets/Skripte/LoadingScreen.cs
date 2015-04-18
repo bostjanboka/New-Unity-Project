@@ -3,6 +3,7 @@ using System.Collections;
 public class LoadingScreen : MonoBehaviour
 {
 	public float delayTime=3;
+   
 
 
 	public GameObject slikaOzadja;
