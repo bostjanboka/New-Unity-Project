@@ -17,8 +17,9 @@ public class Move : MonoBehaviour {
 	void Start () {
 		//gameObject.AddComponent (PlugInWP.Class2);
 		Debug.Log(""+UnityPluginForWindowsPhone.Class1.GetDeviceName);
-
-
+		//UnityPluginForWindowsPhone.Class1.konstruktor ();
+		UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
+		UnityPluginForWindowsPhone.Class1.prizgiCelozaslonsko ();
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
 
