@@ -187,6 +187,12 @@ public class NewBehaviourScript : MonoBehaviour {
 		HighScoreManager._instance.SaveHighScore("boka",35);
 		Time.timeScale = 0;
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = temp.trenutniLevel;
+		if (hp == 0) {
+			zgubil.transform.Find("life lost").gameObject.GetComponent<Text>().text="NO MORE LIFES";
+			zgubil.transform.Find("noHP").gameObject.SetActive(true);
+			zgubil.transform.Find("new game").gameObject.SetActive(false);
+		}
+
 
 		zgubil.SetActive (true);
 	}

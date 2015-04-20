@@ -10,6 +10,7 @@ public class scenarijLevel4 : MonoBehaviour {
 	public GameObject prostorZogic;
 	public GameObject zmagal;
 	public GameObject caneZaJaw;
+	public GameObject popUpRekord;
 	
 	
 	NewBehaviourScript junakSkripta;
@@ -57,6 +58,9 @@ public class scenarijLevel4 : MonoBehaviour {
 		else if(stanje == 3 && steviloZogic.prazenProstor){
 			LeveliManeger._instance.odkleniStopnjo(3);
 			junakSkripta.zmagalLevel();
+			if(LeveliManeger._instance.getCas(1) > junakSkripta.score){
+				Instantiate(popUpRekord);
+			}
 			LeveliManeger._instance.naredilStopnjo();
 
 			stanje++;

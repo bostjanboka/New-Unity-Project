@@ -18,7 +18,15 @@ public class VisenjeSkripta : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("deluje triger gor");
-		if (other.gameObject.tag.Equals ("spirala")) {
+		if (other.gameObject.tag.Equals ("spirala") && gameObject.tag.Equals ("jaw")&&other.gameObject.GetComponent<SpiralaScript>().vrsta.Equals("jaw")) {
+
+			junakSkripta = junak.GetComponent<NewBehaviourScript>();
+			junakSkripta.steviloSpiral--;
+			Destroy(gameObject.transform.parent.gameObject);
+			Destroy(other.gameObject);
+
+		}
+		else if (other.gameObject.tag.Equals ("spirala")) {
 			GameObject inst = Instantiate (zoga, transform.position, Quaternion.identity) as GameObject;
 			inst.transform.localScale = gameObject.transform.localScale;
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();

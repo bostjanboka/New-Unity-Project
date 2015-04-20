@@ -10,7 +10,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 	PalcekAI palcekSkripta;
 	
 	
-	
+	public GameObject popUpRekord;
 	public GameObject prostorZogic;
 	public GameObject zmagal;
 	public GameObject akcija;
@@ -49,6 +49,9 @@ public class ScenarijLevela12 : MonoBehaviour {
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
 			junakSkripta.zmagalLevel();
+			if(LeveliManeger._instance.getCas(1) > junakSkripta.score){
+				Instantiate(popUpRekord);
+			}
 			LeveliManeger._instance.naredilStopnjo();
 			stanje++;
 		}
