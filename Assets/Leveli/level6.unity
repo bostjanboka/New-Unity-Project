@@ -355,6 +355,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 3279aeaa59e4086428fd7ee631c679fa,
         type: 3}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
@@ -506,6 +510,10 @@ Prefab:
       propertyPath: m_GravityScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
@@ -1162,6 +1170,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 436614f988278b14dbc2f4a86b9ff7f7,
         type: 3}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
@@ -1786,6 +1798,7 @@ MonoBehaviour:
   hp: 0
   trenutniLevel: 0
   casi: {fileID: 1466923583}
+  jawCane: {fileID: 0}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}

@@ -9,6 +9,9 @@ public class JawBreakerSkripta : MonoBehaviour {
 	public int speed;
 	public float smer;
 
+	public AudioClip pok;
+	public AudioClip antiPok;
+
 	public float rotacija=90;
 
 	Rigidbody2D rb;
@@ -62,7 +65,10 @@ public class JawBreakerSkripta : MonoBehaviour {
 			
 			Destroy(other.gameObject);
 			if(spirala.vrsta.Equals("jaw")){
+				AudioSource.PlayClipAtPoint(pok, transform.position);
 				Destroy(gameObject);
+			}else{
+				AudioSource.PlayClipAtPoint(antiPok, transform.position);
 			}
 			//
 		}

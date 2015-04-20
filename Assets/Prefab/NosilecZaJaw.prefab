@@ -102,6 +102,8 @@ MonoBehaviour:
   visina: 15
   speed: 4
   smer: 1
+  pok: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+  antiPok: {fileID: 8300000, guid: f57b07ba08b56fa4eb47fa6b6cb04d4f, type: 3}
   rotacija: 45
   timeNastanka: 1
 --- !u!212 &21267196

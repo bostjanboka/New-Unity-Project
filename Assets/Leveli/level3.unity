@@ -245,6 +245,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: .600000024
       objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
@@ -627,6 +631,7 @@ MonoBehaviour:
   hp: 3
   trenutniLevel: 0
   casi: {fileID: 1644319331}
+  jawCane: {fileID: 0}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
@@ -1298,6 +1303,14 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11402174, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11402174, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
+      propertyPath: antiPok
+      value: 
+      objectReference: {fileID: 8300000, guid: f57b07ba08b56fa4eb47fa6b6cb04d4f, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
   m_IsPrefabParent: 0

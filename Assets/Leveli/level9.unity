@@ -188,6 +188,7 @@ MonoBehaviour:
   hp: 3
   trenutniLevel: 0
   casi: {fileID: 1154521058}
+  jawCane: {fileID: 0}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
   srca: {fileID: 186496, guid: fa191aedc2c4920458132a3c995db53f, type: 2}
@@ -432,6 +433,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 11487662, guid: 1ffe92446876c5749b87a271849c3e42, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1ffe92446876c5749b87a271849c3e42, type: 2}
   m_IsPrefabParent: 0
@@ -659,6 +664,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: d1aa6b37a494584448b9a1c4850dc4a4,
         type: 3}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0

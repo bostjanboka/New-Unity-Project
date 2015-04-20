@@ -11,6 +11,8 @@ public class ClasicZogaSkripta : MonoBehaviour {
 
 	public float rotacija=90;
 
+	public AudioClip pok;
+
 	public float skala;
 	Rigidbody2D rb;
 	ClasicZogaSkripta clasicSkripta;
@@ -58,7 +60,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
-			
+			AudioSource.PlayClipAtPoint(pok, transform.position);
 			if(novaZoga && skala > 0.15f){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;

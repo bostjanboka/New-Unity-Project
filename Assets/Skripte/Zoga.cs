@@ -8,6 +8,7 @@ public class Zoga : MonoBehaviour {
 	public int visina;
 	public int speed;
 	public int smer=1;
+	public AudioClip pok;
 
 
 	Rigidbody2D rb;
@@ -46,7 +47,7 @@ public class Zoga : MonoBehaviour {
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
 
-
+			AudioSource.PlayClipAtPoint(pok, transform.position);
 			if(novaZoga){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				rb = inst.GetComponent<Rigidbody2D>();

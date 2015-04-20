@@ -119,7 +119,8 @@ MonoBehaviour:
   rotacija: 90
   skala: 0
   casZaZamenjatBarvo: 1
-  zvok: {fileID: 0}
+  pok: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+  antiPok: {fileID: 8300000, guid: f57b07ba08b56fa4eb47fa6b6cb04d4f, type: 3}
 --- !u!212 &21224474
 SpriteRenderer:
   m_ObjectHideFlags: 1

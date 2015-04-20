@@ -1026,6 +1026,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 38d405d66c82f4043b7c3ddf3f553324,
         type: 3}
+    - target: {fileID: 11416784, guid: d5574d1d598857b4b9eea651c65e7317, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11405554, guid: d5574d1d598857b4b9eea651c65e7317, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11472408, guid: d5574d1d598857b4b9eea651c65e7317, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11481076, guid: d5574d1d598857b4b9eea651c65e7317, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11465330, guid: d5574d1d598857b4b9eea651c65e7317, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5574d1d598857b4b9eea651c65e7317, type: 2}
   m_IsPrefabParent: 0
@@ -1097,6 +1117,26 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: f4b0932ef3903034c835786e2b952bf8,
         type: 3}
+    - target: {fileID: 11430538, guid: 284d7436e608f93419eacdea0dcf0b88, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11469936, guid: 284d7436e608f93419eacdea0dcf0b88, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11448910, guid: 284d7436e608f93419eacdea0dcf0b88, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11467656, guid: 284d7436e608f93419eacdea0dcf0b88, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
+    - target: {fileID: 11429710, guid: 284d7436e608f93419eacdea0dcf0b88, type: 2}
+      propertyPath: pok
+      value: 
+      objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 284d7436e608f93419eacdea0dcf0b88, type: 2}
   m_IsPrefabParent: 0

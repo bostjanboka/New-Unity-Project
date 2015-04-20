@@ -9,6 +9,7 @@ public class ZeleSkripta : MonoBehaviour {
 	public float speed;
 	public int smer;
 	public int korak;
+	public AudioClip pok;
 	
 	float stopinje;
 	public float skala;
@@ -75,7 +76,7 @@ public class ZeleSkripta : MonoBehaviour {
 
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
-			
+			AudioSource.PlayClipAtPoint(pok, transform.position);
 			if(noviZele && skala > 0.070f){
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;

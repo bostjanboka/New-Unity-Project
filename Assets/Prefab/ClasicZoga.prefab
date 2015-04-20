@@ -74,6 +74,8 @@ MonoBehaviour:
   visina: 15
   speed: 3
   smer: 1
+  rotacija: 90
+  pok: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
   skala: 0
 --- !u!212 &21245410
 SpriteRenderer:
