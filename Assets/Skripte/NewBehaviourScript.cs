@@ -71,6 +71,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		count = 1;
 		steviloSpiral = 0;
 		casi.text= PotkaSkripta.casovniFormat(score);
+		Move.loadCelozaslonsko ();
 	}
 	
 	// Update is called once per frame
@@ -158,7 +159,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public void zgubilLevel(){
-
+		Move.showCelozaslonsko ();
 		LeveliManeger._instance.saveProgres ( --hp, trenutniLevel, score);
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
@@ -170,7 +171,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public void zmagalLevel(){
 		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
-
+		Move.showCelozaslonsko ();
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
 	}
 

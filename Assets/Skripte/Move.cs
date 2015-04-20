@@ -14,12 +14,17 @@ public class Move : MonoBehaviour {
 	// Use this for initialization
 	public bool prikaziReklamoBool=false;
 	public bool ugasniReklamoBool=false;
+
+	public bool loadCelo=false;
+	public bool showCelo=false;
+
+
 	void Start () {
 		//gameObject.AddComponent (PlugInWP.Class2);
 		Debug.Log(""+UnityPluginForWindowsPhone.Class1.GetDeviceName);
 		//UnityPluginForWindowsPhone.Class1.konstruktor ();
-		UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
-		UnityPluginForWindowsPhone.Class1.prizgiCelozaslonsko ();
+
+
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
 
@@ -34,6 +39,14 @@ public class Move : MonoBehaviour {
 		UnityPluginForWindowsPhone.Class1.prizgiReklamo ();
 	}
 
+	public static void loadCelozaslonsko(){
+		UnityPluginForWindowsPhone.Class1.loadCelozaslonsko ();
+	}
+
+	public static void showCelozaslonsko(){
+		UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
+	}
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -46,6 +59,17 @@ public class Move : MonoBehaviour {
 			ugasniReklamoBool=false;
 			ugasniReklamo();
 		}
+
+		if (loadCelo) {
+			loadCelo=false;
+			loadCelozaslonsko();
+		}
+
+		if (showCelo) {
+			showCelo=false;
+			showCelozaslonsko();
+		}
+
 	
 	}
 
