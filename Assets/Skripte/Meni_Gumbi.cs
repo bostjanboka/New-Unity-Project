@@ -36,7 +36,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	void Start () {
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		
-		if (continueGameGumb && temp.level == -1 && temp.level % 2 == 0) {
+		if (continueGameGumb && (temp.level == -1 || temp.level % 2 == 0)) {
 			continueGameGumb.interactable = false;
 		} 
 
@@ -78,7 +78,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void continueGame(){
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
-		if ((temp.level == -1 && temp.level % 2 == 0) || temp.level % 2 != 0 && temp.score == 0) {
+		if ((temp.level == -1 || temp.level % 2 == 0) || temp.level % 2 != 0 && temp.score == 0) {
 			Application.LoadLevel ("ZemljevidScena");
 		} else {
 			if (temp.level % 2 == 0) {
