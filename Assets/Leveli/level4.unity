@@ -550,7 +550,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d15f54e3d8392fb45b9a085abc320bac,
+      objectReference: {fileID: 21300000, guid: 436614f988278b14dbc2f4a86b9ff7f7,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.x
@@ -633,7 +633,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d15f54e3d8392fb45b9a085abc320bac,
+      objectReference: {fileID: 21300000, guid: 0038709dc117b5c47bec3150a595254e,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.x
