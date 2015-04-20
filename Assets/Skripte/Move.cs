@@ -47,6 +47,10 @@ public class Move : MonoBehaviour {
 		UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
 	}
 
+	public static void showRate(){
+		UnityPluginForWindowsPhone.Class1.prizgiRate ();
+	}
+
 	
 	// Update is called once per frame
 	void Update () {

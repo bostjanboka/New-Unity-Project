@@ -10,6 +10,8 @@ public class Meni_Gumbi : MonoBehaviour {
 	public GameObject gameMusic;
 	public GameObject loading;
 
+	public GameObject popUpRate;
+
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
 
@@ -43,9 +45,13 @@ public class Meni_Gumbi : MonoBehaviour {
 		if (continueGameGumb && temp.level % 2 != 0 && temp.score == 0) {
 			continueGameGumb.interactable=false;
 		}
-
-		if (continueGameMeni && LeveliManeger._instance.obiskalIgro () == 0) {
+		int obiski = LeveliManeger._instance.obiskalIgro ();
+		if (continueGameMeni && obiski == 0) {
 			continueGameMeni.interactable=false;
+		}
+
+		if (popUpRate && obiski%2 != 0) {
+			Instantiate(popUpRate);
 		}
 
 	}

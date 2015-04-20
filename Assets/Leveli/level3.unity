@@ -572,6 +572,7 @@ MonoBehaviour:
   akcija: {fileID: 2056040014}
   prostorZogic: {fileID: 23470105}
   zmagal: {fileID: 944925160}
+  popUpRekord: {fileID: 105450, guid: a2ceb5ca89a0e334ca334081714adde4, type: 2}
 --- !u!4 &741426693
 Transform:
   m_ObjectHideFlags: 0

@@ -179,6 +179,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public void zgubilLevel(){
+
 		Move.showCelozaslonsko ();
 		LeveliManeger._instance.saveProgres ( --hp, trenutniLevel, score);
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
@@ -186,6 +187,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		HighScoreManager._instance.SaveHighScore("boka",35);
 		Time.timeScale = 0;
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = temp.trenutniLevel;
+
 		zgubil.SetActive (true);
 	}
 
@@ -193,6 +195,8 @@ public class NewBehaviourScript : MonoBehaviour {
 		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
 		Move.showCelozaslonsko ();
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
+
+
 	}
 
 

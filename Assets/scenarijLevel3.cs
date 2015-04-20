@@ -12,6 +12,8 @@ public class scenarijLevel3 : MonoBehaviour {
 	public GameObject akcija;
 	public GameObject prostorZogic;
 	public GameObject zmagal;
+
+	public GameObject popUpRekord;
 	SteviloZogicSkripta steviloZogic;
 	
 	int stanje;
@@ -65,6 +67,9 @@ public class scenarijLevel3 : MonoBehaviour {
 		} else if (stanje == 6 && steviloZogic.prazenProstor) {
 			LeveliManeger._instance.odkleniStopnjo(2);
 			junakSkripta.zmagalLevel();
+			if(LeveliManeger._instance.getCas(1) > junakSkripta.score){
+				Instantiate(popUpRekord);
+			}
 			LeveliManeger._instance.naredilStopnjo();
 			stanje++;
 			
