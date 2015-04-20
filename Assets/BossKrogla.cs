@@ -91,7 +91,7 @@ public class BossKrogla : MonoBehaviour {
 				if(novaZoga && skala < 0.4f){
 					gameObject.transform.localScale *= 2;
 					skala /= 0.5f;
-					clasicSkripta.visina/=0.9f;
+					visina/=0.9f;
 
 				}
 				rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);

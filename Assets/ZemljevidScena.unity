@@ -1764,7 +1764,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1542134872}
-        m_MethodName: naloziMeni
+        m_MethodName: continueGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2016,6 +2016,7 @@ MonoBehaviour:
   loading: {fileID: 102376, guid: d7fe78744883c4247b9588251626267d, type: 2}
   musicToggle: {fileID: 1055896120}
   soundToggle: {fileID: 677142118}
+  continueGameGumb: {fileID: 1303197479}
 --- !u!4 &1542134873
 Transform:
   m_ObjectHideFlags: 0
@@ -2615,3 +2616,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prikaziReklamoBool: 1
   ugasniReklamoBool: 0
+  loadCelo: 0
+  showCelo: 0

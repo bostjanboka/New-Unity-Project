@@ -44,6 +44,20 @@ public class LeveliManeger : MonoBehaviour {
 		}
 	}
 
+	public int obiskalIgro(){
+		if (!PlayerPrefs.HasKey ("ObiskalIgro")) {
+			PlayerPrefs.SetInt ("ObiskalIgro", 0);
+			PlayerPrefs.Save();
+			return 0;
+		} else {
+			int x = PlayerPrefs.GetInt ("ObiskalIgro");
+			PlayerPrefs.SetInt ("ObiskalIgro", x+1);
+			PlayerPrefs.Save();
+			return x+1;
+		}
+
+	}
+
 	public void saveProgres(int hp, int trenutniLevel, float score){
 		if (hp < 1) {
 			PlayerPrefs.SetFloat ("Leveli"  + "score", 0);
@@ -107,6 +121,14 @@ public class LeveliManeger : MonoBehaviour {
 
 		}
 		PlayerPrefs.Save ();
+	}
+
+	public float getCas(int i){
+		if (!PlayerPrefs.HasKey ("Stopnja" + i)) {
+			return -1;
+		} else {
+			return PlayerPrefs.GetFloat ("Stopnja" + i);
+		}
 	}
 
 	public float[] getCase(){

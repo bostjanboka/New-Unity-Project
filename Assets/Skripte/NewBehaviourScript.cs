@@ -6,6 +6,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	//animacija
 	int level;
+	float timeToBeat;
 	public float score;
 	public int hp;
 	public int trenutniLevel;
@@ -13,6 +14,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 
 	Animator anim;
+	public Animation jawCane;
 
 	// Use this for initialization
 	GameObject junak;
@@ -47,7 +49,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 
 	void Start () {
-
+		Move.loadCelozaslonsko ();
 		level = inputNavigacija.GetComponent<InputNavigacija> ().level;
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		hp = 1;
@@ -71,7 +73,17 @@ public class NewBehaviourScript : MonoBehaviour {
 		count = 1;
 		steviloSpiral = 0;
 		casi.text= PotkaSkripta.casovniFormat(score);
-		Move.loadCelozaslonsko ();
+
+		timeToBeat = LeveliManeger._instance.getCas (level);
+		if(timeToBeat > 0){
+			if(score > timeToBeat){
+				casi.color = new Color(1,0,0,0.3f);
+			}else{
+				casi.color = new Color(0,1,0,0.3f);
+			}
+		}
+
+
 	}
 	
 	// Update is called once per frame
@@ -139,6 +151,14 @@ public class NewBehaviourScript : MonoBehaviour {
 			score+=Time.deltaTime;
 
 			casi.text= PotkaSkripta.casovniFormat(score);
+			if(timeToBeat > 0){
+				if(score > timeToBeat){
+					casi.color = new Color(1,0,0,0.3f);
+				}else{
+					casi.color = new Color(0,1,0,0.3f);
+				}
+			}
+
 		}
 	}
 

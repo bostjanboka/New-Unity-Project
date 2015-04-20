@@ -13,6 +13,10 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
 
+	public Button continueGameGumb;
+
+	public Button continueGameMeni;
+
 	GameObject zvok;
 	void Awake(){
 		zvok = GameObject.Find("game music(Clone)");
@@ -30,7 +34,19 @@ public class Meni_Gumbi : MonoBehaviour {
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
 	}
 	void Start () {
+		InfoLeveli temp = LeveliManeger._instance.getLevel ();
+		
+		if (continueGameGumb && temp.level == -1 && temp.level % 2 == 0) {
+			continueGameGumb.interactable = false;
+		} 
 
+		if (continueGameGumb && temp.level % 2 != 0 && temp.score == 0) {
+			continueGameGumb.interactable=false;
+		}
+
+		if (continueGameMeni && LeveliManeger._instance.obiskalIgro () == 0) {
+			continueGameMeni.interactable=false;
+		}
 
 	}
 	
@@ -62,7 +78,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void continueGame(){
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
-		if (temp.level == -1) {
+		if ((temp.level == -1 && temp.level % 2 == 0) || temp.level % 2 != 0 && temp.score == 0) {
 			Application.LoadLevel ("ZemljevidScena");
 		} else {
 			if (temp.level % 2 == 0) {
