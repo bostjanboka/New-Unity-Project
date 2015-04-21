@@ -161,7 +161,7 @@ public class NewBehaviourScript : MonoBehaviour {
 			}
 
 		}
-
+		OnPressedSkripta.omogociStrel = strelOmogocen;
 		inputNavigacija.GetComponent<InputNavigacija> ().setHUD (omogociPremikanje);
 	}
 

@@ -24,6 +24,7 @@ public class DropCaneJaw : MonoBehaviour {
 
 			junakSkripta = other.gameObject.GetComponent<NewBehaviourScript>();
 			junakSkripta.powerUpSpirala = spiralaJaw;
+			junakSkripta.strelOmogocen=true;
 			Destroy(gameObject);
 			Debug.Log ("noter sem");
 		}

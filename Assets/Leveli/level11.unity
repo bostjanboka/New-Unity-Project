@@ -420,6 +420,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11430652, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+      propertyPath: disable
+      value: 
+      objectReference: {fileID: 21300000, guid: 285ade802c5540e4f9ffcfdbbef53e8d,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_IsPrefabParent: 0
@@ -1775,6 +1780,7 @@ MonoBehaviour:
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
+  strelOmogocen: 1
   speed: 6
   xTocka: 0
   ustreli: 0
