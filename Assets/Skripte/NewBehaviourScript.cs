@@ -188,7 +188,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		Time.timeScale = 0;
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = temp.trenutniLevel;
 		if (hp == 0) {
-			zgubil.transform.Find("life lost").gameObject.GetComponent<Text>().text="NO MORE LIFES";
+			zgubil.transform.Find("life lost").gameObject.GetComponent<Text>().text="NO MORE LIVES";
 			zgubil.transform.Find("noHP").gameObject.SetActive(true);
 			zgubil.transform.Find("new game").gameObject.SetActive(false);
 		}
