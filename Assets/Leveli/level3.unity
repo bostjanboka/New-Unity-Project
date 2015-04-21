@@ -1630,7 +1630,6 @@ GameObject:
   - 50: {fileID: 914824934}
   - 61: {fileID: 914824933}
   - 114: {fileID: 914824932}
-  - 95: {fileID: 914824935}
   m_Layer: 0
   m_Name: junak1
   m_TagString: junak
@@ -1681,7 +1680,7 @@ MonoBehaviour:
   speed: 6
   xTocka: 0
   ustreli: 0
-  naloziReklamo: 10
+  naloziReklamo: 30
   steviloSpiral: 0
 --- !u!61 &914824933
 BoxCollider2D:
@@ -1713,23 +1712,6 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!95 &914824935
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 914824930}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 967711500566f0241ad9c02dc511e8f2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &944925160
 GameObject:
   m_ObjectHideFlags: 0
