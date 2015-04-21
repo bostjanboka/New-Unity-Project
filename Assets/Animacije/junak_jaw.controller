@@ -7,7 +7,13 @@ AnimatorController:
   m_PrefabInternal: {fileID: 0}
   m_Name: junak_jaw
   serializedVersion: 5
-  m_AnimatorParameters: []
+  m_AnimatorParameters:
+  - m_Name: hitrost
+    m_Type: 1
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -28,7 +34,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: hitrost
+    m_EventTreshold: .899999976
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110221108}
   m_Solo: 0
@@ -48,7 +57,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: hitrost
+    m_EventTreshold: .100000001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110275528}
   m_Solo: 0
@@ -68,7 +80,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 3
+    m_ConditionEvent: hitrost
+    m_EventTreshold: -.899999976
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110221108}
   m_Solo: 0
@@ -88,7 +103,10 @@ AnimatorStateTransition:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: 
-  m_Conditions: []
+  m_Conditions:
+  - m_ConditionMode: 4
+    m_ConditionEvent: hitrost
+    m_EventTreshold: -.100000001
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 110256076}
   m_Solo: 0
@@ -170,10 +188,10 @@ AnimatorStateMachine:
     m_Position: {x: 358, y: 10, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110275528}
-    m_Position: {x: 360, y: 204, z: 0}
+    m_Position: {x: 552, y: 192, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110256076}
-    m_Position: {x: 671, y: 186, z: 0}
+    m_Position: {x: 168, y: 192, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
