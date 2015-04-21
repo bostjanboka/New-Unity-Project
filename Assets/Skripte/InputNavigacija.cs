@@ -95,7 +95,7 @@ public class InputNavigacija : MonoBehaviour {
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
 		Time.timeScale = .0000001f;
-		StartCoroutine(Wait(Time.timeScale * 2));
+		StartCoroutine(Wait(Time.timeScale * 3));
 
 	}
 

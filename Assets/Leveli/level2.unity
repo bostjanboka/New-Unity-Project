@@ -285,7 +285,7 @@ MonoBehaviour:
   speed: 6
   xTocka: 0
   ustreli: 0
-  naloziReklamo: 30
+  naloziReklamo: 5
   steviloSpiral: 0
 --- !u!61 &114893958
 BoxCollider2D:
@@ -300,11 +300,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: -.0276184101, y: .531262219}
   serializedVersion: 2
-<<<<<<< HEAD
   m_Size: {x: .564511478, y: 1.17312396}
-=======
-  m_Size: {x: .540000021, y: 1.04999995}
->>>>>>> origin/master
 --- !u!50 &114893959
 Rigidbody2D:
   m_ObjectHideFlags: 0
