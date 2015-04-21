@@ -6,6 +6,7 @@ public class DropCaneJaw : MonoBehaviour {
 	// Use this for initialization
 	public GameObject spiralaJaw;
 	NewBehaviourScript junakSkripta;
+	public RuntimeAnimatorController anim;
 	void Start () {
 	
 	}
@@ -18,6 +19,9 @@ public class DropCaneJaw : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other){
 		Debug.Log ("noter sem spirala");
 		if (other.gameObject.tag.Equals ("junak")) {
+
+			other.gameObject.transform.Find("animacija").gameObject.GetComponent<Animator>().runtimeAnimatorController = anim;
+
 			junakSkripta = other.gameObject.GetComponent<NewBehaviourScript>();
 			junakSkripta.powerUpSpirala = spiralaJaw;
 			Destroy(gameObject);

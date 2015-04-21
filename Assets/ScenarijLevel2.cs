@@ -15,6 +15,7 @@ public class ScenarijLevel2 : MonoBehaviour {
 	public GameObject prostorZogic;
 	public GameObject zmagal;
 	public GameObject akcija;
+
 	SteviloZogicSkripta steviloZogic;
 
 	int stanje;
@@ -32,6 +33,7 @@ public class ScenarijLevel2 : MonoBehaviour {
 		junakSkripta.xTocka = -8f;
 		stanje = 0;
 		akcija.SetActive (false);
+
 	}
 	
 	// Update is called once per frame

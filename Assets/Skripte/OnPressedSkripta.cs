@@ -10,6 +10,7 @@ public class OnPressedSkripta : MonoBehaviour {
 	Rigidbody2D rigid;
 	SpriteRenderer render;
 	bool pressed;
+	public static bool omogocenoPremikanje=true;
 	void Start () {
 		render = GetComponent<SpriteRenderer> ();
 		render.sprite = normal;
@@ -23,7 +24,7 @@ public class OnPressedSkripta : MonoBehaviour {
 		foreach (Touch touch in Input.touches) {
 			Vector2 touchPosition = Camera.main.ScreenToWorldPoint(touch.position);
 			Collider2D hitCollider = Physics2D.OverlapPoint(touchPosition);
-			if (hitCollider.transform.name.Equals (gameObject.name)) {
+			if (omogocenoPremikanje && hitCollider.transform.name.Equals (gameObject.name)) {
 				pressed = true;
 				render.sprite = onPressed;
 			}

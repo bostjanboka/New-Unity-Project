@@ -13,7 +13,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	public Text casi;
 
 
-	Animator anim;
+	public Animator anim;
 	public Animation jawCane;
 
 	// Use this for initialization
@@ -160,6 +160,8 @@ public class NewBehaviourScript : MonoBehaviour {
 			}
 
 		}
+
+		inputNavigacija.GetComponent<InputNavigacija> ().setHUD (omogociPremikanje);
 	}
 
 	public void zacniCas(){
@@ -201,6 +203,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
 		Move.showCelozaslonsko ();
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
+
 
 
 	}

@@ -13,6 +13,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 	TrezorSkripta trezorSkripta;
 	public GameObject prostorZogic;
 	public GameObject akcija;
+
 	SteviloZogicSkripta steviloZogic;
 
 
@@ -32,6 +33,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 		akcija.SetActive (false);
 
 
+
 	}
 	
 	// Update is called once per frame
@@ -46,6 +48,7 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 		} else if (stanje == 2) {
 			if (junakSkripta.stojimNaMestuX) {
 				junakSkripta.omogociPremikanje = true;
+
 				coliderJunak.isTrigger = false;
 				stanje = 3;
 			}

@@ -1677,6 +1677,7 @@ MonoBehaviour:
   hp: 3
   trenutniLevel: 0
   casi: {fileID: 1424799113}
+  anim: {fileID: 0}
   jawCane: {fileID: 0}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}
@@ -1845,6 +1846,10 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11480380, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
+      propertyPath: anim
+      value: 
+      objectReference: {fileID: 9100000, guid: 967711500566f0241ad9c02dc511e8f2, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
   m_IsPrefabParent: 0
