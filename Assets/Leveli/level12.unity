@@ -436,6 +436,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 466846, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_PrefabInternal: {fileID: 438551412}
+--- !u!1 &438551414
+GameObject:
+  m_PrefabParentObject: {fileID: 118594, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+  m_PrefabInternal: {fileID: 438551412}
 --- !u!1 &460997563
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +638,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11419918, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 438551414}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0
@@ -1346,6 +1354,7 @@ MonoBehaviour:
   hp: 3
   trenutniLevel: 0
   casi: {fileID: 1514361289}
+  anim: {fileID: 0}
   jawCane: {fileID: 0}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}

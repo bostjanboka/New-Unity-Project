@@ -327,6 +327,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 466846, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_PrefabInternal: {fileID: 415781753}
+--- !u!1 &415781755
+GameObject:
+  m_PrefabParentObject: {fileID: 118594, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+  m_PrefabInternal: {fileID: 415781753}
 --- !u!1001 &427375572
 Prefab:
   m_ObjectHideFlags: 0
@@ -1589,6 +1593,7 @@ MonoBehaviour:
   zgubil: {fileID: 1227226903}
   zmagal: {fileID: 459453088}
   back: {fileID: 640579750}
+  HUD: {fileID: 415781755}
 --- !u!1 &1281237747
 GameObject:
   m_ObjectHideFlags: 0
@@ -1876,6 +1881,7 @@ MonoBehaviour:
   hp: 3
   trenutniLevel: 0
   casi: {fileID: 1816896879}
+  anim: {fileID: 0}
   jawCane: {fileID: 0}
   powerUpSpirala: {fileID: 0}
   spirala: {fileID: 125498, guid: 1fc8b1ea022fb2b469bf14c431d623e6, type: 2}

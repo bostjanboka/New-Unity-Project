@@ -458,51 +458,6 @@ RectTransform:
   m_PrefabParentObject: {fileID: 22413662, guid: d99e62ccb46a78c409a6f5c76ac0dec5,
     type: 2}
   m_PrefabInternal: {fileID: 464637355}
---- !u!1 &492791562
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 492791563}
-  - 95: {fileID: 492791564}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &492791563
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492791562}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 753892355}
-  m_RootOrder: 1
---- !u!95 &492791564
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 492791562}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 967711500566f0241ad9c02dc511e8f2, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &629052636
 GameObject:
   m_ObjectHideFlags: 0
@@ -701,7 +656,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1124514613}
-  - {fileID: 492791563}
   m_Father: {fileID: 1314843080}
   m_RootOrder: 2
 --- !u!114 &753892356
@@ -1591,6 +1545,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1053733599
+GameObject:
+  m_PrefabParentObject: {fileID: 118594, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+  m_PrefabInternal: {fileID: 1053733598}
 --- !u!4 &1081403128
 Transform:
   m_ObjectHideFlags: 0
@@ -3216,6 +3174,7 @@ MonoBehaviour:
   zgubil: {fileID: 1367388007}
   zmagal: {fileID: 1821202566}
   back: {fileID: 54203826}
+  HUD: {fileID: 1053733599}
 --- !u!1 &2073721526
 GameObject:
   m_PrefabParentObject: {fileID: 195606, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}

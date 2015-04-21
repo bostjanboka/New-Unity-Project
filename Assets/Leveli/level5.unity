@@ -606,6 +606,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &246885740
+GameObject:
+  m_PrefabParentObject: {fileID: 118594, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+  m_PrefabInternal: {fileID: 246885739}
 --- !u!1 &266187005
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,6 +1761,7 @@ MonoBehaviour:
   zgubil: {fileID: 54860022}
   zmagal: {fileID: 2139626412}
   back: {fileID: 1906011050}
+  HUD: {fileID: 246885740}
 --- !u!1001 &850656258
 Prefab:
   m_ObjectHideFlags: 0

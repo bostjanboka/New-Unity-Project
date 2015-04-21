@@ -1362,6 +1362,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 466846, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_PrefabInternal: {fileID: 1196117346}
+--- !u!1 &1196117348
+GameObject:
+  m_PrefabParentObject: {fileID: 118594, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+  m_PrefabInternal: {fileID: 1196117346}
 --- !u!1 &1223468794
 GameObject:
   m_ObjectHideFlags: 0
@@ -1759,6 +1763,7 @@ MonoBehaviour:
   zgubil: {fileID: 1296490979}
   zmagal: {fileID: 1296490981}
   back: {fileID: 1453956687}
+  HUD: {fileID: 1196117348}
 --- !u!114 &1296490989
 MonoBehaviour:
   m_ObjectHideFlags: 0
