@@ -1891,9 +1891,11 @@ MonoBehaviour:
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
+  strelOmogocen: 1
   speed: 6
   xTocka: 0
   ustreli: 0
+  naloziReklamo: 30
   steviloSpiral: 0
 --- !u!61 &1462900220
 BoxCollider2D:
@@ -1906,9 +1908,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .558924675}
+  m_Offset: {x: -.0276184101, y: .531262219}
   serializedVersion: 2
-  m_Size: {x: .564511597, y: 1.24405575}
+  m_Size: {x: .564511478, y: 1.17312396}
 --- !u!50 &1462900221
 Rigidbody2D:
   m_ObjectHideFlags: 0

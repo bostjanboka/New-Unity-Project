@@ -2340,7 +2340,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1434032051}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0199999996, y: -3.56399989, z: 1}
+  m_LocalPosition: {x: -.0199999996, y: -3.59699988, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 657946869}
@@ -2372,9 +2372,11 @@ MonoBehaviour:
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
+  strelOmogocen: 1
   speed: 6
   xTocka: 0
   ustreli: 0
+  naloziReklamo: 30
   steviloSpiral: 0
 --- !u!61 &1434032054
 BoxCollider2D:
@@ -2387,9 +2389,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.027721405, y: .534064054}
+  m_Offset: {x: -.0276184101, y: .531262219}
   serializedVersion: 2
-  m_Size: {x: .564511418, y: 1.18509436}
+  m_Size: {x: .564511478, y: 1.17312396}
 --- !u!50 &1434032055
 Rigidbody2D:
   m_ObjectHideFlags: 0

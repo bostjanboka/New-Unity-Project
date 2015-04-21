@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1001 &347894544
 Prefab:
   m_ObjectHideFlags: 0
@@ -420,9 +420,11 @@ MonoBehaviour:
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
+  strelOmogocen: 1
   speed: 6
   xTocka: 0
   ustreli: 0
+  naloziReklamo: 30
   steviloSpiral: 0
 --- !u!61 &502857322
 BoxCollider2D:
@@ -435,9 +437,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .558924675}
+  m_Offset: {x: -.0276184101, y: .531262219}
   serializedVersion: 2
-  m_Size: {x: .564511597, y: 1.24405575}
+  m_Size: {x: .564511478, y: 1.17312396}
 --- !u!50 &502857323
 Rigidbody2D:
   m_ObjectHideFlags: 0
