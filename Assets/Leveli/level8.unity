@@ -3354,9 +3354,11 @@ MonoBehaviour:
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
+  strelOmogocen: 1
   speed: 6
   xTocka: 0
   ustreli: 0
+  naloziReklamo: 15
   steviloSpiral: 0
 --- !u!61 &1632155952
 BoxCollider2D:

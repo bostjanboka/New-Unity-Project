@@ -374,6 +374,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPressed: {fileID: 21300000, guid: 492d545f62dfe6941ae7588bc375c6ca, type: 3}
   normal: {fileID: 21300000, guid: 7a7dabdfd58a15c46876061deaaa1632, type: 3}
+  disable: {fileID: 0}
 --- !u!61 &102707763
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1268,6 +1269,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPressed: {fileID: 21300000, guid: fdbaeddceacab9e4e9673ffd50a37263, type: 3}
   normal: {fileID: 21300000, guid: e6612e847b0584b49962638c411fa23c, type: 3}
+  disable: {fileID: 0}
 --- !u!61 &632990170
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2704,6 +2706,10 @@ Prefab:
       propertyPath: casi
       value: 
       objectReference: {fileID: 481126077}
+    - target: {fileID: 11448502, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
+      propertyPath: naloziReklamo
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
   m_IsPrefabParent: 0
@@ -2877,6 +2883,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onPressed: {fileID: 21300000, guid: 3e74aca81fab6264486ceec4de25728b, type: 3}
   normal: {fileID: 21300000, guid: fbeaf2bc6c47f3d428d0d065e945e583, type: 3}
+  disable: {fileID: 0}
 --- !u!61 &1617477492
 BoxCollider2D:
   m_ObjectHideFlags: 0

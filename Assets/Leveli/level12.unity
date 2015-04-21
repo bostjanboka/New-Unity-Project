@@ -1403,6 +1403,7 @@ MonoBehaviour:
   speed: 6
   xTocka: 0
   ustreli: 0
+  naloziReklamo: 20
   steviloSpiral: 0
 --- !u!61 &1967651705
 BoxCollider2D:
