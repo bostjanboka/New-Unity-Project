@@ -40,6 +40,10 @@ public class ScenarijLevela7 : MonoBehaviour {
 			junakSkripta.zmagalLevel();
 			if(LeveliManeger._instance.getCas(3) > junakSkripta.score){
 				Instantiate(popUpRekord);
+			}else{
+				if(Random.value < 0.5f){
+					Move.showCelozaslonsko ();
+				}
 			}
 			LeveliManeger._instance.naredilStopnjo();
 			stanje++;

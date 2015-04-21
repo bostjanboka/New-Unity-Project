@@ -46,11 +46,17 @@ public class NewBehaviourScript : MonoBehaviour {
 	//GUIContent btn;
 	int presses = 0;
 
+	public int naloziReklamo=30;
+
+
 	public int steviloSpiral;
 
 
 	void Start () {
-		Move.loadCelozaslonsko ();
+		if (Random.value * 100 < naloziReklamo) {
+			Move.loadCelozaslonsko ();
+		}
+
 		level = inputNavigacija.GetComponent<InputNavigacija> ().level;
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		hp = 1;
@@ -202,11 +208,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public void zmagalLevel(){
 		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
-		Move.showCelozaslonsko ();
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
-
-
-
 	}
 
 

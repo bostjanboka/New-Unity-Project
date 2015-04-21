@@ -60,6 +60,9 @@ public class ScenarijLevel1Skripta : MonoBehaviour {
 			stanje = 4;
 		}else if(stanje == 4 && steviloZogic.prazenProstor){
 			junakSkripta.zmagalLevel();
+			if(Random.value < 0.5f){
+				Move.showCelozaslonsko ();
+			}
 			stanje++;
 		}
 	}
