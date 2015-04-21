@@ -349,19 +349,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22484724, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 8.29959106
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 22484724, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: 105.199944
+      value: 66
       objectReference: {fileID: 0}
     - target: {fileID: 22484724, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
       propertyPath: m_SizeDelta.x
-      value: 950
+      value: 753
       objectReference: {fileID: 0}
     - target: {fileID: 22484724, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
       propertyPath: m_SizeDelta.y
-      value: 234
+      value: 156
       objectReference: {fileID: 0}
     - target: {fileID: 22484724, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
       propertyPath: m_AnchorMin.x
@@ -386,6 +386,18 @@ Prefab:
     - target: {fileID: 22484724, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
       propertyPath: m_Pivot.y
       value: .5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473730, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
+      propertyPath: m_FontData.m_Alignment
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473730, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
+      propertyPath: m_Text
+      value: CONGRATULATIONS! GAME COMPLETED. THANKS FOR PLAYING.
+      objectReference: {fileID: 0}
+    - target: {fileID: 11473730, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 38
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ca1e0baa5bb4e9d4db447744af04a71a, type: 2}
@@ -642,6 +654,29 @@ Prefab:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 438551414}
+    - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_SpriteState.m_HighlightedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f8b71e4d5a225749a7fd74f057121e8,
+        type: 3}
+    - target: {fileID: 11466392, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 0f8b71e4d5a225749a7fd74f057121e8,
+        type: 3}
+    - target: {fileID: 11443528, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_SpriteState.m_PressedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: aec215753d51a364b81e4334851036d2,
+        type: 3}
+    - target: {fileID: 22482802, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22419068, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 92d73ad9521a2bc42827d91114c54466, type: 2}
   m_IsPrefabParent: 0
@@ -1364,6 +1399,7 @@ MonoBehaviour:
   omogociPremikanje: 1
   stojimNaMestuX: 0
   meritev: 0
+  strelOmogocen: 1
   speed: 6
   xTocka: 0
   ustreli: 0
