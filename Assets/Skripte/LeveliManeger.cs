@@ -44,18 +44,31 @@ public class LeveliManeger : MonoBehaviour {
 		}
 	}
 
+
+	public void disableRate(){
+		PlayerPrefs.SetInt ("pokaziRate",0);
+	}
+	public int pokaziRate(){
+		if (!PlayerPrefs.HasKey ("pokaziRate")) {
+			PlayerPrefs.SetInt("pokaziRate",1);
+			PlayerPrefs.Save();
+		}
+		return PlayerPrefs.GetInt ("pokaziRate");
+	}	
+
+	public void povecajObisk(){
+		PlayerPrefs.SetInt ("ObiskalIgro", obiskalIgro()+1);
+		PlayerPrefs.Save();
+	}
+
 	public int obiskalIgro(){
 		if (!PlayerPrefs.HasKey ("ObiskalIgro")) {
 			PlayerPrefs.SetInt ("ObiskalIgro", 0);
 			PlayerPrefs.Save();
 			return 0;
-		} else {
-			int x = PlayerPrefs.GetInt ("ObiskalIgro");
-			PlayerPrefs.SetInt ("ObiskalIgro", x+1);
-			PlayerPrefs.Save();
-			return x+1;
 		}
-
+			int x = PlayerPrefs.GetInt ("ObiskalIgro");
+			return x;
 	}
 
 	public void saveProgres(int hp, int trenutniLevel, float score){

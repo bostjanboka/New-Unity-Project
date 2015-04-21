@@ -50,7 +50,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			continueGameMeni.interactable=false;
 		}
 
-		if (popUpRate && obiski%2 != 0) {
+		if (popUpRate && LeveliManeger._instance.pokaziRate() == 1 && obiski > 0) {
 			Instantiate(popUpRate);
 		}
 
@@ -62,6 +62,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			if(Application.loadedLevelName.Equals("ZemljevidScena")){
 				Application.LoadLevel("MeniScena");
 			}else{
+				LeveliManeger._instance.povecajObisk();
 				Application.Quit();
 			}
 
