@@ -74,7 +74,7 @@ MonoBehaviour:
   visina: 10
   speed: 3
   smer: 1
-  korak: 3
+  korak: 230
   pok: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
   skala: 0
   timeNastanka: 0

@@ -58,7 +58,7 @@ public class scenarijLevel4 : MonoBehaviour {
 		else if(stanje == 3 && steviloZogic.prazenProstor){
 			LeveliManeger._instance.odkleniStopnjo(3);
 			junakSkripta.zmagalLevel();
-			if(LeveliManeger._instance.getCas(1) > junakSkripta.score){
+			if(LeveliManeger._instance.getCas(2) > junakSkripta.score){
 				Instantiate(popUpRekord);
 			}
 			LeveliManeger._instance.naredilStopnjo();

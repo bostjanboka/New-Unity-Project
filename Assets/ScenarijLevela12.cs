@@ -49,7 +49,7 @@ public class ScenarijLevela12 : MonoBehaviour {
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
 			junakSkripta.zmagalLevel();
-			if(LeveliManeger._instance.getCas(1) > junakSkripta.score){
+			if(LeveliManeger._instance.getCas(6) > junakSkripta.score){
 				Instantiate(popUpRekord);
 			}
 			LeveliManeger._instance.naredilStopnjo();

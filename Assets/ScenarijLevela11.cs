@@ -37,7 +37,7 @@ public class ScenarijLevela11 : MonoBehaviour {
 			stanje++;
 			LeveliManeger._instance.odkleniStopnjo(6);
 			junakSkripta.zmagalLevel();
-			if(LeveliManeger._instance.getCas(1) > junakSkripta.score){
+			if(LeveliManeger._instance.getCas(5) > junakSkripta.score){
 				Instantiate(popUpRekord);
 			}
 			LeveliManeger._instance.naredilStopnjo();
