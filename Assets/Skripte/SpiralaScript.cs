@@ -8,8 +8,12 @@ public class SpiralaScript : MonoBehaviour {
 	public string vrsta;
 	GameObject junak;
 	NewBehaviourScript skripta;
+	public AudioClip zvok;
 
-
+	void Awake(){
+		if(InputNavigacija.zvoki)
+			AudioSource.PlayClipAtPoint(zvok, transform.position);
+	}
 	void Start () {
 		junak = GameObject.Find ("junak1");
 	}

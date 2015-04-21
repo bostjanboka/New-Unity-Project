@@ -14,6 +14,8 @@ public class InputNavigacija : MonoBehaviour {
 	public GameObject back;
 
 	public GameObject HUD;
+
+	public static bool zvoki=true;
 	void Start () {
 		back.SetActive (false);
 		zmagal.SetActive (false);

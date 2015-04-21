@@ -59,8 +59,9 @@ public class ClasicZogaSkripta : MonoBehaviour {
 			smer *= -1;
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
-			
-			AudioSource.PlayClipAtPoint(pok, transform.position);
+			if(InputNavigacija.zvoki){
+				AudioSource.PlayClipAtPoint(pok, transform.position);
+			}
 			if(novaZoga && skala > 0.15f){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;

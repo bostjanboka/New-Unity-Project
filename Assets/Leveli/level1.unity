@@ -1684,7 +1684,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 457332, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
@@ -1890,7 +1890,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 434610, guid: 472cf9b7bfc3f93419b6c4336054a8ed, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 21259396, guid: 472cf9b7bfc3f93419b6c4336054a8ed, type: 2}
       propertyPath: m_SortingOrder
@@ -3047,7 +3047,6 @@ MonoBehaviour:
   trezor: {fileID: 950643464}
   prostorZogic: {fileID: 1126238527}
   akcija: {fileID: 1455546611}
-  inputMeni: {fileID: 106393170}
 --- !u!4 &1695908251
 Transform:
   m_ObjectHideFlags: 0

@@ -75,8 +75,11 @@ public class ZeleSkripta : MonoBehaviour {
 		}
 
 		if (other.gameObject.tag.Equals ("spirala")) {
-			
-			AudioSource.PlayClipAtPoint(pok, transform.position);
+			if(InputNavigacija.zvoki){
+				AudioSource.PlayClipAtPoint(pok, transform.position);
+			}
+
+
 			if(noviZele && skala > 0.070f){
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;

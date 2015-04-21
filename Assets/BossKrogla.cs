@@ -98,7 +98,10 @@ public class BossKrogla : MonoBehaviour {
 
 				}
 				rb.velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.5f)+5,0);
-				AudioSource.PlayClipAtPoint(antiPok, transform.position);
+				if(InputNavigacija.zvoki){
+					AudioSource.PlayClipAtPoint(antiPok, transform.position);
+				}
+
 			}else{
 				if(novaZoga && skala > 0.06f){
 					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
@@ -119,7 +122,9 @@ public class BossKrogla : MonoBehaviour {
 					clasicSkripta.smer = -1;
 					clasicSkripta.visina*=0.9f;
 				}
-				AudioSource.PlayClipAtPoint(pok, transform.position);
+				if(InputNavigacija.zvoki){
+					AudioSource.PlayClipAtPoint(pok, transform.position);
+				}
 				GameObject parent = gameObject.transform.parent.gameObject;
 				Destroy(parent);
 			}

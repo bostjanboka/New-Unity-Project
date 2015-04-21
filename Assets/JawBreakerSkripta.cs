@@ -65,10 +65,14 @@ public class JawBreakerSkripta : MonoBehaviour {
 			
 			Destroy(other.gameObject);
 			if(spirala.vrsta.Equals("jaw")){
-				AudioSource.PlayClipAtPoint(pok, transform.position);
+				if(InputNavigacija.zvoki){
+					AudioSource.PlayClipAtPoint(pok, transform.position);
+				}
 				Destroy(gameObject);
 			}else{
-				AudioSource.PlayClipAtPoint(antiPok, transform.position);
+				if(InputNavigacija.zvoki){
+					AudioSource.PlayClipAtPoint(antiPok, transform.position);
+				}
 			}
 			//
 		}

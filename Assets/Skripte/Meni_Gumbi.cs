@@ -113,7 +113,8 @@ public class Meni_Gumbi : MonoBehaviour {
 	} 
 
 	public void muteZvok(){
-		zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
+		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
+		InputNavigacija.zvoki = soundToggle.isOn;
 	}
 	
 	public void muteMuzika(){

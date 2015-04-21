@@ -72,6 +72,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 4
   vrsta: jaw
+  zvok: {fileID: 8300000, guid: 2a52660a42b866b4e8271e1fa45ecf20, type: 3}
 --- !u!212 &21279244
 SpriteRenderer:
   m_ObjectHideFlags: 1
