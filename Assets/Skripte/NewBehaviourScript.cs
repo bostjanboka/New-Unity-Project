@@ -29,6 +29,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	public bool omogociPremikanje = true;
 	public bool stojimNaMestuX;
 	public bool meritev;
+	public bool strelOmogocen=true;
 
 
 	public float speed;
@@ -111,7 +112,7 @@ public class NewBehaviourScript : MonoBehaviour {
 				}
 				if (hitCollider.transform.name.Equals ("gumb_strel") || ustreli) {
 					Debug.Log ("zadetek strel");
-					if (steviloSpiral == 0) {
+					if (steviloSpiral == 0 && strelOmogocen) {
 						if (powerUpSpirala) {
 							Instantiate (powerUpSpirala, new Vector3 (transform.position.x, -9.62f, 2), Quaternion.identity);
 						} else {
