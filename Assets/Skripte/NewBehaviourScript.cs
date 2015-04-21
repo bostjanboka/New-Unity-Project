@@ -78,9 +78,9 @@ public class NewBehaviourScript : MonoBehaviour {
 		timeToBeat = LeveliManeger._instance.getCas (level);
 		if(timeToBeat > 0){
 			if(score > timeToBeat){
-				casi.color = new Color(1,0,0,0.3f);
+				casi.color = new Color(1,24f/255,24f/255,150f/255);
 			}else{
-				casi.color = new Color(0,1,0,0.3f);
+				casi.color = new Color(51f/255,192f/255,0,150f/255);
 			}
 		}
 
@@ -154,9 +154,9 @@ public class NewBehaviourScript : MonoBehaviour {
 			casi.text= PotkaSkripta.casovniFormat(score);
 			if(timeToBeat > 0){
 				if(score > timeToBeat){
-					casi.color = new Color(1,0,0,0.3f);
+					casi.color = new Color(1,24f/255,24f/255,150f/255);
 				}else{
-					casi.color = new Color(0,1,0,0.3f);
+					casi.color = new Color(51f/255,192f/255,0,150f/255);
 				}
 			}
 
