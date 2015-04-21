@@ -2014,9 +2014,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameMusic: {fileID: 165312, guid: b1eb6db5e24cf864ba90ec32697a01ab, type: 2}
   loading: {fileID: 102376, guid: d7fe78744883c4247b9588251626267d, type: 2}
+  popUpRate: {fileID: 0}
   musicToggle: {fileID: 1055896120}
   soundToggle: {fileID: 677142118}
   continueGameGumb: {fileID: 1303197479}
+  continueGameMeni: {fileID: 0}
 --- !u!4 &1542134873
 Transform:
   m_ObjectHideFlags: 0
@@ -2510,7 +2512,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 442db6bc6ab37f24ea6268e943dca980, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2090285221
