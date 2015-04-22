@@ -25,6 +25,7 @@ public class SteviloZogicSkripta : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		if (triggered) {
 			// put exit trigger logic here
 			//Debug.Log (stevilo);
