@@ -26,7 +26,7 @@ public class ScenarijLevela7 : MonoBehaviour {
 		
 		palcekSkripta = palcek.GetComponent<PalcekAI> ();
 		palcekSkripta.xTocka = 12.16f;
-
+		junakSkripta.meritev = true;
 		stanje = 0;
 		akcija.SetActive (true);
 	}
