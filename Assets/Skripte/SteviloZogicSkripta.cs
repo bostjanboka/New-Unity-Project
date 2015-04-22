@@ -25,7 +25,7 @@ public class SteviloZogicSkripta : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		/*
 		if (triggered) {
 			// put exit trigger logic here
 			//Debug.Log (stevilo);
@@ -41,7 +41,14 @@ public class SteviloZogicSkripta : MonoBehaviour {
 
 		}
 		stevilo = 0;
-		triggered = false;
+		triggered = false;*/
+		prazenProstor = false;
+		if (GameObject.FindGameObjectsWithTag ("zogice").Length == 0 && GameObject.FindGameObjectsWithTag ("zeleji").Length == 0) {
+			prazenProstor=true;
+		}
+		if (upostevajJaw && GameObject.FindGameObjectsWithTag ("jaw").Length > 0) {
+			prazenProstor=false;
+		}
 	}
 
 	void OnTriggerExit2D(Collider2D other){

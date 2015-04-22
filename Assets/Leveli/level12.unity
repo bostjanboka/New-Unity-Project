@@ -223,7 +223,7 @@ Prefab:
     - target: {fileID: 11483156, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: antiPok
       value: 
-      objectReference: {fileID: 8300000, guid: f57b07ba08b56fa4eb47fa6b6cb04d4f, type: 3}
+      objectReference: {fileID: 8300000, guid: d87bc0bc52d100842abf9855e52e96ce, type: 3}
     - target: {fileID: 11483156, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
       propertyPath: pok
       value: 

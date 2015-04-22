@@ -33,9 +33,9 @@ public class DontDestroyOnLoad : MonoBehaviour {
 	public void muteZvok(bool x){
 		zvok = x;
 		if (zvok) {
-			AudioListener.volume = 0;
+			//AudioListener.volume = 0;
 		} else {
-			AudioListener.volume=1;
+			//AudioListener.volume=1;
 		}
 	}
 

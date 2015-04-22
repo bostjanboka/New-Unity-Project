@@ -271,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1001 &347894544
 Prefab:
   m_ObjectHideFlags: 0
@@ -1435,6 +1435,26 @@ Prefab:
     - target: {fileID: 484394, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
       propertyPath: m_LocalPosition.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 137790, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
+      propertyPath: m_TagString
+      value: ovira
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113372, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
+      propertyPath: m_Size.x
+      value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 6113372, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
+      propertyPath: m_Offset.y
+      value: -.0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124894, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
+      propertyPath: m_Size.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124894, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 788fd8c83ab47de4da12633cfc95c4e6, type: 2}
