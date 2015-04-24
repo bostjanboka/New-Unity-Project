@@ -101,6 +101,15 @@ public class Meni_Gumbi : MonoBehaviour {
 		Application.LoadLevel ("HighScoreScena");
 	}
 
+	public void gumbRate(){
+		Move.showRate ();
+	}
+
+	public void gumbExit(){
+		LeveliManeger._instance.povecajObisk();
+		Application.Quit();
+	}
+
 	IEnumerator Wait(float duration)
 	{
 		//This is a coroutine
