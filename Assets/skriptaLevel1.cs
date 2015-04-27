@@ -15,6 +15,7 @@ public class skriptaLevel1 : MonoBehaviour {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
 		akcija.SetActive (false);
+		akcija.transform.FindChild("ClasicZoga").GetComponent<ClasicZogaSkripta> ().smer = 0;
 		stanje = 0;
 	}
 	
