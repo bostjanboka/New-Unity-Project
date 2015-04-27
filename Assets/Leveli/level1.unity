@@ -2708,7 +2708,7 @@ Prefab:
       objectReference: {fileID: 481126077}
     - target: {fileID: 11448502, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
       propertyPath: naloziReklamo
-      value: 0
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}

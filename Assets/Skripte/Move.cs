@@ -26,18 +26,18 @@ public class Move : MonoBehaviour {
 		//gameObject.AddComponent (PlugInWP.Class2);
 		//Debug.Log(""+UnityPluginForWindowsPhone.Class1.GetDeviceName);
 		//UnityPluginForWindowsPhone.Class1.konstruktor ();
-		interstitial.Destroy ();
+		//interstitial.Destroy ();
 		interstitial = new InterstitialAd("ca-app-pub-6223160944701050/1650693929");
 
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
-		bannerView.Destroy ();
+		//bannerView.Destroy ();
 		bannerView = new BannerView(
 			"ca-app-pub-6223160944701050/8340773121", AdSize.SmartBanner, AdPosition.Top);
 
 		request = new AdRequest.Builder().Build();
 		bannerView.LoadAd(request);
-
+		bannerView.Show();
 				
 
 
@@ -46,6 +46,7 @@ public class Move : MonoBehaviour {
 	public static void ugasniReklamo(){
 		//UnityPluginForWindowsPhone.Class1.ugasniReklamo ();
 		bannerView.Hide();
+
 	}
 
 	public static void prizgiReklamo(){
@@ -74,12 +75,12 @@ public class Move : MonoBehaviour {
 	void Update () {
 		if (prikaziReklamoBool) {
 			prikaziReklamoBool=false;
-			prizgiReklamo();
+			//prizgiReklamo();
 		}
 
 		if (ugasniReklamoBool) {
 			ugasniReklamoBool=false;
-			ugasniReklamo();
+			//ugasniReklamo();
 		}
 
 		if (loadCelo) {
