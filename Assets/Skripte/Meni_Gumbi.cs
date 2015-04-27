@@ -6,6 +6,10 @@ using UnityEngine.UI;
 public class Meni_Gumbi : MonoBehaviour {
 
 	// Use this for initialization
+	public Camera meni;
+	public Camera potka;
+
+
 	GameObject loadingScreen;
 	public GameObject gameMusic;
 	public GameObject loading;
@@ -14,6 +18,9 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
+
+	public Toggle musicToggleP; 
+	public Toggle soundToggleP; 
 
 	public Button continueGameGumb;
 
@@ -30,12 +37,17 @@ public class Meni_Gumbi : MonoBehaviour {
 			loadingScreen = GameObject.Find ("Loading(Clone)");
 		}
 		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
+		musicToggleP.isOn = musicToggle.isOn;
 
 		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
+		soundToggleP.isOn = soundToggle.isOn;
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
 	}
 	void Start () {
+		meni.enabled = true;
+		potka.enabled = false;
+
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		
 		if (continueGameGumb && (temp.level == -1 || temp.level % 2 == 0)) {
@@ -59,8 +71,9 @@ public class Meni_Gumbi : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			if(Application.loadedLevelName.Equals("ZemljevidScena")){
-				Application.LoadLevel("MeniScena");
+			if(potka.enabled){
+				potka.enabled = false;
+				meni.enabled=true;
 			}else{
 				LeveliManeger._instance.povecajObisk();
 				Application.Quit();
@@ -70,11 +83,13 @@ public class Meni_Gumbi : MonoBehaviour {
 	}
 
 	public void naloziZemljevid(){
-		Application.LoadLevel ("ZemljevidScena");
+		potka.enabled = true;
+		meni.enabled = false;
 	}
 
 	public void naloziMeni(){
-		Application.LoadLevel ("MeniScena");
+		potka.enabled = false;
+		meni.enabled=true;
 	}
 
 	public void newGameButton(){
@@ -86,7 +101,8 @@ public class Meni_Gumbi : MonoBehaviour {
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
 		if ((temp.level == -1 || temp.level % 2 == 0) || temp.level % 2 != 0 && temp.score == 0) {
-			Application.LoadLevel ("ZemljevidScena");
+			potka.enabled = true;
+			meni.enabled = false;
 		} else {
 			if (temp.level % 2 == 0) {
 				Application.LoadLevel ("level" + temp.level * 2); 
@@ -124,9 +140,22 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void muteZvok(){
 		zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		InputNavigacija.zvoki = soundToggle.isOn;
+		soundToggleP.isOn = soundToggle.isOn;
+	}
+
+	public void muteZvokP(){
+		zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
+		InputNavigacija.zvoki = soundToggle.isOn;
+		soundToggle.isOn = soundToggleP.isOn;
 	}
 	
 	public void muteMuzika(){
 		zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
+		musicToggleP.isOn = musicToggle.isOn;
+	}
+
+	public void muteMuzikaP(){
+		zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
+		musicToggle.isOn = musicToggleP.isOn;
 	}
 }

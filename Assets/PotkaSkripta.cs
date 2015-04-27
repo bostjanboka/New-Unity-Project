@@ -63,7 +63,7 @@ public class PotkaSkripta : MonoBehaviour {
 
 	public void pritisnilEna(){
 		LeveliManeger._instance.ponastaviLevel (1);
-		Application.LoadLevel ("level1");
+		Application.LoadLevel ("level1a");
 	}
 
 	public void pritisnilDva(){

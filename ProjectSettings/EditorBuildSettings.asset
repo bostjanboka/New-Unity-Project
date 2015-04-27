@@ -33,3 +33,5 @@ EditorBuildSettings:
     path: Assets/Leveli/level11.unity
   - enabled: 1
     path: Assets/Leveli/level12.unity
+  - enabled: 1
+    path: Assets/Leveli/level1a.unity
