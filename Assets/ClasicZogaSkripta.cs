@@ -66,6 +66,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
+				rb.gravityScale=1;
 				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
 				clasicSkripta.skala *= 0.5f;
 				clasicSkripta.visina*=0.9f;
@@ -76,6 +77,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
+				rb.gravityScale=1;
 				rb.velocity = new Vector3(0,5);
 				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
 				clasicSkripta.skala *= 0.5f;

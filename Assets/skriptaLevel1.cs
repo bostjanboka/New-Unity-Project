@@ -25,7 +25,9 @@ public class skriptaLevel1 : MonoBehaviour {
 			akcija.SetActive (true);
 			stanje = 1;
 		} else if (stanje == 1 && akcija.transform.position.y < 4) {
-			Time.timeScale= 0;
+			akcija.GetComponent<Rigidbody2D>().gravityScale=0;
+			akcija.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+			stanje = 2;
 		}
 	}
 }

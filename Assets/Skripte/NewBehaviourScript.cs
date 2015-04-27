@@ -41,6 +41,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	bool pressedD = false;
 	bool pressedL = false;
 	bool pressedS = false;
+	bool bilZadet;
+
 	public bool ustreli = false;
 	InputNavigacija navSkripta;
 	//GUIContent btn;
@@ -63,7 +65,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		if (level % 2 != 0) {
 			hp = temp.hp;
 		}
-
+		bilZadet = false;
 
 		trenutniLevel = temp.trenutniLevel;
 		score = temp.score;
@@ -188,20 +190,21 @@ public class NewBehaviourScript : MonoBehaviour {
 	}
 
 	public void zgubilLevel(){
+		if (!bilZadet) {
+			bilZadet=true;
+			Move.showCelozaslonsko ();
+			LeveliManeger._instance.saveProgres (--hp, trenutniLevel, score);
+			InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
-		Move.showCelozaslonsko ();
-		LeveliManeger._instance.saveProgres ( --hp, trenutniLevel, score);
-		InfoLeveli temp = LeveliManeger._instance.getLevel ();
-
-		HighScoreManager._instance.SaveHighScore("boka",35);
-		Time.timeScale = 0;
-		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = temp.trenutniLevel;
-		if (hp == 0) {
-			zgubil.transform.Find("life lost").gameObject.GetComponent<Text>().text="NO MORE LIVES";
-			zgubil.transform.Find("noHP").gameObject.SetActive(true);
-			zgubil.transform.Find("new game").gameObject.SetActive(false);
+			HighScoreManager._instance.SaveHighScore ("boka", 35);
+			Time.timeScale = 0;
+			inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = temp.trenutniLevel;
+			if (hp == 0) {
+				zgubil.transform.Find ("life lost").gameObject.GetComponent<Text> ().text = "NO MORE LIVES";
+				zgubil.transform.Find ("noHP").gameObject.SetActive (true);
+				zgubil.transform.Find ("new game").gameObject.SetActive (false);
+			}
 		}
-
 
 		zgubil.SetActive (true);
 	}
