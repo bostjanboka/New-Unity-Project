@@ -6,9 +6,7 @@ public class ScenarijLevel2 : MonoBehaviour {
 	// Use this for initialization
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
-	BoxCollider2D coliderJunak;
-	public GameObject palcek;
-	PalcekAI palcekSkripta;
+
 
 
 	
@@ -23,32 +21,28 @@ public class ScenarijLevel2 : MonoBehaviour {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
 
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
-		coliderJunak = junak.GetComponent<BoxCollider2D> ();
-		coliderJunak.isTrigger = true;
+
 		
-		junakSkripta.omogociPremikanje = false;
+		junakSkripta.omogociPremikanje = true;
 		
-		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = -6.16f;
+
 		junakSkripta.xTocka = -8f;
 		stanje = 0;
-		akcija.SetActive (false);
+
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
-			stanje = 1;
-			Move.ugasniReklamo ();
+		if (stanje == 0) {
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
-			junakSkripta.omogociPremikanje = true;
-			coliderJunak.isTrigger = false;
-			palcekSkripta.xTocka=21f;
+			stanje=1;
 
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
+			LeveliManeger._instance.odkleniStopnjo(3);
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
 			if(Random.value < 0.5f){
 				Move.showCelozaslonsko ();
 			}

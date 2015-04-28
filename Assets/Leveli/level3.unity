@@ -589,7 +589,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   junak: {fileID: 0}
-  palcek: {fileID: 0}
   vrata: {fileID: 1076407784}
   akcija: {fileID: 2056040014}
   prostorZogic: {fileID: 23470105}
@@ -983,6 +982,10 @@ Prefab:
     - target: {fileID: 426760, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
       propertyPath: m_RootOrder
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430166, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: level
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}

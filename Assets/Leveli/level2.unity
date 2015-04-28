@@ -206,9 +206,29 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 11430166, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: level
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11430166, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 521606195}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &452561347
+GameObject:
+  m_PrefabParentObject: {fileID: 143068, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+  m_PrefabInternal: {fileID: 452561346}
+--- !u!1 &452561348
+GameObject:
+  m_PrefabParentObject: {fileID: 110080, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+  m_PrefabInternal: {fileID: 452561346}
+--- !u!1 &452561349
+GameObject:
+  m_PrefabParentObject: {fileID: 133446, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+  m_PrefabInternal: {fileID: 452561346}
 --- !u!1001 &521606194
 Prefab:
   m_ObjectHideFlags: 0
@@ -255,6 +275,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &521606195
+GameObject:
+  m_PrefabParentObject: {fileID: 118594, guid: 5fbdcd95bd10d0f4680016a3c1171912, type: 2}
+  m_PrefabInternal: {fileID: 521606194}
 --- !u!1001 &696682708
 Prefab:
   m_ObjectHideFlags: 0
@@ -496,11 +520,17 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 195668, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8db2061801a4b7f489a86213f2cd6335, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &855680851
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11460068, guid: 8db2061801a4b7f489a86213f2cd6335,
+    type: 2}
+  m_PrefabInternal: {fileID: 855680850}
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
 --- !u!1 &864571481
 GameObject:
   m_ObjectHideFlags: 0
@@ -766,10 +796,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f6c0958ab4c77a048a29f551038ba02e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  junak: {fileID: 0}
-  palcek: {fileID: 0}
+  junak: {fileID: 2046561099}
   prostorZogic: {fileID: 1457764297}
-  zmagal: {fileID: 0}
+  zmagal: {fileID: 452561348}
   akcija: {fileID: 922322488}
 --- !u!4 &1762692764
 Transform:
@@ -954,6 +983,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11498058, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+      propertyPath: zgubil
+      value: 
+      objectReference: {fileID: 452561347}
+    - target: {fileID: 11498058, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+      propertyPath: inputNavigacija
+      value: 
+      objectReference: {fileID: 452561349}
+    - target: {fileID: 11498058, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+      propertyPath: casi
+      value: 
+      objectReference: {fileID: 855680851}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2046561099
+GameObject:
+  m_PrefabParentObject: {fileID: 168406, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+  m_PrefabInternal: {fileID: 2046561098}

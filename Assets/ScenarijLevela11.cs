@@ -7,8 +7,7 @@ public class ScenarijLevela11 : MonoBehaviour {
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
 
-	public GameObject palcek;
-	PalcekAI palcekSkripta;
+
 	
 	public GameObject popUpRekord;
 	
@@ -21,9 +20,6 @@ public class ScenarijLevela11 : MonoBehaviour {
 		
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
 
-		
-		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 12.16f;
 
 		stanje = 0;
 		junakSkripta.meritev=true;
@@ -36,7 +32,7 @@ public class ScenarijLevela11 : MonoBehaviour {
 	void Update () {
 		if(stanje == 0 && steviloZogic.prazenProstor){
 			stanje++;
-			LeveliManeger._instance.odkleniStopnjo(6);
+			LeveliManeger._instance.odkleniStopnjo(12);
 			junakSkripta.zmagalLevel();
 			if(LeveliManeger._instance.getCas(5) > junakSkripta.score){
 				Instantiate(popUpRekord);
