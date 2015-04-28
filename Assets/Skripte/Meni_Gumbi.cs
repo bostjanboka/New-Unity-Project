@@ -19,8 +19,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
 
-	public Toggle musicToggleP; 
-	public Toggle soundToggleP; 
+
 
 	public Button continueGameGumb;
 
@@ -37,10 +36,10 @@ public class Meni_Gumbi : MonoBehaviour {
 			loadingScreen = GameObject.Find ("Loading(Clone)");
 		}
 		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
-		musicToggleP.isOn = musicToggle.isOn;
+
 
 		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
-		soundToggleP.isOn = soundToggle.isOn;
+
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
 	}
@@ -140,22 +139,15 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void muteZvok(){
 		zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		InputNavigacija.zvoki = soundToggle.isOn;
-		soundToggleP.isOn = soundToggle.isOn;
+
 	}
 
-	public void muteZvokP(){
-		zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
-		InputNavigacija.zvoki = soundToggle.isOn;
-		soundToggle.isOn = soundToggleP.isOn;
-	}
+
 	
 	public void muteMuzika(){
 		zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
-		musicToggleP.isOn = musicToggle.isOn;
+
 	}
 
-	public void muteMuzikaP(){
-		zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
-		musicToggle.isOn = musicToggleP.isOn;
-	}
+
 }

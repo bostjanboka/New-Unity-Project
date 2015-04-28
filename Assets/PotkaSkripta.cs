@@ -11,17 +11,43 @@ public class PotkaSkripta : MonoBehaviour {
 	public Button stiri;
 	public Button pet;
 	public Button sest;
+	public Button sedem;
+	public Button osem;
+	public Button devet;
+	public Button deset;
+	public Button enajst;
+	public Button dvanajst;
 
-	public Text cas1;
-	public Text cas2;
-	public Text cas3;
-	public Text cas4;
-	public Text cas5;
-	public Text cas6;
+
+	public GameObject level1;
+	public GameObject level2;
+	public GameObject level3;
+	public GameObject level4;
+	public GameObject level5;
+	public GameObject level6;
+	public GameObject level7;
+	public GameObject level8;
+	public GameObject level9;
+	public GameObject level10;
+	public GameObject level11;
+	public GameObject level12;
+
+
 	public Text totalCas;
 	float skupaj;
 	void Start () {
-
+		level1.SetActive (false);
+		level2.SetActive (false);
+		level3.SetActive (false);
+		level4.SetActive (false);
+		level5.SetActive (false);
+		level6.SetActive (false);
+		level7.SetActive (false);
+		level8.SetActive (false);
+		level9.SetActive (false);
+		level10.SetActive (false);
+		level11.SetActive (false);
+		level12.SetActive (false);
 
 		//ena.interactable = LeveliManeger._instance.odklenjenaStopnja(1);
 		dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
@@ -29,14 +55,63 @@ public class PotkaSkripta : MonoBehaviour {
 		stiri.interactable = LeveliManeger._instance.odklenjenaStopnja(4);
 		pet.interactable = LeveliManeger._instance.odklenjenaStopnja(5);
 		sest.interactable = LeveliManeger._instance.odklenjenaStopnja(6);
+		sedem.interactable = LeveliManeger._instance.odklenjenaStopnja(7);
+		osem.interactable = LeveliManeger._instance.odklenjenaStopnja(8);
+		devet.interactable = LeveliManeger._instance.odklenjenaStopnja(9);
+		deset.interactable = LeveliManeger._instance.odklenjenaStopnja(10);
+		enajst.interactable = LeveliManeger._instance.odklenjenaStopnja(11);
+		dvanajst.interactable = LeveliManeger._instance.odklenjenaStopnja(12);
 
 		float[] casi = LeveliManeger._instance.getCase ();
-		cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
-	    cas2.text = (casi[1] > 0) ? "BEST: "+casovniFormat(casi[1])+"s":"BEST: N/A";
-	    cas3.text = (casi[2] > 0) ? "BEST: "+casovniFormat(casi[2])+"s":"BEST: N/A";
-	    cas4.text = (casi[3] > 0) ? "BEST: "+casovniFormat(casi[3])+"s":"BEST: N/A";
-	    cas5.text = (casi[4] > 0) ? "BEST: "+casovniFormat(casi[4])+"s":"BEST: N/A";
-	    cas6.text = (casi[5] > 0) ? "BEST: "+casovniFormat(casi[5])+"s":"BEST: N/A";
+		//cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
+	    if (casi [0] > 0) {
+			level1.SetActive (true);
+			level1.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[0]);
+		}
+		if (casi [1] > 0) {
+			level2.SetActive (true);
+			level2.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[1]);
+		}
+		if (casi [2] > 0) {
+			level3.SetActive (true);
+			level3.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[2]);
+		}
+		if (casi [3] > 0) {
+			level4.SetActive (true);
+			level4.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[3]);
+		}
+		if (casi [4] > 0) {
+			level5.SetActive (true);
+			level5.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[4]);
+		}
+		if (casi [5] > 0) {
+			level6.SetActive (true);
+			level6.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[5]);
+		}
+		if (casi [6] > 0) {
+			level7.SetActive (true);
+			level7.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[6]);
+		}
+		if (casi [7] > 0) {
+			level8.SetActive (true);
+			level8.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[7]);
+		}
+		if (casi [8] > 0) {
+			level9.SetActive (true);
+			level9.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[8]);
+		}
+		if (casi [9] > 0) {
+			level10.SetActive (true);
+			level10.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[9]);
+		}
+		if (casi [10] > 0) {
+			level11.SetActive (true);
+			level11.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[10]);
+		}
+		if (casi [11] > 0) {
+			level12.SetActive (true);
+			level12.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[11]);
+		}
 
 		for (int i=0; i < casi.Length; i++) {
 			if(casi[i]> 0){

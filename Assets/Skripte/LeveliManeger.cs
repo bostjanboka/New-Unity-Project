@@ -6,7 +6,7 @@ public class LeveliManeger : MonoBehaviour {
 
 	// Use this for initialization
 	private static LeveliManeger m_instance;
-	private const int leveliLength = 6;
+	private const int leveliLength = 12;
 	public static LeveliManeger _instance {
 		get {
 			if (m_instance == null) {
@@ -146,36 +146,14 @@ public class LeveliManeger : MonoBehaviour {
 
 	public float[] getCase(){
 		float[] casi = new float[leveliLength];
-		if (!PlayerPrefs.HasKey ("Stopnja" + 1)) {
-			casi [0] = -1;
-		} else {
-			casi[0] = PlayerPrefs.GetFloat ("Stopnja" + 1);
+		for (int i=0; i < casi.Length; i++) {
+			if (!PlayerPrefs.HasKey ("Stopnja" + i+1)) {
+				casi [i] = -1;
+			}else{
+				casi[i] = PlayerPrefs.GetInt("Stopnja"+i+1);
+			}
 		}
-		if (!PlayerPrefs.HasKey ("Stopnja" + 2)) {
-			casi [1] = -1;
-		} else {
-			casi[1] = PlayerPrefs.GetFloat ("Stopnja" + 2);
-		}
-		if (!PlayerPrefs.HasKey ("Stopnja" + 3)) {
-			casi [2] = -1;
-		} else {
-			casi[2] = PlayerPrefs.GetFloat ("Stopnja" + 3);
-		}
-		if (!PlayerPrefs.HasKey ("Stopnja" + 4)) {
-			casi [3] = -1;
-		} else {
-			casi[3] = PlayerPrefs.GetFloat ("Stopnja" + 4);
-		}
-		if (!PlayerPrefs.HasKey ("Stopnja" + 5)) {
-			casi [4] = -1;
-		} else {
-			casi[4] = PlayerPrefs.GetFloat ("Stopnja" + 5);
-		}
-		if (!PlayerPrefs.HasKey ("Stopnja" + 6)) {
-			casi [5] = -1;
-		} else {
-			casi[5] = PlayerPrefs.GetFloat ("Stopnja" + 6);
-		}
+		 
 		return casi;
 	}
 
