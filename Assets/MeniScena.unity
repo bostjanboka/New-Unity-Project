@@ -279,6 +279,33 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 90391410}
+--- !u!1 &102709796
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 102709797}
+  m_Layer: 0
+  m_Name: upornaTocka
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &102709797
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 102709796}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.38999987, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
 --- !u!1 &123060655
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,8 +342,8 @@ RectTransform:
   - {fileID: 1953147324}
   - {fileID: 501473185}
   - {fileID: 475362784}
-  m_Father: {fileID: 2090285226}
-  m_RootOrder: 0
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -620,10 +647,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 151842041}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00100000005, y: -4.44399977, z: 1}
+  m_LocalPosition: {x: 0, y: -4.5, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1577474235}
+  m_Father: {fileID: 1725181502}
   m_RootOrder: 2
 --- !u!212 &151842043
 SpriteRenderer:
@@ -858,7 +885,7 @@ RectTransform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 427290731}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: .5}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: .0299999993, y: .0299999993, z: 1}
   m_Children:
   - {fileID: 446281867}
@@ -887,8 +914,9 @@ RectTransform:
   - {fileID: 42338378}
   - {fileID: 999962407}
   - {fileID: 555651316}
-  m_Father: {fileID: 1577474235}
-  m_RootOrder: 1
+  - {fileID: 1653017250}
+  m_Father: {fileID: 1725181502}
+  m_RootOrder: 3
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1889,7 +1917,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
 --- !u!1 &834735537
 GameObject:
   m_ObjectHideFlags: 0
@@ -2416,6 +2444,33 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 999962406}
+--- !u!1 &1013267635
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1013267636}
+  m_Layer: 0
+  m_Name: upornaTocka 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1013267636
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1013267635}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: -6.41900015, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1725181502}
+  m_RootOrder: 1
 --- !u!1 &1041605221
 GameObject:
   m_ObjectHideFlags: 0
@@ -2426,7 +2481,7 @@ GameObject:
   - 4: {fileID: 1041605222}
   - 212: {fileID: 1041605223}
   m_Layer: 0
-  m_Name: meni
+  m_Name: ozadje potke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2439,11 +2494,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1041605221}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1577474235}
-  m_RootOrder: 0
+  m_Father: {fileID: 1725181502}
+  m_RootOrder: 4
 --- !u!212 &1041605223
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3245,36 +3300,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1235799467}
---- !u!1 &1264873023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 195606, guid: 98e3ba69f16b8484381b337c5fb35cc8, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1264873024}
-  m_Layer: 0
-  m_Name: potka
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1264873024
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 401980, guid: 98e3ba69f16b8484381b337c5fb35cc8, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1264873023}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.03437114, y: -14.04, z: -1.96875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1577474235}
-  - {fileID: 1426238892}
-  - {fileID: 1653017250}
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
 --- !u!1 &1336634594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,7 +3448,7 @@ GameObject:
   - 4: {fileID: 1367967677}
   - 212: {fileID: 1367967676}
   m_Layer: 0
-  m_Name: meni
+  m_Name: ozadje menija
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3465,8 +3490,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2090285226}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
 --- !u!1 &1426238891
 GameObject:
   m_ObjectHideFlags: 0
@@ -3492,11 +3517,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1426238891}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03437114, y: .417586237, z: 1.96875}
+  m_LocalPosition: {x: 0, y: -13.6224136, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1264873024}
-  m_RootOrder: 1
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
 --- !u!114 &1426238893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3909,8 +3934,6 @@ MonoBehaviour:
   popUpRate: {fileID: 183156, guid: ec15b651acd50ea4eb66ba372d76cbf8, type: 2}
   musicToggle: {fileID: 501473186}
   soundToggle: {fileID: 475362785}
-  musicToggleP: {fileID: 0}
-  soundToggleP: {fileID: 0}
   continueGameGumb: {fileID: 0}
   continueGameMeni: {fileID: 0}
 --- !u!4 &1542134873
@@ -3937,8 +3960,9 @@ GameObject:
   - 92: {fileID: 1577474239}
   - 124: {fileID: 1577474238}
   - 114: {fileID: 1577474236}
+  - 114: {fileID: 1577474237}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Potka Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3951,13 +3975,10 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1577474234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.03437114, y: .417586237, z: 1.96875}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1041605222}
-  - {fileID: 427290732}
-  - {fileID: 151842042}
-  m_Father: {fileID: 1264873024}
+  m_Children: []
+  m_Father: {fileID: 1725181502}
   m_RootOrder: 0
 --- !u!114 &1577474236
 MonoBehaviour:
@@ -3975,6 +3996,19 @@ MonoBehaviour:
   ugasniReklamoBool: 0
   loadCelo: 0
   showCelo: 0
+--- !u!114 &1577474237
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1577474234}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b4b093f2669ab48bfd62b9f0dc61f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 22
+  tocka: {fileID: 1013267635}
 --- !u!124 &1577474238
 Behaviour:
   m_ObjectHideFlags: 0
@@ -4171,11 +4205,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1653017249}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .978156805, y: -.660387278, z: 3.796875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 67.0842667, y: -40.0129013, z: 1.328125}
+  m_LocalScale: {x: 33.3333359, y: 33.3333359, z: 1}
   m_Children: []
-  m_Father: {fileID: 1264873024}
-  m_RootOrder: 2
+  m_Father: {fileID: 427290732}
+  m_RootOrder: 26
 --- !u!114 &1653017251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4194,12 +4228,24 @@ MonoBehaviour:
   stiri: {fileID: 1665516722}
   pet: {fileID: 880100722}
   sest: {fileID: 1933087061}
-  cas1: {fileID: 1132411049}
-  cas2: {fileID: 0}
-  cas3: {fileID: 0}
-  cas4: {fileID: 0}
-  cas5: {fileID: 0}
-  cas6: {fileID: 0}
+  sedem: {fileID: 1456304875}
+  osem: {fileID: 1194608120}
+  devet: {fileID: 1235799469}
+  deset: {fileID: 1142222802}
+  enajst: {fileID: 1796625218}
+  dvanajst: {fileID: 834735539}
+  level1: {fileID: 1187813679}
+  level2: {fileID: 1655240253}
+  level3: {fileID: 541461245}
+  level4: {fileID: 125074301}
+  level5: {fileID: 1614423512}
+  level6: {fileID: 1097401863}
+  level7: {fileID: 1652706128}
+  level8: {fileID: 410636649}
+  level9: {fileID: 1985672453}
+  level10: {fileID: 862121848}
+  level11: {fileID: 919702682}
+  level12: {fileID: 42338377}
   totalCas: {fileID: 999962408}
 --- !u!1 &1655240253
 GameObject:
@@ -4464,6 +4510,38 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1679287341}
+--- !u!1 &1725181501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1725181502}
+  m_Layer: 0
+  m_Name: potkaNOter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1725181502
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725181501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 37.7299995, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1577474235}
+  - {fileID: 1013267636}
+  - {fileID: 151842042}
+  - {fileID: 427290732}
+  - {fileID: 1041605222}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
 --- !u!1 &1796625216
 GameObject:
   m_ObjectHideFlags: 0
@@ -4760,8 +4838,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 1.55999994, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 2090285226}
-  m_RootOrder: 2
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
 --- !u!212 &1923689293
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5220,7 +5298,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 7
 --- !u!1 &2063446408
 GameObject:
   m_ObjectHideFlags: 0
@@ -5295,8 +5373,9 @@ GameObject:
   - 92: {fileID: 2090285224}
   - 124: {fileID: 2090285223}
   - 81: {fileID: 2090285222}
+  - 114: {fileID: 2090285227}
   m_Layer: 0
-  m_Name: Main Camera
+  m_Name: Meni Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5343,7 +5422,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.20889854
+  orthographic size: 19.7691269
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5364,9 +5443,19 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 123060656}
-  - {fileID: 1367967677}
-  - {fileID: 1923689292}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &2090285227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2090285221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03b4b093f2669ab48bfd62b9f0dc61f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size: 22
+  tocka: {fileID: 102709796}

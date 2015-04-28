@@ -5,11 +5,12 @@ public class CameraSize : MonoBehaviour {
 
 	// Use this for initialization
 	Camera cam;
+	public float size=20;
 	public GameObject tocka;
 
 	void Start () {
 		cam = gameObject.GetComponent<Camera> ();
-		cam.orthographicSize = 22 * Screen.height / Screen.width * 0.5f;
+		cam.orthographicSize = size * Screen.height / Screen.width * 0.5f;
 
 		//gameObject.transform.position = cam.ScreenToWorldPoint (new Vector3(cam.WorldToScreenPoint(gameObject.transform.position).x,cam.WorldToScreenPoint(tocka.transform.position).y,0));
 
