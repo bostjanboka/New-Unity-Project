@@ -1,0 +1,583 @@
+fileFormatVersion: 2
+guid: 5e1d598a167bea24b8b6bb390d807f0d
+timeCreated: 1430229422
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: junak_0
+    21300002: junak_1
+    21300004: junak_2
+    21300006: junak_3
+    21300008: junak_4
+    21300010: junak_5
+    21300012: junak_6
+    21300014: junak_7
+    21300016: junak_8
+    21300018: junak_9
+    21300020: junak_10
+    21300022: junak_11
+    21300024: junak_12
+    21300026: junak_13
+    21300028: junak_14
+    21300030: junak_15
+    21300032: junak_16
+    21300034: junak_17
+    21300036: junak_18
+    21300038: junak_19
+    21300040: junak_20
+    21300042: junak_21
+    21300044: junak_22
+    21300046: junak_23
+    21300048: junak_24
+    21300050: junak_25
+    21300052: junak_26
+    21300054: junak_27
+    21300056: junak_28
+    21300058: junak_29
+    21300060: junak_30
+    21300062: junak_31
+    21300064: junak_32
+    21300066: junak_33
+    21300068: junak_34
+    21300070: junak_35
+    21300072: junak_36
+    21300074: junak_37
+    21300076: junak_38
+    21300078: junak_39
+    21300080: junak_40
+    21300082: junak_41
+    21300084: junak_42
+    21300086: junak_43
+    21300088: junak_44
+    21300090: junak_45
+    21300092: junak_46
+    21300094: junak_47
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 60
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: junak_0
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 628
+        width: 48
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_1
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 628
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_2
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 628
+        width: 57
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_3
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 628
+        width: 50
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_4
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 628
+        width: 49
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_5
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 628
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_6
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 628
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_7
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 628
+        width: 49
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_8
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 522
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_9
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 522
+        width: 56
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_10
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 522
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_11
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 522
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_12
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 522
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_13
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 522
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_14
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 522
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_15
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 522
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_16
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 417
+        width: 48
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_17
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 417
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_18
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 417
+        width: 57
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_19
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 417
+        width: 50
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_20
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 417
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_21
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 417
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_22
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 417
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_23
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 417
+        width: 49
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_24
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 311
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_25
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 311
+        width: 56
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_26
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 311
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_27
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 311
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_28
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 311
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_29
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 311
+        width: 57
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_30
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 311
+        width: 55
+        height: 76
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_31
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 311
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_32
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 205
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_33
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 205
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_34
+      rect:
+        serializedVersion: 2
+        x: 464
+        y: 205
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_35
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 205
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_36
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 205
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_37
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 205
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_38
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 205
+        width: 56
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_39
+      rect:
+        serializedVersion: 2
+        x: 958
+        y: 205
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_40
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 99
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_41
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 99
+        width: 56
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_42
+      rect:
+        serializedVersion: 2
+        x: 466
+        y: 99
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_43
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 99
+        width: 49
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_44
+      rect:
+        serializedVersion: 2
+        x: 664
+        y: 99
+        width: 50
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_45
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 99
+        width: 57
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_46
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 99
+        width: 55
+        height: 77
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: junak_47
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 99
+        width: 48
+        height: 75
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
