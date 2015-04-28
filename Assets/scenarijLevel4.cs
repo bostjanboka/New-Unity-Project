@@ -5,7 +5,7 @@ public class scenarijLevel4 : MonoBehaviour {
 
 	// Use this for initialization
 	public GameObject junak;
-	public GameObject palcek;
+
 	public GameObject visenje;
 	public GameObject prostorZogic;
 	public GameObject zmagal;
@@ -14,9 +14,9 @@ public class scenarijLevel4 : MonoBehaviour {
 	
 	
 	NewBehaviourScript junakSkripta;
-	BoxCollider2D coliderJunak;
-	PalcekAI palcekSkripta;
-	TrezorSkripta trezorSkripta;
+
+
+
 	SteviloZogicSkripta steviloZogic;
 	
 	
@@ -25,29 +25,15 @@ public class scenarijLevel4 : MonoBehaviour {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
 		
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
-		coliderJunak = junak.GetComponent<BoxCollider2D> ();
-		coliderJunak.isTrigger = true;
-		
-		junakSkripta.omogociPremikanje = false;
-		junakSkripta.xTocka = -8;
-		junakSkripta.stojimNaMestuX = false;
-		
-		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 7f;
+
 		stanje = 0;
 		caneZaJaw.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (stanje == 0 && junakSkripta.stojimNaMestuX) {
-			junakSkripta.omogociPremikanje = true;
-			coliderJunak.isTrigger=false;
+		if (stanje == 0) {
 
-			stanje = 1;
-		} else if (stanje == 1 && palcekSkripta.stojimNaMestuX) {
-			palcekSkripta.xTocka = 12.5f;
-			Move.ugasniReklamo ();
 			visenje.GetComponent<DropDownSkriptaZaVisenje> ().sprozi = true;
 			junakSkripta.meritev=true;
 			stanje = 2;
@@ -56,8 +42,10 @@ public class scenarijLevel4 : MonoBehaviour {
 			stanje=3;
 		}
 		else if(stanje == 3 && steviloZogic.prazenProstor){
-			LeveliManeger._instance.odkleniStopnjo(3);
+			LeveliManeger._instance.odkleniStopnjo(5);
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
+
 			if(LeveliManeger._instance.getCas(2) > junakSkripta.score){
 				Instantiate(popUpRekord);
 			}else{
@@ -65,7 +53,7 @@ public class scenarijLevel4 : MonoBehaviour {
 					Move.showCelozaslonsko ();
 				}
 			}
-			LeveliManeger._instance.naredilStopnjo();
+
 
 			stanje++;
 		}

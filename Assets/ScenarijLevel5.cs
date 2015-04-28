@@ -6,9 +6,7 @@ public class ScenarijLevel5 : MonoBehaviour {
 	// Use this for initialization
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
-	BoxCollider2D coliderJunak;
-	public GameObject palcek;
-	PalcekAI palcekSkripta;
+
 	
 	
 	
@@ -22,31 +20,23 @@ public class ScenarijLevel5 : MonoBehaviour {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
 		
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
-		coliderJunak = junak.GetComponent<BoxCollider2D> ();
-		coliderJunak.isTrigger = true;
-		
-		junakSkripta.omogociPremikanje = false;
-		
-		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 8.6f;
-		junakSkripta.xTocka = -8f;
+
 		stanje = 0;
 		akcija.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
+		if (stanje == 0) {
 			stanje = 1;
 			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
-			junakSkripta.omogociPremikanje = true;
-			coliderJunak.isTrigger = false;
-			palcekSkripta.xTocka=12f;
-			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
+			LeveliManeger._instance.odkleniStopnjo(6);
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
+
 			if(Random.value < 0.5f){
 				Move.showCelozaslonsko ();
 			}

@@ -6,10 +6,8 @@ public class ScenarijLevela10 : MonoBehaviour {
 	// Use this for initialization
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
-
-	public GameObject palcek;
-	PalcekAI palcekSkripta;
 	
+
 	
 	
 	public GameObject prostorZogic;
@@ -23,25 +21,23 @@ public class ScenarijLevela10 : MonoBehaviour {
 		
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
 
-		
-		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 4f;
-		junakSkripta.xTocka = -8f;
 		stanje = 0;
 		akcija.SetActive (false);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
+		if (stanje == 0) {
 			stanje = 1;
 			Move.ugasniReklamo ();
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
-			palcekSkripta.xTocka=21f;
+
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
+			LeveliManeger._instance.odkleniStopnjo(11);
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
 			if(Random.value < 0.5f){
 				Move.showCelozaslonsko ();
 			}

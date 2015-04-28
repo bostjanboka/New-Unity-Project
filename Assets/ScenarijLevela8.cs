@@ -6,9 +6,8 @@ public class ScenarijLevela8 : MonoBehaviour {
 	// Use this for initialization
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
-	BoxCollider2D coliderJunak;
-	public GameObject palcek;
-	PalcekAI palcekSkripta;
+
+
 	
 	
 	
@@ -24,8 +23,7 @@ public class ScenarijLevela8 : MonoBehaviour {
 		
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
 
-		palcekSkripta = palcek.GetComponent<PalcekAI> ();
-		palcekSkripta.xTocka = 4.4f;
+
 
 		stanje = 0;
 		akcija.SetActive (false);
@@ -33,14 +31,14 @@ public class ScenarijLevela8 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (stanje == 0 && palcekSkripta.stojimNaMestuX) {
+		if (stanje == 0 ) {
 			stanje = 1;
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
-			palcekSkripta.xTocka=21f;
+
 			
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
-			LeveliManeger._instance.odkleniStopnjo(5);
+			LeveliManeger._instance.odkleniStopnjo(9);
 			junakSkripta.zmagalLevel();
 			if(LeveliManeger._instance.getCas(4) > junakSkripta.score){
 				Instantiate(popUpRekord);

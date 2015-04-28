@@ -64,11 +64,12 @@ public class PotkaSkripta : MonoBehaviour {
 
 		float[] casi = LeveliManeger._instance.getCase ();
 		//cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
+		Debug.Log (LeveliManeger._instance.getCas(2));
 	    if (casi [0] > 0) {
 			level1.SetActive (true);
 			level1.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[0]);
 		}
-		if (casi [1] > 0) {
+		if (LeveliManeger._instance.getCas(2) > 0) {
 			level2.SetActive (true);
 			level2.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[1]);
 		}
@@ -136,33 +137,11 @@ public class PotkaSkripta : MonoBehaviour {
 		return minutes + ":" + seconds + "." + mil;
 	}
 
-	public void pritisnilEna(){
-		LeveliManeger._instance.ponastaviLevel (1);
-		Application.LoadLevel ("level1a");
+	public void pritisnilPlay(int i){
+		LeveliManeger._instance.ponastaviLevel (i);
+		Application.LoadLevel ("level"+i);
 	}
 
-	public void pritisnilDva(){
-		LeveliManeger._instance.ponastaviLevel (2);
-		Application.LoadLevel ("level4");
-	}
 
-	public void pritisnilTri(){
-		LeveliManeger._instance.ponastaviLevel (3);
-		Application.LoadLevel ("level5");
-	}
-
-	public void pritisnilStiri(){
-		LeveliManeger._instance.ponastaviLevel (4);
-		Application.LoadLevel ("level8");
-	}
-
-	public void pritisnilPet(){
-		LeveliManeger._instance.ponastaviLevel (5);
-		Application.LoadLevel ("level9");
-	}
-
-	public void pritisnilSest(){
-		LeveliManeger._instance.ponastaviLevel (6);
-		Application.LoadLevel ("level12");
-	}
+	
 }
