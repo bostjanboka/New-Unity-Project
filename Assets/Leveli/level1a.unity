@@ -112,6 +112,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1538624848}
   - {fileID: 632990168}
   - {fileID: 1617477490}
   - {fileID: 102707761}
@@ -266,7 +267,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 20592899}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!114 &102707762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -606,7 +607,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &481126077 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11460068, guid: 8db2061801a4b7f489a86213f2cd6335,
@@ -882,7 +883,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 20592899}
-  m_RootOrder: 0
+  m_RootOrder: 1
 --- !u!114 &632990169
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1404,6 +1405,60 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 14
+--- !u!1 &859008146
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 859008148}
+  - 212: {fileID: 859008147}
+  m_Layer: 0
+  m_Name: "\u017Eoga"
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!212 &859008147
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859008146}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300000, guid: 5b57dfb05962cdb4cacbabfd69aecc9d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &859008148
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 859008146}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5, y: 2.78999996, z: 0}
+  m_LocalScale: {x: .5, y: .5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
 --- !u!1 &918510653
 GameObject:
   m_ObjectHideFlags: 0
@@ -1997,7 +2052,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495768, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -3.20000005
+      value: -3.19000006
       objectReference: {fileID: 0}
     - target: {fileID: 495768, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2021,7 +2076,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495768, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
       propertyPath: m_RootOrder
-      value: 9
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 11448502, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
       propertyPath: zgubil
@@ -2075,6 +2130,60 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1538624847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1538624848}
+  - 212: {fileID: 1538624849}
+  m_Layer: 0
+  m_Name: tla
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1538624848
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538624847}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .189999998, y: -.25999999, z: -2}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 20592899}
+  m_RootOrder: 0
+--- !u!212 &1538624849
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538624847}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 7
+  m_Sprite: {fileID: 21300000, guid: 0c32e521d9223d648b6633a6de1cfb49, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1608085761
 GameObject:
   m_ObjectHideFlags: 0
@@ -2200,7 +2309,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 2}
   m_Children: []
   m_Father: {fileID: 20592899}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1617477491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2432,7 +2541,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .0399999619
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -2460,12 +2569,12 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 311237d2bde08eb44a95bab9dcaa1d59,
+      objectReference: {fileID: 21300000, guid: 62081ffab8b03734c882758f337e92ab,
         type: 3}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: pok
