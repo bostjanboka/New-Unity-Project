@@ -147,10 +147,10 @@ public class LeveliManeger : MonoBehaviour {
 	public float[] getCase(){
 		float[] casi = new float[leveliLength];
 		for (int i=0; i < casi.Length; i++) {
-			if (!PlayerPrefs.HasKey ("Stopnja" + i+1)) {
+			if (!PlayerPrefs.HasKey ("Stopnja" + (i+1))) {
 				casi [i] = -1;
 			}else{
-				casi[i] = PlayerPrefs.GetInt("Stopnja"+i+1);
+				casi[i] = PlayerPrefs.GetFloat("Stopnja"+(i+1));
 			}
 		}
 		 

@@ -61,10 +61,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
 		level = inputNavigacija.GetComponent<InputNavigacija> ().level;
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
-		hp = 1;
-		if (level % 2 != 0) {
-			hp = temp.hp;
-		}
+		hp = 4;
+
 		bilZadet = false;
 
 		trenutniLevel = temp.trenutniLevel;

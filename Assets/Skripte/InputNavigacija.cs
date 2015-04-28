@@ -42,7 +42,7 @@ public class InputNavigacija : MonoBehaviour {
 	}
 
 	public void setHUD(bool active){
-		HUD.SetActive (active);
+		//HUD.SetActive (active);
 	}
 
 	public void Zgubil(){

@@ -64,11 +64,12 @@ public class PotkaSkripta : MonoBehaviour {
 
 		float[] casi = LeveliManeger._instance.getCase ();
 		//cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
+		Debug.Log (LeveliManeger._instance.getCas(2));
 	    if (casi [0] > 0) {
 			level1.SetActive (true);
 			level1.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[0]);
 		}
-		if (casi [1] > 0) {
+		if (LeveliManeger._instance.getCas(2) > 0) {
 			level2.SetActive (true);
 			level2.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[1]);
 		}
