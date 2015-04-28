@@ -3902,8 +3902,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18395ff415b2b64487e2ea4d1182100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meni: {fileID: 0}
-  potka: {fileID: 0}
+  meni: {fileID: 2090285225}
+  potka: {fileID: 1577474240}
   gameMusic: {fileID: 165312, guid: b1eb6db5e24cf864ba90ec32697a01ab, type: 2}
   loading: {fileID: 102376, guid: d7fe78744883c4247b9588251626267d, type: 2}
   popUpRate: {fileID: 183156, guid: ec15b651acd50ea4eb66ba372d76cbf8, type: 2}
@@ -5332,7 +5332,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0, g: 0, b: 0, a: .0196078438}
+  m_BackGroundColor: {r: .941176474, g: .0346020535, b: .0346020535, a: .0196078438}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -5343,7 +5343,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6
+  orthographic size: 6.20889854
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
