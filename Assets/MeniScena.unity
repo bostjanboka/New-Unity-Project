@@ -3931,6 +3931,7 @@ MonoBehaviour:
   potka: {fileID: 1577474240}
   gameMusic: {fileID: 165312, guid: b1eb6db5e24cf864ba90ec32697a01ab, type: 2}
   loading: {fileID: 102376, guid: d7fe78744883c4247b9588251626267d, type: 2}
+  loadingMorden: {fileID: 151876, guid: d04ffcff55e84504cb62ccdd142d929f, type: 2}
   popUpRate: {fileID: 183156, guid: ec15b651acd50ea4eb66ba372d76cbf8, type: 2}
   musicToggle: {fileID: 501473186}
   soundToggle: {fileID: 475362785}
