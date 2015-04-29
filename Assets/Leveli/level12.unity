@@ -837,7 +837,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9bd40e2364a730b4ba88ba8abfbaa691, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &1522094916
+--- !u!1 &1522094916 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 188774, guid: 9bd40e2364a730b4ba88ba8abfbaa691, type: 2}
   m_PrefabInternal: {fileID: 1522094915}
@@ -871,11 +871,11 @@ Transform:
   - {fileID: 708620597}
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!4 &1569890802
+--- !u!4 &1569890802 stripped
 Transform:
   m_PrefabParentObject: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}
   m_PrefabInternal: {fileID: 349547384}
---- !u!1 &1595373024
+--- !u!1 &1595373024 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 168644, guid: 04d4dca2b1a1b1a47915d2e0e2f52f30, type: 2}
   m_PrefabInternal: {fileID: 1466722338}
