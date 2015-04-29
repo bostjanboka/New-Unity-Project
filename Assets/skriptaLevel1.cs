@@ -17,6 +17,7 @@ public class skriptaLevel1 : MonoBehaviour {
 		akcija.SetActive (false);
 		akcija.transform.FindChild("ClasicZoga").GetComponent<ClasicZogaSkripta> ().smer = 0;
 		stanje = 0;
+		junakSkripta.meritev = true;
 	}
 	
 	// Update is called once per frame
@@ -25,9 +26,17 @@ public class skriptaLevel1 : MonoBehaviour {
 			akcija.SetActive (true);
 			stanje = 1;
 		} else if (stanje == 1 && akcija.transform.position.y < 4) {
-			akcija.GetComponent<Rigidbody2D>().gravityScale=0;
-			akcija.GetComponent<Rigidbody2D>().velocity = new Vector2(0,0);
+			akcija.GetComponent<Rigidbody2D> ().gravityScale = 0;
+			akcija.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			stanje = 2;
+		} else if (stanje == 2 && steviloZogic.prazenProstor) {
+			LeveliManeger._instance.odkleniStopnjo(3);
+			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
+			if(Random.value < 0.5f){
+				Move.showCelozaslonsko ();
+			}
+			stanje++;
 		}
 	}
 }
