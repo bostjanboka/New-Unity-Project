@@ -8,16 +8,24 @@ public class skriptaLevel1 : MonoBehaviour {
 	public GameObject prostorZogic;
 	public GameObject akcija;
 
+	public GameObject pressTo;
+	public GameObject holdTo;
+
 	NewBehaviourScript junakSkripta;
 	SteviloZogicSkripta steviloZogic;
 	int stanje;
+	float cas;
 	void Start () {
 		junakSkripta = junak.GetComponent<NewBehaviourScript> ();
+		junakSkripta.omogociPremikanje = false;
 		steviloZogic = prostorZogic.GetComponent<SteviloZogicSkripta> ();
 		akcija.SetActive (false);
 		akcija.transform.FindChild("ClasicZoga").GetComponent<ClasicZogaSkripta> ().smer = 0;
 		stanje = 0;
 		junakSkripta.meritev = true;
+		pressTo.SetActive (false);
+		holdTo.SetActive (false);
+		cas = 0;
 	}
 	
 	// Update is called once per frame
@@ -29,7 +37,41 @@ public class skriptaLevel1 : MonoBehaviour {
 			akcija.GetComponent<Rigidbody2D> ().gravityScale = 0;
 			akcija.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			stanje = 2;
-		} else if (stanje == 2 && steviloZogic.prazenProstor) {
+			pressTo.SetActive (true);
+			junakSkripta.meritev = false;
+
+		} else if (stanje == 2) { 
+			foreach (Touch touch in Input.touches) {
+				
+				Vector2 mousePosition = Camera.main.ScreenToWorldPoint (touch.position);
+				Collider2D hitCollider = Physics2D.OverlapPoint (mousePosition);
+				if (hitCollider.transform.name.Equals ("gumb_strel")) {
+					pressTo.SetActive (false);
+					stanje = 3;
+					junakSkripta.meritev = true;
+				}
+			}
+
+		} else if (stanje = 4) {
+			cas += Time.deltaTime;
+			if (cas > 0.7f) {
+				stanje = 5;
+				holdTo.SetActive (true);
+				Time.timeScale=0;
+			}
+
+		} else if (stanje == 5) {
+			foreach (Touch touch in Input.touches) {
+				
+				Vector2 mousePosition = Camera.main.ScreenToWorldPoint (touch.position);
+				Collider2D hitCollider = Physics2D.OverlapPoint (mousePosition);
+				if (hitCollider.transform.name.Equals ("gumb_desno") || hitCollider.transform.name.Equals ("gumb_levo")) {
+					holdTo.SetActive (false);
+					stanje = 6;
+					Time.timeScale=1;
+				}
+			}
+		}else if (stanje == 6 && steviloZogic.prazenProstor) {
 			LeveliManeger._instance.odkleniStopnjo(3);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
