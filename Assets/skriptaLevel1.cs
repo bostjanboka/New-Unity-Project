@@ -9,7 +9,9 @@ public class skriptaLevel1 : MonoBehaviour {
 	public GameObject akcija;
 
 	public GameObject pressTo;
+	public GameObject pressCrta;
 	public GameObject holdTo;
+	public GameObject holdCrta;
 
 	NewBehaviourScript junakSkripta;
 	SteviloZogicSkripta steviloZogic;
@@ -24,7 +26,10 @@ public class skriptaLevel1 : MonoBehaviour {
 		stanje = 0;
 		junakSkripta.meritev = true;
 		pressTo.SetActive (false);
+		pressCrta.SetActive (false);
+		holdCrta.SetActive (false);
 		holdTo.SetActive (false);
+
 		cas = 0;
 	}
 	
@@ -38,6 +43,7 @@ public class skriptaLevel1 : MonoBehaviour {
 			akcija.GetComponent<Rigidbody2D> ().velocity = new Vector2 (0, 0);
 			stanje = 2;
 			pressTo.SetActive (true);
+			pressCrta.SetActive(true);
 			junakSkripta.meritev = false;
 
 		} else if (stanje == 2) { 
@@ -47,15 +53,19 @@ public class skriptaLevel1 : MonoBehaviour {
 				Collider2D hitCollider = Physics2D.OverlapPoint (mousePosition);
 				if (hitCollider.transform.name.Equals ("gumb_strel")) {
 					pressTo.SetActive (false);
-					stanje = 3;
+					pressCrta.SetActive(false);
+					stanje = 4;
 					junakSkripta.meritev = true;
+					junakSkripta.ustreli=true;
+					junakSkripta.omogociPremikanje=true;
 				}
 			}
 
-		} else if (stanje = 4) {
+		} else if (stanje == 4) {
 			cas += Time.deltaTime;
-			if (cas > 0.7f) {
+			if (cas > 1f) {
 				stanje = 5;
+				holdCrta.SetActive(true);
 				holdTo.SetActive (true);
 				Time.timeScale=0;
 			}
@@ -66,7 +76,9 @@ public class skriptaLevel1 : MonoBehaviour {
 				Vector2 mousePosition = Camera.main.ScreenToWorldPoint (touch.position);
 				Collider2D hitCollider = Physics2D.OverlapPoint (mousePosition);
 				if (hitCollider.transform.name.Equals ("gumb_desno") || hitCollider.transform.name.Equals ("gumb_levo")) {
+
 					holdTo.SetActive (false);
+					holdCrta.SetActive(false);
 					stanje = 6;
 					Time.timeScale=1;
 				}

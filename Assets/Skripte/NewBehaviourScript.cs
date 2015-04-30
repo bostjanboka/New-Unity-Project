@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using UnityEngine.SocialPlatforms;
 
 public class NewBehaviourScript : MonoBehaviour {
 
@@ -153,6 +154,19 @@ public class NewBehaviourScript : MonoBehaviour {
 				stojimNaMestuX = true;
 				anim.SetFloat ("hitrost", 0);
 			}
+			if ( ustreli) {
+				Debug.Log ("zadetek strel");
+				if (steviloSpiral == 0) {
+					if (powerUpSpirala) {
+						Instantiate (powerUpSpirala, new Vector3 (transform.position.x, -9.62f, 2), Quaternion.identity);
+					} else {
+						Instantiate (spirala, new Vector3 (transform.position.x, -9.7f, 2), Quaternion.identity);
+					}
+					steviloSpiral++;
+					
+				}
+				ustreli=false;
+			}
 		}
 		if (meritev) {
 			score+=Time.deltaTime;
@@ -209,6 +223,10 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public void zmagalLevel(){
 		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
+		Social.ReportScore((long)(score*100), "CgkI3JSVn_IJEAIQAA", (bool success) => {
+			// handle success or failure
+		});
+		Social.ShowLeaderboardUI();
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
 	}
 

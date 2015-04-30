@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
+using GooglePlayGames;
+using UnityEngine.SocialPlatforms;
 
 
 public class Meni_Gumbi : MonoBehaviour {
@@ -29,6 +31,10 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	GameObject zvok;
 	void Awake(){
+		PlayGamesPlatform.DebugLogEnabled = true;
+
+		PlayGamesPlatform.Activate();
+
 		zvok = GameObject.Find("game music(Clone)");
 		if(zvok == null)
 			zvok = Instantiate (gameMusic) as GameObject;
@@ -53,6 +59,11 @@ public class Meni_Gumbi : MonoBehaviour {
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
 	}
 	void Start () {
+		Social.localUser.Authenticate((bool success) => {
+			// handle success or failure
+
+		});
+
 		meni.enabled = true;
 		potka.enabled = false;
 
@@ -88,6 +99,11 @@ public class Meni_Gumbi : MonoBehaviour {
 			}
 
 		}
+	}
+
+	public void facebook(){
+		Application.OpenURL ("http://unity3d.com/");
+
 	}
 
 	public void naloziZemljevid(){
