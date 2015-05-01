@@ -12,6 +12,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Camera potka;
 
 
+
 	GameObject loadingScreen;
 	GameObject mordenLogo;
 	public GameObject gameMusic;
@@ -81,8 +82,8 @@ public class Meni_Gumbi : MonoBehaviour {
 			continueGameMeni.interactable=false;
 		}
 
-		if (popUpRate && LeveliManeger._instance.pokaziRate() == 1 && obiski > 0) {
-			Instantiate(popUpRate);
+		if (LeveliManeger._instance.pokaziRate() == 1 && obiski > 0) {
+			popUpRate.SetActive(true);
 		}
 
 	}
@@ -135,6 +136,11 @@ public class Meni_Gumbi : MonoBehaviour {
 			}
 			loadingScreen.GetComponent<LoadingScreen> ().show ();
 		}
+	}
+
+	public void gumbRateX(){
+		Debug.Log ("gumb rate X");
+		popUpRate.SetActive (false);
 	}
 
 	public void highScoreButton(){
