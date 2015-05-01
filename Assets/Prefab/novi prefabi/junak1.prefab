@@ -26,8 +26,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 455670}
   - 50: {fileID: 5049452}
-  - 61: {fileID: 6164558}
   - 114: {fileID: 11498058}
+  - 60: {fileID: 6091994}
   m_Layer: 0
   m_Name: junak1
   m_TagString: junak
@@ -75,8 +75,8 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
---- !u!61 &6164558
-BoxCollider2D:
+--- !u!60 &6091994
+PolygonCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -85,9 +85,23 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.027721405, y: .534064054}
-  serializedVersion: 2
-  m_Size: {x: .564511418, y: 1.18509436}
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: -.385731608, y: .276125193}
+      - {x: -.364763349, y: .352592945}
+      - {x: -.272774518, y: .498535633}
+      - {x: -.148952574, y: .570216417}
+      - {x: .00379449129, y: .601636887}
+      - {x: .152816325, y: .562604189}
+      - {x: .24586311, y: .499159575}
+      - {x: .321597308, y: .427592278}
+      - {x: .361293614, y: .332942247}
+      - {x: .369196147, y: .260851622}
+      - {x: .368321598, y: .165958881}
+      - {x: .369052529, y: -.578129053}
+      - {x: -.388410687, y: -.578128576}
+      - {x: -.376857519, y: .213317633}
 --- !u!95 &9567360
 Animator:
   serializedVersion: 3
