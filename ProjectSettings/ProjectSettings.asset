@@ -12,7 +12,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Mordenkul
-  productName: Mordenelf
+  productName: Candy Trouble
   cloudProjectId: 
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -134,7 +134,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: b028be35d8e9bad46877bad74bc87f7e, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 0070b0e5a29064c4b8bba9f22699b521, type: 3}
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Android

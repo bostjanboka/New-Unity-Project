@@ -157,16 +157,28 @@ public class LeveliManeger : MonoBehaviour {
 		return casi;
 	}
 
-	public string getIdScore(){
-		if (PlayerPrefs.HasKey ("IdScore")) {
-			return PlayerPrefs.GetString ("IdScore");
+	public string getIdPlayer(){
+		if (PlayerPrefs.HasKey ("IdPlayer")) {
+			return PlayerPrefs.GetString ("IdPlayer");
 		} else {
 			return null;
 		}
 	}
 
-	public void setIdScore(string idScore){
-		PlayerPrefs.SetString ("IdScore",idScore);
+	public void setIdPlayer(string idScore){
+		PlayerPrefs.SetString ("IdPlayer",idScore);
+	}
+
+	public string getIdUser(){
+		if (PlayerPrefs.HasKey ("IdUser")) {
+			return PlayerPrefs.GetString ("IdUser");
+		} else {
+			return null;
+		}
+	}
+	
+	public void setIdUser(string idScore){
+		PlayerPrefs.SetString ("IdUser",idScore);
 	}
 
 

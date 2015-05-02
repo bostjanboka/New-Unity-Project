@@ -10,7 +10,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	// Use this for initialization
 	public Camera meni;
 	public Camera potka;
-
+	public Camera input;
 
 
 	GameObject loadingScreen;
@@ -65,9 +65,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		});
 
-		meni.enabled = true;
-		potka.enabled = false;
-
+		kamera(0);
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		
 		if (continueGameGumb && (temp.level == -1 || temp.level % 2 == 0)) {
@@ -92,8 +90,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 			if(potka.enabled){
-				potka.enabled = false;
-				meni.enabled=true;
+				kamera(0);
 			}else{
 				LeveliManeger._instance.povecajObisk();
 				Application.Quit();
@@ -126,8 +123,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 
 		if ((temp.level == -1 || temp.level % 2 == 0) || temp.level % 2 != 0 && temp.score == 0) {
-			potka.enabled = true;
-			meni.enabled = false;
+			kamera(1);
 		} else {
 			if (temp.level % 2 == 0) {
 				Application.LoadLevel ("level" + temp.level * 2); 
@@ -178,6 +174,19 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void muteMuzika(){
 		zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
 
+	}
+
+	public void kamera(int i){
+		meni.enabled = false;
+		potka.enabled = false;
+		input.enabled = false;
+		if (i == 0) {
+			meni.enabled = true;
+		} else if (i == 1) {
+			potka.enabled = true;
+		} else if (i == 2) {
+			input.enabled=true;
+		}
 	}
 
 
