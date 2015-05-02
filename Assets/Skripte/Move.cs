@@ -32,12 +32,12 @@ public class Move : MonoBehaviour {
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
 		//bannerView.Destroy ();
-		bannerView = new BannerView(
-			"ca-app-pub-6223160944701050/8340773121", AdSize.SmartBanner, AdPosition.Top);
+		//bannerView = new BannerView(
+		//	"ca-app-pub-6223160944701050/8340773121", AdSize.SmartBanner, AdPosition.Top);
 
 		request = new AdRequest.Builder().Build();
-		bannerView.LoadAd(request);
-		bannerView.Show();
+		//bannerView.LoadAd(request);
+		//bannerView.Show();
 				
 
 
@@ -45,13 +45,13 @@ public class Move : MonoBehaviour {
 
 	public static void ugasniReklamo(){
 		//UnityPluginForWindowsPhone.Class1.ugasniReklamo ();
-		bannerView.Hide();
+		//bannerView.Hide();
 
 	}
 
 	public static void prizgiReklamo(){
 		//UnityPluginForWindowsPhone.Class1.prizgiReklamo ();
-		bannerView.Show();
+		//bannerView.Show();
 	}
 
 	public static void loadCelozaslonsko(){
