@@ -19,6 +19,8 @@ public class userService : MonoBehaviour {
 	public string secretKey ="2b45ce60091b3d57733551d6b0363ca0bb6cdf2ea002f59852990da09d650268";					// SECRET key that you have receieved after the success of app creation from AppHQ
 	public string gameName ="mordenelf";
 	public string userName;
+	public static IList<Game.Score> scoreList;
+	public static bool scoreLista=false;
 
 	public InputField app42InputNick;
 	public InputField app42InputEmail;
@@ -103,6 +105,12 @@ public class userService : MonoBehaviour {
 		   
 	}
 
+	public void getTopNRankings(){
+		scoreLista = false;
+		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
+		scoreBoardService.GetTopNRankers ("mordenelf", 10, new UnityCallBack());
+	}
+
 	public void signUpUser(){
 
 
@@ -177,24 +185,46 @@ public class userService : MonoBehaviour {
 
 	public class UnityCallBack : App42CallBack  
 	{  
-		public void OnSuccess(object response)  
-		{  
-			Game game = (Game) response;       
-			App42Log.Console("gameName is " + game.GetName());   
-			for(int i = 0;i<game.GetScoreList().Count;i++)  
-			{  
-				App42Log.Console("userName is : " + game.GetScoreList()[i].GetUserName());  
-				App42Log.Console("score is : " + game.GetScoreList()[i].GetValue());  
-				App42Log.Console("scoreId is : " + game.GetScoreList()[i].GetScoreId());
-				App42Log.Console("rank is : " + game.GetScoreList()[i].GetRank());  
-
-			}  
-		}  
+		private string result = "";
 		
-		public void OnException(Exception e)  
-		{  
-			App42Log.Console("Exception : " + e);  
-		}  
+		public void OnSuccess (object obj)
+		{
+			if (obj is Game) {
+				Game gameObj = (Game)obj;
+				result = gameObj.ToString ();
+				Debug.Log ("GameName : " + gameObj.GetName ());
+				if (gameObj.GetScoreList () != null) {
+					scoreList = gameObj.GetScoreList ();
+					scoreLista=true;
+					for (int i = 0; i < scoreList.Count; i++) {
+						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
+						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());
+						Debug.Log ("ScoreId is  : " + scoreList [i].GetScoreId ());
+						Debug.Log ("Value is  : " + scoreList [i].GetValue ());
+					}
+				}
+			} else {
+				IList<Game> game = (IList<Game>)obj;
+				result = game.ToString ();
+				for (int j = 0; j < game.Count; j++) {
+					Debug.Log ("GameName is   : " + game [j].GetName ());
+					Debug.Log ("Description is  : " + game [j].GetDesription ());
+				}
+			}
+			
+		}
+		
+		public void OnException (Exception e)
+		{
+			result = e.ToString ();
+			Debug.Log ("EXCEPTION : " + e);
+			
+		}
+		
+		public string getResult ()
+		{
+			return result;
+		}
 	}
 
 	public class UnityUserCallBack : App42CallBack  

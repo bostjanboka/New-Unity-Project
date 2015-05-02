@@ -11,6 +11,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Camera meni;
 	public Camera potka;
 	public Camera input;
+	public Camera scori;
 
 
 	GameObject loadingScreen;
@@ -179,13 +180,16 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void kamera(int i){
 		meni.enabled = false;
 		potka.enabled = false;
+		scori.enabled = false;
 		input.enabled = false;
 		if (i == 0) {
 			meni.enabled = true;
 		} else if (i == 1) {
 			potka.enabled = true;
 		} else if (i == 2) {
-			input.enabled=true;
+			input.enabled = true;
+		} else if (i == 3) {
+			scori.enabled=true;
 		}
 	}
 
