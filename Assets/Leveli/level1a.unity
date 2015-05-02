@@ -839,6 +839,10 @@ Prefab:
       propertyPath: inputNavigacija
       value: 
       objectReference: {fileID: 106393170}
+    - target: {fileID: 168406, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
   m_IsPrefabParent: 0
@@ -880,6 +884,10 @@ Prefab:
     - target: {fileID: 423208, guid: 439d1bfc306991046904703cda650d85, type: 2}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 154276, guid: 439d1bfc306991046904703cda650d85, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 439d1bfc306991046904703cda650d85, type: 2}
@@ -927,6 +935,10 @@ Prefab:
       propertyPath: HUD
       value: 
       objectReference: {fileID: 20592898}
+    - target: {fileID: 159486, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
