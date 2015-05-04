@@ -11,6 +11,7 @@ using com.shephertz.app42.paas.sdk.csharp.user;
 using com.shephertz.app42.paas.sdk.csharp.storage;
 using SimpleJSON;
 using UnityEngine.UI;
+using com.shephertz.app42.paas.sdk.csharp;
 
 public class userService : MonoBehaviour {
 
