@@ -11,6 +11,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	public float faktorHitrosti;
 	public float faktorSkale;
 	public float silaSplita;
+	public float gravitacija;
 	public int ST_del;
 	public int smer=1;
 
@@ -70,27 +71,25 @@ public class ClasicZogaSkripta : MonoBehaviour {
 			if(novaZoga && ST_del > 0){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * faktorSkale;
-				rb = inst.GetComponent<Rigidbody2D>();
-				rb.gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
+				inst.GetComponent<Rigidbody2D>().gravityScale=gravitacija;
 				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
 				clasicSkripta.skala *= faktorSkale;
 				clasicSkripta.visina*=faktorVisine;
 				clasicSkripta.speed*=faktorHitrosti;
 				clasicSkripta.ST_del--;
-				rb.velocity = new Vector3(0,silaSplita);
+				inst.GetComponent<Rigidbody2D>().velocity = new Vector3(0,silaSplita);
 				clasicSkripta.smer = 1;
 				
 				
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * faktorSkale;
-				rb = inst.GetComponent<Rigidbody2D>();
-				rb.gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
+				inst.GetComponent<Rigidbody2D>().gravityScale=gravitacija;
 				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
 				clasicSkripta.skala *= faktorSkale;
 				clasicSkripta.visina*=faktorVisine;
 				clasicSkripta.speed*=faktorHitrosti;
 				clasicSkripta.ST_del--;
-				rb.velocity = new Vector3(0,silaSplita);
+				inst.GetComponent<Rigidbody2D>().velocity = new Vector3(0,silaSplita);
 				clasicSkripta.smer = -1;
 			}
 			

@@ -1437,7 +1437,7 @@ GameObject:
   - 50: {fileID: 1027081574}
   m_Layer: 0
   m_Name: Strop
-  m_TagString: strop
+  m_TagString: stropN
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1915,6 +1915,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11448502, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f8db3bb1ff001f40b41276a7c8e5283, type: 2}
   m_IsPrefabParent: 0
@@ -2242,19 +2246,43 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 428664, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 1.70000005
       objectReference: {fileID: 0}
     - target: {fileID: 428664, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 1.70000005
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: speed
-      value: 1.5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: visina
-      value: 10
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: faktorVisine
+      value: .899999976
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: faktorHitrosti
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: faktorSkale
+      value: .600000024
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: silaSplita
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: ST_del
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: gravitacija
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}

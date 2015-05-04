@@ -77,7 +77,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		Transform animacija = transform.Find ("animacija");
 		anim = animacija.gameObject.GetComponent<Animator> ();
 
-		speed = 2;
+
 		count = 1;
 		steviloSpiral = 0;
 		casi.text= PotkaSkripta.casovniFormat(score);
