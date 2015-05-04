@@ -339,7 +339,7 @@ MonoBehaviour:
   userName: BOKABALL
   app42InputNick: {fileID: 1535955220}
   app42InputEmail: {fileID: 930923222}
-  playerName: {fileID: 0}
+  playerName: {fileID: 2099010564}
   userScore: 1000
   Score1: 2000
   max: 2

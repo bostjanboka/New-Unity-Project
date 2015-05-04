@@ -5,9 +5,10 @@ public class JawBreakerSkripta : MonoBehaviour {
 
 	// Use this for initialization komentar  hhh
 	public GameObject noviJaw;
-	public int visina;
-	public int speed;
+	public float visina;
+	public float speed;
 	public float smer;
+	public float silaSplita;
 
 	public AudioClip pok;
 	public AudioClip antiPok;
@@ -55,7 +56,7 @@ public class JawBreakerSkripta : MonoBehaviour {
 
 		if (other.gameObject.tag.Equals ("spirala")) {
 			
-			rb.velocity = new Vector3(0,5);
+			rb.velocity = new Vector3(0,silaSplita);
 
 			spirala = other.gameObject.GetComponent<SpiralaScript>();
 

@@ -7,6 +7,11 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	public GameObject novaZoga;
 	public float visina;
 	public float speed;
+	public float faktorVisine;
+	public float faktorHitrosti;
+	public float faktorSkale;
+	public float silaSplita;
+	public int ST_del;
 	public int smer=1;
 
 	public float rotacija=90;
@@ -62,27 +67,31 @@ public class ClasicZogaSkripta : MonoBehaviour {
 			if(InputNavigacija.zvoki){
 				AudioSource.PlayClipAtPoint(pok, transform.position);
 			}
-			if(novaZoga && skala > 0.15f){
+			if(novaZoga && ST_del > 0){
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
+				inst.transform.localScale = inst.transform.localScale * faktorSkale;
 				rb = inst.GetComponent<Rigidbody2D>();
-				rb.gravityScale=1;
+				rb.gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
 				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
-				clasicSkripta.skala *= 0.5f;
-				clasicSkripta.visina*=0.9f;
-				rb.velocity = new Vector3(0,5);
+				clasicSkripta.skala *= faktorSkale;
+				clasicSkripta.visina*=faktorVisine;
+				clasicSkripta.speed*=faktorHitrosti;
+				clasicSkripta.ST_del--;
+				rb.velocity = new Vector3(0,silaSplita);
 				clasicSkripta.smer = 1;
 				
 				
 				inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
+				inst.transform.localScale = inst.transform.localScale * faktorSkale;
 				rb = inst.GetComponent<Rigidbody2D>();
-				rb.gravityScale=1;
-				rb.velocity = new Vector3(0,5);
+				rb.gravityScale = gameObject.GetComponent<Rigidbody2D>().gravityScale;
 				clasicSkripta = inst.transform.GetChild(0).GetComponent<ClasicZogaSkripta>();
-				clasicSkripta.skala *= 0.5f;
+				clasicSkripta.skala *= faktorSkale;
+				clasicSkripta.visina*=faktorVisine;
+				clasicSkripta.speed*=faktorHitrosti;
+				clasicSkripta.ST_del--;
+				rb.velocity = new Vector3(0,silaSplita);
 				clasicSkripta.smer = -1;
-				clasicSkripta.visina*=0.9f;
 			}
 			
 			junakSkripta = junak.GetComponent<NewBehaviourScript>();

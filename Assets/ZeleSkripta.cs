@@ -5,8 +5,13 @@ public class ZeleSkripta : MonoBehaviour {
 
 	// Use this for initialization komentar  hhh
 	public GameObject noviZele;
-	public int visina;
+	public float visina;
 	public float speed;
+	public float faktorVisine;
+	public float faktorHitrosti;
+	public float faktorSkale;
+	public float silaSplita;
+	public int ST_del;
 	public int smer;
 	public int korak;
 	public AudioClip pok;
@@ -80,21 +85,25 @@ public class ZeleSkripta : MonoBehaviour {
 			}
 
 
-			if(noviZele && skala > 0.070f){
+			if(noviZele && ST_del > 0){
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
-				inst.transform.localScale = inst.transform.localScale * 0.5f;
+				inst.transform.localScale = inst.transform.localScale * faktorSkale;
 				rb = inst.GetComponent<Rigidbody2D>();
 				zeleSkripta = inst.GetComponent<ZeleSkripta>();
-				zeleSkripta.skala *= 0.5f;
-				rb.velocity = new Vector3(0,5);
+				zeleSkripta.skala *= faktorSkale;
+				zeleSkripta.visina*=faktorVisine;
+				zeleSkripta.speed*=faktorHitrosti;
+				rb.velocity = new Vector3(0,silaSplita);
 				zeleSkripta.smer = 1;
 				
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * 0.5f;
 				rb = inst.GetComponent<Rigidbody2D>();
-				rb.velocity = new Vector3(0,5);
 				zeleSkripta = inst.GetComponent<ZeleSkripta>();
-				zeleSkripta.skala *= 0.5f;
+				zeleSkripta.skala *= faktorSkale;
+				zeleSkripta.visina*=faktorVisine;
+				zeleSkripta.speed*=faktorHitrosti;
+				rb.velocity = new Vector3(0,silaSplita);
 				zeleSkripta.smer = -1;
 			}
 			

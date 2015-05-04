@@ -15,6 +15,8 @@ public class InputNavigacija : MonoBehaviour {
 
 	public GameObject HUD;
 
+	bool pavza=false;
+
 	public static bool zvoki=true;
 	void Start () {
 		back.SetActive (false);
@@ -26,19 +28,26 @@ public class InputNavigacija : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape) && !zgubil.activeSelf && !zmagal.activeSelf) {
+		if ((Input.GetKeyDown (KeyCode.Escape) || pavza) && !zgubil.activeSelf && !zmagal.activeSelf) {
 			Time.timeScale = 0;
 			back.SetActive (true);
+			pavza=false;
 
 			//Move.prizgiReklamo();
 		}
 		if (back.activeSelf || zmagal.activeSelf || zgubil.activeSelf) {
+			HUD.SetActive(false);
 			OnPressedSkripta.omogocenoPremikanje = false;
 		} else {
 			OnPressedSkripta.omogocenoPremikanje = true;
+			HUD.SetActive(true);
 		}
 
 	
+	}
+
+	public void pause(){
+		pavza = true;
 	}
 
 	public void setHUD(bool active){

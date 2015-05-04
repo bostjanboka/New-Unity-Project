@@ -63,7 +63,7 @@ public class skriptaLevel1 : MonoBehaviour {
 
 		} else if (stanje == 4) {
 			cas += Time.deltaTime;
-			if (cas > 1f) {
+			if (cas > 1.5f) {
 				stanje = 5;
 				holdCrta.SetActive(true);
 				holdTo.SetActive (true);
