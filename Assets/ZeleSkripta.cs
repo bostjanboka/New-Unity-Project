@@ -11,7 +11,7 @@ public class ZeleSkripta : MonoBehaviour {
 	public float faktorHitrosti;
 	public float faktorSkale;
 	public float silaSplita;
-	public int ST_del;
+	public float minSkala;
 	public int smer;
 	public int korak;
 	public AudioClip pok;
@@ -85,7 +85,7 @@ public class ZeleSkripta : MonoBehaviour {
 			}
 
 
-			if(noviZele && ST_del > 0){
+			if(noviZele && skala > minSkala){
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
 				inst.transform.localScale = inst.transform.localScale * faktorSkale;
 				rb = inst.GetComponent<Rigidbody2D>();
@@ -93,6 +93,7 @@ public class ZeleSkripta : MonoBehaviour {
 				zeleSkripta.skala *= faktorSkale;
 				zeleSkripta.visina*=faktorVisine;
 				zeleSkripta.speed*=faktorHitrosti;
+
 				rb.velocity = new Vector3(0,silaSplita);
 				zeleSkripta.smer = 1;
 				
@@ -103,6 +104,7 @@ public class ZeleSkripta : MonoBehaviour {
 				zeleSkripta.skala *= faktorSkale;
 				zeleSkripta.visina*=faktorVisine;
 				zeleSkripta.speed*=faktorHitrosti;
+
 				rb.velocity = new Vector3(0,silaSplita);
 				zeleSkripta.smer = -1;
 			}
