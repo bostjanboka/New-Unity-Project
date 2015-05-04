@@ -48,6 +48,7 @@ public class InputNavigacija : MonoBehaviour {
 
 	public void pause(){
 		pavza = true;
+		Debug.Log ("Pavza");
 	}
 
 	public void setHUD(bool active){

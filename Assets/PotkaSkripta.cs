@@ -50,7 +50,7 @@ public class PotkaSkripta : MonoBehaviour {
 		level12.SetActive (false);
 
 		//ena.interactable = LeveliManeger._instance.odklenjenaStopnja(1);
-		dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
+		//dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
 		tri.interactable = LeveliManeger._instance.odklenjenaStopnja(3);
 		stiri.interactable = LeveliManeger._instance.odklenjenaStopnja(4);
 		pet.interactable = LeveliManeger._instance.odklenjenaStopnja(5);
@@ -69,7 +69,7 @@ public class PotkaSkripta : MonoBehaviour {
 			level1.SetActive (true);
 			level1.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[0]);
 		}
-		if (LeveliManeger._instance.getCas(2) > 0) {
+		if (casi [1] > 0) {
 			level2.SetActive (true);
 			level2.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[1]);
 		}
@@ -116,6 +116,7 @@ public class PotkaSkripta : MonoBehaviour {
 
 		for (int i=0; i < casi.Length; i++) {
 			if(casi[i]> 0){
+				Debug.Log(casi[i]+"casi"+i+" "+casovniFormat(casi[i]));
 				skupaj+=casi[i];
 			}
 

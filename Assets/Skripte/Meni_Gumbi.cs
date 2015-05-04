@@ -14,10 +14,9 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Camera scori;
 
 
-	GameObject loadingScreen;
+
 	GameObject mordenLogo;
 	public GameObject gameMusic;
-	public GameObject loading;
 	public GameObject loadingMorden;
 
 	public GameObject popUpRate;
@@ -43,15 +42,10 @@ public class Meni_Gumbi : MonoBehaviour {
 		if (GameObject.Find ("Loading mordenkul(Clone)") == null) {
 			mordenLogo = Instantiate (loadingMorden) as GameObject;
 			mordenLogo.GetComponent<LoadingScreen>().show();
-
 		} else {
 			mordenLogo = GameObject.Find ("Loading mordenkul(Clone)");
 		}
-		if (GameObject.Find ("Loading(Clone)") == null) {
-			loadingScreen = Instantiate (loading) as GameObject;
-		} else {
-			loadingScreen = GameObject.Find ("Loading(Clone)");
-		}
+
 		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
 
 
@@ -117,7 +111,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public void newGameButton(){
 		//Application.LoadLevel ("level1");
-		loadingScreen.GetComponent<LoadingScreen> ().show ();
+		mordenLogo.GetComponent<LoadingScreen> ().show ();
 	}
 
 	public void continueGame(){
@@ -131,7 +125,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			} else {
 				Application.LoadLevel ("level"+(temp.level*2-1+temp.trenutniLevel)); 
 			}
-			loadingScreen.GetComponent<LoadingScreen> ().show ();
+			mordenLogo.GetComponent<LoadingScreen> ().show ();
 		}
 	}
 
