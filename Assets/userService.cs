@@ -44,6 +44,7 @@ public class userService : MonoBehaviour {
 	public int offSet = 1;
 	public string success;
 	public static bool posodobiScore=false;
+	public static bool dobiNRanke=false;
 
 
 	static bool uspesnoStevilo=false;
@@ -51,6 +52,7 @@ public class userService : MonoBehaviour {
 	static string PlayerX=null;
 	bool userUstvarjen=false;
 	static bool shranjenScore=false;
+
 
 	
 	#if UNITY_EDITOR
@@ -99,6 +101,11 @@ public class userService : MonoBehaviour {
 			getUserRank();
 			Debug.Log("SHRANJEN SCORE");
 		}
+
+		if (dobiNRanke) {
+			dobiNRanke=false;
+			getTopNRankings();
+		}
 	}
 
 	public void saveScore(){
@@ -139,7 +146,7 @@ public class userService : MonoBehaviour {
 	public void getTopNRankings(){
 		scoreLista = false;
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-		scoreBoardService.GetTopNRankers ("mordenelf", 10, new UnityCallBack());
+		scoreBoardService.GetTopNRankers ("mordenelf", 10, new UnityTopNRankBack());
 	}
 
 	public void signUpUser(){
@@ -236,6 +243,50 @@ public class userService : MonoBehaviour {
 			App42Log.Console("Exception : " + e);  
 		}  
 	}  
+
+	public class UnityTopNRankBack : App42CallBack  
+	{  
+		private string result = "";
+		
+		public void OnSuccess (object obj)
+		{
+			if (obj is Game) {
+				Game gameObj = (Game)obj;
+				result = gameObj.ToString ();
+				Debug.Log ("GameName : " + gameObj.GetName ());
+				if (gameObj.GetScoreList () != null) {
+					scoreList = gameObj.GetScoreList ();
+					scoreLista=true;
+					for (int i = 0; i < scoreList.Count; i++) {
+						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
+						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());
+						Debug.Log ("ScoreId is  : " + scoreList [i].GetScoreId ());
+						Debug.Log ("Value is  : " + scoreList [i].GetValue ());
+					}
+				}
+			} else {
+				IList<Game> game = (IList<Game>)obj;
+				result = game.ToString ();
+				for (int j = 0; j < game.Count; j++) {
+					Debug.Log ("GameName is   : " + game [j].GetName ());
+					Debug.Log ("Description is  : " + game [j].GetDesription ());
+				}
+			}
+			
+		}
+		
+		public void OnException (Exception e)
+		{
+			result = e.ToString ();
+			Debug.Log ("EXCEPTION : " + e);
+			
+		}
+		
+		public string getResult ()
+		{
+			return result;
+		}
+	}
 
 	public class UnityCallBack : App42CallBack  
 	{  

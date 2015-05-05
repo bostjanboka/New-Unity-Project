@@ -16,6 +16,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	GameObject mordenLogo;
+	GameObject userSer;
 	public GameObject gameMusic;
 	public GameObject loadingMorden;
 
@@ -48,7 +49,9 @@ public class Meni_Gumbi : MonoBehaviour {
 		}
 
 		if (!GameObject.Find ("User(Clone)")) {
-			Instantiate (user);
+			userSer = Instantiate (user) as GameObject;
+		} else {
+			userSer = GameObject.Find ("User(Clone)");
 		}
 
 		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
@@ -140,7 +143,8 @@ public class Meni_Gumbi : MonoBehaviour {
 	}
 
 	public void highScoreButton(){
-		Application.LoadLevel ("HighScoreScena");
+		userSer.GetComponent<userService> ().getTopNRankings ();
+		//Application.LoadLevel ("HighScoreScena");
 	}
 
 	public void gumbRate(){
