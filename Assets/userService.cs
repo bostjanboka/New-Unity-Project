@@ -25,7 +25,8 @@ public class userService : MonoBehaviour {
 
 	public InputField app42InputNick;
 	public InputField app42InputEmail;
-	public Text playerName;
+	public static String playerName;
+	public static String rankUserja;
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
@@ -43,9 +44,11 @@ public class userService : MonoBehaviour {
 	public int offSet = 1;
 	public string success;
 
+
 	static bool uspesnoStevilo=false;
 	static int steviloUser;
 	static string PlayerX=null;
+	bool userUstvarjen=false;
 
 	
 	#if UNITY_EDITOR
@@ -71,9 +74,15 @@ public class userService : MonoBehaviour {
 
 		if (PlayerX != null) {
 			saveScore(PlayerX);
-			playerName.text=PlayerX;
+			playerName=PlayerX;
 			PlayerX=null;
+			userUstvarjen=true;
 
+		}
+
+		if (userUstvarjen) {
+			userUstvarjen=false;
+			getUserRank();
 		}
 	}
 
@@ -104,6 +113,11 @@ public class userService : MonoBehaviour {
 		}
 
 		   
+	}
+
+	public void getUserRank(){
+		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
+		scoreBoardService.GetUserRanking("mordenelf", playerName, new UnityUserRankCallBack());
 	}
 
 	public void getTopNRankings(){
@@ -183,6 +197,29 @@ public class userService : MonoBehaviour {
 			return result;
 		}	
 	}
+
+
+	public class UnityUserRankCallBack : App42CallBack  
+	{  
+		public void OnSuccess(object response)  
+		{  
+			Game game = (Game) response;       
+			App42Log.Console("gameName is " + game.GetName());   
+			for(int i = 0;i<game.GetScoreList().Count;i++)  
+			{  
+				App42Log.Console("userName is : " + game.GetScoreList()[i].GetUserName());  
+				App42Log.Console("rank is : " + game.GetScoreList()[i].GetRank());  
+				App42Log.Console("score is : " + game.GetScoreList()[i].GetValue());  
+				App42Log.Console("scoreId is : " + game.GetScoreList()[i].GetScoreId());  
+				rankUserja = game.GetScoreList()[i].GetRank();
+			}  
+		}  
+		
+		public void OnException(Exception e)  
+		{  
+			App42Log.Console("Exception : " + e);  
+		}  
+	}  
 
 	public class UnityCallBack : App42CallBack  
 	{  

@@ -20,6 +20,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public GameObject loadingMorden;
 
 	public GameObject popUpRate;
+	public GameObject user;
 
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
@@ -44,6 +45,10 @@ public class Meni_Gumbi : MonoBehaviour {
 			mordenLogo.GetComponent<LoadingScreen>().show();
 		} else {
 			mordenLogo = GameObject.Find ("Loading mordenkul(Clone)");
+		}
+
+		if (!GameObject.Find ("User(Clone)")) {
+			Instantiate (user);
 		}
 
 		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;

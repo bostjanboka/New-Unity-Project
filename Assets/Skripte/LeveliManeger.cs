@@ -72,18 +72,12 @@ public class LeveliManeger : MonoBehaviour {
 	}
 
 	public void saveProgres(int hp, int trenutniLevel, float score){
-		if (hp < 1) {
-			PlayerPrefs.SetFloat ("Leveli"  + "score", 0);
-			PlayerPrefs.SetInt ("Leveli"  + "hp", 4);
-			PlayerPrefs.SetInt ("Leveli" + "trenutniLevel", 0);
-		} 
 
-		if(hp > 0){
-			float tempScore = PlayerPrefs.GetFloat("Leveli"  + "score");
-			PlayerPrefs.SetFloat ("Leveli" + "score", score);
-			PlayerPrefs.SetInt ("Leveli"  + "hp", hp);
-			PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", trenutniLevel);
-		}
+		float tempScore = PlayerPrefs.GetFloat("Leveli"  + "score");
+		PlayerPrefs.SetFloat ("Leveli" + "score", score);
+		PlayerPrefs.SetInt ("Leveli"  + "hp", hp);
+		PlayerPrefs.SetInt ("Leveli"  + "trenutniLevel", trenutniLevel);
+
 		PlayerPrefs.Save ();
 
 	}

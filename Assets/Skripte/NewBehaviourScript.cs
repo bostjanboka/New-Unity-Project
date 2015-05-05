@@ -223,10 +223,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public void zmagalLevel(){
 		LeveliManeger._instance.saveProgres ( hp, ++trenutniLevel, score);
-		Social.ReportScore((long)(score*100), "CgkI3JSVn_IJEAIQAA", (bool success) => {
-			// handle success or failure
-		});
-		Social.ShowLeaderboardUI();
+
 		inputNavigacija.GetComponent<InputNavigacija> ().Zmagal ();
 	}
 

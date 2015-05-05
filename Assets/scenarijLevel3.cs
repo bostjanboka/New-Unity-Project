@@ -34,6 +34,7 @@ public class scenarijLevel3 : MonoBehaviour {
 		
 		if (stanje == 0) {
 			akcija.SetActive(true);
+			junakSkripta.meritev=true;
 			stanje=4;
 		
 		} else if (stanje == 4 && steviloZogic.prazenProstor) {

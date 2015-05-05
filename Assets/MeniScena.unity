@@ -306,57 +306,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
---- !u!1 &103444537
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 103444539}
-  - 114: {fileID: 103444538}
-  m_Layer: 0
-  m_Name: User
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &103444538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 103444537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 427b25111f70a5e4fa06276eec18a381, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  apiKey: 7d5819403473acccbf1a5dbe6a9362e32e24742f3170e4d3a6a2cca072f38abf
-  secretKey: 2b45ce60091b3d57733551d6b0363ca0bb6cdf2ea002f59852990da09d650268
-  gameName: mordenelf
-  userName: BOKABALL
-  app42InputNick: {fileID: 1535955220}
-  app42InputEmail: {fileID: 930923222}
-  playerName: {fileID: 2099010564}
-  userScore: 1000
-  Score1: 2000
-  max: 2
-  offSet: 1
-  success: 
---- !u!4 &103444539
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 103444537}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.3544302, y: 7.45837688, z: 1.125}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
 --- !u!1 &123060655
 GameObject:
   m_ObjectHideFlags: 0
@@ -2919,7 +2868,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103444538}
+      - m_Target: {fileID: 0}
         m_MethodName: signUpUser
         m_Mode: 1
         m_Arguments:
@@ -3910,7 +3859,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 103444538}
+      - m_Target: {fileID: 0}
         m_MethodName: getTopNRankings
         m_Mode: 1
         m_Arguments:
@@ -6199,6 +6148,7 @@ MonoBehaviour:
   gameMusic: {fileID: 165312, guid: b1eb6db5e24cf864ba90ec32697a01ab, type: 2}
   loadingMorden: {fileID: 151876, guid: d04ffcff55e84504cb62ccdd142d929f, type: 2}
   popUpRate: {fileID: 273906049}
+  user: {fileID: 142336, guid: acf85056657990a4b9cf00d419b1fd54, type: 2}
   musicToggle: {fileID: 501473186}
   soundToggle: {fileID: 475362785}
   continueGameGumb: {fileID: 0}
