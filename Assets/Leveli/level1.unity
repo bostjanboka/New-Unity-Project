@@ -1136,7 +1136,7 @@ Prefab:
     - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 62081ffab8b03734c882758f337e92ab,
+      objectReference: {fileID: 21300000, guid: c70d672bbffe855498d77255dee3d63d,
         type: 3}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: pok
@@ -1148,7 +1148,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5886452, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Radius
-      value: .959999979
+      value: 1.02031505
       objectReference: {fileID: 0}
     - target: {fileID: 428664, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.x
@@ -1190,6 +1190,26 @@ Prefab:
       propertyPath: gravitacija
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
