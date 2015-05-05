@@ -67,7 +67,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		bilZadet = false;
 
 		trenutniLevel = temp.trenutniLevel;
-		score = temp.score;
+		score = 99.99f;
 
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = trenutniLevel;
 		stojimNaMestuX = false;
@@ -84,7 +84,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 		timeToBeat = LeveliManeger._instance.getCas (level);
 		if(timeToBeat > 0){
-			if(score > timeToBeat){
+			if(score < timeToBeat){
 				casi.color = new Color(1,24f/255,24f/255,150f/255);
 			}else{
 				casi.color = new Color(51f/255,192f/255,0,150f/255);
@@ -169,11 +169,14 @@ public class NewBehaviourScript : MonoBehaviour {
 			}
 		}
 		if (meritev) {
-			score+=Time.deltaTime;
+			score-=Time.deltaTime;
+			if(score < 0){
+				score=0;
+			}
 
 			casi.text= PotkaSkripta.casovniFormat(score);
 			if(timeToBeat > 0){
-				if(score > timeToBeat){
+				if(score < timeToBeat){
 					casi.color = new Color(1,24f/255,24f/255,150f/255);
 				}else{
 					casi.color = new Color(51f/255,192f/255,0,150f/255);

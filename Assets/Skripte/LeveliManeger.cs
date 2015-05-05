@@ -115,13 +115,32 @@ public class LeveliManeger : MonoBehaviour {
 		return temp;
 	}
 
+	public float getSkupniCas(){
+		float[] casi = getCase();
+		float skupaj=0;
+		for (int i=0; i < casi.Length; i++) {
+			if(casi[i]>= 0){
+				skupaj+=casi[i];
+			}
+		}
+		PlayerPrefs.SetFloat("SkupniCas",skupaj);
+		
+		return PlayerPrefs.GetFloat("SkupniCas");
+	}
+
+	public void setSkupniCas(float cas){
+
+		PlayerPrefs.SetFloat("SkupniCas",cas);
+
+	}
+
 	public void nastaviCas(int stopnja,float cas){
 		Debug.Log("Prvic1"+cas);
 		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja) || PlayerPrefs.GetFloat ("Stopnja" + stopnja) < 1) {
 			PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
 			Debug.Log("Prvic"+cas);
 		} else {
-			if(PlayerPrefs.GetFloat ("Stopnja" + stopnja) > cas ){
+			if(PlayerPrefs.GetFloat ("Stopnja" + stopnja) < cas ){
 				PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
 				Debug.Log("Drugic"+cas);
 			}

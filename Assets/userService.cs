@@ -43,12 +43,14 @@ public class userService : MonoBehaviour {
 	public int max = 2;
 	public int offSet = 1;
 	public string success;
+	public static bool posodobiScore=false;
 
 
 	static bool uspesnoStevilo=false;
 	static int steviloUser;
 	static string PlayerX=null;
 	bool userUstvarjen=false;
+	static bool shranjenScore=false;
 
 	
 	#if UNITY_EDITOR
@@ -73,8 +75,9 @@ public class userService : MonoBehaviour {
 		}
 
 		if (PlayerX != null) {
-			saveScore(PlayerX);
+
 			playerName=PlayerX;
+			saveScore();
 			PlayerX=null;
 			userUstvarjen=true;
 
@@ -84,15 +87,28 @@ public class userService : MonoBehaviour {
 			userUstvarjen=false;
 			getUserRank();
 		}
+
+		if (posodobiScore) {
+			posodobiScore=false;
+			saveScore();
+			Debug.Log("SAVE SCORE");
+		}
+
+		if (shranjenScore) {
+			shranjenScore=false;
+			getUserRank();
+			Debug.Log("SHRANJEN SCORE");
+		}
 	}
 
-	public void saveScore(String name){
-
-		Debug.Log (name);
-		App42Log.SetDebug (true);
-		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-
-		scoreBoardService.SaveUserScore (gameName, name , userScore+100, new UnityCallBack());
+	public void saveScore(){
+		if (playerName != null) {
+			Debug.Log (name);
+			App42Log.SetDebug (true);
+			scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
+			Debug.Log(LeveliManeger._instance.getSkupniCas ()+"skupni cassss");
+			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor(LeveliManeger._instance.getSkupniCas ()*100), new UnityCallBack ());
+		}
 
 
 	}
@@ -233,6 +249,7 @@ public class userService : MonoBehaviour {
 				Debug.Log ("GameName : " + gameObj.GetName ());
 				if (gameObj.GetScoreList () != null) {
 					scoreList = gameObj.GetScoreList ();
+					shranjenScore=true;
 					scoreLista=true;
 					for (int i = 0; i < scoreList.Count; i++) {
 						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());

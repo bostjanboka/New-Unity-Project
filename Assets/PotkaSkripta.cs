@@ -65,51 +65,51 @@ public class PotkaSkripta : MonoBehaviour {
 		float[] casi = LeveliManeger._instance.getCase ();
 		//cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
 		Debug.Log (LeveliManeger._instance.getCas(2));
-	    if (casi [0] > 0) {
+	    if (casi [0] >= 0) {
 			level1.SetActive (true);
 			level1.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[0]);
 		}
-		if (casi [1] > 0) {
+		if (casi [1] >= 0) {
 			level2.SetActive (true);
 			level2.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[1]);
 		}
-		if (casi [2] > 0) {
+		if (casi [2] >= 0) {
 			level3.SetActive (true);
 			level3.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[2]);
 		}
-		if (casi [3] > 0) {
+		if (casi [3] >= 0) {
 			level4.SetActive (true);
 			level4.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[3]);
 		}
-		if (casi [4] > 0) {
+		if (casi [4] >= 0) {
 			level5.SetActive (true);
 			level5.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[4]);
 		}
-		if (casi [5] > 0) {
+		if (casi [5] >= 0) {
 			level6.SetActive (true);
 			level6.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[5]);
 		}
-		if (casi [6] > 0) {
+		if (casi [6] >= 0) {
 			level7.SetActive (true);
 			level7.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[6]);
 		}
-		if (casi [7] > 0) {
+		if (casi [7] >= 0) {
 			level8.SetActive (true);
 			level8.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[7]);
 		}
-		if (casi [8] > 0) {
+		if (casi [8] >= 0) {
 			level9.SetActive (true);
 			level9.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[8]);
 		}
-		if (casi [9] > 0) {
+		if (casi [9] >= 0) {
 			level10.SetActive (true);
 			level10.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[9]);
 		}
-		if (casi [10] > 0) {
+		if (casi [10] >= 0) {
 			level11.SetActive (true);
 			level11.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[10]);
 		}
-		if (casi [11] > 0) {
+		if (casi [11] >= 0) {
 			level12.SetActive (true);
 			level12.transform.FindChild("cas 1").GetComponent<Text>().text=casovniFormat(casi[11]);
 		}
@@ -121,7 +121,9 @@ public class PotkaSkripta : MonoBehaviour {
 			}
 
 		}
+		LeveliManeger._instance.setSkupniCas (skupaj);
 		totalCas.text = casovniFormat (skupaj);
+		userService.posodobiScore = true;
 	}
 	
 	// Update is called once per frame
@@ -131,11 +133,11 @@ public class PotkaSkripta : MonoBehaviour {
 
 	public static string casovniFormat(float cas){
 
-		string minutes = Mathf.Floor(cas / 60).ToString("00");
-		string seconds = Mathf.Floor(cas % 60).ToString("00");
-		string mil = Mathf.Floor((cas*10) % 10).ToString("0");
+		string minutes = Mathf.Floor(cas*100).ToString("000");
+		//string seconds = Mathf.Floor(cas % 60).ToString("00");
+		//string mil = Mathf.Floor((cas*10) % 10).ToString("0");
 
-		return minutes + ":" + seconds + "." + mil;
+		return minutes;
 	}
 
 	public void pritisnilPlay(int i){
