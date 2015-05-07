@@ -26,13 +26,14 @@ public class ClasicZogaSkripta : MonoBehaviour {
 	GameObject inst;
 	GameObject junak;
 
-
+	float casOvire;
 
 	void Start () {
 		
 		rb = transform.parent.GetComponent<Rigidbody2D>();
 		junak = GameObject.Find ("junak1");
 		skala = transform.parent.gameObject.transform.localScale.x;
+		casOvire = -1;
 		//smer = 1;
 	}
 	
@@ -43,7 +44,10 @@ public class ClasicZogaSkripta : MonoBehaviour {
 		transform.parent.gameObject.transform.Translate(move);
 
 		transform.Rotate (new Vector3(0,0,Time.deltaTime * -rotacija * smer));
-
+		casOvire -= Time.deltaTime;
+		if (casOvire < 0) {
+			casOvire=-1;
+		}
 
 	}
 	
@@ -62,7 +66,11 @@ public class ClasicZogaSkripta : MonoBehaviour {
 			smer = -1;
 		} else if (other.gameObject.tag.Equals ("ovira")) {
 			//rb.velocity = new Vector3(0,-rb.velocity.y*0.5f);
-			smer *= -1;
+			if(casOvire < 0){
+				smer *= -1;
+				casOvire=1;
+			}
+
 		}
 		if (other.gameObject.tag.Equals ("spirala")) {
 			if(InputNavigacija.zvoki){

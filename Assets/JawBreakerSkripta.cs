@@ -21,6 +21,7 @@ public class JawBreakerSkripta : MonoBehaviour {
 	SpiralaScript spirala;
 	GameObject inst;
 	GameObject junak;
+	float casOvire;
 	
 	public float timeNastanka;
 	void Start () {
@@ -38,6 +39,10 @@ public class JawBreakerSkripta : MonoBehaviour {
 		transform.parent.Translate(move);
 		transform.Rotate (new Vector3(0,0,Time.deltaTime * -rotacija * smer));
 		//stopinje *= Time.deltaTime;
+		casOvire -= Time.deltaTime;
+		if (casOvire < 0) {
+			casOvire=-1;
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
@@ -51,7 +56,10 @@ public class JawBreakerSkripta : MonoBehaviour {
 		} else if (other.gameObject.name.Equals ("Desno")) {
 			smer = -1;
 		} else if (other.gameObject.tag.Equals ("ovira")) {
-			smer *= -1;
+			if(casOvire < 0){
+				smer *= -1;
+				casOvire=1;
+			}
 		}
 
 		if (other.gameObject.tag.Equals ("spirala")) {

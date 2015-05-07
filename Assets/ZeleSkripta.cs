@@ -24,6 +24,7 @@ public class ZeleSkripta : MonoBehaviour {
 	GameObject inst;
 	GameObject junak;
 
+	float casOvire;
 	public float timeNastanka;
 	void Start () {
 		
@@ -43,6 +44,10 @@ public class ZeleSkripta : MonoBehaviour {
 		transform.localScale = new Vector3 (skala, skala*(1 - Mathf.Sin (stopinje * 0.0174532925f) * 0.1f), 1);
 		stopinje = (stopinje + korak*Time.deltaTime)%360;
 		//stopinje *= Time.deltaTime;
+		casOvire -= Time.deltaTime;
+		if (casOvire < 0) {
+			casOvire=-1;
+		}
 	}
 	
 	void OnTriggerEnter2D(Collider2D other){
@@ -59,7 +64,10 @@ public class ZeleSkripta : MonoBehaviour {
 			smer = -1;
 		} else if (other.gameObject.tag.Equals ("ovira")) {
 			//rb.velocity = new Vector3(0,-rb.velocity.y*0.5f);
-			smer *= -1;
+			if(casOvire < 0){
+				smer *= -1;
+				casOvire=1;
+			}
 		}
 
 		if (other.gameObject.tag.Equals ("zeleji")) {
