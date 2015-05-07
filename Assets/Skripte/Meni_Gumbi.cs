@@ -27,6 +27,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Toggle soundToggle; 
 
 	public static int stKamere=0;
+	public Button exit;
 
 
 
@@ -36,6 +37,9 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	GameObject zvok;
 	void Awake(){
+
+		exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width-50,Screen.height-80,100));
+		
 		PlayGamesPlatform.DebugLogEnabled = true;
 
 		PlayGamesPlatform.Activate();

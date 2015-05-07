@@ -2772,7 +2772,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
     m_FontSize: 20
     m_FontStyle: 0
-    m_Alignment: 4
+    m_Alignment: 3
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -6268,6 +6268,7 @@ MonoBehaviour:
   user: {fileID: 142336, guid: acf85056657990a4b9cf00d419b1fd54, type: 2}
   musicToggle: {fileID: 501473186}
   soundToggle: {fileID: 475362785}
+  exit: {fileID: 1953147325}
   continueGameGumb: {fileID: 0}
   continueGameMeni: {fileID: 0}
 --- !u!4 &1542134873
@@ -8212,7 +8213,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 19.7691269
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

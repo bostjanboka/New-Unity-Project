@@ -21,21 +21,21 @@ public class scrollView : MonoBehaviour {
 			highscore = userService.scoreList;
 			//highscore = HighScoreManager._instance.GetHighScore (); 
 			scrollPos = GUI.BeginScrollView (
-			new Rect (Screen.width * 0.3f, Screen.height * 0.1f, Screen.width * 0.4f, Screen.height * 0.8f), scrollPos,
-			new Rect (Screen.width * 0.3f, Screen.height * 0.1f, Screen.width * 0.4f, 530),
+			new Rect (Screen.width * 0.3f, Screen.height * 0.17f, Screen.width * 0.4f, Screen.height * 0.6f), scrollPos,
+			new Rect (Screen.width * 0.3f, Screen.height * 0.2f, Screen.width * 0.4f, 5000),
 			myStyle, myStyle);
 			// HOORAY THOSE TWO ARGUMENTS ELIMINATE
 			// THE STUPID RIDICULOUS UNITY SCROLL BARS
 			if(highscore != null){
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < 100; i++) {
 					for (int j=i; j <= highscore.Count; j++) {
 						if (highscore.Count == j) {
 							i = j;
 							break;
 						}
-						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), "" + highscore [j].GetUserName ()+" "+highscore [j].GetValue(), myStyle);
+						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), (j+1) + ". " + highscore [j].GetUserName ()+"\t"+highscore [j].GetValue(), myStyle);
 					}
-					GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + i * 53, Screen.width * 0.4f, 50), "-empty-", myStyle);
+					GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + i * 53, Screen.width * 0.4f, 50), "", myStyle);
 
 				}
 			}

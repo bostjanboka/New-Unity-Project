@@ -146,7 +146,7 @@ public class userService : MonoBehaviour {
 	public void getTopNRankings(){
 		scoreLista = false;
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-		scoreBoardService.GetTopNRankers ("mordenelf", 10, new UnityTopNRankBack());
+		scoreBoardService.GetTopNRankers ("mordenelf", 100, new UnityTopNRankBack());
 	}
 
 	public void signUpUser(){
