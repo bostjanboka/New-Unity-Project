@@ -52,7 +52,7 @@ public class PotkaSkripta : MonoBehaviour {
 		level12.SetActive (false);
 
 		//ena.interactable = LeveliManeger._instance.odklenjenaStopnja(1);
-		//dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
+		dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
 		tri.interactable = LeveliManeger._instance.odklenjenaStopnja(3);
 		stiri.interactable = LeveliManeger._instance.odklenjenaStopnja(4);
 		pet.interactable = LeveliManeger._instance.odklenjenaStopnja(5);
