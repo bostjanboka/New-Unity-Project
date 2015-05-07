@@ -1362,6 +1362,10 @@ Prefab:
       propertyPath: m_TagString
       value: zogice
       objectReference: {fileID: 0}
+    - target: {fileID: 11407098, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: zoga
+      value: 
+      objectReference: {fileID: 154330, guid: 4c7b3e9c4da7cf1448b294e5a0395b2a, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
   m_IsPrefabParent: 0
