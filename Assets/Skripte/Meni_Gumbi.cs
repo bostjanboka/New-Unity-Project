@@ -26,6 +26,8 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
 
+	public static int stKamere=0;
+
 
 
 	public Button continueGameGumb;
@@ -68,7 +70,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		});
 
-		kamera(0);
+		kamera(stKamere);
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
 		
 		if (continueGameGumb && (temp.level == -1 || temp.level % 2 == 0)) {

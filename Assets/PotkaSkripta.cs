@@ -137,6 +137,15 @@ public class PotkaSkripta : MonoBehaviour {
 	
 	}
 
+	public static string casovniFormatIgra(float cas){
+		
+		string minutes = Mathf.Floor(cas*10).ToString("00");
+		//string seconds = Mathf.Floor(cas % 60).ToString("00");
+		//string mil = Mathf.Floor((cas*10) % 10).ToString("0");
+		
+		return minutes;
+	}
+
 	public static string casovniFormat(float cas){
 
 		string minutes = Mathf.Floor(cas*100).ToString("000");

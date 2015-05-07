@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class InputNavigacija : MonoBehaviour {
 
@@ -13,11 +14,20 @@ public class InputNavigacija : MonoBehaviour {
 	public GameObject zmagal;
 	public GameObject back;
 
+	public Button pavzaGumb;
+	public Text cas;
+	public Camera cam;
+
 	public GameObject HUD;
 
 	bool pavza=false;
 
 	public static bool zvoki=true;
+
+	void Awake(){
+		pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(-10 ,Screen.height - 40,100));
+		cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width+50,Screen.height-40,100));
+	}
 	void Start () {
 		back.SetActive (false);
 		zmagal.SetActive (false);

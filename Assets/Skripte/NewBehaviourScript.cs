@@ -56,6 +56,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 
 	void Start () {
+		Meni_Gumbi.stKamere = 1;
 		if (Random.value * 100 < naloziReklamo) {
 			Move.loadCelozaslonsko ();
 		}
@@ -174,7 +175,7 @@ public class NewBehaviourScript : MonoBehaviour {
 				score=0;
 			}
 
-			casi.text= PotkaSkripta.casovniFormat(score);
+			casi.text= PotkaSkripta.casovniFormatIgra(score);
 			if(timeToBeat > 0){
 				if(score < timeToBeat){
 					casi.color = new Color(1,24f/255,24f/255,150f/255);
