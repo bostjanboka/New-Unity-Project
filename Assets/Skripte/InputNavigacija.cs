@@ -25,8 +25,8 @@ public class InputNavigacija : MonoBehaviour {
 	public static bool zvoki=true;
 
 	void Awake(){
-		pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(-10 ,Screen.height - 40,100));
-		cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width+50,Screen.height-40,100));
+		pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(80 ,Screen.height - 100,100));
+		cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width-50,Screen.height-80,100));
 	}
 	void Start () {
 		back.SetActive (false);

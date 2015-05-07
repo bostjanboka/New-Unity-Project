@@ -145,7 +145,7 @@ MonoBehaviour:
   stojimNaMestuX: 0
   meritev: 0
   strelOmogocen: 1
-  speed: 6
+  speed: 2.5
   xTocka: 0
   ustreli: 0
   naloziReklamo: 100
