@@ -6268,7 +6268,7 @@ MonoBehaviour:
   user: {fileID: 142336, guid: acf85056657990a4b9cf00d419b1fd54, type: 2}
   musicToggle: {fileID: 501473186}
   soundToggle: {fileID: 475362785}
-  exit: {fileID: 1953147325}
+  exit: {fileID: 0}
   continueGameGumb: {fileID: 0}
   continueGameMeni: {fileID: 0}
 --- !u!4 &1542134873
