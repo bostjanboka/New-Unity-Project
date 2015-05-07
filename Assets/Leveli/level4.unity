@@ -498,6 +498,10 @@ Prefab:
       value: 
       objectReference: {fileID: 21300004, guid: 24a0c7e892cf8dd4b99124dc15a171b5,
         type: 3}
+    - target: {fileID: 5810654, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
+      propertyPath: m_Radius
+      value: .560000002
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 78cb9b6cbab65e2409600243c47afb0d, type: 2}
   m_IsPrefabParent: 0
@@ -1081,7 +1085,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: ac89e8a397a04ec46b8286a8b0497bab,
+      objectReference: {fileID: 21300000, guid: d1e6908ced80ffd44a96150f5330225b,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.y
@@ -1134,6 +1138,18 @@ Prefab:
     - target: {fileID: 21267160, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_SortingOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_Color.r
+      value: .898039281
+      objectReference: {fileID: 0}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_Color.g
+      value: .0745098069
+      objectReference: {fileID: 0}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_Color.b
+      value: .137254909
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
@@ -1324,7 +1340,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 4e3f00c4ca68f474e8860a8813dc292c,
+      objectReference: {fileID: 21300000, guid: a3a0565390df86842916ae18fb07d7d3,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.x
