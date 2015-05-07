@@ -13,6 +13,13 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Camera input;
 	public Camera scori;
 
+	public InputField app42InputNick;
+	public InputField app42InputEmail;
+	public Text loginText;
+	public Text nickText;
+	public Text passText;
+
+	public static string errorText;
 
 
 	GameObject mordenLogo;
@@ -35,6 +42,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public Button continueGameMeni;
 
+	public static bool pojdiVMeni=false;
 	GameObject zvok;
 	void Awake(){
 
@@ -66,8 +74,47 @@ public class Meni_Gumbi : MonoBehaviour {
 		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
 
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
-		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn);
+		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn); ss
+
 	}
+
+
+	public void narediPlayer(){
+		nickText.text = "";
+		passText.text = "";
+		loginText.text = "";
+		bool napaka = false;
+		if (app42InputNick.text.Length < 4) {
+			if (app42InputNick.text.Length < 1) {
+				nickText.text = "Please enter nickname";
+			} else {
+				nickText.text = "Nick must be 4 letters long or more";
+			}
+			napaka=true;
+		} else if (app42InputNick.text.Length > 10) {
+			nickText.text = "Nickname is too long, use less than 10 letters";
+			napaka=true;
+		}
+
+		if (app42InputEmail.text.Length < 3) {
+			if (app42InputEmail.text.Length < 1) {
+				passText.text = "Please enter password";
+			} else {
+				passText.text = "Plase enter at least 3 letters long password";
+			}
+			napaka=true;
+		} else if (app42InputEmail.text.Length > 10) {
+			passText.text = "Password is too long, use less than 10 letters";
+			napaka=true;
+		}
+
+		if (!napaka) {
+			userSer.GetComponent<userService> ().signUpUser (app42InputNick.text,app42InputEmail.text);
+		}
+
+	}
+
+
 	void Start () {
 		Social.localUser.Authenticate((bool success) => {
 			// handle success or failure
@@ -106,7 +153,24 @@ public class Meni_Gumbi : MonoBehaviour {
 			}
 
 		}
+		if (pojdiVMeni) {
+			pojdiVMeni=false;
+			if(input.enabled){
+				kamera(0);
+			}
+		}
+
+		if (errorText != null) {
+			string x = errorText;
+			string[] y = x.Split(':');
+			x = y[y.Length-1];
+			x = x.Replace("}","");
+
+			loginText.text = x;
+		}
 	}
+
+
 
 	public void facebook(){
 		Application.OpenURL ("http://unity3d.com/");

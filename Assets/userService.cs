@@ -149,11 +149,10 @@ public class userService : MonoBehaviour {
 		scoreBoardService.GetTopNRankers ("mordenelf", 100, new UnityTopNRankBack());
 	}
 
-	public void signUpUser(){
-
+	public void signUpUser(String ime, string pass){
 
 		userSer = sp.BuildUserService (); // Initializing UserService.
-		userSer.CreateUser (app42InputNick.text, "password", app42InputEmail.text, new UserResponse());
+		userSer.CreateUser (ime, pass, ime+"@gmail.com", new UserResponse());
 
 	}
 
@@ -202,9 +201,11 @@ public class userService : MonoBehaviour {
 					Debug.Log ("EmailId : " + userList[0].GetEmail());
 					
 				}
+				Meni_Gumbi.pojdiVMeni=true;
 			}
 			catch (App42Exception e)
 			{
+				Meni_Gumbi.errorText = e.ToString();
 				result = e.ToString();
 				Debug.Log ("App42Exception : "+ e);
 			}
@@ -212,6 +213,7 @@ public class userService : MonoBehaviour {
 		
 		public void OnException(Exception e)
 		{
+			Meni_Gumbi.errorText = e.ToString();
 			result = e.ToString();
 			Debug.Log ("Exception : " + e);
 		}
