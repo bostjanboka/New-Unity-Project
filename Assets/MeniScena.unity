@@ -6634,6 +6634,7 @@ MonoBehaviour:
   level10: {fileID: 862121848}
   level11: {fileID: 919702682}
   level12: {fileID: 42338377}
+  potkaNavodila: {fileID: 894125878}
   totalCas: {fileID: 999962408}
 --- !u!1 &1655240253
 GameObject:

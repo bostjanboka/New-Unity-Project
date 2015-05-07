@@ -32,6 +32,8 @@ public class PotkaSkripta : MonoBehaviour {
 	public GameObject level11;
 	public GameObject level12;
 
+	public GameObject potkaNavodila;
+
 
 	public Text totalCas;
 	float skupaj;
@@ -61,6 +63,10 @@ public class PotkaSkripta : MonoBehaviour {
 		deset.interactable = LeveliManeger._instance.odklenjenaStopnja(10);
 		enajst.interactable = LeveliManeger._instance.odklenjenaStopnja(11);
 		dvanajst.interactable = LeveliManeger._instance.odklenjenaStopnja(12);
+
+		if (dve.interactable) {
+			potkaNavodila.SetActive(false);
+		}
 
 		float[] casi = LeveliManeger._instance.getCase ();
 		//cas1.text = (casi[0] > 0) ? "BEST: "+casovniFormat(casi[0])+"s":"BEST: N/A";
