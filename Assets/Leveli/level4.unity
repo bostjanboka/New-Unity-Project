@@ -547,7 +547,7 @@ Prefab:
     - target: {fileID: 11407098, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: zoga
       value: 
-      objectReference: {fileID: 177420, guid: f959559eb2db6ba44aeea8d1c278f8dc, type: 2}
+      objectReference: {fileID: 107728, guid: 534a63245a15267428faf2083cb440a4, type: 2}
     - target: {fileID: 149038, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_TagString
       value: zogice
@@ -587,7 +587,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 1067ecb0e2897b34e87a769c13dc2789, type: 3}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.r
-      value: .945098042
+      value: .454901963
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.g
@@ -595,7 +595,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.b
-      value: .160784319
+      value: .200000003
+      objectReference: {fileID: 0}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_SortingOrder
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
@@ -720,6 +724,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
   m_IsPrefabParent: 0
@@ -786,14 +794,14 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Points:
     m_Paths:
-    - - {x: -.514999986, y: 1.01822805}
-      - {x: -1.0250001, y: -.0104737282}
-      - {x: -1.02499998, y: -.0250000004}
-      - {x: -.519842148, y: -1.03499985}
-      - {x: .574999988, y: -1.03499997}
-      - {x: 1.03499997, y: .000157833099}
-      - {x: 1.03499997, y: -.0104737282}
-      - {x: .508227944, y: 1.02661419}
+    - - {x: .625, y: -.845000029}
+      - {x: .612439692, y: -.824999809}
+      - {x: 1.03500068, y: -.00841379166}
+      - {x: .634146333, y: .804146767}
+      - {x: -.284999967, y: 1.02414656}
+      - {x: -1.02926707, y: .461586475}
+      - {x: -1.03499997, y: -.455000013}
+      - {x: -.282439232, y: -1.03499985}
 --- !u!50 &1036736553
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1110,7 +1118,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: d1e6908ced80ffd44a96150f5330225b,
+      objectReference: {fileID: 21300000, guid: 1ea00f3fc852cd347ac990f28315c2e5,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.y
@@ -1166,7 +1174,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.r
-      value: .454901963
+      value: .945098042
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.g
@@ -1174,7 +1182,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.b
-      value: .200000003
+      value: .160784319
+      objectReference: {fileID: 0}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -5.86999989
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5896016, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
@@ -1392,6 +1412,10 @@ Prefab:
       propertyPath: zoga
       value: 
       objectReference: {fileID: 154330, guid: 4c7b3e9c4da7cf1448b294e5a0395b2a, type: 2}
+    - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_SortingOrder
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
   m_IsPrefabParent: 0
