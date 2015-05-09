@@ -127,21 +127,13 @@ Prefab:
       value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: HUD
-      value: 
-      objectReference: {fileID: 206167933}
-    - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
       propertyPath: cam
       value: 
       objectReference: {fileID: 786918530}
     - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: level
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 11441024, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: level3
-      objectReference: {fileID: 0}
+      propertyPath: HUD
+      value: 
+      objectReference: {fileID: 206167933}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
