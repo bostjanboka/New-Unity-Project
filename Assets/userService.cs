@@ -27,6 +27,7 @@ public class userService : MonoBehaviour {
 	public InputField app42InputEmail;
 	public static String playerName;
 	public static String rankUserja;
+	public static string firstName;
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
@@ -35,9 +36,9 @@ public class userService : MonoBehaviour {
 
 	ServiceAPI sp = null;
 	ScoreBoardService scoreBoardService = null; // Initializing ScoreBoard Service.
-	StorageService storageService = null;
-	UserService userSer = null;
 
+	static UserService userSer = null;
+	static bool flag  = true; 
 	public double userScore = 1000;
 	public double Score1 = 2000;
 	public int max = 2;
@@ -66,13 +67,14 @@ public class userService : MonoBehaviour {
 		#endif
 		sp = new ServiceAPI (apiKey,secretKey);
 		//saveScore ();
-		narediUser1();
+		dobiUserja();
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		if (uspesnoStevilo) {
-			narediUser(steviloUser);
+			LeveliManeger._instance.setIdUser("Player"+steviloUser);
+			updateUser(null);
 			uspesnoStevilo=false;
 		}
 
@@ -120,23 +122,8 @@ public class userService : MonoBehaviour {
 
 	}
 
-	public void narediUser1(){
-		String scoreId = LeveliManeger._instance.getIdPlayer ();
-		String userId = LeveliManeger._instance.getIdUser ();
-		if (userId != null) {
-			getUser ();
-		} else {
-			if (scoreId != null) {
-				StorageService storageService = App42API.BuildStorageService ();  
-				storageService.FindDocumentById ("mordenelf", "user", scoreId, new UnityUserCallBack ()); 
-			} else {
-				StorageService storageService = App42API.BuildStorageService ();   
-				storageService.FindAllDocumentsCount ("mordenelf", "user", new UnitySteviloUserCallBack ());
-			}
-		}
 
-		   
-	}
+
 
 	public void getUserRank(){
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
@@ -149,27 +136,84 @@ public class userService : MonoBehaviour {
 		scoreBoardService.GetTopNRankers ("mordenelf", 100, new UnityTopNRankBack());
 	}
 
-	public void signUpUser(String ime, string pass){
-
-		userSer = sp.BuildUserService (); // Initializing UserService.
-		userSer.CreateUser (ime, pass, ime+"@gmail.com", new UserResponse());
-
+	public void dobiUserja(){
+		string user = LeveliManeger._instance.getIdUser ();
+		if (user != null) {
+			getUser (null);
+		} else {
+			getUserCount();
+		}
 	}
 
-	public void narediUser(int stevilo){
 
-		String json = "{\"name\":\"Player"+stevilo+"\"}";  
-		App42Log.SetDebug (true);
-		storageService = sp.BuildStorageService (); // Initializing Storage Service.
-		storageService.InsertJSONDocument ("mordenelf", "user",json , new UnityUserCallBack()); 
-
+	public void updateUser(string ime){
+		firstName = ime;
+		userSer = App42API.BuildUserService ();  
+		userSer.CreateUser (LeveliManeger._instance.getIdUser(), "boka", LeveliManeger._instance.getIdUser()+"@gmail.com", new UnityUpdateUser ()); 
 	}
 
-	public void getUser(){
+	public void getUser(string ime){
+		flag = false;
+		if (ime != null) {
+			flag=true;
+		}
+		firstName = ime;
 		userSer = sp.BuildUserService (); // Initializing UserService.
 		userSer.GetUser (LeveliManeger._instance.getIdUser(), new UserResponse());
 	}
 
+	public void getUserCount(){
+		userSer = App42API.BuildUserService();  
+		userSer.GetAllUsersCount(new UnityUsersCount());   
+	}
+
+	public class UnityUsersCount : App42CallBack  
+	{  
+		public void OnSuccess(object response)  
+		{  
+			App42Response app42response = (App42Response) response;   
+			App42Log.Console("TotalRecords is : " + app42response.GetTotalRecords());  
+			uspesnoStevilo = true;
+			steviloUser = app42response.GetTotalRecords ();
+		}  
+		public void OnException(Exception e)  
+		{  
+			App42Log.Console("Exception : " + e);  
+		}  
+	}  
+
+	public class UnityUpdateUser : App42CallBack  
+	{  
+		public void OnSuccess(object response)  
+		{  
+			if(flag)  
+			{  
+				User user = (User) response;   
+				User.Profile profile = new User.Profile(user);  
+				if(firstName != null){
+					profile.SetFirstName(firstName);   
+				}else{
+					profile.SetFirstName(LeveliManeger._instance.getIdUser());
+				}
+
+				flag = false;  
+				userSer.CreateOrUpdateProfile(user, new UserResponse());  
+
+				/* Above line will create user profile and returns User object which has profile object in it. */  
+			}  
+			else {  
+				User user = (User) response;  
+				/* This will create user in App42 cloud and will return User object */    
+				App42Log.Console("userName is " + user.GetUserName());  
+				App42Log.Console("emailId is " + user.GetEmail());   
+			}  
+		}  
+		public void OnException(Exception e)  
+		{  
+			Meni_Gumbi.errorText = e.ToString();
+			App42Log.Console("Exception : " + e);  
+		}  
+	}  
 	public class UserResponse : App42CallBack
 	{
 		private string result = "";
@@ -185,12 +229,22 @@ public class userService : MonoBehaviour {
 					Debug.Log ("EmailId : " + userObj.GetEmail());
 					User.Profile profileObj = (User.Profile)userObj.GetProfile();
 					LeveliManeger._instance.setIdUser(userObj.GetUserName());
-					PlayerX=userObj.GetUserName();
+
 					if (profileObj != null )
 					{
 						Debug.Log ("FIRST NAME" + profileObj.GetFirstName());
-						Debug.Log ("SEX" + profileObj.GetSex());
-						Debug.Log ("LAST NAME" + profileObj.GetLastName());
+						PlayerX=profileObj.GetFirstName();
+					}
+					if(flag){
+						User user2 = (User) user;   
+						User.Profile profile = new User.Profile(user2); 
+						if(firstName != null){
+							profile.SetFirstName(firstName);   
+						}else{
+							profile.SetFirstName(LeveliManeger._instance.getIdUser());
+						}
+						userSer.CreateOrUpdateProfile(user2, new UserResponse());  
+						flag=false;
 					}
 				}
 				else
@@ -335,44 +389,4 @@ public class userService : MonoBehaviour {
 		}
 	}
 
-	public class UnityUserCallBack : App42CallBack  
-	{  
-		public void OnSuccess(object response)  
-		{  
-			Storage storage = (Storage) response;  
-			IList<Storage.JSONDocument> jsonDocList = storage.GetJsonDocList();   
-			for(int i=0;i <jsonDocList.Count;i++)  
-			{     
-				App42Log.Console("objectId is " + jsonDocList[i].GetDocId());  
-				App42Log.Console("besedilo is " + jsonDocList[i].GetJsonDoc());  
-				LeveliManeger._instance.setIdPlayer(jsonDocList[i].GetDocId());
-				PlayerX = jsonDocList[i].GetJsonDoc();
-				String ime = PlayerX.Split(':')[1];
-				ime = ime.Replace ("}", "");
-				ime = ime.Replace ('"', ' ');
-				PlayerX=ime;
-			}    
-		}  
-		
-		public void OnException(Exception e)  
-		{  
-			App42Log.Console("Exception : " + e);  
-		}  
-	}  
-
-	public class UnitySteviloUserCallBack : App42CallBack  
-	{  
-		public void OnSuccess(object response)  
-		{  
-			App42Response success = (App42Response) response;      
-			App42Log.Console("TotalRecords : " + success.GetTotalRecords());  
-			steviloUser = success.GetTotalRecords ();
-			uspesnoStevilo = true;
-		}  
-		
-		public void OnException(Exception e)  
-		{  
-			App42Log.Console("Exception : " + e);  
-		}  
-	}  
 }

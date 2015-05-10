@@ -14,10 +14,10 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Camera scori;
 
 	public InputField app42InputNick;
-	public InputField app42InputEmail;
+
 	public Text loginText;
 	public Text nickText;
-	public Text passText;
+
 
 	public static string errorText;
 
@@ -76,12 +76,14 @@ public class Meni_Gumbi : MonoBehaviour {
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn); ss
 
+		//PlayerPrefs.DeleteAll ();
+
 	}
 
 
 	public void narediPlayer(){
 		nickText.text = "";
-		passText.text = "";
+
 		loginText.text = "";
 		bool napaka = false;
 		if (app42InputNick.text.Length < 4) {
@@ -96,20 +98,8 @@ public class Meni_Gumbi : MonoBehaviour {
 			napaka=true;
 		}
 
-		if (app42InputEmail.text.Length < 3) {
-			if (app42InputEmail.text.Length < 1) {
-				passText.text = "Please enter password";
-			} else {
-				passText.text = "Plase enter at least 3 letters long password";
-			}
-			napaka=true;
-		} else if (app42InputEmail.text.Length > 10) {
-			passText.text = "Password is too long, use less than 10 letters";
-			napaka=true;
-		}
-
 		if (!napaka) {
-			userSer.GetComponent<userService> ().signUpUser (app42InputNick.text,app42InputEmail.text);
+			userSer.GetComponent<userService> ().getUser (app42InputNick.text);
 		}
 
 	}
