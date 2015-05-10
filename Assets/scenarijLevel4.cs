@@ -46,8 +46,8 @@ public class scenarijLevel4 : MonoBehaviour {
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
 
-			if(LeveliManeger._instance.getCas(2) > junakSkripta.score){
-				Instantiate(popUpRekord);
+			if(LeveliManeger._instance.getCas(4) < junakSkripta.score){
+				//Instantiate(popUpRekord);
 			}else{
 				if(Random.value < 0.5f){
 					Move.showCelozaslonsko ();

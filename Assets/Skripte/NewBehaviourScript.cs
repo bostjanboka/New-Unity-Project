@@ -68,7 +68,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		bilZadet = false;
 
 		trenutniLevel = temp.trenutniLevel;
-		score = 99.99f;
+		score = 999.99f;
 
 		inputNavigacija.GetComponent<InputNavigacija> ().trenutniLevel = trenutniLevel;
 		stojimNaMestuX = false;

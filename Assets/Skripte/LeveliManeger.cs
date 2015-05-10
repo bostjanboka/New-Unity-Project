@@ -136,7 +136,7 @@ public class LeveliManeger : MonoBehaviour {
 
 	public void nastaviCas(int stopnja,float cas){
 		Debug.Log("Prvic1"+cas);
-		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja) || PlayerPrefs.GetFloat ("Stopnja" + stopnja) < 1) {
+		if (!PlayerPrefs.HasKey ("Stopnja" + stopnja) || PlayerPrefs.GetFloat ("Stopnja" + stopnja) < 0) {
 			PlayerPrefs.SetFloat ("Stopnja" + stopnja, cas);
 			Debug.Log("Prvic"+cas);
 		} else {

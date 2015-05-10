@@ -44,7 +44,7 @@ public class ScenarijLevel2 : MonoBehaviour {
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
 			if(Random.value < 0.5f){
-				Move.showCelozaslonsko ();
+				//Move.showCelozaslonsko ();
 			}
 			stanje++;
 		}

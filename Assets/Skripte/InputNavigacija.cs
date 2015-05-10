@@ -26,7 +26,7 @@ public class InputNavigacija : MonoBehaviour {
 
 	void Awake(){
 		pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(80 ,Screen.height - 100,100));
-		cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width-50,Screen.height-80,100));
+		cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width-80,Screen.height-80,100));
 	}
 	void Start () {
 		back.SetActive (false);
@@ -85,10 +85,12 @@ public class InputNavigacija : MonoBehaviour {
 		zgubil.SetActive (false);
 	}
 
-	public void noviLevel(string level){
+	public void noviLevel(string level2){
 		Time.timeScale = 1;
 		loadingScreen.GetComponent<LoadingScreen> ().show ();
-		Application.LoadLevel (level); 
+		LeveliManeger._instance.ponastaviLevel (level+1);
+		Application.LoadLevel (level2); 
+
 	}
 
 	public void resetLevel(){
