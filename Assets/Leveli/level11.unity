@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   junak: {fileID: 754348767}
-  popUpRekord: {fileID: 105450, guid: a2ceb5ca89a0e334ca334081714adde4, type: 2}
+  newRecord: {fileID: 277998012}
   prostorZogic: {fileID: 2067712758}
 --- !u!4 &203256814
 Transform:
@@ -349,6 +349,52 @@ SpriteRenderer:
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: 5219514ba5300da45b83a6fc6c3d1bdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1001 &277998011
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 451794, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &277998012
+GameObject:
+  m_PrefabParentObject: {fileID: 114068, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+  m_PrefabInternal: {fileID: 277998011}
 --- !u!1 &307652565
 GameObject:
   m_ObjectHideFlags: 0

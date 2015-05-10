@@ -10,9 +10,9 @@ public class scenarijLevel4 : MonoBehaviour {
 	public GameObject prostorZogic;
 	public GameObject zmagal;
 	public GameObject caneZaJaw;
-	public GameObject popUpRekord;
+
 	
-	
+	public GameObject newRecord;
 	NewBehaviourScript junakSkripta;
 
 
@@ -47,11 +47,7 @@ public class scenarijLevel4 : MonoBehaviour {
 			LeveliManeger._instance.naredilStopnjo();
 
 			if(LeveliManeger._instance.getCas(4) < junakSkripta.score){
-				//Instantiate(popUpRekord);
-			}else{
-				if(Random.value < 0.5f){
-					Move.showCelozaslonsko ();
-				}
+				newRecord.SetActive(true);
 			}
 
 

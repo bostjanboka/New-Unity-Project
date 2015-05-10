@@ -9,12 +9,12 @@ public class ScenarijLevela8 : MonoBehaviour {
 
 
 	
-	
+	public GameObject newRecord;
 	
 	public GameObject prostorZogic;
 	public GameObject zmagal;
 	public GameObject akcija;
-	public GameObject popUpRekord;
+
 	SteviloZogicSkripta steviloZogic;
 
 	int stanje;
@@ -40,15 +40,11 @@ public class ScenarijLevela8 : MonoBehaviour {
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
 			LeveliManeger._instance.odkleniStopnjo(9);
 			junakSkripta.zmagalLevel();
-			if(LeveliManeger._instance.getCas(4) > junakSkripta.score){
-				Instantiate(popUpRekord);
-			}else{
-				if(Random.value < 0.5f){
-					Move.showCelozaslonsko ();
-				}
-			}
-			LeveliManeger._instance.naredilStopnjo();
 
+			LeveliManeger._instance.naredilStopnjo();
+			if(LeveliManeger._instance.getCas(8) < junakSkripta.score){
+				newRecord.SetActive(true);
+			}
 			stanje++;
 		}
 		

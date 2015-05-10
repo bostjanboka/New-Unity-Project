@@ -7,9 +7,8 @@ public class ScenarijLevela11 : MonoBehaviour {
 	public GameObject junak;
 	NewBehaviourScript junakSkripta;
 
+	public GameObject newRecord;
 
-	
-	public GameObject popUpRekord;
 	
 	public GameObject prostorZogic;
 	SteviloZogicSkripta steviloZogic;
@@ -35,11 +34,7 @@ public class ScenarijLevela11 : MonoBehaviour {
 			LeveliManeger._instance.odkleniStopnjo(12);
 			junakSkripta.zmagalLevel();
 			if(LeveliManeger._instance.getCas(11) < junakSkripta.score){
-				Instantiate(popUpRekord);
-			}else{
-				if(Random.value < 0.5f){
-					Move.showCelozaslonsko ();
-				}
+				newRecord.SetActive(true);
 			}
 			LeveliManeger._instance.naredilStopnjo();
 

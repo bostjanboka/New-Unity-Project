@@ -9,7 +9,7 @@ public class ScenarijLevel5 : MonoBehaviour {
 
 	
 	
-	
+	public GameObject newRecord;
 	public GameObject prostorZogic;
 	public GameObject zmagal;
 	public GameObject akcija;
@@ -37,8 +37,8 @@ public class ScenarijLevel5 : MonoBehaviour {
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
 
-			if(Random.value < 0.5f){
-				Move.showCelozaslonsko ();
+			if(LeveliManeger._instance.getCas(5) < junakSkripta.score){
+				newRecord.SetActive(true);
 			}
 			stanje++;
 			//Time.timeScale=0;

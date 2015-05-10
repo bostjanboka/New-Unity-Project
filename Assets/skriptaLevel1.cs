@@ -7,7 +7,7 @@ public class skriptaLevel1 : MonoBehaviour {
 	public GameObject junak;
 	public GameObject prostorZogic;
 	public GameObject akcija;
-
+	public GameObject newRecord;
 	public GameObject pressTo;
 	public GameObject pressCrta;
 	public GameObject holdTo;
@@ -87,8 +87,8 @@ public class skriptaLevel1 : MonoBehaviour {
 			LeveliManeger._instance.odkleniStopnjo(2);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
-			if(Random.value < 0.5f){
-				Move.showCelozaslonsko ();
+			if(LeveliManeger._instance.getCas(1) < junakSkripta.score){
+				newRecord.SetActive(true);
 			}
 			stanje++;
 		}

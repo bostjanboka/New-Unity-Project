@@ -12,6 +12,7 @@ public class ScenarijLevela9 : MonoBehaviour {
 	public GameObject prostorZogic;
 	public GameObject akcija2;
 	SteviloZogicSkripta steviloZogic;
+	public GameObject newRecord;
 	
 	float stanje;
 	void Start () {
@@ -49,8 +50,8 @@ public class ScenarijLevela9 : MonoBehaviour {
 			LeveliManeger._instance.odkleniStopnjo(10);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
-			if(Random.value < 0.5f){
-				Move.showCelozaslonsko ();
+			if(LeveliManeger._instance.getCas(9) < junakSkripta.score){
+				newRecord.SetActive(true);
 			}
 			stanje++;
 			
