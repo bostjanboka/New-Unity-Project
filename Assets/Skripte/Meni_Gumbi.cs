@@ -45,6 +45,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public static bool pojdiVMeni=false;
 	GameObject zvok;
 	void Awake(){
+		//PlayerPrefs.DeleteAll ();
 
 		exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width-50,Screen.height-80,100));
 		
@@ -64,6 +65,9 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		if (!GameObject.Find ("User(Clone)")) {
 			userSer = Instantiate (user) as GameObject;
+			if (LeveliManeger._instance.getIdUser () == null) {
+				stKamere=2;
+			}
 		} else {
 			userSer = GameObject.Find ("User(Clone)");
 		}
@@ -76,7 +80,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn); ss
 
-		//PlayerPrefs.DeleteAll ();
+
 
 	}
 
@@ -99,7 +103,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		}
 
 		if (!napaka) {
-			userSer.GetComponent<userService> ().getUser (app42InputNick.text);
+			userSer.GetComponent<userService> ().updateUser (app42InputNick.text);
 		}
 
 	}
@@ -157,6 +161,9 @@ public class Meni_Gumbi : MonoBehaviour {
 			x = x.Replace("}","");
 
 			loginText.text = x;
+			if(x.Equals("0 ")){
+				pojdiVMeni=true;
+			}
 		}
 	}
 

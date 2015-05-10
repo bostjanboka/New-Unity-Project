@@ -67,24 +67,22 @@ public class userService : MonoBehaviour {
 		#endif
 		sp = new ServiceAPI (apiKey,secretKey);
 		//saveScore ();
-		dobiUserja();
+		if (LeveliManeger._instance.getIdUser () != null) {
+			getUser ();
+		}
+
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (uspesnoStevilo) {
-			LeveliManeger._instance.setIdUser("Player"+steviloUser);
-			updateUser(null);
-			uspesnoStevilo=false;
-		}
+
 
 		if (PlayerX != null) {
-
 			playerName=PlayerX;
+			LeveliManeger._instance.setIdUser(PlayerX);
 			saveScore();
 			PlayerX=null;
 			userUstvarjen=true;
-
 		}
 
 		if (userUstvarjen) {
@@ -136,37 +134,18 @@ public class userService : MonoBehaviour {
 		scoreBoardService.GetTopNRankers ("mordenelf", 100, new UnityTopNRankBack());
 	}
 
-	public void dobiUserja(){
-		string user = LeveliManeger._instance.getIdUser ();
-		if (user != null) {
-			getUser (null);
-		} else {
-			getUserCount();
-		}
-	}
-
 
 	public void updateUser(string ime){
-		firstName = ime;
 		userSer = App42API.BuildUserService ();  
-		userSer.CreateUser (LeveliManeger._instance.getIdUser(), "boka", LeveliManeger._instance.getIdUser()+"@gmail.com", new UnityUpdateUser ()); 
+		userSer.CreateUser (ime, "boka", ime+"@gmail.com", new UnityUpdateUser ()); 
 	}
 
-	public void getUser(string ime){
-		flag = false;
-		if (ime != null) {
-			flag=true;
-		}
-		firstName = ime;
+	public void getUser(){
 		userSer = sp.BuildUserService (); // Initializing UserService.
 		userSer.GetUser (LeveliManeger._instance.getIdUser(), new UserResponse());
 	}
 
-	public void getUserCount(){
-		userSer = App42API.BuildUserService();  
-		userSer.GetAllUsersCount(new UnityUsersCount());   
-	}
-
+	
 	public class UnityUsersCount : App42CallBack  
 	{  
 		public void OnSuccess(object response)  
@@ -186,27 +165,14 @@ public class userService : MonoBehaviour {
 	{  
 		public void OnSuccess(object response)  
 		{  
-			if(flag)  
-			{  
-				User user = (User) response;   
-				User.Profile profile = new User.Profile(user);  
-				if(firstName != null){
-					profile.SetFirstName(firstName);   
-				}else{
-					profile.SetFirstName(LeveliManeger._instance.getIdUser());
-				}
+			 
+			User user = (User) response;  
+			/* This will create user in App42 cloud and will return User object */    
+			App42Log.Console("userName is " + user.GetUserName());  
+			PlayerX = user.GetUserName ();
+			App42Log.Console("emailId is " + user.GetEmail()); 
+			Meni_Gumbi.pojdiVMeni=true;
 
-				flag = false;  
-				userSer.CreateOrUpdateProfile(user, new UserResponse());  
-
-				/* Above line will create user profile and returns User object which has profile object in it. */  
-			}  
-			else {  
-				User user = (User) response;  
-				/* This will create user in App42 cloud and will return User object */    
-				App42Log.Console("userName is " + user.GetUserName());  
-				App42Log.Console("emailId is " + user.GetEmail());   
-			}  
 		}  
 		public void OnException(Exception e)  
 		{  
@@ -229,23 +195,9 @@ public class userService : MonoBehaviour {
 					Debug.Log ("EmailId : " + userObj.GetEmail());
 					User.Profile profileObj = (User.Profile)userObj.GetProfile();
 					LeveliManeger._instance.setIdUser(userObj.GetUserName());
+					PlayerX=userObj.GetUserName();
 
-					if (profileObj != null )
-					{
-						Debug.Log ("FIRST NAME" + profileObj.GetFirstName());
-						PlayerX=profileObj.GetFirstName();
-					}
-					if(flag){
-						User user2 = (User) user;   
-						User.Profile profile = new User.Profile(user2); 
-						if(firstName != null){
-							profile.SetFirstName(firstName);   
-						}else{
-							profile.SetFirstName(LeveliManeger._instance.getIdUser());
-						}
-						userSer.CreateOrUpdateProfile(user2, new UserResponse());  
-						flag=false;
-					}
+
 				}
 				else
 				{
@@ -315,6 +267,7 @@ public class userService : MonoBehaviour {
 					scoreLista=true;
 					for (int i = 0; i < scoreList.Count; i++) {
 						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
+
 						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());
 						Debug.Log ("ScoreId is  : " + scoreList [i].GetScoreId ());
 						Debug.Log ("Value is  : " + scoreList [i].GetValue ());
