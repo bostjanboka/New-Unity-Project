@@ -144,7 +144,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
 --- !u!212 &140507540
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -811,7 +811,7 @@ Prefab:
   m_IsPrefabParent: 0
 --- !u!1 &1557944393
 GameObject:
-  m_PrefabParentObject: {fileID: 114068, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
+  m_PrefabParentObject: {fileID: 144890, guid: 2647c772e06f45f43b8a6b283524fd4a, type: 2}
   m_PrefabInternal: {fileID: 1557944392}
 --- !u!1 &1618025740
 GameObject:
