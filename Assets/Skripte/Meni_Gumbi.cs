@@ -118,6 +118,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	void Start () {
+		popUpRate.SetActive (false);
 		Social.localUser.Authenticate((bool success) => {
 			// handle success or failure
 
@@ -178,7 +179,8 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	public void facebook(){
-		Application.OpenURL ("http://unity3d.com/");
+		Debug.Log ("OPEN PAGE");
+		Application.OpenURL ("https://www.facebook.com/pages/Mordenelf/107340919596875?__mref=message_bubble");
 
 	}
 
