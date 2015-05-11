@@ -114,7 +114,7 @@ public class userService : MonoBehaviour {
 			App42Log.SetDebug (true);
 			scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
 			Debug.Log(LeveliManeger._instance.getSkupniCas ()+"skupni cassss");
-			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor(LeveliManeger._instance.getSkupniCas ()*100), new UnityCallBack ());
+			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor(LeveliManeger._instance.getSkupniCas ()*10), new UnityCallBack ());
 		}
 
 
