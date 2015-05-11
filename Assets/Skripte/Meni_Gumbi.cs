@@ -23,9 +23,11 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	GameObject mordenLogo;
+	GameObject gameLogo;
 	GameObject userSer;
 	public GameObject gameMusic;
 	public GameObject loadingMorden;
+	public GameObject loadingGame;
 
 	public GameObject popUpRate;
 	public GameObject user;
@@ -61,6 +63,12 @@ public class Meni_Gumbi : MonoBehaviour {
 			mordenLogo.GetComponent<LoadingScreen>().show();
 		} else {
 			mordenLogo = GameObject.Find ("Loading mordenkul(Clone)");
+		}
+
+		if (GameObject.Find ("Loading Logo(Clone)") == null) {
+			gameLogo = Instantiate (loadingGame) as GameObject;
+		} else {
+			gameLogo = GameObject.Find ("Loading Logo(Clone)");
 		}
 
 		if (!GameObject.Find ("User(Clone)")) {
@@ -186,7 +194,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public void newGameButton(){
 		//Application.LoadLevel ("level1");
-		mordenLogo.GetComponent<LoadingScreen> ().show ();
+		gameLogo.GetComponent<LoadingScreen> ().show ();
 	}
 
 	public void continueGame(){

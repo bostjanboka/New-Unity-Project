@@ -23,7 +23,9 @@ public class LoadingScreen : MonoBehaviour
 	{
 
 		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = false;
-		logo.GetComponent<SpriteRenderer> ().enabled = false;
+		if (logo) {
+			logo.GetComponent<SpriteRenderer> ().enabled = false;
+		}
 		if (animacija) {
 			animacija.GetComponent<Animator> ().enabled = false;
 			animacija.GetComponent<SpriteRenderer> ().enabled = false;
@@ -36,9 +38,9 @@ public class LoadingScreen : MonoBehaviour
 	{
 		showed = true;
 		Debug.Log("show show");
-
-		logo.GetComponent<SpriteRenderer> ().enabled = true;
-		
+		if (logo) {
+			logo.GetComponent<SpriteRenderer> ().enabled = true;
+		}
 		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = true;
 		if (animacija) {
 			animacija.GetComponent<Animator> ().enabled = true;
@@ -64,9 +66,9 @@ public class LoadingScreen : MonoBehaviour
 		//Debug.Log("IZGINI");
 		//gameObject.GetComponent<Animator> ().enabled = false;
 		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = false;
-
-		logo.GetComponent<SpriteRenderer> ().enabled = false;
-		
+		if (logo) {
+			logo.GetComponent<SpriteRenderer> ().enabled = false;
+		}
 		if (animacija) {
 			animacija.GetComponent<Animator> ().enabled = false;
 			animacija.GetComponent<SpriteRenderer> ().enabled = false;

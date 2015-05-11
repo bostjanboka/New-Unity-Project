@@ -1544,7 +1544,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1542134872}
-        m_MethodName: 
+        m_MethodName: newGameButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6356,6 +6356,7 @@ MonoBehaviour:
   nickText: {fileID: 529490365}
   gameMusic: {fileID: 165312, guid: b1eb6db5e24cf864ba90ec32697a01ab, type: 2}
   loadingMorden: {fileID: 151876, guid: d04ffcff55e84504cb62ccdd142d929f, type: 2}
+  loadingGame: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
   popUpRate: {fileID: 273906049}
   user: {fileID: 142336, guid: acf85056657990a4b9cf00d419b1fd54, type: 2}
   musicToggle: {fileID: 501473186}
