@@ -487,7 +487,7 @@ Transform:
   m_Children:
   - {fileID: 1569890802}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1276218317
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +531,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1001 &1303300226
 Prefab:
   m_ObjectHideFlags: 0
@@ -587,6 +587,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: MeniScena
       objectReference: {fileID: 0}
+    - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: loading
+      value: 
+      objectReference: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
@@ -631,7 +635,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!212 &1453584612
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -822,7 +826,7 @@ Transform:
   - {fileID: 352834887}
   - {fileID: 708620597}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!4 &1569890802
 Transform:
   m_PrefabParentObject: {fileID: 480658, guid: 8c83fe695e16c9a4686306600db3b628, type: 2}

@@ -219,6 +219,10 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: level12
       objectReference: {fileID: 0}
+    - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: loading
+      value: 
+      objectReference: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
@@ -277,7 +281,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &215673587
 GameObject:
   m_ObjectHideFlags: 0
@@ -307,7 +311,7 @@ Transform:
   m_Children:
   - {fileID: 720321300}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!61 &215673589
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -540,7 +544,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!212 &381805532
 SpriteRenderer:
   m_ObjectHideFlags: 0
