@@ -22,6 +22,8 @@ public class InputNavigacija : MonoBehaviour {
 
 	bool pavza=false;
 
+	bool ugasniReklamo=false;
+
 	public static bool zvoki=true;
 
 	void Awake(){
@@ -43,7 +45,8 @@ public class InputNavigacija : MonoBehaviour {
 			back.SetActive (true);
 			pavza=false;
 
-			//Move.prizgiReklamo();
+			Move.prizgiReklamo();
+			ugasniReklamo=true;
 		}
 		if (back.activeSelf || zmagal.activeSelf || zgubil.activeSelf) {
 			HUD.SetActive(false);
@@ -51,6 +54,11 @@ public class InputNavigacija : MonoBehaviour {
 		} else {
 			OnPressedSkripta.omogocenoPremikanje = true;
 			HUD.SetActive(true);
+			if(ugasniReklamo){
+				Move.ugasniReklamo();
+				ugasniReklamo=false;
+			}
+
 		}
 
 	
@@ -68,14 +76,14 @@ public class InputNavigacija : MonoBehaviour {
 	public void Zgubil(){
 		Time.timeScale = 0;
 		zgubil.SetActive (true);
-		//Move.prizgiReklamo();
+		Move.prizgiReklamo();
 
 	}
 
 	public void Zmagal(){
 		Time.timeScale = 0;
 		zmagal.SetActive (true);
-		//Move.prizgiReklamo();
+		Move.prizgiReklamo();
 
 	}
 
