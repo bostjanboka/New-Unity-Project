@@ -35,6 +35,7 @@ public class InputNavigacija : MonoBehaviour {
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
 		loadingScreen = Instantiate (loading) as GameObject;
+		ugasniReklamo=true;
 		//Time.timeScale = 1;
 	}
 	
@@ -49,6 +50,7 @@ public class InputNavigacija : MonoBehaviour {
 			ugasniReklamo=true;
 		}
 		if (back.activeSelf || zmagal.activeSelf || zgubil.activeSelf) {
+			ugasniReklamo=true;
 			HUD.SetActive(false);
 			OnPressedSkripta.omogocenoPremikanje = false;
 		} else {

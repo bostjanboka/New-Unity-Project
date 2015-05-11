@@ -38,7 +38,7 @@ public class Move : MonoBehaviour {
 		//request = new AdRequest.Builder().Build();
 		//bannerView.LoadAd(request);
 		//bannerView.Show();
-		// ugasniReklamo();		
+		ugasniReklamo();		
 
 
 	}
