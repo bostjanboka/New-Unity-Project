@@ -308,6 +308,10 @@ Prefab:
       propertyPath: loading
       value: 
       objectReference: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
+    - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: level
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
@@ -344,7 +348,7 @@ Transform:
   - {fileID: 1318668748}
   - {fileID: 1027081573}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &768089250
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +521,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &993418716
 GameObject:
   m_ObjectHideFlags: 0
@@ -918,7 +922,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
 --- !u!1 &1734887300
 GameObject:
   m_ObjectHideFlags: 0
