@@ -2645,10 +2645,10 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor: {r: .254901975, g: .250980407, b: .258823544, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+      m_TextColor: {r: .254901975, g: .250980407, b: .258823544, a: 1}
     m_Active:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -3985,7 +3985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .368627459, g: .698039234, b: .600000024, a: 1}
+  m_Color: {r: .254901975, g: .250980407, b: .258823544, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
     m_FontSize: 24
@@ -5493,7 +5493,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .454901963, g: .352941185, b: .200000003, a: 1}
+  m_Color: {r: .254901975, g: .250980407, b: .258823544, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
     m_FontSize: 14
@@ -8088,8 +8088,8 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -.0199999996, y: -.239999995}
-  m_SizeDelta: {x: 232.399994, y: 81.0100021}
+  m_AnchoredPosition: {x: -.0199999996, y: -.529999971}
+  m_SizeDelta: {x: 232.399994, y: 100.010002}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2099010564
 MonoBehaviour:
@@ -8103,7 +8103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .988235354, g: .960784376, b: .749019623, a: 1}
+  m_Color: {r: .254901975, g: .250980407, b: .258823544, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
     m_FontSize: 28
@@ -8111,7 +8111,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 10
     m_MaxSize: 40
-    m_Alignment: 7
+    m_Alignment: 4
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
