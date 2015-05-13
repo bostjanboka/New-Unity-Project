@@ -247,6 +247,10 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 102642, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
@@ -659,7 +663,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469440, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.88999999
       objectReference: {fileID: 0}
     - target: {fileID: 469440, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalPosition.z
@@ -736,11 +740,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 21267196, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_Color.r
@@ -756,7 +760,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 4
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5888510, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
@@ -774,7 +778,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 524708969}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -1022,11 +1026,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 21267196, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_Color.r
@@ -1060,7 +1064,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 731170400}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -1170,6 +1174,10 @@ Prefab:
       propertyPath: inputNavigacija
       value: 
       objectReference: {fileID: 175617174}
+    - target: {fileID: 478178, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
   m_IsPrefabParent: 0
@@ -1267,11 +1275,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 21267196, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_Color.r
@@ -1305,7 +1313,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 937225214}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
@@ -1638,7 +1646,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 469440, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -2
+      value: -1.88999999
       objectReference: {fileID: 0}
     - target: {fileID: 469440, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1715,11 +1723,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.79999995
+      value: 1.89999998
       objectReference: {fileID: 0}
     - target: {fileID: 472304, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
       propertyPath: m_LocalPosition.y
@@ -1753,7 +1761,7 @@ PolygonCollider2D:
   m_GameObject: {fileID: 1708167626}
   m_Enabled: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   m_Points:
