@@ -91,7 +91,7 @@ public class BossKrogla : MonoBehaviour {
 		if (other.gameObject.tag.Equals ("spirala")) {
 
 			if(indexBarve <= 6){
-				if(novaZoga && skala < 0.4f){
+				if(novaZoga && skala < 1.7f){
 					gameObject.transform.localScale *= 2;
 					skala /= 0.5f;
 					visina/=0.9f;
@@ -103,7 +103,7 @@ public class BossKrogla : MonoBehaviour {
 				}
 
 			}else{
-				if(novaZoga && skala > 0.06f){
+				if(novaZoga && skala > 0.13f){
 					inst = Instantiate (novaZoga, transform.position, Quaternion.identity) as GameObject;
 					inst.transform.localScale = inst.transform.localScale * 0.5f;
 					rb = inst.GetComponent<Rigidbody2D>();

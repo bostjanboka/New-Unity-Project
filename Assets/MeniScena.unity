@@ -6071,7 +6071,7 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   m_SelectionColor: {r: .65882355, g: .807843149, b: 1, a: .752941191}
   m_Text: 
-  m_CaretBlinkRate: 1.70000005
+  m_CaretBlinkRate: 1.75
 --- !u!114 &1535955221
 MonoBehaviour:
   m_ObjectHideFlags: 0

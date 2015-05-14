@@ -109,6 +109,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		singUpLogo.SetActive (false);
 
+
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn); ss
 
@@ -145,6 +146,9 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	void Start () {
+		if (GameObject.Find ("InputField Input Caret")) {
+			GameObject.Find ("InputField Input Caret").SetActive (false);
+		}
 		popUpRate.SetActive (false);
 		Social.localUser.Authenticate((bool success) => {
 			// handle success or failure
