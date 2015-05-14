@@ -1,0 +1,16 @@
+﻿<Deployment xmlns="http://schemas.microsoft.com/client/2007/deployment" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" EntryPointAssembly="CandyTrouble" EntryPointType="CandyTrouble.App" RuntimeVersion="4.7.50308.0">
+  <Deployment.Parts>
+    <AssemblyPart x:Name="CandyTrouble" Source="CandyTrouble.dll" />
+    <AssemblyPart x:Name="Assembly-CSharp" Source="Assembly-CSharp.dll" />
+    <AssemblyPart x:Name="GoogleAds" Source="GoogleAds.dll" />
+    <AssemblyPart x:Name="UnityEngine" Source="UnityEngine.dll" />
+    <AssemblyPart x:Name="UnityEngine.UI" Source="UnityEngine.UI.dll" />
+    <AssemblyPart x:Name="UnityPluginForWindowsPhone" Source="UnityPluginForWindowsPhone.dll" />
+    <AssemblyPart x:Name="WinRTBridge" Source="WinRTBridge.dll" />
+    <AssemblyPart x:Name="WinRTLegacy" Source="WinRTLegacy.dll" />
+    <AssemblyPart x:Name="App42_Unity3D_SDK_WP8_3.3.1" Source="App42_Unity3D_SDK_WP8_3.3.1.dll" />
+    <AssemblyPart x:Name="FacebookWinPhone8" Source="FacebookWinPhone8.dll" />
+    <AssemblyPart x:Name="BridgeInterface" Source="BridgeInterface.dll" />
+    <AssemblyPart x:Name="UnityPlayer" Source="UnityPlayer.dll" />
+  </Deployment.Parts>
+</Deployment>

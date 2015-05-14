@@ -1,0 +1,6 @@
+Assembly-CSharp.dll
+UnityEngine.UI.dll
+App42_Unity3D_SDK_WP8_3.3.1.dll
+UnityPluginForWindowsPhone.dll
+FacebookWinPhone8.dll
+GoogleAds.dll
