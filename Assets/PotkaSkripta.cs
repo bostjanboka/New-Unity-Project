@@ -128,7 +128,11 @@ public class PotkaSkripta : MonoBehaviour {
 
 		}
 		LeveliManeger._instance.setSkupniCas (skupaj);
-		totalCas.text = casovniFormat (skupaj);
+		if (skupaj > 0) {
+			totalCas.text = casovniFormat (skupaj);
+		} else {
+			totalCas.text ="0";
+		}
 		userService.posodobiScore = true;
 	}
 	
