@@ -6137,6 +6137,7 @@ MonoBehaviour:
   loadingMorden: {fileID: 154560, guid: d04ffcff55e84504cb62ccdd142d929f, type: 2}
   loadingMorden1: {fileID: 148168, guid: 54d69a464d0787641991db054f7a9783, type: 2}
   loadingGame: {fileID: 171852, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
+  loadingSign: {fileID: 146968, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
   popUpRate: {fileID: 273906049}
   user: {fileID: 142336, guid: acf85056657990a4b9cf00d419b1fd54, type: 2}
   musicToggle: {fileID: 501473186}

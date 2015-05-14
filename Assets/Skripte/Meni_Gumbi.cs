@@ -25,12 +25,14 @@ public class Meni_Gumbi : MonoBehaviour {
 	GameObject mordenLogo;
 	GameObject mordenLogo1;
 	GameObject gameLogo;
+	GameObject singUpLogo;
 
 	GameObject userSer;
 	public GameObject gameMusic;
 	public GameObject loadingMorden;
 	public GameObject loadingMorden1;
 	public GameObject loadingGame;
+	public GameObject loadingSign;
 
 	public GameObject popUpRate;
 	public GameObject user;
@@ -49,6 +51,8 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public static bool pojdiVMeni=false;
 	GameObject zvok;
+
+	bool casNazaj=false;
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
 
@@ -66,6 +70,13 @@ public class Meni_Gumbi : MonoBehaviour {
 			mordenLogo.GetComponent<LoadingScreen>().show();
 		} else {
 			mordenLogo = GameObject.Find ("Loading mordenkul(Clone)");
+		}
+
+		if (GameObject.Find ("splash_prozoren(Clone)") == null) {
+			singUpLogo = Instantiate (loadingSign) as GameObject;
+
+		} else {
+			singUpLogo = GameObject.Find ("splash_prozoren(Clone)");
 		}
 
 		if (GameObject.Find ("Loading mordenkul 1(Clone)") == null) {
@@ -95,6 +106,9 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
 
+
+		singUpLogo.SetActive (false);
+
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteZvok (!soundToggle.isOn);
 		//zvok.GetComponent<DontDestroyOnLoad> ().muteMuzika (!musicToggle.isOn); ss
 
@@ -104,6 +118,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	public void narediPlayer(){
+
 		nickText.text = "";
 
 		loginText.text = "";
@@ -122,6 +137,8 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		if (!napaka) {
 			userSer.GetComponent<userService> ().updateUser (app42InputNick.text);
+			singUpLogo.SetActive(true);
+
 		}
 
 	}
@@ -153,6 +170,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			popUpRate.SetActive(true);
 		}
 
+
 	}
 	
 	// Update is called once per frame
@@ -166,11 +184,23 @@ public class Meni_Gumbi : MonoBehaviour {
 			}
 
 		}
+
+		if (input.enabled && singUpLogo.activeSelf) {
+
+			Time.timeScale = 0.0000001f;
+		} else if(casNazaj){
+			casNazaj=false;
+			Time.timeScale=1;
+		}
 		if (pojdiVMeni) {
 			pojdiVMeni=false;
 			if(input.enabled){
 				kamera(0);
+				singUpLogo.SetActive(false);
+				casNazaj=true;
+
 			}
+
 		}
 
 		if (errorText != null) {
