@@ -275,16 +275,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: ST_del
-      value: 8
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: faktorVisine
-      value: .949999988
+      value: .889999986
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: novaZoga
       value: 
-      objectReference: {fileID: 107728, guid: 534a63245a15267428faf2083cb440a4, type: 2}
+      objectReference: {fileID: 679192794}
     - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_SortingOrder
       value: 8
@@ -295,7 +295,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: faktorSkale
-      value: .850000024
+      value: .629999995
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: silaSplita
@@ -320,6 +320,10 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &679192794 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 123578, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+  m_PrefabInternal: {fileID: 679192793}
 --- !u!1001 &716400555
 Prefab:
   m_ObjectHideFlags: 0
