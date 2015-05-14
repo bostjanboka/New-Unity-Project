@@ -28,7 +28,8 @@ public class LoadingScreen : MonoBehaviour
 		}
 		if (animacija) {
 			//animacija.GetComponent<Animator> ().enabled = false;
-			animacija.GetComponent<SpriteRenderer> ().enabled = false;
+			//animacija.GetComponent<SpriteRenderer> ().enabled = false;
+			animacija.SetActive(false);
 		}
 
 
@@ -44,7 +45,8 @@ public class LoadingScreen : MonoBehaviour
 		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = true;
 		if (animacija) {
 			//animacija.GetComponent<Animator> ().enabled = true;
-			animacija.GetComponent<SpriteRenderer> ().enabled = true;
+			//animacija.GetComponent<SpriteRenderer> ().enabled = true;
+			animacija.SetActive(true);
 		}
 		Time.timeScale = .0000001f;
 		StartCoroutine(Wait(Time.timeScale * delayTime));
@@ -71,9 +73,10 @@ public class LoadingScreen : MonoBehaviour
 		}
 		if (animacija) {
 			//animacija.GetComponent<Animator> ().enabled = false;
-			animacija.GetComponent<SpriteRenderer> ().enabled = false;
+			//animacija.GetComponent<SpriteRenderer> ().enabled = false;
+			animacija.SetActive(false);
 		}
-		Destroy (gameObject);
+		//Destroy (gameObject);
 	}
 	
 	void Update()

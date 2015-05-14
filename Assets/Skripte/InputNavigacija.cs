@@ -34,7 +34,7 @@ public class InputNavigacija : MonoBehaviour {
 		back.SetActive (false);
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
-		loadingScreen = Instantiate (loading) as GameObject;
+		loadingScreen = GameObject.Find ("Loading Logo(Clone)");
 		ugasniReklamo=true;
 		//Time.timeScale = 1;
 	}
