@@ -10,6 +10,9 @@ public class scrollView : MonoBehaviour {
 	public GUIStyle myStyle;
 	public GUIStyle myStyleScore;
 
+	public GUIStyle soda;
+	public GUIStyle liha;
+
 	IList<Game.Score> highscore;
 	Camera camera2;
 
@@ -33,6 +36,11 @@ public class scrollView : MonoBehaviour {
 						if (highscore.Count == j) {
 							i = j;
 							break;
+						}
+						if(j % 2 == 0){
+							GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), "", soda);
+						}else{
+							GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), "", liha);
 						}
 						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), (j+1) + ". "+highscore[j].GetUserName(), myStyle);
 						GUI.Box (new Rect (Screen.width * 0.6f, Screen.height * 0.1f + j * 53, Screen.width * 0.1f, 50), ""+highscore [j].GetValue(), myStyleScore);
