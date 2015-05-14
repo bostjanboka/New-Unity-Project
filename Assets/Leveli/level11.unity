@@ -1301,6 +1301,10 @@ Prefab:
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 21267196, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5888510, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4dcef6b4512e36d4b81072c77596b037, type: 2}

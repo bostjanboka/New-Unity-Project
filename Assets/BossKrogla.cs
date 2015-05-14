@@ -31,16 +31,16 @@ public class BossKrogla : MonoBehaviour {
 	
 	void Start () {
 		barve = new Color[10];
-		barve [0] = new Color (1,0,0);
-		barve [1] = new Color (1,127f/255,0);
-		barve [2] = new Color (1,1,0);
-		barve [3] = new Color (0,1,0);
-		barve [4] = new Color (0,0,1);
-		barve [5] = new Color (75f/255,0,130f/255);
-		barve [6] = new Color (143f/255,0,1);
-		barve [7] = new Color (212f/255,175f/255,52f/255);
-		barve [8] = new Color (212f/255,175f/255,52f/255);
-		barve [9] = new Color (212f/255,175f/255,52f/255);
+		barve [0] = new Color (94f/255,178f/255,153f/255);
+		barve [1] = new Color (207f/255,202f/255,76f/255);
+		barve [2] = new Color (116f/255,90f/255,51f/255);
+		barve [3] = new Color (65f/255,64f/255,66f/255);
+		barve [4] = new Color (51f/255,204f/255,204f/255);
+		barve [5] = new Color (117f/255,208f/255,84f/255);
+		barve [6] = new Color (158f/255,114f/255,249f/255);
+		barve [7] = new Color (241f/255,90f/255,41f/255);
+		barve [8] = new Color (241f/255,90f/255,41f/255);
+		barve [9] = new Color (241f/255,90f/255,41f/255);
 		indexBarve = 0;
 		casTrajanja = 0;
 		rb = transform.parent.GetComponent<Rigidbody2D>();
