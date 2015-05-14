@@ -758,7 +758,7 @@ GameObject:
   - 50: {fileID: 1538023230}
   m_Layer: 0
   m_Name: Strop
-  m_TagString: strop
+  m_TagString: stropN
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
