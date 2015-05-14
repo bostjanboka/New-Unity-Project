@@ -176,7 +176,7 @@ public class NewBehaviourScript : MonoBehaviour {
 			}
 
 			casi.text= PotkaSkripta.casovniFormatIgra(score);
-			casi.color=new Color(214f/255, 90f/255, 41f/255);
+			casi.color=new Color(1, 1, 1);
 			if(timeToBeat > 0){
 				if(score < timeToBeat){
 					//casi.color = new Color(1,24f/255,24f/255,150f/255);
