@@ -343,11 +343,11 @@ Prefab:
     - target: {fileID: 11446408, guid: b81cc0cfe696607499abaf593444ad1a, type: 2}
       propertyPath: noviZele
       value: 
-      objectReference: {fileID: 140914, guid: 0ccf2ff1a8a03d846934c11db92cc395, type: 2}
+      objectReference: {fileID: 113186, guid: b81cc0cfe696607499abaf593444ad1a, type: 2}
     - target: {fileID: 21216264, guid: b81cc0cfe696607499abaf593444ad1a, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 878e37beab811ca458458c6c37b0be62,
+      objectReference: {fileID: 21300000, guid: 4dfb6d3530e3d9f45979167bb2956d35,
         type: 3}
     - target: {fileID: 113186, guid: b81cc0cfe696607499abaf593444ad1a, type: 2}
       propertyPath: m_Name

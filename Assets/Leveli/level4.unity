@@ -1210,15 +1210,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.r
-      value: .254901975
+      value: .945098042
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.g
-      value: .250980407
+      value: .352941185
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Color.b
-      value: .258823544
+      value: .160784319
       objectReference: {fileID: 0}
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_SortingOrder
