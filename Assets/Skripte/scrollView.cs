@@ -8,6 +8,7 @@ public class scrollView : MonoBehaviour {
 
 	Vector2 scrollPos;
 	public GUIStyle myStyle;
+	public GUIStyle myStyleScore;
 
 	IList<Game.Score> highscore;
 	Camera camera2;
@@ -33,7 +34,8 @@ public class scrollView : MonoBehaviour {
 							i = j;
 							break;
 						}
-						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), (j+1) + ". " + highscore [j].GetUserName ()+"\t"+highscore [j].GetValue(), myStyle);
+						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), (j+1) + ". "+highscore[j].GetUserName(), myStyle);
+						GUI.Box (new Rect (Screen.width * 0.6f, Screen.height * 0.1f + j * 53, Screen.width * 0.1f, 50), ""+highscore [j].GetValue(), myStyleScore);
 					}
 					GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + i * 53, Screen.width * 0.4f, 50), "", myStyle);
 
