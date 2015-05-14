@@ -235,15 +235,15 @@ Prefab:
       objectReference: {fileID: 8300000, guid: 51db6568b841a4540b2539029c3d8691, type: 3}
     - target: {fileID: 5886452, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Radius
-      value: 1.02031505
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 428664, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 428664, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_LocalScale.y
-      value: 2.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 21272102, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Materials.Array.data[0]
@@ -275,7 +275,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: faktorVisine
-      value: .0625
+      value: .949999988
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: novaZoga
@@ -287,11 +287,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 5881572, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: m_Radius
-      value: 2.54999995
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: faktorSkale
-      value: .5
+      value: .850000024
       objectReference: {fileID: 0}
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: silaSplita
@@ -300,6 +300,18 @@ Prefab:
     - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
       propertyPath: gravitacija
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 436204, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 11459652, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
+      propertyPath: speed
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: cdd16d89cf6cab542b6b9f0ea27f189c, type: 2}
