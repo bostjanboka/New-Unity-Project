@@ -212,7 +212,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			string[] y = x.Split(':');
 			x = y[y.Length-1];
 			x = x.Replace("}","");
-
+			singUpLogo.SetActive(false);
 			loginText.text = x;
 			if(x.Equals("0 ")){
 				pojdiVMeni=true;
