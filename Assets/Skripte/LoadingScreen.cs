@@ -68,6 +68,7 @@ public class LoadingScreen : MonoBehaviour
 
 	public void hide()
 	{
+		showed = false;
 		//Debug.Log("IZGINI");
 		//gameObject.GetComponent<Animator> ().enabled = false;
 		slikaOzadja.GetComponent<SpriteRenderer> ().enabled = false;
