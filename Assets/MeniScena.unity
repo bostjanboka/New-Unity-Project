@@ -1744,8 +1744,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b4b093f2669ab48bfd62b9f0dc61f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 22
-  tocka: {fileID: 1812976058}
+  size: 20
+  tocka: {fileID: 0}
 --- !u!114 &508396342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1758,7 +1758,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56ad90271c445f4eb68500cf4fee8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prikaziReklamoBool: 1
+  prikaziReklamoBool: 0
   ugasniReklamoBool: 0
   loadCelo: 0
   showCelo: 0
@@ -2563,8 +2563,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b4b093f2669ab48bfd62b9f0dc61f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 22
-  tocka: {fileID: 611962123}
+  size: 20
+  tocka: {fileID: 0}
 --- !u!114 &653353719
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2577,7 +2577,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56ad90271c445f4eb68500cf4fee8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prikaziReklamoBool: 1
+  prikaziReklamoBool: 0
   ugasniReklamoBool: 0
   loadCelo: 0
   showCelo: 0
@@ -2645,66 +2645,7 @@ MonoBehaviour:
     m_Name: 
     m_Normal:
       m_Background: {fileID: 0}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Hover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
-    m_Active:
-      m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Focused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnNormal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnHover:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnActive:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_OnFocused:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
-    m_Border:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Margin:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Padding:
-      m_Left: 20
-      m_Right: 0
-      m_Top: 10
-      m_Bottom: 0
-    m_Overflow:
-      m_Left: 0
-      m_Right: 0
-      m_Top: 0
-      m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
-    m_FontSize: 20
-    m_FontStyle: 0
-    m_Alignment: 3
-    m_WordWrap: 0
-    m_RichText: 1
-    m_TextClipping: 0
-    m_ImagePosition: 3
-    m_ContentOffset: {x: 0, y: 0}
-    m_FixedWidth: 0
-    m_FixedHeight: 0
-    m_StretchWidth: 0
-    m_StretchHeight: 0
-  myStyleScore:
-    m_Name: 
-    m_Normal:
-      m_Background: {fileID: 0}
-      m_TextColor: {r: 1, g: 1, b: 1, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
@@ -2738,18 +2679,18 @@ MonoBehaviour:
       m_Bottom: 0
     m_Padding:
       m_Left: 0
-      m_Right: 20
-      m_Top: 10
+      m_Right: 0
+      m_Top: 0
       m_Bottom: 0
     m_Overflow:
       m_Left: 0
       m_Right: 0
       m_Top: 0
       m_Bottom: 0
-    m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
-    m_FontSize: 20
+    m_Font: {fileID: 0}
+    m_FontSize: 0
     m_FontStyle: 0
-    m_Alignment: 5
+    m_Alignment: 0
     m_WordWrap: 0
     m_RichText: 1
     m_TextClipping: 0
@@ -2757,12 +2698,71 @@ MonoBehaviour:
     m_ContentOffset: {x: 0, y: 0}
     m_FixedWidth: 0
     m_FixedHeight: 0
-    m_StretchWidth: 0
+    m_StretchWidth: 1
+    m_StretchHeight: 0
+  myStyleScore:
+    m_Name: 
+    m_Normal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Hover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Active:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Focused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnNormal:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnHover:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnActive:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_OnFocused:
+      m_Background: {fileID: 0}
+      m_TextColor: {r: 0, g: 0, b: 0, a: 1}
+    m_Border:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Margin:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Padding:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Overflow:
+      m_Left: 0
+      m_Right: 0
+      m_Top: 0
+      m_Bottom: 0
+    m_Font: {fileID: 0}
+    m_FontSize: 0
+    m_FontStyle: 0
+    m_Alignment: 0
+    m_WordWrap: 0
+    m_RichText: 1
+    m_TextClipping: 0
+    m_ImagePosition: 0
+    m_ContentOffset: {x: 0, y: 0}
+    m_FixedWidth: 0
+    m_FixedHeight: 0
+    m_StretchWidth: 1
     m_StretchHeight: 0
   soda:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: b75ae6732449479409fd23d604e403d5, type: 3}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
@@ -2821,7 +2821,7 @@ MonoBehaviour:
   liha:
     m_Name: 
     m_Normal:
-      m_Background: {fileID: 2800000, guid: b75ae6732449479409fd23d604e403d5, type: 3}
+      m_Background: {fileID: 0}
       m_TextColor: {r: 0, g: 0, b: 0, a: 1}
     m_Hover:
       m_Background: {fileID: 0}
@@ -6303,23 +6303,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e18395ff415b2b64487e2ea4d1182100, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  meni: {fileID: 2090285225}
-  potka: {fileID: 1577474240}
-  input: {fileID: 508396345}
-  scori: {fileID: 653353722}
-  app42InputNick: {fileID: 1535955220}
-  loginText: {fileID: 1088671019}
-  nickText: {fileID: 529490365}
-  gameMusic: {fileID: 165312, guid: b1eb6db5e24cf864ba90ec32697a01ab, type: 2}
-  loadingMorden: {fileID: 154560, guid: d04ffcff55e84504cb62ccdd142d929f, type: 2}
-  loadingMorden1: {fileID: 148168, guid: 54d69a464d0787641991db054f7a9783, type: 2}
-  loadingGame: {fileID: 171852, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
-  loadingSign: {fileID: 146968, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
-  popUpRate: {fileID: 273906049}
-  user: {fileID: 142336, guid: acf85056657990a4b9cf00d419b1fd54, type: 2}
-  musicToggle: {fileID: 501473186}
-  soundToggle: {fileID: 475362785}
-  exit: {fileID: 1953147325}
+  meni: {fileID: 0}
+  potka: {fileID: 0}
+  input: {fileID: 0}
+  scori: {fileID: 0}
+  app42InputNick: {fileID: 0}
+  loginText: {fileID: 0}
+  nickText: {fileID: 0}
+  gameMusic: {fileID: 0}
+  loadingMorden: {fileID: 0}
+  loadingMorden1: {fileID: 0}
+  loadingGame: {fileID: 0}
+  loadingSign: {fileID: 0}
+  popUpRate: {fileID: 0}
+  user: {fileID: 0}
+  musicToggle: {fileID: 0}
+  soundToggle: {fileID: 0}
+  exit: {fileID: 0}
   continueGameGumb: {fileID: 0}
   continueGameMeni: {fileID: 0}
 --- !u!4 &1542134873
@@ -6378,7 +6378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e56ad90271c445f4eb68500cf4fee8e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prikaziReklamoBool: 1
+  prikaziReklamoBool: 0
   ugasniReklamoBool: 0
   loadCelo: 0
   showCelo: 0
@@ -6393,8 +6393,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b4b093f2669ab48bfd62b9f0dc61f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 22
-  tocka: {fileID: 1013267635}
+  size: 20
+  tocka: {fileID: 0}
 --- !u!124 &1577474238
 Behaviour:
   m_ObjectHideFlags: 0
@@ -6662,32 +6662,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da9dec8b83d5e8d44b5ac5535a949e4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ena: {fileID: 446281868}
-  dve: {fileID: 508765913}
-  tri: {fileID: 642450796}
-  stiri: {fileID: 1665516722}
-  pet: {fileID: 880100722}
-  sest: {fileID: 1933087061}
-  sedem: {fileID: 1456304875}
-  osem: {fileID: 1194608120}
-  devet: {fileID: 1235799469}
-  deset: {fileID: 1142222802}
-  enajst: {fileID: 1796625218}
-  dvanajst: {fileID: 834735539}
-  level1: {fileID: 1187813679}
-  level2: {fileID: 1655240253}
-  level3: {fileID: 541461245}
-  level4: {fileID: 125074301}
-  level5: {fileID: 1614423512}
-  level6: {fileID: 1097401863}
-  level7: {fileID: 1652706128}
-  level8: {fileID: 410636649}
-  level9: {fileID: 1985672453}
-  level10: {fileID: 862121848}
-  level11: {fileID: 919702682}
-  level12: {fileID: 42338377}
-  potkaNavodila: {fileID: 894125878}
-  totalCas: {fileID: 999962408}
+  ena: {fileID: 0}
+  dve: {fileID: 0}
+  tri: {fileID: 0}
+  stiri: {fileID: 0}
+  pet: {fileID: 0}
+  sest: {fileID: 0}
+  sedem: {fileID: 0}
+  osem: {fileID: 0}
+  devet: {fileID: 0}
+  deset: {fileID: 0}
+  enajst: {fileID: 0}
+  dvanajst: {fileID: 0}
+  level1: {fileID: 0}
+  level2: {fileID: 0}
+  level3: {fileID: 0}
+  level4: {fileID: 0}
+  level5: {fileID: 0}
+  level6: {fileID: 0}
+  level7: {fileID: 0}
+  level8: {fileID: 0}
+  level9: {fileID: 0}
+  level10: {fileID: 0}
+  level11: {fileID: 0}
+  level12: {fileID: 0}
+  potkaNavodila: {fileID: 0}
+  totalCas: {fileID: 0}
 --- !u!1 &1655240253
 GameObject:
   m_ObjectHideFlags: 0
@@ -8233,8 +8233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b4b093f2669ab48bfd62b9f0dc61f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 22
-  tocka: {fileID: 102709796}
+  size: 20
+  tocka: {fileID: 0}
 --- !u!1 &2099010562
 GameObject:
   m_ObjectHideFlags: 0
