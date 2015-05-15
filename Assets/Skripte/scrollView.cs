@@ -25,8 +25,7 @@ public class scrollView : MonoBehaviour {
 			highscore = userService.scoreList;
 			//highscore = HighScoreManager._instance.GetHighScore (); 
 			scrollPos = GUI.BeginScrollView (
-			new Rect (Screen.width * 0.3f, Screen.height * 0.17f, Screen.width * 0.4f, Screen.height * 0.6f), scrollPos,
-			new Rect (Screen.width * 0.3f, Screen.height * 0.2f, Screen.width * 0.4f, 5000),
+			new Rect (Screen.width * 0.3f, Screen.height * 0.20f, Screen.width * 0.4f, Screen.height * 0.6f), scrollPos,
 			myStyle, myStyle);
 			// HOORAY THOSE TWO ARGUMENTS ELIMINATE
 			// THE STUPID RIDICULOUS UNITY SCROLL BARS
