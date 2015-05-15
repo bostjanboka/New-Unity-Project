@@ -42,7 +42,7 @@ public class ScenarijLevela8 : MonoBehaviour {
 			junakSkripta.zmagalLevel();
 
 			LeveliManeger._instance.naredilStopnjo();
-			if(LeveliManeger._instance.getCas(8) < junakSkripta.score){
+			if(LeveliManeger._instance.getCas(8) >= 0 && LeveliManeger._instance.getCas(8) < junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 			stanje++;

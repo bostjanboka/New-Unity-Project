@@ -46,7 +46,7 @@ public class scenarijLevel4 : MonoBehaviour {
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
 
-			if(LeveliManeger._instance.getCas(4) < junakSkripta.score){
+			if(LeveliManeger._instance.getCas(4) >= 0 && LeveliManeger._instance.getCas(4) < junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 

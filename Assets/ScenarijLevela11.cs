@@ -33,10 +33,11 @@ public class ScenarijLevela11 : MonoBehaviour {
 			stanje++;
 			LeveliManeger._instance.odkleniStopnjo(12);
 			junakSkripta.zmagalLevel();
+			LeveliManeger._instance.naredilStopnjo();
 			if(LeveliManeger._instance.getCas(11) < junakSkripta.score){
 				newRecord.SetActive(true);
 			}
-			LeveliManeger._instance.naredilStopnjo();
+
 
 
 		}

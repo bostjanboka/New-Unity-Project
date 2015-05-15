@@ -50,7 +50,7 @@ public class scenarijLevel3 : MonoBehaviour {
 			LeveliManeger._instance.odkleniStopnjo(4);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
-			if(LeveliManeger._instance.getCas(3) < junakSkripta.score){
+			if(LeveliManeger._instance.getCas(3)>= 0 && LeveliManeger._instance.getCas(3) < junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 
