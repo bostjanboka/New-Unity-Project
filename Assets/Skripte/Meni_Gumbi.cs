@@ -214,7 +214,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			x = x.Replace("}","");
 			singUpLogo.SetActive(false);
 			loginText.text = x;
-			if(x.Equals("0 ")){
+			if(x.Equals("0 ") || x.Contains("Object reference")){
 				pojdiVMeni=true;
 			}
 		}
