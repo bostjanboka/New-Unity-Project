@@ -52,17 +52,17 @@ public class PotkaSkripta : MonoBehaviour {
 		level12.SetActive (false);
 
 		//ena.interactable = LeveliManeger._instance.odklenjenaStopnja(1);
-		//dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
-		//tri.interactable = LeveliManeger._instance.odklenjenaStopnja(3);
-		//stiri.interactable = LeveliManeger._instance.odklenjenaStopnja(4);
-		//pet.interactable = LeveliManeger._instance.odklenjenaStopnja(5);
-		//sest.interactable = LeveliManeger._instance.odklenjenaStopnja(6);
-		//sedem.interactable = LeveliManeger._instance.odklenjenaStopnja(7);
-		//osem.interactable = LeveliManeger._instance.odklenjenaStopnja(8);
-		//devet.interactable = LeveliManeger._instance.odklenjenaStopnja(9);
-		//deset.interactable = LeveliManeger._instance.odklenjenaStopnja(10);
-		//enajst.interactable = LeveliManeger._instance.odklenjenaStopnja(11);
-		//dvanajst.interactable = LeveliManeger._instance.odklenjenaStopnja(12);
+		dve.interactable = LeveliManeger._instance.odklenjenaStopnja(2);
+		tri.interactable = LeveliManeger._instance.odklenjenaStopnja(3);
+		stiri.interactable = LeveliManeger._instance.odklenjenaStopnja(4);
+		pet.interactable = LeveliManeger._instance.odklenjenaStopnja(5);
+		sest.interactable = LeveliManeger._instance.odklenjenaStopnja(6);
+		sedem.interactable = LeveliManeger._instance.odklenjenaStopnja(7);
+		osem.interactable = LeveliManeger._instance.odklenjenaStopnja(8);
+		devet.interactable = LeveliManeger._instance.odklenjenaStopnja(9);
+		deset.interactable = LeveliManeger._instance.odklenjenaStopnja(10);
+		enajst.interactable = LeveliManeger._instance.odklenjenaStopnja(11);
+		dvanajst.interactable = LeveliManeger._instance.odklenjenaStopnja(12);
 
 		if (dve.interactable) {
 			potkaNavodila.SetActive(false);
