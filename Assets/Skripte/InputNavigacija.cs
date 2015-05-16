@@ -25,6 +25,7 @@ public class InputNavigacija : MonoBehaviour {
 	bool ugasniReklamo=false;
 
 	public static bool zvoki=true;
+	float casPavze;
 
 	void Awake(){
 		pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(80 ,Screen.height - 100,100));
@@ -41,13 +42,19 @@ public class InputNavigacija : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if ((Input.GetKeyDown (KeyCode.Escape) || pavza) && !zgubil.activeSelf && !zmagal.activeSelf) {
+
+		if ((Input.GetKeyDown (KeyCode.Escape) || pavza) && !zgubil.activeSelf && !zmagal.activeSelf && back.activeSelf) {
+			pavza=false;
+			contineuGame();
+		}
+		else if ((Input.GetKeyDown (KeyCode.Escape) || pavza) && !zgubil.activeSelf && !zmagal.activeSelf) {
 			Time.timeScale = 0;
 			back.SetActive (true);
 			pavza=false;
 
 			Move.prizgiReklamo();
 			ugasniReklamo=true;
+			casPavze=Time.time;
 		}
 		if (back.activeSelf || zmagal.activeSelf || zgubil.activeSelf) {
 			ugasniReklamo=true;
@@ -68,6 +75,7 @@ public class InputNavigacija : MonoBehaviour {
 
 	public void pause(){
 		pavza = true;
+		casPavze=Time.time;
 		Debug.Log ("Pavza");
 	}
 
