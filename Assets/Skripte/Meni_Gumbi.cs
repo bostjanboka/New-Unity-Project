@@ -150,10 +150,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			GameObject.Find ("InputField Input Caret").SetActive (false);
 		}
 		popUpRate.SetActive (false);
-		Social.localUser.Authenticate((bool success) => {
-			// handle success or failure
 
-		});
 
 		kamera(stKamere);
 		InfoLeveli temp = LeveliManeger._instance.getLevel ();
