@@ -1,8 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using GooglePlayGames;
-using UnityEngine.SocialPlatforms;
+
 
 
 public class Meni_Gumbi : MonoBehaviour {
@@ -58,9 +57,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 		exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width-50,Screen.height-80,100));
 		
-		PlayGamesPlatform.DebugLogEnabled = true;
 
-		PlayGamesPlatform.Activate();
 
 		zvok = GameObject.Find("game music(Clone)");
 		if(zvok == null)
