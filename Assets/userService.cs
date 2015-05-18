@@ -108,12 +108,16 @@ public class userService : MonoBehaviour {
 	}
 
 	public void saveScore(){
-		if (playerName != null) {
+		if (playerName != null && LeveliManeger._instance.getIdScore () == null) {
 			Debug.Log (name);
 			App42Log.SetDebug (true);
 			scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-			Debug.Log(LeveliManeger._instance.getSkupniCas ()+"skupni cassss");
-			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor(LeveliManeger._instance.getSkupniCas ()*10), new UnityCallBack ());
+			Debug.Log (LeveliManeger._instance.getSkupniCas () + "skupni cassss");
+			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor (LeveliManeger._instance.getSkupniCas () * 10), new UnityCallBack ());
+		} else if (LeveliManeger._instance.getIdScore() != null) {
+
+			scoreBoardService = sp.BuildScoreBoardService ();   
+			scoreBoardService.EditScoreValueById(LeveliManeger._instance.getIdScore(), Mathf.Floor (LeveliManeger._instance.getSkupniCas () * 10), new UnityCallBack());   
 		}
 
 
@@ -301,6 +305,7 @@ public class userService : MonoBehaviour {
 						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
 						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());
 						Debug.Log ("ScoreId is  : " + scoreList [i].GetScoreId ());
+						LeveliManeger._instance.setIdScore(scoreList [i].GetScoreId ());
 						Debug.Log ("Value is  : " + scoreList [i].GetValue ());
 					}
 				}

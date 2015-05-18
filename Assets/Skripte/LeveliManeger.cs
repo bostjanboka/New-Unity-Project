@@ -194,5 +194,17 @@ public class LeveliManeger : MonoBehaviour {
 		PlayerPrefs.SetString ("IdUser",idScore);
 	}
 
+	public string getIdScore(){
+		if (PlayerPrefs.HasKey ("IdScore")) {
+			return PlayerPrefs.GetString ("IdScore");
+		} else {
+			return null;
+		}
+	}
+
+	public void setIdScore(string id){
+		PlayerPrefs.SetString ("IdUser",id);
+	}
+
 
 }
