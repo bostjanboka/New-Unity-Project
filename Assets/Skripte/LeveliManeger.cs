@@ -203,7 +203,7 @@ public class LeveliManeger : MonoBehaviour {
 	}
 
 	public void setIdScore(string id){
-		PlayerPrefs.SetString ("IdUser",id);
+		PlayerPrefs.SetString ("IdScore",id);
 	}
 
 
