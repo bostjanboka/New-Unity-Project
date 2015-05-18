@@ -255,6 +255,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void gumbRateX(){
 		Debug.Log ("gumb rate X");
 		popUpRate.SetActive (false);
+		LeveliManeger._instance.disableRate ();
 	}
 
 	public void highScoreButton(){
@@ -264,6 +265,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public void gumbRate(){
 		Move.showRate ();
+		LeveliManeger._instance.disableRate ();
 	}
 
 	public void gumbExit(){

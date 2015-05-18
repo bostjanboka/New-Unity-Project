@@ -144,8 +144,7 @@ public class userService : MonoBehaviour {
 	}
 
 	public void getUser(){
-		userSer = sp.BuildUserService (); // Initializing UserService.
-		userSer.GetUser (LeveliManeger._instance.getIdUser(), new UserResponse());
+		PlayerX = LeveliManeger._instance.getIdUser ();
 	}
 
 	
