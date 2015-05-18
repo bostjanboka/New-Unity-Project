@@ -33,11 +33,12 @@ public class ScenarijLevel5 : MonoBehaviour {
 			akcija.SetActive (true);
 			junakSkripta.meritev=true;
 		}else if(stanje == 1 && steviloZogic.prazenProstor){
+			float cs = LeveliManeger._instance.getCas(5);
 			LeveliManeger._instance.odkleniStopnjo(6);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
 
-			if(LeveliManeger._instance.getCas(5) >= 0 && LeveliManeger._instance.getCas(5) < junakSkripta.score){
+			if(cs >= 0 && cs <  junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 			stanje++;

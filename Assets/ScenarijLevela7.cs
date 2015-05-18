@@ -32,10 +32,11 @@ public class ScenarijLevela7 : MonoBehaviour {
 
 			
 		if(stanje == 0 && steviloZogic.prazenProstor){
+			float cs = LeveliManeger._instance.getCas(7);
 			LeveliManeger._instance.odkleniStopnjo(8);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
-			if(LeveliManeger._instance.getCas(7) >= 0 && LeveliManeger._instance.getCas(7) < junakSkripta.score){
+			if(cs >= 0 && cs <  junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 

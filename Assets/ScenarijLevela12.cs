@@ -30,10 +30,11 @@ public class ScenarijLevela12 : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(stanje == 0 && steviloZogic.prazenProstor){
+			float cs = LeveliManeger._instance.getCas(12);
 			junakSkripta.zmagalLevel();
 
 			LeveliManeger._instance.naredilStopnjo();
-			if(LeveliManeger._instance.getCas(12) < junakSkripta.score){
+			if(cs >= 0 && cs <  junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 			stanje++;

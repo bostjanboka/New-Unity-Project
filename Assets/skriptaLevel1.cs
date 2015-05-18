@@ -84,10 +84,12 @@ public class skriptaLevel1 : MonoBehaviour {
 				}
 			}
 		}else if (stanje == 6 && steviloZogic.prazenProstor) {
+			float cs = LeveliManeger._instance.getCas(1);
 			LeveliManeger._instance.odkleniStopnjo(2);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
-			if(LeveliManeger._instance.getCas(1) < junakSkripta.score){
+
+			if(cs >= 0 && cs < junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 			stanje++;

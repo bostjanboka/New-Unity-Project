@@ -82,7 +82,6 @@ public class userService : MonoBehaviour {
 			LeveliManeger._instance.setIdUser(PlayerX);
 			saveScore();
 			PlayerX=null;
-			userUstvarjen=true;
 		}
 
 		if (userUstvarjen) {
@@ -136,7 +135,7 @@ public class userService : MonoBehaviour {
 
 
 	public void updateUser(string ime){
-		userSer = App42API.BuildUserService ();  
+		userSer = sp.BuildUserService ();  
 		userSer.CreateUser (ime, "boka", ime+"@gmail.com", new UnityUpdateUser ()); 
 	}
 
@@ -146,20 +145,7 @@ public class userService : MonoBehaviour {
 	}
 
 	
-	public class UnityUsersCount : App42CallBack  
-	{  
-		public void OnSuccess(object response)  
-		{  
-			App42Response app42response = (App42Response) response;   
-			App42Log.Console("TotalRecords is : " + app42response.GetTotalRecords());  
-			uspesnoStevilo = true;
-			steviloUser = app42response.GetTotalRecords ();
-		}  
-		public void OnException(Exception e)  
-		{  
-			App42Log.Console("Exception : " + e);  
-		}  
-	}  
+
 
 	public class UnityUpdateUser : App42CallBack  
 	{  
@@ -310,7 +296,7 @@ public class userService : MonoBehaviour {
 				if (gameObj.GetScoreList () != null) {
 					scoreList = gameObj.GetScoreList ();
 					shranjenScore=true;
-					scoreLista=true;
+
 					for (int i = 0; i < scoreList.Count; i++) {
 						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
 						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());

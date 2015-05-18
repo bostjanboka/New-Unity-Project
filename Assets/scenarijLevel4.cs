@@ -42,11 +42,12 @@ public class scenarijLevel4 : MonoBehaviour {
 			stanje=3;
 		}
 		else if(stanje == 3 && steviloZogic.prazenProstor){
+			float cs = LeveliManeger._instance.getCas(4);
 			LeveliManeger._instance.odkleniStopnjo(5);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
 
-			if(LeveliManeger._instance.getCas(4) >= 0 && LeveliManeger._instance.getCas(4) < junakSkripta.score){
+			if(cs >= 0 && cs <  junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 

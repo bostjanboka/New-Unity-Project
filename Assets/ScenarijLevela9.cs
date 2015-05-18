@@ -47,10 +47,11 @@ public class ScenarijLevela9 : MonoBehaviour {
 		} else if (stanje == 5 && vrataSkripta.odprta) {
 			stanje = 6;
 		} else if (stanje == 6 && steviloZogic.prazenProstor) {
+			float cs = LeveliManeger._instance.getCas(9);
 			LeveliManeger._instance.odkleniStopnjo(10);
 			junakSkripta.zmagalLevel();
 			LeveliManeger._instance.naredilStopnjo();
-			if(LeveliManeger._instance.getCas(9) >= 0 && LeveliManeger._instance.getCas(9) < junakSkripta.score){
+			if(cs >= 0 && cs <  junakSkripta.score){
 				newRecord.SetActive(true);
 			}
 			stanje++;
