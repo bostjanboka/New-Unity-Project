@@ -26,6 +26,7 @@ public class userService : MonoBehaviour {
 	public static string playerX = null;
 
 	public static bool posodobiScore=false;
+	public static bool dobiRank=false;
 
 	ServiceAPI sp = null;
 	ScoreBoardService scoreBoardService = null; // Initializing ScoreBoard Service.
@@ -36,6 +37,7 @@ public class userService : MonoBehaviour {
 	CreateUser createUserCall = new CreateUser();
 	SaveScore saveScoreCall = new SaveScore();
 
+	float time;
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
@@ -54,6 +56,7 @@ public class userService : MonoBehaviour {
 		ServicePointManager.ServerCertificateValidationCallback = Validator;
 		#endif
 		sp = new ServiceAPI (apiKey,secretKey);
+		time = 0;
 		//saveScore ();
 		if (LeveliManeger._instance.getIdUser () != null) {
 			playerName = LeveliManeger._instance.getIdUser ();
@@ -82,13 +85,22 @@ public class userService : MonoBehaviour {
 			}
 		}
 
-		if (posodobiScore) {
+		if (dobiRank && time < 1) {
+			dobiRank=false;
+			getUserRank();
+		}
 
+		if (posodobiScore) {
+			dobiRank=true;
+			time=3;
 			posodobiScore=false;
 			saveScore();
 		}
 
-
+		time -= Time.deltaTime;
+		if (time < 0) {
+			time=0;
+		}
 	}
 
 	public void saveScore(){
@@ -238,7 +250,7 @@ public class userService : MonoBehaviour {
 		
 		public void OnSuccess (object obj)
 		{
-			
+			result = "ok";
 		}
 		
 		public void OnException (Exception e)
