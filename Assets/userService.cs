@@ -19,43 +19,31 @@ public class userService : MonoBehaviour {
 	public string apiKey  ="7d5819403473acccbf1a5dbe6a9362e32e24742f3170e4d3a6a2cca072f38abf";						// API key that you have receieved after the success of app creation from AppHQ
 	public string secretKey ="2b45ce60091b3d57733551d6b0363ca0bb6cdf2ea002f59852990da09d650268";					// SECRET key that you have receieved after the success of app creation from AppHQ
 	public string gameName ="mordenelf";
-	public string userName;
-	public static IList<Game.Score> scoreList;
-	public static bool scoreLista=false;
+	public static string playerName=null;
+	public static string userRank="NA";
+	public static string[] scori=null;
 
-	public InputField app42InputNick;
-	public InputField app42InputEmail;
-	public static String playerName;
-	public static String rankUserja;
-	public static string firstName;
+	public static string playerX = null;
+
+	public static bool posodobiScore=false;
+
+	ServiceAPI sp = null;
+	ScoreBoardService scoreBoardService = null; // Initializing ScoreBoard Service.
+	UserService userSer = null;
+
+	UserRank userRankCall = new UserRank();
+	TopNRank topNRankCall = new TopNRank();
+	CreateUser createUserCall = new CreateUser();
+	SaveScore saveScoreCall = new SaveScore();
+
 
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
 		DontDestroyOnLoad (gameObject);
 	}
 
-	ServiceAPI sp = null;
-	ScoreBoardService scoreBoardService = null; // Initializing ScoreBoard Service.
-
-	static UserService userSer = null;
-	static bool flag  = true; 
-	public double userScore = 1000;
-	public double Score1 = 2000;
-	public int max = 2;
-	public int offSet = 1;
-	public string success;
-	public static bool posodobiScore=false;
-	public static bool dobiNRanke=false;
 
 
-	static bool uspesnoStevilo=false;
-	static int steviloUser;
-	static string PlayerX=null;
-	bool userUstvarjen=false;
-	static bool shranjenScore=false;
-
-
-	
 	#if UNITY_EDITOR
 	public static bool Validator (object sender, System.Security.Cryptography.X509Certificates.X509Certificate certificate, System.Security.Cryptography.X509Certificates.X509Chain chain, System.Net.Security.SslPolicyErrors sslPolicyErrors)
 	{return true;}
@@ -68,43 +56,39 @@ public class userService : MonoBehaviour {
 		sp = new ServiceAPI (apiKey,secretKey);
 		//saveScore ();
 		if (LeveliManeger._instance.getIdUser () != null) {
-			getUser ();
+			playerName = LeveliManeger._instance.getIdUser ();
+			getUserRank();
 		}
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-
-		if (PlayerX != null) {
-			playerName=PlayerX;
-			LeveliManeger._instance.setIdUser(PlayerX);
-			saveScore();
-			PlayerX=null;
+		if(userRankCall.getResult () != null){
+			userRank = userRankCall.getResult ();
 		}
 
-		if (userUstvarjen) {
-			userUstvarjen=false;
-			getUserRank();
+		if (topNRankCall.getResult() != null) {
+			scori=topNRankCall.getResult();
+		}
+
+		if (createUserCall.getResult () != null) {
+			if(createUserCall.getResult ().Equals("12success12")){
+				playerName = playerX;
+				LeveliManeger._instance.setIdUser(playerX);
+				Meni_Gumbi.pojdiVMeni=true;
+			}else{
+				Meni_Gumbi.errorText = createUserCall.getResult ();
+			}
 		}
 
 		if (posodobiScore) {
+
 			posodobiScore=false;
 			saveScore();
-			Debug.Log("SAVE SCORE");
 		}
 
-		if (shranjenScore) {
-			shranjenScore=false;
-			getUserRank();
-			Debug.Log("SHRANJEN SCORE");
-		}
 
-		if (dobiNRanke) {
-			dobiNRanke=false;
-			getTopNRankings();
-		}
 	}
 
 	public void saveScore(){
@@ -113,11 +97,11 @@ public class userService : MonoBehaviour {
 			App42Log.SetDebug (true);
 			scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
 			Debug.Log (LeveliManeger._instance.getSkupniCas () + "skupni cassss");
-			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor (LeveliManeger._instance.getSkupniCas () * 10), new UnityCallBack ());
+			scoreBoardService.SaveUserScore (gameName, playerName, Mathf.Floor (LeveliManeger._instance.getSkupniCas () * 10), saveScoreCall);
 		} else if (LeveliManeger._instance.getIdScore() != null) {
 
 			scoreBoardService = sp.BuildScoreBoardService ();   
-			scoreBoardService.EditScoreValueById(LeveliManeger._instance.getIdScore(), Mathf.Floor (LeveliManeger._instance.getSkupniCas () * 10), new UnityCallBack());   
+			scoreBoardService.EditScoreValueById(LeveliManeger._instance.getIdScore(), Mathf.Floor (LeveliManeger._instance.getSkupniCas () * 10), saveScoreCall);   
 		}
 
 
@@ -128,101 +112,57 @@ public class userService : MonoBehaviour {
 
 	public void getUserRank(){
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-		scoreBoardService.GetUserRanking("mordenelf", playerName, new UnityUserRankCallBack());
+		scoreBoardService.GetUserRanking("mordenelf", playerName, userRankCall);
 	}
 
 	public void getTopNRankings(){
-		scoreLista = false;
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-		scoreBoardService.GetTopNRankers ("mordenelf", 100, new UnityTopNRankBack());
+		scoreBoardService.GetTopNRankers ("mordenelf", 100, topNRankCall);
 	}
 
 
 	public void updateUser(string ime){
 		userSer = sp.BuildUserService ();  
-		userSer.CreateUser (ime, "boka", ime+"@gmail.com", new UnityUpdateUser ()); 
+		userSer.CreateUser (ime, "boka", ime+"@gmail.com", createUserCall); 
 	}
 
-	public void getUser(){
-		PlayerX = LeveliManeger._instance.getIdUser ();
-	}
+
 
 	
 
 
-	public class UnityUpdateUser : App42CallBack  
+	public class CreateUser : App42CallBack  
 	{  
+		private string result = null;
 		public void OnSuccess(object response)  
 		{  
-			 
+			result = "12success12";
 			User user = (User) response;  
-			/* This will create user in App42 cloud and will return User object */    
-			App42Log.Console("userName is " + user.GetUserName());  
-			PlayerX = user.GetUserName ();
-			App42Log.Console("emailId is " + user.GetEmail()); 
-			Meni_Gumbi.pojdiVMeni=true;
 
 		}  
 		public void OnException(Exception e)  
 		{  
-			Meni_Gumbi.errorText = e.ToString();
+			result = e.ToString ();
+
 			App42Log.Console("Exception : " + e);  
 		}  
-	}  
-	public class UserResponse : App42CallBack
-	{
-		private string result = "";
-		public void OnSuccess(object user)
-		{
-			try
-			{
-				if (user is User)
-				{
-					User userObj = (User)user;
-					result = userObj.ToString();
-					Debug.Log ("UserName : " + userObj.GetUserName());
-					Debug.Log ("EmailId : " + userObj.GetEmail());
-					User.Profile profileObj = (User.Profile)userObj.GetProfile();
-					LeveliManeger._instance.setIdUser(userObj.GetUserName());
-					PlayerX=userObj.GetUserName();
-
-
-				}
-				else
-				{
-					IList<User> userList = (IList<User>)user;
-					result = userList[0].ToString();
-					Debug.Log ("UserName : " + userList[0].GetUserName());
-					Debug.Log ("EmailId : " + userList[0].GetEmail());
-					
-				}
-				Meni_Gumbi.pojdiVMeni=true;
-			}
-			catch (App42Exception e)
-			{
-				Meni_Gumbi.errorText = e.ToString();
-				result = e.ToString();
-				Debug.Log ("App42Exception : "+ e);
-			}
-		}
-		
-		public void OnException(Exception e)
-		{
-			Meni_Gumbi.errorText = e.ToString();
-			result = e.ToString();
-			Debug.Log ("Exception : " + e);
-		}
-		
 		public string getResult() {
 			return result;
-		}	
-	}
+		}
+
+	}  
 
 
-	public class UnityUserRankCallBack : App42CallBack  
+
+
+	public class UserRank : App42CallBack  
 	{  
+
+		private string result = null;
+
 		public void OnSuccess(object response)  
 		{  
+
 			Game game = (Game) response;       
 			App42Log.Console("gameName is " + game.GetName());   
 			for(int i = 0;i<game.GetScoreList().Count;i++)  
@@ -231,7 +171,7 @@ public class userService : MonoBehaviour {
 				App42Log.Console("rank is : " + game.GetScoreList()[i].GetRank());  
 				App42Log.Console("score is : " + game.GetScoreList()[i].GetValue());  
 				App42Log.Console("scoreId is : " + game.GetScoreList()[i].GetScoreId());  
-				rankUserja = game.GetScoreList()[i].GetRank();
+				result = game.GetScoreList()[i].GetRank();
 			}  
 		}  
 		
@@ -239,32 +179,38 @@ public class userService : MonoBehaviour {
 		{  
 			App42Log.Console("Exception : " + e);  
 		}  
+
+		public string getResult ()
+		{
+			return result;
+		}
 	}  
 
-	public class UnityTopNRankBack : App42CallBack  
+	public class TopNRank : App42CallBack  
 	{  
-		private string result = "";
+		private string[] result; 
 		
 		public void OnSuccess (object obj)
 		{
 			if (obj is Game) {
 				Game gameObj = (Game)obj;
-				result = gameObj.ToString ();
+
 				Debug.Log ("GameName : " + gameObj.GetName ());
 				if (gameObj.GetScoreList () != null) {
-					scoreList = gameObj.GetScoreList ();
-					scoreLista=true;
+					IList<Game.Score> scoreList = gameObj.GetScoreList ();
+					result = new string[scoreList.Count];
 					for (int i = 0; i < scoreList.Count; i++) {
 						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
 
 						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());
 						Debug.Log ("ScoreId is  : " + scoreList [i].GetScoreId ());
 						Debug.Log ("Value is  : " + scoreList [i].GetValue ());
+						result[i] = scoreList [i].GetUserName ()+":"+scoreList [i].GetValue ();
 					}
 				}
 			} else {
 				IList<Game> game = (IList<Game>)obj;
-				result = game.ToString ();
+
 				for (int j = 0; j < game.Count; j++) {
 					Debug.Log ("GameName is   : " + game [j].GetName ());
 					Debug.Log ("Description is  : " + game [j].GetDesription ());
@@ -275,47 +221,23 @@ public class userService : MonoBehaviour {
 		
 		public void OnException (Exception e)
 		{
-			result = e.ToString ();
+
 			Debug.Log ("EXCEPTION : " + e);
 			
 		}
 		
-		public string getResult ()
+		public string[] getResult ()
 		{
 			return result;
 		}
 	}
 
-	public class UnityCallBack : App42CallBack  
+	public class SaveScore : App42CallBack  
 	{  
 		private string result = "";
 		
 		public void OnSuccess (object obj)
 		{
-			if (obj is Game) {
-				Game gameObj = (Game)obj;
-				result = gameObj.ToString ();
-				Debug.Log ("GameName : " + gameObj.GetName ());
-				if (gameObj.GetScoreList () != null) {
-					scoreList = gameObj.GetScoreList ();
-					shranjenScore=true;
-
-					for (int i = 0; i < scoreList.Count; i++) {
-						Debug.Log ("UserName is  : " + scoreList [i].GetUserName ());
-						Debug.Log ("CreatedOn is  : " + scoreList [i].GetCreatedOn ());
-						Debug.Log ("ScoreId is  : " + scoreList [i].GetScoreId ());
-						LeveliManeger._instance.setIdScore(scoreList [i].GetScoreId ());
-						Debug.Log ("Value is  : " + scoreList [i].GetValue ());
-					}
-				}
-			} else {
-				IList<Game> game = (IList<Game>)obj;
-				result = game.ToString ();
-				for (int j = 0; j < game.Count; j++) {
-					Debug.Log ("GameName is   : " + game [j].GetName ());
-					Debug.Log ("Description is  : " + game [j].GetDesription ());
-				}
-			}
 			
 		}
 		

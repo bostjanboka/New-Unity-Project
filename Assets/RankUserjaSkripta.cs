@@ -9,7 +9,7 @@ public class RankUserjaSkripta : MonoBehaviour {
 	void OnGUI() // simply an example of a long ScrollView
 	{
 		if (userService.playerName != null) {
-			gameObject.GetComponent<Text>().text = userService.rankUserja;
+			gameObject.GetComponent<Text>().text = userService.userRank;
 		}
 	}
 	void Start () {

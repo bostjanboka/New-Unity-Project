@@ -133,7 +133,7 @@ public class PotkaSkripta : MonoBehaviour {
 		} else {
 			totalCas.text ="0";
 		}
-		userService.posodobiScore = true;
+
 	}
 	
 	// Update is called once per frame

@@ -134,6 +134,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		}
 
 		if (!napaka) {
+			userService.playerX = app42InputNick.text;
 			userSer.GetComponent<userService> ().updateUser (app42InputNick.text);
 			singUpLogo.SetActive(true);
 

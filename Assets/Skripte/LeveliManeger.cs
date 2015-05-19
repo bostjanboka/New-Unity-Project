@@ -86,6 +86,7 @@ public class LeveliManeger : MonoBehaviour {
 		nastaviCas(PlayerPrefs.GetInt ("Levelilevel"),PlayerPrefs.GetFloat ("Leveli"  + "score"));
 		PlayerPrefs.SetInt("Levelilevel",-1);
 		PlayerPrefs.Save ();
+		userService.posodobiScore = true;
 		return PlayerPrefs.GetFloat ("Leveli"  + "score");
 	}
 

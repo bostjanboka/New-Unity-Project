@@ -13,7 +13,7 @@ public class scrollView : MonoBehaviour {
 	public GUIStyle soda;
 	public GUIStyle liha;
 
-	IList<Game.Score> highscore;
+	string[] highscore;
 	Camera camera2;
 
 	void Awake(){
@@ -22,7 +22,7 @@ public class scrollView : MonoBehaviour {
 	void OnGUI() // simply an example of a long ScrollView
 	{
 		if (camera2.enabled) {
-			highscore = userService.scoreList;
+			highscore = userService.scori;
 			//highscore = HighScoreManager._instance.GetHighScore (); 
 			scrollPos = GUI.BeginScrollView (
 			new Rect (Screen.width * 0.3f, Screen.height * 0.20f, Screen.width * 0.4f, Screen.height * 0.59f), scrollPos,
@@ -32,8 +32,8 @@ public class scrollView : MonoBehaviour {
 			// THE STUPID RIDICULOUS UNITY SCROLL BARS
 			if(highscore != null){
 				for (int i = 0; i < 100; i++) {
-					for (int j=i; j <= highscore.Count; j++) {
-						if (highscore.Count == j) {
+					for (int j=i; j <= highscore.Length; j++) {
+						if (highscore.Length == j) {
 							i = j;
 							break;
 						}
@@ -42,8 +42,8 @@ public class scrollView : MonoBehaviour {
 						}else{
 							GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), "", liha);
 						}
-						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), (j+1) + ". "+highscore[j].GetUserName(), myStyle);
-						GUI.Box (new Rect (Screen.width * 0.6f, Screen.height * 0.1f + j * 53, Screen.width * 0.1f, 50), ""+highscore [j].GetValue(), myStyleScore);
+						GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + j * 53, Screen.width * 0.4f, 50), (j+1) + ". "+highscore[j].Split(':')[0], myStyle);
+						GUI.Box (new Rect (Screen.width * 0.6f, Screen.height * 0.1f + j * 53, Screen.width * 0.1f, 50), ""+highscore[j].Split(':')[1], myStyleScore);
 					}
 					GUI.Box (new Rect (Screen.width * 0.3f, Screen.height * 0.1f + i * 53, Screen.width * 0.4f, 50), "", myStyle);
 
