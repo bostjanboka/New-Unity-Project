@@ -27,47 +27,48 @@ public class Move : MonoBehaviour {
 		//Debug.Log(""+UnityPluginForWindowsPhone.Class1.GetDeviceName);
 		//UnityPluginForWindowsPhone.Class1.konstruktor ();
 		//interstitial.Destroy ();
-		//interstitial = new InterstitialAd("ca-app-pub-6223160944701050/1650693929");
+		interstitial = new InterstitialAd("ca-app-pub-6223160944701050/1650693929");
 
 		//PlayerPrefs.DeleteAll ();
 		//PlayerPrefs.Save ();
 		//bannerView.Destroy ();
-		//bannerView = new BannerView(
-		//	"ca-app-pub-6223160944701050/8340773121", AdSize.SmartBanner, AdPosition.Top);
+		//bannerView = new BannerView("ca-app-pub-6223160944701050/8340773121", AdSize.SmartBanner, AdPosition.Top);
 
-		//request = new AdRequest.Builder().Build();
+		request = new AdRequest.Builder().Build();
 		//bannerView.LoadAd(request);
 		//bannerView.Show();
-		ugasniReklamo();		
+		//ugasniReklamo();		
 
 
 	}
 
 	public static void ugasniReklamo(){
-		UnityPluginForWindowsPhone.Class1.ugasniReklamo ();
+		//UnityPluginForWindowsPhone.Class1.ugasniReklamo ();
 		//bannerView.Hide();
 
 	}
 
 	public static void prizgiReklamo(){
-		UnityPluginForWindowsPhone.Class1.prizgiReklamo ();
+		//UnityPluginForWindowsPhone.Class1.prizgiReklamo ();
 		//bannerView.Show();
 	}
 
 	public static void loadCelozaslonsko(){
-		UnityPluginForWindowsPhone.Class1.loadCelozaslonsko ();
-		//interstitial.LoadAd(request);
+		//UnityPluginForWindowsPhone.Class1.loadCelozaslonsko ();
+		interstitial.LoadAd(request);
 	}
 
 	public static void showCelozaslonsko(){
-		UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
-		//if (interstitial.IsLoaded()) {
-		//	interstitial.Show();
-		//}
+		//UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
+		if (interstitial.IsLoaded()) {
+			interstitial.Show();
+		}
 	}
 
 	public static void showRate(){
-		UnityPluginForWindowsPhone.Class1.prizgiRate ();
+		//UnityPluginForWindowsPhone.Class1.prizgiRate ();
+		Application.OpenURL ("market://details?id=com.mordenkul.mordenElf");
+	
 	}
 
 	

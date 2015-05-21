@@ -55,7 +55,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
 
-		exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width-50,Screen.height-80,100));
+		exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,100));
 		
 
 
@@ -127,10 +127,13 @@ public class Meni_Gumbi : MonoBehaviour {
 			} else {
 				nickText.text = "Nick must be 4 letters long or more";
 			}
-			napaka=true;
+			napaka = true;
 		} else if (app42InputNick.text.Length > 10) {
 			nickText.text = "Nickname is too long, use less than 10 letters";
-			napaka=true;
+			napaka = true;
+		} else if (app42InputNick.text.Contains (" ")) {
+			nickText.text = "Nickname must not contain spaces";
+			napaka = true;
 		}
 
 		if (!napaka) {
@@ -209,7 +212,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			x = x.Replace("}","");
 			singUpLogo.SetActive(false);
 			loginText.text = x;
-			if(x.Equals("0 ") || x.Contains("Object reference")){
+			if(x.Equals("0 ") || x.Contains("Object reference") || x.Contains("No address associated")){
 				pojdiVMeni=true;
 			}
 		}

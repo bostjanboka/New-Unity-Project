@@ -28,8 +28,8 @@ public class InputNavigacija : MonoBehaviour {
 	float casPavze;
 
 	void Awake(){
-		pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(80 ,Screen.height - 100,100));
-		cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width-80,Screen.height-80,100));
+		//pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(pavzaGumb.image.rectTransform.rect.width/2 ,Screen.height-pavzaGumb.image.rectTransform.rect.height/12,100));
+		//cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height - cas.rectTransform.rect.height/4,100));
 	}
 	void Start () {
 		back.SetActive (false);

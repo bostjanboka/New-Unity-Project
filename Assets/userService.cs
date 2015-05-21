@@ -11,7 +11,7 @@ using com.shephertz.app42.paas.sdk.csharp.user;
 using com.shephertz.app42.paas.sdk.csharp.storage;
 using SimpleJSON;
 using UnityEngine.UI;
-using com.shephertz.app42.paas.sdk.csharp;
+
 
 public class userService : MonoBehaviour {
 
@@ -225,7 +225,7 @@ public class userService : MonoBehaviour {
 
 				for (int j = 0; j < game.Count; j++) {
 					Debug.Log ("GameName is   : " + game [j].GetName ());
-					Debug.Log ("Description is  : " + game [j].GetDesription ());
+					//Debug.Log ("Description is  : " + game [j].GetDesription ());
 				}
 			}
 			

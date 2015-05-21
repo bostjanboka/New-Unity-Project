@@ -12,7 +12,7 @@ PlayerSettings:
   targetResolution: 0
   accelerometerFrequency: 60
   companyName: Mordenkul
-  productName: Mordenelf
+  productName: MordenElf
   cloudProjectId: 
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -75,14 +75,14 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  bundleIdentifier: com.mordenkul.candytrouble
-  bundleVersion: 1.2
+  bundleIdentifier: com.mordenkul.mordenElf
+  bundleVersion: 1.3
   preloadedAssets: []
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   xboxOneDisableKinectGpuReservation: 0
   productGUID: 00758e77914b8184cb1795e04b895ae0
-  AndroidBundleVersionCode: 2
+  AndroidBundleVersionCode: 3
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -123,11 +123,11 @@ PlayerSettings:
   iOSLaunchScreenCustomXibPath: 
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/Bostjan/Documents/New Unity Project/keystoreMorden.keystore
+  AndroidKeystoreName: C:/Users/Bostjan/Documents/GitHub/New-Unity-Project/MordenElfKeystore.keystore
   AndroidKeyaliasName: mordenelf
   AndroidTVCompatibility: 1
   AndroidIsGame: 1
-  androidEnableBanner: 1
+  androidEnableBanner: 0
   m_AndroidBanners:
   - width: 320
     height: 180
@@ -137,7 +137,7 @@ PlayerSettings:
   m_BuildTargetIcons:
   - m_BuildTarget: 
     m_Icons:
-    - m_Icon: {fileID: 2800000, guid: a62e4ed5810b78045bdd534250e250f0, type: 3}
+    - m_Icon: {fileID: 2800000, guid: 3c660597581b96741be42e0a47ec0adb, type: 3}
       m_Size: 128
   m_BuildTargetBatching:
   - m_BuildTarget: Android
