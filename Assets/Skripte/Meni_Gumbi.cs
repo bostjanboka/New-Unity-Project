@@ -55,7 +55,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	void Awake(){
 		//PlayerPrefs.DeleteAll ();
 
-		exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,100));
+		//exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,100));
 		
 
 
