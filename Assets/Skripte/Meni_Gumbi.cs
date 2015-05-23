@@ -118,18 +118,18 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void narediPlayer(){
 
 		nickText.text = "";
-
+		errorText = null;
 		loginText.text = "";
 		bool napaka = false;
-		if (app42InputNick.text.Length < 4) {
+		if (app42InputNick.text.Length < 3) {
 			if (app42InputNick.text.Length < 1) {
 				nickText.text = "Please enter nickname";
 			} else {
-				nickText.text = "Nick must be 4 letters long or more";
+				nickText.text = "Nick must be 3 letters long or more";
 			}
 			napaka = true;
 		} else if (app42InputNick.text.Length > 10) {
-			nickText.text = "Nickname is too long, use less than 10 letters";
+			nickText.text = "Nickname is too long, use less than 11 letters";
 			napaka = true;
 		} else if (app42InputNick.text.Contains (" ")) {
 			nickText.text = "Nickname must not contain spaces";
@@ -212,7 +212,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			x = x.Replace("}","");
 			singUpLogo.SetActive(false);
 			loginText.text = x;
-			if(x.Equals("0 ") || x.Contains("Object reference") || x.Contains("No address associated")){
+			if(!x.Contains("already exists")){
 				pojdiVMeni=true;
 			}
 		}

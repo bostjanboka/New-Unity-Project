@@ -2360,6 +2360,10 @@ Prefab:
       propertyPath: padanje
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 21280520, guid: fc7fe1e648a96064dacb441f70759ef1, type: 2}
+      propertyPath: m_SortingOrder
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc7fe1e648a96064dacb441f70759ef1, type: 2}
   m_IsPrefabParent: 0

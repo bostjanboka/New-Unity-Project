@@ -825,8 +825,8 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 195606, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
   m_PrefabInternal: {fileID: 1408287896}
---- !u!60 &1036736549
-PolygonCollider2D:
+--- !u!58 &1036736549
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -836,16 +836,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: .625, y: -.845000029}
-      - {x: .612439692, y: -.824999809}
-      - {x: 1.03500068, y: -.00841379166}
-      - {x: .634146333, y: .804146767}
-      - {x: -.284999967, y: 1.02414656}
-      - {x: -1.02926707, y: .461586475}
-      - {x: -1.03499997, y: -.455000013}
-      - {x: -.282439232, y: -1.03499985}
+  serializedVersion: 2
+  m_Radius: 1.03499997
 --- !u!50 &1036736553
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1162,7 +1154,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 1ea00f3fc852cd347ac990f28315c2e5,
+      objectReference: {fileID: 21300000, guid: 77670797cde43944eb29f8c940c9bb2e,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.y
@@ -1242,11 +1234,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -.134371191
+      value: .0087265363
       objectReference: {fileID: 0}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalRotation.w
-      value: .990931094
+      value: .999961913
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5896016, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
