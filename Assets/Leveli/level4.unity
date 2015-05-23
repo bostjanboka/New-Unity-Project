@@ -1154,7 +1154,7 @@ Prefab:
     - target: {fileID: 21287734, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 77670797cde43944eb29f8c940c9bb2e,
+      objectReference: {fileID: 21300000, guid: 1ea00f3fc852cd347ac990f28315c2e5,
         type: 3}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalScale.y
