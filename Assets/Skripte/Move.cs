@@ -5,6 +5,7 @@ using GoogleMobileAds.Api;
 
 
 
+
 //using PlugInWP;
 
 
@@ -23,21 +24,13 @@ public class Move : MonoBehaviour {
 
 
 	void Start () {
-		//gameObject.AddComponent (PlugInWP.Class2);
-		//Debug.Log(""+UnityPluginForWindowsPhone.Class1.GetDeviceName);
-		//UnityPluginForWindowsPhone.Class1.konstruktor ();
-		//interstitial.Destroy ();
-		interstitial = new InterstitialAd("ca-app-pub-6223160944701050/1650693929");
 
-		//PlayerPrefs.DeleteAll ();
-		//PlayerPrefs.Save ();
-		//bannerView.Destroy ();
-		//bannerView = new BannerView("ca-app-pub-6223160944701050/8340773121", AdSize.SmartBanner, AdPosition.Top);
+		//interstitial = new InterstitialAd("ca-app-pub-6223160944701050/1650693929");
 
-		request = new AdRequest.Builder().Build();
-		//bannerView.LoadAd(request);
-		//bannerView.Show();
-		//ugasniReklamo();		
+
+
+		//request = new AdRequest.Builder().Build();
+			
 
 
 	}
@@ -55,14 +48,16 @@ public class Move : MonoBehaviour {
 
 	public static void loadCelozaslonsko(){
 		//UnityPluginForWindowsPhone.Class1.loadCelozaslonsko ();
-		interstitial.LoadAd(request);
+		//interstitial.LoadAd(request);
+
 	}
 
 	public static void showCelozaslonsko(){
 		//UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
-		if (interstitial.IsLoaded()) {
+		/*if (interstitial.IsLoaded()) {
 			interstitial.Show();
-		}
+		}*/
+
 	}
 
 	public static void showRate(){

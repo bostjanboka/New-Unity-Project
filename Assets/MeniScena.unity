@@ -6258,6 +6258,7 @@ MonoBehaviour:
   musicToggle: {fileID: 501473186}
   soundToggle: {fileID: 475362785}
   exit: {fileID: 1953147325}
+  Oglasi: {fileID: 114950, guid: aaf5ea183af2acd45b54e11503db06ba, type: 2}
   continueGameGumb: {fileID: 0}
   continueGameMeni: {fileID: 0}
 --- !u!4 &1542134873

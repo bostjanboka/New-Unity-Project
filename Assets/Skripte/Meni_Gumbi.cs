@@ -25,6 +25,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	GameObject mordenLogo1;
 	GameObject gameLogo;
 	GameObject singUpLogo;
+	GameObject oglasi;
 
 	GameObject userSer;
 	public GameObject gameMusic;
@@ -41,6 +42,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public static int stKamere=0;
 	public Button exit;
+	public GameObject Oglasi;
 
 
 
@@ -56,7 +58,12 @@ public class Meni_Gumbi : MonoBehaviour {
 		//PlayerPrefs.DeleteAll ();
 
 		//exit.gameObject.transform.position = meni.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height,100));
-		
+		if (GameObject.Find ("Oglasi(Clone)") == null) {
+			oglasi = Instantiate (Oglasi) as GameObject;
+			oglasi.GetComponent<OglasiSkripta>().initReklamo();
+		} else {
+			oglasi = GameObject.Find ("Oglasi(Clone)");
+		}
 
 
 		zvok = GameObject.Find("game music(Clone)");
