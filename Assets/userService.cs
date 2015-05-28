@@ -129,7 +129,7 @@ public class userService : MonoBehaviour {
 
 	public void getTopNRankings(){
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-		scoreBoardService.GetTopNRankers ("mordenelf", 100, topNRankCall);
+		scoreBoardService.GetTopNRankers ("mordenelf", 200, topNRankCall);
 	}
 
 

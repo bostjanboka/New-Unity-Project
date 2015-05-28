@@ -26,12 +26,12 @@ public class scrollView : MonoBehaviour {
 			//highscore = HighScoreManager._instance.GetHighScore (); 
 			scrollPos = GUI.BeginScrollView (
 			new Rect (Screen.width * 0.3f, Screen.height * 0.20f, Screen.width * 0.4f, Screen.height * 0.59f), scrollPos,
-			new Rect (Screen.width * 0.3f, Screen.height * 0.10f, Screen.width * 0.4f, 5000),
+			new Rect (Screen.width * 0.3f, Screen.height * 0.10f, Screen.width * 0.4f, 10000),
 			myStyle, myStyle);
 			// HOORAY THOSE TWO ARGUMENTS ELIMINATE
 			// THE STUPID RIDICULOUS UNITY SCROLL BARS
 			if(highscore != null){
-				for (int i = 0; i < 100; i++) {
+				for (int i = 0; i < 200; i++) {
 					for (int j=i; j <= highscore.Length; j++) {
 						if (highscore.Length == j) {
 							i = j;
