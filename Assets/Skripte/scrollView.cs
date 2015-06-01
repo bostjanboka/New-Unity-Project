@@ -15,23 +15,24 @@ public class scrollView : MonoBehaviour {
 
 	string[] highscore;
 	Camera camera2;
-
+	Canvas score;
 	void Awake(){
-		camera2 = gameObject.GetComponent<Camera> ();
+		camera2 = GameObject.Find("Main Camera").GetComponent<Camera> ();
+		score = GameObject.Find("Score").GetComponent<Canvas>();
 	}
 	void OnGUI() // simply an example of a long ScrollView
 	{
-		if (camera2.enabled) {
+		if (score.enabled) {
 			highscore = userService.scori;
 			//highscore = HighScoreManager._instance.GetHighScore (); 
 			scrollPos = GUI.BeginScrollView (
 			new Rect (Screen.width * 0.3f, Screen.height * 0.20f, Screen.width * 0.4f, Screen.height * 0.59f), scrollPos,
-			new Rect (Screen.width * 0.3f, Screen.height * 0.10f, Screen.width * 0.4f, 10000),
+			new Rect (Screen.width * 0.3f, Screen.height * 0.10f, Screen.width * 0.4f, 5300),
 			myStyle, myStyle);
 			// HOORAY THOSE TWO ARGUMENTS ELIMINATE
 			// THE STUPID RIDICULOUS UNITY SCROLL BARS
 			if(highscore != null){
-				for (int i = 0; i < 200; i++) {
+				for (int i = 0; i < 100; i++) {
 					for (int j=i; j <= highscore.Length; j++) {
 						if (highscore.Length == j) {
 							i = j;

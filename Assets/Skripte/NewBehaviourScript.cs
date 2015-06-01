@@ -54,13 +54,13 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public int steviloSpiral;
 
-	GameObject oglasi;
+
 	void Start () {
-		oglasi = GameObject.Find ("Oglasi(Clone)");
+
 		Meni_Gumbi.stKamere = 1;
 		if (Random.value * 100 < naloziReklamo) {
-			//Move.loadCelozaslonsko ();
-			oglasi.GetComponent<OglasiSkripta>().loadReklamo();
+			Move.loadCelozaslonsko ();
+			//oglasi.GetComponent<OglasiSkripta>().loadReklamo();
 		}
 
 		level = inputNavigacija.GetComponent<InputNavigacija> ().level;
@@ -211,8 +211,8 @@ public class NewBehaviourScript : MonoBehaviour {
 	public void zgubilLevel(){
 		if (!bilZadet) {
 			bilZadet=true;
-			//Move.showCelozaslonsko ();
-			oglasi.GetComponent<OglasiSkripta>().showReklamo();
+			Move.showCelozaslonsko ();
+
 
 			LeveliManeger._instance.saveProgres (--hp, trenutniLevel, score);
 			InfoLeveli temp = LeveliManeger._instance.getLevel ();

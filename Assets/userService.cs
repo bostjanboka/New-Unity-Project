@@ -60,8 +60,9 @@ public class userService : MonoBehaviour {
 		//saveScore ();
 		if (LeveliManeger._instance.getIdUser () != null) {
 			playerName = LeveliManeger._instance.getIdUser ();
-			getUserRank();
-		}
+			Meni_Gumbi.pojdiVMeni=true;
+			getUserRank ();
+		} 
 
 	}
 	
@@ -129,7 +130,7 @@ public class userService : MonoBehaviour {
 
 	public void getTopNRankings(){
 		scoreBoardService = sp.BuildScoreBoardService (); // Initializing ScoreBoard Service.
-		scoreBoardService.GetTopNRankers ("mordenelf", 200, topNRankCall);
+		scoreBoardService.GetTopNRankers ("mordenelf", 100, topNRankCall);
 	}
 
 

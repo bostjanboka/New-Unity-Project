@@ -26,7 +26,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	GameObject mordenLogo1;
 	GameObject gameLogo;
 	GameObject singUpLogo;
-	GameObject oglasi;
+
 
 	GameObject userSer;
 
@@ -48,7 +48,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	bool casNazaj=false;
 	void Awake(){
 
-		oglasi = GameObject.Find ("Oglasi");
+
 
 		zvok = GameObject.Find("game music");
 
@@ -65,7 +65,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
 
 		singUpLogo.SetActive (false);
-
+		mordenLogo.GetComponent<LoadingScreen> ().show ();
 
 	}
 
@@ -186,6 +186,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public void highScoreButton(){
 		userSer.GetComponent<userService> ().getTopNRankings ();
+		canvas (3);
 		//Application.LoadLevel ("HighScoreScena");
 	}
 
