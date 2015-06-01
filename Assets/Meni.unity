@@ -3438,10 +3438,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .254901975, g: .250980407, b: .258823544, a: 1}
+  m_Color: {r: .988235295, g: .960784316, b: .749019623, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
-    m_FontSize: 25
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -4611,7 +4611,7 @@ RectTransform:
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
   m_AnchoredPosition: {x: 292, y: -164.199997}
-  m_SizeDelta: {x: 170, y: 80.4940033}
+  m_SizeDelta: {x: 170, y: 81}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1028676312
 MonoBehaviour:
@@ -6894,8 +6894,8 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 169.5, y: 35.9000015}
-  m_SizeDelta: {x: 161, y: 51}
+  m_AnchoredPosition: {x: 135.5, y: 35.9000015}
+  m_SizeDelta: {x: 81, y: 51}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1716161466
 MonoBehaviour:
@@ -6923,9 +6923,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: .100000001
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 21300000, guid: 9c97a75ad8d657946a60c158345d3c3f,
+    m_HighlightedSprite: {fileID: 21300000, guid: f3831c9130d6c60479479ddd947a8a48,
       type: 3}
-    m_PressedSprite: {fileID: 21300000, guid: b252c3384acebb047be62c1aeaad640d, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: a03bc64930a82a3499d09fd802aa9b2b, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -6964,7 +6964,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 9c97a75ad8d657946a60c158345d3c3f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3831c9130d6c60479479ddd947a8a48, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7659,7 +7659,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2017074308
 MonoBehaviour:
   m_ObjectHideFlags: 0
