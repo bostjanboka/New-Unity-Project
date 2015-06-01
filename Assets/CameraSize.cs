@@ -19,6 +19,7 @@ public class CameraSize : MonoBehaviour {
 		gameObject.transform.position = cam.ScreenToWorldPoint (pos);
 		pos = cam.WorldToScreenPoint (gameObject.transform.position);
 		pos.y = pos.y * 2;
+		pos.z = -10;
 		gameObject.transform.position = cam.ScreenToWorldPoint (pos);
 	}
 	

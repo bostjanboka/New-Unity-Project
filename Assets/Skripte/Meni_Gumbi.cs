@@ -11,6 +11,7 @@ public class Meni_Gumbi : MonoBehaviour {
 	public GameObject scori;
 	public GameObject potka;
 	public GameObject input;
+	public GameObject splash;
 
 
 	public InputField app42InputNick;
@@ -40,14 +41,15 @@ public class Meni_Gumbi : MonoBehaviour {
 	public static int stKamere=0;
 	
 
-
+	float cas = 0;
+	bool logo=true;
 
 	public static bool pojdiVMeni=false;
 	GameObject zvok;
 
 	bool casNazaj=false;
 	void Awake(){
-
+		//PlayerPrefs.DeleteAll ();
 
 
 		zvok = GameObject.Find("game music");
@@ -56,7 +58,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			
 		singUpLogo = GameObject.Find ("splash_prozoren");
 			
-		gameLogo = GameObject.Find ("Loading Logo");
+
 
 		userSer = GameObject.Find ("User");
 			
@@ -102,7 +104,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 
 	void Start () {
-
+		cas = Time.time;
 		popUpRate.SetActive (false);
 
 		int obiski = LeveliManeger._instance.obiskalIgro ();
@@ -110,7 +112,11 @@ public class Meni_Gumbi : MonoBehaviour {
 		if (LeveliManeger._instance.pokaziRate() == 1 && obiski > 0) {
 			popUpRate.SetActive(true);
 		}
-
+		if (LeveliManeger._instance.getIdUser () != null) {
+			canvas(0);
+		}else{
+			canvas(2);
+		}
 
 	}
 	
@@ -154,6 +160,8 @@ public class Meni_Gumbi : MonoBehaviour {
 				pojdiVMeni=true;
 			}
 		}
+
+
 	}
 
 
@@ -229,6 +237,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		potka.SetActive (false);
 		scori.SetActive (false);
 		input.SetActive (false);
+		splash.SetActive (false);
 		if (i == 0) {
 			meni.SetActive (true);
 		} else if (i == 1) {
@@ -237,7 +246,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			input.SetActive (true);
 		} else if (i == 3) {
 			scori.SetActive (true);
-		}
+		} 
 	}
 
 

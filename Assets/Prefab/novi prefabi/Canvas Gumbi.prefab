@@ -312,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &156804
 GameObject:
   m_ObjectHideFlags: 0
@@ -948,15 +948,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e1903df4a5017f499958449b082bf8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
+  level: 1
   trenutniLevel: 0
-  loading: {fileID: 0}
-  zgubil: {fileID: 0}
-  zmagal: {fileID: 0}
-  back: {fileID: 0}
-  pavzaGumb: {fileID: 0}
-  cas: {fileID: 0}
-  cam: {fileID: 0}
+  loading: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
+  zgubil: {fileID: 156804}
+  zmagal: {fileID: 114620}
+  back: {fileID: 144790}
   HUD: {fileID: 0}
 --- !u!114 &11431278
 MonoBehaviour:
@@ -1257,7 +1254,7 @@ MonoBehaviour:
             Culture=neutral, PublicKeyToken=null
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: level2
+          m_StringArgument: level4
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,

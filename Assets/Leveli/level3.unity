@@ -185,53 +185,13 @@ Prefab:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1247177203}
-    - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
       propertyPath: HUD
       value: 
       objectReference: {fileID: 1337317498}
-    - target: {fileID: 11441024, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: level4
-      objectReference: {fileID: 0}
     - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
       propertyPath: level
       value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 11430886, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: loading
-      value: 
-      objectReference: {fileID: 102376, guid: c039983fdb09edc4581dc4da5632c171, type: 2}
-    - target: {fileID: 22384808, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_SortingOrder
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 11490128, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11490128, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11490128, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11490128, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11490128, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_Text
-      value: 9999
-      objectReference: {fileID: 0}
-    - target: {fileID: 11498632, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 2100000, guid: d8cebf9a14d8ca24dac4369f8504cb60, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0

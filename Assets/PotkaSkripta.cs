@@ -37,6 +37,11 @@ public class PotkaSkripta : MonoBehaviour {
 
 	public Text totalCas;
 	float skupaj;
+	GameObject gameLogo;
+	void Awake(){
+		gameLogo = GameObject.Find ("Loading Logo");
+	}
+
 	void Start () {
 		level1.SetActive (false);
 		level2.SetActive (false);
@@ -162,6 +167,7 @@ public class PotkaSkripta : MonoBehaviour {
 	public void pritisnilPlay(int i){
 		LeveliManeger._instance.ponastaviLevel (i);
 		Application.LoadLevel ("level"+i);
+		gameLogo.GetComponent<LoadingScreen> ().show ();
 	}
 
 

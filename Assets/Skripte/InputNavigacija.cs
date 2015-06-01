@@ -13,10 +13,7 @@ public class InputNavigacija : MonoBehaviour {
 	public GameObject zgubil;
 	public GameObject zmagal;
 	public GameObject back;
-
-	public Button pavzaGumb;
-	public Text cas;
-	public Camera cam;
+	
 
 	public GameObject HUD;
 
@@ -28,14 +25,13 @@ public class InputNavigacija : MonoBehaviour {
 	float casPavze;
 
 	void Awake(){
-		//pavzaGumb.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(pavzaGumb.image.rectTransform.rect.width/2 ,Screen.height-pavzaGumb.image.rectTransform.rect.height/12,100));
-		//cas.gameObject.transform.position = cam.ScreenToWorldPoint(new Vector3(Screen.width,Screen.height - cas.rectTransform.rect.height/4,100));
-	}
+
+		}
 	void Start () {
 		back.SetActive (false);
 		zmagal.SetActive (false);
 		zgubil.SetActive (false);
-		loadingScreen = GameObject.Find ("Loading Logo(Clone)");
+		loadingScreen = GameObject.Find ("Loading Logo");
 		ugasniReklamo=true;
 		//Time.timeScale = 1;
 	}
@@ -117,7 +113,7 @@ public class InputNavigacija : MonoBehaviour {
 	}
 
 	public void quitToMainMenu(){
-		Application.LoadLevel ("MeniScena");
+		Application.LoadLevel ("Meni");
 		Time.timeScale = 1;
 	}
 

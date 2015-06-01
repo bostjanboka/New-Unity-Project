@@ -12,7 +12,7 @@ public class LoadingScreen : MonoBehaviour
 
 
 	bool showed = false;
-	public bool izredniPrikaz=true;
+
 
 
 
@@ -39,7 +39,7 @@ public class LoadingScreen : MonoBehaviour
 	}
 	public void show()
 	{
-		izredniPrikaz = true;
+
 		showed = true;
 		Debug.Log("show show");
 		if (logo) {
@@ -98,9 +98,8 @@ public class LoadingScreen : MonoBehaviour
 			Debug.Log("konec stetja" + timer);
 		}*/
 
-		else if (showed&&Time.timeScale == 1 && !Application.isLoadingLevel) {
+		else if (showed && Time.timeScale == 1 && !Application.isLoadingLevel) {
 			//Debug.Log("IZGINI pdate");
-			izredniPrikaz=false;
 			hide();
 		}
 
