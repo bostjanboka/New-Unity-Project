@@ -113,6 +113,7 @@ public class InputNavigacija : MonoBehaviour {
 	}
 
 	public void quitToMainMenu(){
+		Meni_Gumbi.potkaV = true;
 		Application.LoadLevel ("Meni");
 		Time.timeScale = 1;
 	}

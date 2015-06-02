@@ -57,7 +57,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	void Start () {
 
-		Meni_Gumbi.stKamere = 1;
+
 		if (Random.value * 100 < naloziReklamo) {
 			Move.loadCelozaslonsko ();
 			//oglasi.GetComponent<OglasiSkripta>().loadReklamo();

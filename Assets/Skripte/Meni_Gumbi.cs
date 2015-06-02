@@ -42,7 +42,8 @@ public class Meni_Gumbi : MonoBehaviour {
 	public Toggle musicToggle; 
 	public Toggle soundToggle; 
 
-	public static int stKamere=0;
+
+	public static bool potkaV;
 	
 
 	float cas = 0;
@@ -160,6 +161,11 @@ public class Meni_Gumbi : MonoBehaviour {
 				casNazaj=true;
 			}
 
+		}
+
+		if (potkaV) {
+			potkaV=false;
+			canvas(1);
 		}
 
 		if (errorText != null) {
