@@ -125,7 +125,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		if (LeveliManeger._instance.pokaziRate() == 1 && obiski > 0) {
 			popUpRate.SetActive(true);
 		}
-		if (LeveliManeger._instance.getIdUser () != null) {
+		if (LeveliManeger._instance.getIdUser () != null || userService.skipLog) {
 			canvas(0);
 		}else{
 			canvas(2);
@@ -219,6 +219,11 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void gumbExit(){
 		LeveliManeger._instance.povecajObisk();
 		Application.Quit();
+	}
+
+	public void skipLogIn(){
+		canvas (0);
+		userService.skipLog = true;
 	}
 
 	IEnumerator Wait(float duration)
