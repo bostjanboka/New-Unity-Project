@@ -11,7 +11,11 @@ public class Meni_Gumbi : MonoBehaviour {
 	public GameObject scori;
 	public GameObject potka;
 	public GameObject input;
-	public GameObject splash;
+
+
+	public GameObject startLogo;
+	public GameObject zvokMusic;
+	public GameObject userserv;
 
 
 	public InputField app42InputNick;
@@ -52,15 +56,24 @@ public class Meni_Gumbi : MonoBehaviour {
 		//PlayerPrefs.DeleteAll ();
 
 
-		zvok = GameObject.Find("game music");
+		zvok = GameObject.Find("game music(Clone)");
+		if (zvok == null) {
+			zvok = Instantiate(zvokMusic) as GameObject;
+		}
+		mordenLogo = GameObject.Find ("Loading mordenkul(Clone)");
+		if (mordenLogo == null) {
+			mordenLogo = Instantiate(startLogo) as GameObject;
+		}
 
-		mordenLogo = GameObject.Find ("Loading mordenkul");
-			
+
 		singUpLogo = GameObject.Find ("splash_prozoren");
 			
 
 
-		userSer = GameObject.Find ("User");
+		userSer = GameObject.Find ("User(Clone)");
+		if (userSer == null) {
+			userSer = Instantiate(userserv) as GameObject;
+		}
 			
 		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
 
@@ -237,7 +250,6 @@ public class Meni_Gumbi : MonoBehaviour {
 		potka.SetActive (false);
 		scori.SetActive (false);
 		input.SetActive (false);
-		splash.SetActive (false);
 		if (i == 0) {
 			meni.SetActive (true);
 		} else if (i == 1) {

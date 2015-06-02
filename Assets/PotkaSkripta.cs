@@ -5,6 +5,8 @@ using UnityEngine.UI;
 public class PotkaSkripta : MonoBehaviour {
 
 	// Use this for initialization
+	public GameObject loadLogo;
+
 	public Button ena;
 	public Button dve;
 	public Button tri;
@@ -39,7 +41,10 @@ public class PotkaSkripta : MonoBehaviour {
 	float skupaj;
 	GameObject gameLogo;
 	void Awake(){
-		gameLogo = GameObject.Find ("Loading Logo");
+		gameLogo = GameObject.Find ("Loading Logo(Clone)");
+		if (gameLogo == null) {
+			gameLogo = Instantiate(loadLogo) as GameObject;
+		}
 	}
 
 	void Start () {
