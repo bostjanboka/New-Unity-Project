@@ -27,7 +27,6 @@ public class userService : MonoBehaviour {
 
 	public static bool posodobiScore=false;
 	public static bool dobiRank=false;
-	public static bool skip=false;
 
 	ServiceAPI sp = null;
 	ScoreBoardService scoreBoardService = null; // Initializing ScoreBoard Service.

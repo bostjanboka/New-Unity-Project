@@ -125,7 +125,7 @@ public class Meni_Gumbi : MonoBehaviour {
 		if (LeveliManeger._instance.pokaziRate() == 1 && obiski > 0) {
 			popUpRate.SetActive(true);
 		}
-		if (LeveliManeger._instance.getIdUser () != null || userService.skip) {
+		if (LeveliManeger._instance.getIdUser () != null) {
 			canvas(0);
 		}else{
 			canvas(2);
@@ -196,11 +196,6 @@ public class Meni_Gumbi : MonoBehaviour {
 	public void newGameButton(){
 		//Application.LoadLevel ("level1");
 		gameLogo.GetComponent<LoadingScreen> ().show ();
-	}
-
-	public void skipLogIN(){
-		userService.skip = true;
-		canvas (0);
 	}
 
 
