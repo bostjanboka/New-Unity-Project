@@ -301,6 +301,18 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: a03bc64930a82a3499d09fd802aa9b2b,
         type: 3}
+    - target: {fileID: 22346156, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22346156, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: m_SortingOrder
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 22346156, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 261491054}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_IsPrefabParent: 0
