@@ -288,7 +288,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: a542896d6219b7a46b8ab73915d5099a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db965b2e417928e47aef897e2805d778, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2237,7 +2237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &581944298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2827,7 +2827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 0a6a764450a0efa4b8a184eb8cbcad1b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5c33f4eafe890214d96bb8380b8eff57, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5246,26 +5246,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 21282658, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
-      propertyPath: m_SortingOrder
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 447826, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21219098, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
-      propertyPath: m_Color.r
-      value: .368627459
-      objectReference: {fileID: 0}
-    - target: {fileID: 21219098, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
-      propertyPath: m_Color.g
-      value: .698039234
-      objectReference: {fileID: 0}
-    - target: {fileID: 21219098, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
-      propertyPath: m_Color.b
-      value: .600000024
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 04fb84c48dd88f948ad896aceb0abcb2, type: 2}
   m_IsPrefabParent: 0
@@ -5705,7 +5685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1417574386
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6571,7 +6551,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: db965b2e417928e47aef897e2805d778, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a542896d6219b7a46b8ab73915d5099a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7054,7 +7034,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Sprite: {fileID: 21300000, guid: 5c33f4eafe890214d96bb8380b8eff57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a6a764450a0efa4b8a184eb8cbcad1b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
