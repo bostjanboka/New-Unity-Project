@@ -76,9 +76,7 @@ public class Meni_Gumbi : MonoBehaviour {
 			userSer = Instantiate(userserv) as GameObject;
 		}
 			
-		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
 
-		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
 
 		singUpLogo.SetActive (false);
 		mordenLogo.GetComponent<LoadingScreen> ().show ();
@@ -131,7 +129,9 @@ public class Meni_Gumbi : MonoBehaviour {
 		}else{
 			canvas(2);
 		}
-
+		musicToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().muzika;
+		
+		soundToggle.isOn = !zvok.GetComponent<DontDestroyOnLoad> ().zvok;
 	}
 	
 	// Update is called once per frame

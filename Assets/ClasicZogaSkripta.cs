@@ -85,7 +85,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 				clasicSkripta.visina*=faktorVisine;
 				clasicSkripta.speed*=faktorHitrosti;
 				clasicSkripta.ST_del--;
-				inst.GetComponent<Rigidbody2D>().velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.4f)+5,0);
+				inst.GetComponent<Rigidbody2D>().velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.3f)+5,0);
 
 
 				clasicSkripta.smer = 1;
@@ -99,7 +99,7 @@ public class ClasicZogaSkripta : MonoBehaviour {
 				clasicSkripta.visina*=faktorVisine;
 				clasicSkripta.speed*=faktorHitrosti;
 				clasicSkripta.ST_del--;
-				inst.GetComponent<Rigidbody2D>().velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.4f)+5,0);
+				inst.GetComponent<Rigidbody2D>().velocity = new Vector3(0,Mathf.Abs(rb.velocity.y*0.3f)+5,0);
 				clasicSkripta.smer = -1;
 			}
 			

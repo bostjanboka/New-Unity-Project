@@ -18,11 +18,20 @@ public class DontDestroyOnLoad : MonoBehaviour {
 
 		DontDestroyOnLoad(transform.gameObject);
 		audio = gameObject.GetComponent<AudioSource> ();
-		audio.mute = true;
+		//audio.mute = true;
+		if (PlayerPrefs.HasKey ("zvok") && PlayerPrefs.GetInt ("zvok") == 1) {
+			zvok = true;
+		}
+		
+		if (PlayerPrefs.HasKey ("muzika") && PlayerPrefs.GetInt ("muzika") == 1) {
+			audio.mute = true;
+			muzika = true;
+		}
 	}
 
 	void Start(){
-		audio.mute = false;
+
+
 
 	}
 
@@ -37,10 +46,21 @@ public class DontDestroyOnLoad : MonoBehaviour {
 		} else {
 			//AudioListener.volume=1;
 		}
+		if (x) {
+			PlayerPrefs.SetInt ("zvok", 1);
+		} else {
+			PlayerPrefs.SetInt ("zvok", 0);
+		}
+
 	}
 
 	public void muteMuzika(bool x){
 		muzika = x;
 		audio.mute = muzika;
+		if (x) {
+			PlayerPrefs.SetInt ("muzika", 1);
+		} else {
+			PlayerPrefs.SetInt ("muzika", 0);
+		}
 	}
 }
