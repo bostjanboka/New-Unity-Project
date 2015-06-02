@@ -8,7 +8,7 @@ public class CameraSize : MonoBehaviour {
 	public float size=20;
 	public GameObject tocka;
 
-	void Start () {
+	void Awake () {
 		cam = gameObject.GetComponent<Camera> ();
 		cam.orthographicSize = size * Screen.height / Screen.width * 0.5f;
 

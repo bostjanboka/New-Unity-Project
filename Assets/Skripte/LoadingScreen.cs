@@ -18,6 +18,9 @@ public class LoadingScreen : MonoBehaviour
 
 	void Start ()
 	{
+		Vector3 poz = GameObject.Find("Main Camera").transform.position;
+		poz.z = gameObject.transform.position.z;
+		gameObject.transform.position = poz;
 
 	}
 
