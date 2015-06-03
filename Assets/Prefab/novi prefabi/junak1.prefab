@@ -42,7 +42,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 168406}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3.19000006, z: 1}
+  m_LocalPosition: {x: 0, y: -3.20000005, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 478178}
@@ -145,10 +145,10 @@ MonoBehaviour:
   stojimNaMestuX: 0
   meritev: 0
   strelOmogocen: 1
-  speed: 2.5
+  speed: 2.75
   xTocka: 0
   ustreli: 0
-  naloziReklamo: 100
+  naloziReklamo: 30
   steviloSpiral: 0
 --- !u!212 &21269176
 SpriteRenderer:
