@@ -101,7 +101,7 @@ public class ZeleSkripta : MonoBehaviour {
 				zeleSkripta.skala *= faktorSkale;
 				zeleSkripta.visina*=faktorVisine;
 				zeleSkripta.speed*=faktorHitrosti;
-				rb.velocity = new Vector3(0,Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.y*0.3f)+5,0);
+				rb.velocity = new Vector3(0,Mathf.Abs((10-(inst.transform.position.y+4))/10f)*7+2,0);
 				zeleSkripta.smer = 1;
 				
 				inst = Instantiate (noviZele, transform.position, Quaternion.identity) as GameObject;
@@ -112,7 +112,7 @@ public class ZeleSkripta : MonoBehaviour {
 				zeleSkripta.visina*=faktorVisine;
 				zeleSkripta.speed*=faktorHitrosti;
 
-				rb.velocity = new Vector3(0,Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.y*0.3f)+5,0);
+				rb.velocity = new Vector3(0,Mathf.Abs((10-(inst.transform.position.y+4))/10f)*7+2,0);
 				zeleSkripta.smer = -1;
 			}
 			
