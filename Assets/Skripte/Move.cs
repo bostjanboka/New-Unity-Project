@@ -30,7 +30,7 @@ public class Move : MonoBehaviour {
 
 
 		//request = new AdRequest.Builder().Build();
-		UnityPluginForWindowsPhone.Class1.konstruktor ("ca-app-pub-6604259944075538/1359994004", true);	
+		UnityPluginForWindowsPhone.Class1.konstruktor ("ca-app-pub-6604259944075538/1359994004", false);	
 
 
 	}

@@ -61,7 +61,7 @@ public class userService : MonoBehaviour {
 		//saveScore ();
 		if (LeveliManeger._instance.getIdUser () != null) {
 			playerName = LeveliManeger._instance.getIdUser ();
-			getUserRank ();
+			posodobiScore=true;
 		} 
 
 	}
