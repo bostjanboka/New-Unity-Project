@@ -1144,6 +1144,10 @@ Prefab:
       propertyPath: naloziReklamo
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 11498058, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
+      propertyPath: speed
+      value: 2.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d130d56e4d80fc4fbdf9a8581405171, type: 2}
   m_IsPrefabParent: 0
