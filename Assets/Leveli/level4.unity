@@ -542,7 +542,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435552, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 149038, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Name
@@ -785,8 +785,8 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 195606, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
   m_PrefabInternal: {fileID: 1408287896}
---- !u!58 &1036736549
-CircleCollider2D:
+--- !u!60 &1036736549
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -796,8 +796,15 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.03499997
+  m_Points:
+    m_Paths:
+    - - {x: .606680691, y: -.830700934}
+      - {x: 1.02475798, y: -.0106982812}
+      - {x: .617354274, y: .792196631}
+      - {x: -.289544404, y: 1.01485419}
+      - {x: -1.02226377, y: .444777638}
+      - {x: -1.02237499, y: -.46159035}
+      - {x: -.289416641, y: -1.02907658}
 --- !u!50 &1036736553
 Rigidbody2D:
   m_ObjectHideFlags: 0
@@ -1190,7 +1197,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -5.86999989
+      value: -3.67000008
       objectReference: {fileID: 0}
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalRotation.z
@@ -1199,6 +1206,10 @@ Prefab:
     - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_LocalRotation.w
       value: .999961913
+      objectReference: {fileID: 0}
+    - target: {fileID: 455950, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -.0399999991
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5896016, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
@@ -1381,7 +1392,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435552, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 149038, guid: d5c6605d320a1e444b9479f51e9cd5cf, type: 2}
       propertyPath: m_Name
