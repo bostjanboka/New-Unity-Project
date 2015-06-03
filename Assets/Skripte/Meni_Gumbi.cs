@@ -187,7 +187,7 @@ public class Meni_Gumbi : MonoBehaviour {
 
 	public void facebook(){
 		Debug.Log ("OPEN PAGE");
-		Application.OpenURL ("https://www.facebook.com/pages/Mordenelf/107340919596875?__mref=message_bubble");
+		Application.OpenURL ("https://www.facebook.com/mordenkul");
 
 	}
 
