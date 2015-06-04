@@ -280,6 +280,10 @@ GameObject:
 GameObject:
   m_PrefabParentObject: {fileID: 142006, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_PrefabInternal: {fileID: 175617171}
+--- !u!1 &175617175 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 156438, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+  m_PrefabInternal: {fileID: 175617171}
 --- !u!1 &203256812
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,7 +312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   junak: {fileID: 754348767}
-  newRecord: {fileID: 0}
+  newRecord: {fileID: 175617175}
   prostorZogic: {fileID: 2067712758}
 --- !u!4 &203256814
 Transform:

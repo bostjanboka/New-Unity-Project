@@ -928,6 +928,10 @@ MonoBehaviour:
 GameObject:
   m_PrefabParentObject: {fileID: 156804, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
   m_PrefabInternal: {fileID: 538629974}
+--- !u!1 &538629978 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 156438, guid: 3bb892c74ed762a4db9b09d343889f19, type: 2}
+  m_PrefabInternal: {fileID: 538629974}
 --- !u!1001 &606038602
 Prefab:
   m_ObjectHideFlags: 0
@@ -1152,7 +1156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   junak: {fileID: 205405508}
-  newRecord: {fileID: 0}
+  newRecord: {fileID: 538629978}
   prostorZogic: {fileID: 1526557553}
   zmagal: {fileID: 0}
   akcija: {fileID: 753896275}

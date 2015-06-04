@@ -25,11 +25,11 @@ public class Move : MonoBehaviour {
 
 	void Start () {
 
-		//interstitial = new InterstitialAd("ca-app-pub-6223160944701050/1650693929");
+		interstitial = new InterstitialAd("ca-app-pub-6604259944075538/5290666006");
 
 
 
-		//request = new AdRequest.Builder().Build();
+		request = new AdRequest.Builder().Build();
 		UnityPluginForWindowsPhone.Class1.konstruktor ("ca-app-pub-6604259944075538/1359994004", false);	
 
 
@@ -48,21 +48,21 @@ public class Move : MonoBehaviour {
 
 	public static void loadCelozaslonsko(){
 		UnityPluginForWindowsPhone.Class1.loadCelozaslonsko ();
-		//interstitial.LoadAd(request);
+		interstitial.LoadAd(request);
 
 	}
 
 	public static void showCelozaslonsko(){
 		UnityPluginForWindowsPhone.Class1.showCelozaslonsko ();
-		/*if (interstitial.IsLoaded()) {
+		if (interstitial.IsLoaded()) {
 			interstitial.Show();
-		}*/
+		}
 
 	}
 
 	public static void showRate(){
 		UnityPluginForWindowsPhone.Class1.prizgiRate ();
-		//Application.OpenURL ("market://details?id=com.mordenkul.mordenElf");
+		Application.OpenURL ("market://details?id=com.mordenkul.mordenElf");
 	
 	}
 
